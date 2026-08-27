@@ -85,6 +85,7 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
         const chapters = splitChapters(parsed.text, linePageMap)
         const preview = chapters.map(ch => ({
             title: ch.title,
+            level: ch.level || 1,
             chars: ch.content.trim().length,
             pageNo: ch.pageNo || null,
             passages: splitPassages(ch.content, ch.startLine + 1, linePageMap).length,

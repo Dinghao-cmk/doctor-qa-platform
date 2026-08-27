@@ -2441,7 +2441,7 @@
                     <span>段落 <b>${data.totalPassages}</b></span>
                     <span>字数 <b>${data.totalChars.toLocaleString()}</b></span>`;
                 upChapters.innerHTML = (data.chapters || [])
-                    .map(c => `${esc(c.title)} · ${c.passages} 段`)
+                    .map(c => `${c.level >= 2 ? '&nbsp;&nbsp;&nbsp;📄' : '📖'} ${esc(c.title)}${c.pageNo != null ? ' <span style="color:var(--text-3)">P' + c.pageNo + '</span>' : ''} · ${c.passages} 段`)
                     .join('<br>') + (data.chapterCount > 30 ? '<br><span class="more">…共 ' + data.chapterCount + ' 章</span>' : '');
                 uploadPreview.hidden = false;
                 confirmBtn.hidden = false;
