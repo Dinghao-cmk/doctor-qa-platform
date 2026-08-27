@@ -356,8 +356,9 @@ ${question}
 - 分点条理清晰，控制在 400 字以内
 - 不要使用 [参考N] 之类的引用标注（你无法访问资料库）${honest ? HONEST_HINT : ''}`
     try {
-        const { model: cfgModel } = await settings.getLLM()
-        const useModel = model || cfgModel
+        // 无 RAG 兜底回答：问答生成统一用强模型（老板决策：问答质量优先，中间环节才用快模型）
+        const { strongModel } = await settings.getLLM()
+        const useModel = model || strongModel
         const messages = [
             { role: 'system', content: '你是一位专业的医学知识助手。根据自身的医学知识回答临床医生的问题，诚实标注不确定性，不编造。' },
         ]
