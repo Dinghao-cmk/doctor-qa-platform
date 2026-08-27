@@ -1,0 +1,939 @@
+{
+  "doc-36d2cbd685fe77230b9dff2dd3a9ced2": {
+    "status": "processed",
+    "content_summary": "高血压是最常见的心血管疾病之一，治疗包括生活方式干预和药物治疗。生活方式干预包括低盐饮食、适量运动、控制体重、戒烟限酒。常用降压药物包括钙通道阻滞剂（如硝苯地平）、血管紧张素转换酶抑制剂（如依那普利）、利尿剂（如氢氯噻嗪）等。",
+    "content_length": 113,
+    "created_at": "2026-07-16T03:31:10.416241+00:00",
+    "updated_at": "2026-07-16T03:31:43.715578+00:00",
+    "file_path": "高血压",
+    "track_id": "insert_20260716_113110_cbc69386",
+    "content_hash": "5f540855c7ef403947de5b9bb56dcaa5",
+    "metadata": {
+      "parse_start_time": 1784172670,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784172670,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784172670,
+      "process_end_time": 1784172703,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000"
+    ]
+  },
+  "doc-b41877e5d586b1b557850fd91ad9fe5e": {
+    "status": "processed",
+    "content_summary": "糖尿病是一种慢性代谢性疾病，主要特征是血糖升高。治疗包括饮食控制、运动和降糖药物。常用降糖药物包括二甲双胍、磺脲类（如格列本脲）、胰岛素等。糖尿病患者需定期监测血糖，控制饮食中的碳水化合物摄入。",
+    "content_length": 97,
+    "created_at": "2026-07-16T03:31:47.277385+00:00",
+    "updated_at": "2026-07-16T03:32:16.696065+00:00",
+    "file_path": "糖尿病",
+    "track_id": "insert_20260716_113147_e1f2dc8f",
+    "content_hash": "6593fc27b62b1f3a0c55f47caa969607",
+    "metadata": {
+      "parse_start_time": 1784172707,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784172707,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784172707,
+      "process_end_time": 1784172736,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ]
+  },
+  "doc-90fa44500bccd427737678c4f12ce717": {
+    "status": "processed",
+    "content_summary": "肺炎链球菌是社区获得性肺炎最常见的病原体，其次为流感嗜血杆菌、卡他莫拉菌、肺炎支原体、肺炎衣原体等。\n\n社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。\n\n肺炎的胸部X线检查可见肺纹理增粗、斑片状浸润影、大片实变影等。胸部CT可更清晰显示病变范围和性质。\n\n社区获得性肺炎经验性抗感染治疗：门诊患者首选阿莫西林或多西环素；住院患者首选β-内酰胺类联合大环内酯类或呼吸氟喹诺酮类。\n\n重症肺炎的...",
+    "content_length": 6098,
+    "created_at": "2026-07-17T06:16:29.932545+00:00",
+    "updated_at": "2026-07-17T08:38:07.056235+00:00",
+    "file_path": "J18",
+    "track_id": "insert_20260717_141629_1b128ce4",
+    "content_hash": "059d42ab49ba59472ffbebbc7bef18ca",
+    "metadata": {
+      "parse_start_time": 1784277373,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784277373,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784277373,
+      "process_end_time": 1784277487,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 5,
+    "chunks_list": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004"
+    ]
+  },
+  "dup-e6f4f7c6182ce54107906302a37281f5": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-90fa44500bccd427737678c4f12ce717",
+    "content_length": 6098,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T06:23:31.165984+00:00",
+    "updated_at": "2026-07-17T06:23:31.165991+00:00",
+    "file_path": "J18",
+    "track_id": "insert_20260717_142331_4e746425",
+    "error_msg": "File name already exists. Original doc_id: doc-90fa44500bccd427737678c4f12ce717, Status: processing",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-90fa44500bccd427737678c4f12ce717",
+      "original_track_id": "insert_20260717_141629_1b128ce4"
+    }
+  },
+  "doc-37c551f96df8006ffc09d20d5b7a5d48": {
+    "status": "processed",
+    "content_summary": "COPD的主要危险因素包括吸烟、职业粉尘和化学物质、室内外空气污染、呼吸道感染等。吸烟是最重要的环境因素。\n\nCOPD的症状包括慢性咳嗽、咳痰、气短或呼吸困难。呼吸困难是COPD的标志性症状，早期于劳力时出现，后逐渐加重。\n\nCOPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。\n\nCOPD稳定期治疗：戒烟是首要措施。药物治疗包括支气管扩张剂（β2受体激动剂、抗胆...",
+    "content_length": 5268,
+    "created_at": "2026-07-17T06:23:33.228577+00:00",
+    "updated_at": "2026-07-17T08:01:26.512719+00:00",
+    "file_path": "J44",
+    "track_id": "insert_20260717_142333_7ce71589",
+    "content_hash": "f4ab1b6c09102aa240ac74239f3676fa",
+    "metadata": {
+      "parse_start_time": 1784274916,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784274916,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784274918,
+      "process_end_time": 1784275286,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 4,
+    "chunks_list": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ]
+  },
+  "doc-1a9368583c51755c249c96754f37bc8c": {
+    "status": "processed",
+    "content_summary": "哮喘的典型症状为反复发作的喘息、气急、胸闷和咳嗽，多在夜间或凌晨发作或加重。\n\n哮喘的诊断依据：①可变气流受限的证据（支气管舒张试验阳性、PEF变异率>10%）；②症状特征符合哮喘。\n\n哮喘的阶梯治疗：第1级按需SABA，第2级低剂量ICS，第3级低剂量ICS+LABA，第4级中/高剂量ICS+LABA，第5级加用生物制剂。\n\n哮喘急性发作的治疗：重复吸入SABA、早期全身使用糖皮质激素、氧疗维持SpO2 93-95%。严重发作需静脉用药。\n\n哮喘控制评估工具（ACT）评分：25分完全控制，20...",
+    "content_length": 3268,
+    "created_at": "2026-07-17T06:28:35.259827+00:00",
+    "updated_at": "2026-07-17T06:40:57.229555+00:00",
+    "file_path": "J45",
+    "track_id": "insert_20260717_142835_4e89c323",
+    "content_hash": "d507e469b53bf73e17084ea8b2194ca8",
+    "metadata": {
+      "parse_start_time": 1784269928,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784269928,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784269928,
+      "process_end_time": 1784270457,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 3,
+    "chunks_list": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002"
+    ]
+  },
+  "doc-1aaff13c12591e42b44bb47d77f2d4f4": {
+    "status": "processed",
+    "content_summary": "冠心病的危险因素包括：高血压、高血脂、糖尿病、吸烟、肥胖、缺乏运动、家族史等。其中血脂异常是最重要的危险因素。\n\n稳定型心绞痛的典型表现：胸骨后压榨性疼痛，向左肩、左臂内侧放射，持续3-5分钟，休息或含服硝酸甘油后缓解。\n\n急性冠脉综合征（ACS）包括：ST段抬高型心肌梗死（STEMI）、非ST段抬高型心肌梗死（NSTEMI）和不稳定型心绞痛（UA）。\n\nSTEMI的急诊再灌注治疗：发病12小时内首选PCI（经皮冠状动脉介入治疗），无法及时PCI时可行溶栓治疗（发病3小时内效果最佳）。\n\n冠心病...",
+    "content_length": 5988,
+    "created_at": "2026-07-17T06:28:37.324174+00:00",
+    "updated_at": "2026-07-17T08:23:41.244548+00:00",
+    "file_path": "I25",
+    "track_id": "insert_20260717_142837_64c96bce",
+    "content_hash": "6a44c18799b9b88624493d0275ab09e2",
+    "metadata": {
+      "parse_start_time": 1784276527,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784276527,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784276527,
+      "process_end_time": 1784276621,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 5,
+    "chunks_list": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ]
+  },
+  "doc-ce182e3aa85175576ab687a8f471f1c7": {
+    "status": "processed",
+    "content_summary": "心衰的分类：按射血分数分为HFrEF（EF<40%）、HFmrEF（EF 40-49%）和HFpEF（EF≥50%）。\n\n心衰的症状：呼吸困难（劳力性→端坐呼吸→夜间阵发性）、乏力、液体潴留（下肢水肿、腹水）。\n\n心衰的诊断：主要依据症状、体征和BNP/NT-proBNP升高，超声心动图评估心脏结构和功能。\n\nHFrEF的药物治疗（新四联）：ARNI/ACEI + β受体阻滞剂 + MRA + SGLT2抑制剂。这是心衰治疗的基石。\n\n急性心衰的治疗：坐位、吸氧、利尿（呋塞米）、血管扩张剂（硝普...",
+    "content_length": 4308,
+    "created_at": "2026-07-17T06:28:39.395750+00:00",
+    "updated_at": "2026-07-17T06:56:31.246450+00:00",
+    "file_path": "I50",
+    "track_id": "insert_20260717_142839_64e1bdb9",
+    "content_hash": "ee5930f54cbba9b0f5286b6d499394d8",
+    "metadata": {
+      "parse_start_time": 1784269928,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784269928,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784270442,
+      "process_end_time": 1784271391,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 4,
+    "chunks_list": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ]
+  },
+  "doc-744515d9964b7052340a875e5c4e6570": {
+    "status": "processed",
+    "content_summary": "高血压的病理改变：小动脉玻璃样变、动脉硬化、左心室肥厚、肾小球硬化、视网膜动脉硬化等。\n\n高血压的临床表现：早期多无症状，可有头痛、头晕、心悸、眼花等。长期高血压可导致心、脑、肾等靶器官损害。\n\n高血压急症：血压急剧升高（常>180/120mmHg）伴靶器官急性损害，如高血压脑病、急性心衰、主动脉夹层等，需紧急降压。\n\n高血压合并糖尿病：降压目标<130/80mmHg，首选ACEI或ARB（兼具肾脏保护作用），必要时联合CCB或利尿剂。\n\n高血压合并慢性肾病：降压目标<130/80mmHg，首选...",
+    "content_length": 4438,
+    "created_at": "2026-07-17T06:28:41.475012+00:00",
+    "updated_at": "2026-07-17T06:57:34.895687+00:00",
+    "file_path": "I10",
+    "track_id": "insert_20260717_142841_aa64ae28",
+    "content_hash": "4a5c0c4529075ced1fb1a531fbbbfda0",
+    "metadata": {
+      "parse_start_time": 1784269928,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784269929,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784270463,
+      "process_end_time": 1784271454,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 4,
+    "chunks_list": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003"
+    ]
+  },
+  "doc-0ef47a77cab9066c33b05a98b8b9e284": {
+    "status": "processed",
+    "content_summary": "胃溃疡的疼痛特点：餐后1小时内出现上腹痛，经1-2小时后缓解。十二指肠溃疡的疼痛特点：空腹痛、夜间痛，进食后缓解。\n\n幽门螺杆菌（Hp）检测方法：侵入性（胃镜活检快速尿素酶试验、组织学检查）和非侵入性（13C/14C尿素呼气试验、粪便抗原检测）。\n\nHp根除治疗推荐铋剂四联方案：PPI + 铋剂 + 两种抗菌药物，疗程14天。常用抗菌药物组合：阿莫西林+克拉霉素、阿莫西林+左氧氟沙星。\n\n胃溃疡的并发症：出血（最常见）、穿孔、幽门梗阻、癌变。胃溃疡癌变率约1-3%，需定期胃镜随访。\n\n消化性溃疡...",
+    "content_length": 4848,
+    "created_at": "2026-07-17T06:28:43.540975+00:00",
+    "updated_at": "2026-07-17T08:08:24.028222+00:00",
+    "file_path": "K25",
+    "track_id": "insert_20260717_142843_4da89360",
+    "content_hash": "c87504f2cf3ae0e667cfe42247aeb6dc",
+    "metadata": {
+      "parse_start_time": 1784274916,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784274916,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784275299,
+      "process_end_time": 1784275704,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 5,
+    "chunks_list": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-004"
+    ]
+  },
+  "doc-550ecafcd47776fc50b37277c3480ffd": {
+    "status": "processed",
+    "content_summary": "急性阑尾炎的体征：麦氏点压痛（右下腹）、反跳痛、肌紧张。腰大肌试验阳性提示盲肠后位阑尾，闭孔肌试验阳性提示盆腔位阑尾。\n\n急性阑尾炎的实验室检查：白细胞升高（10-20×10^9/L），中性粒细胞比例升高。CRP升高。尿常规一般正常（排除泌尿系疾病）。\n\n急性阑尾炎的影像学检查：腹部超声可显示肿大的阑尾（直径>6mm）。腹部CT诊断准确率更高，尤其对不典型病例。\n\n急性阑尾炎的治疗：首选腹腔镜阑尾切除术。发病72小时内手术。对于阑尾周围脓肿，先行保守治疗（抗感染），3个月后择期手术。\n\n急性阑尾...",
+    "content_length": 3528,
+    "created_at": "2026-07-17T06:28:45.591496+00:00",
+    "updated_at": "2026-07-17T07:38:34.721962+00:00",
+    "file_path": "K35",
+    "track_id": "insert_20260717_142845_42f7811c",
+    "content_hash": "fa51e7177328fb216ae233ecb475044c",
+    "metadata": {
+      "parse_start_time": 1784272917,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784272918,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784273447,
+      "process_end_time": 1784273914,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 4,
+    "chunks_list": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-003"
+    ]
+  },
+  "doc-544fac400db790f57ea8ee4207cbeb6b": {
+    "status": "processed",
+    "content_summary": "血压分级：正常血压<120/80mmHg，正常高值120-139/80-89mmHg，1级高血压140-159/90-99mmHg，2级高血压160-179/100-109mmHg，3级高血压≥180/110mmHg。\n\n高血压患者心血管风险分层：根据血压水平、心血管危险因素、靶器官损害和临床合并症，分为低危、中危、高危和很高危。\n\n高血压的心血管危险因素包括：年龄（男>55岁，女>65岁）、吸烟、血脂异常、早发心血管病家族史、肥胖、缺乏体力活动。\n\n高血压的靶器官损害：左心室肥厚、颈动脉内膜中...",
+    "content_length": 5518,
+    "created_at": "2026-07-17T06:28:47.650766+00:00",
+    "updated_at": "2026-07-17T07:38:52.274753+00:00",
+    "file_path": "标准",
+    "track_id": "insert_20260717_142847_996b108f",
+    "content_hash": "9d86161dfa4906d8cd6c4533393e4252",
+    "metadata": {
+      "parse_start_time": 1784272918,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784272918,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784273658,
+      "process_end_time": 1784273932,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 4,
+    "chunks_list": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003"
+    ]
+  },
+  "doc-153fa67a7fb6ada66a1fcccabbbfab72": {
+    "status": "processed",
+    "content_summary": "CCB（如氨氯地平、硝苯地平控释片）适用于老年高血压、单纯收缩期高血压、伴心绞痛患者。常见不良反应为踝部水肿、面部潮红。\n\nACEI（如依那普利、贝那普利）适用于高血压合并糖尿病、慢性肾病、心衰、心梗后患者。主要不良反应为干咳、血管神经性水肿。\n\nARB（如缬沙坦、氯沙坦）适应证与ACEI相似，但不引起干咳，可作为ACEI不耐受时的替代。\n\n噻嗪类利尿剂（如氢氯噻嗪、吲达帕胺）适用于老年高血压、单纯收缩期高血压、心衰患者。需监测血钾和尿酸。\n\nβ受体阻滞剂（如美托洛尔、比索洛尔）适用于高血压合并...",
+    "content_length": 4938,
+    "created_at": "2026-07-17T06:28:49.728867+00:00",
+    "updated_at": "2026-07-17T08:23:57.930816+00:00",
+    "file_path": "选择",
+    "track_id": "insert_20260717_142849_fec23cce",
+    "content_hash": "017cb2981e4b7a354dd772461a741324",
+    "metadata": {
+      "parse_start_time": 1784276527,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784276527,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784276527,
+      "process_end_time": 1784276637,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 5,
+    "chunks_list": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ]
+  },
+  "doc-b1c6b3f6bd469c518cdfd861316f8d8e": {
+    "status": "processed",
+    "content_summary": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。\n\n特殊级抗菌药物：不良反应大、不宜随意使用或易产生耐药的抗菌药物，如美罗培南、亚胺培南、万古霉素、利奈唑胺等。需高级职称医师审批。\n\n抗菌药物分级管理的目的：在保证临床疗效的前提下，减少不良反应和细菌耐药性的产生，降低患者医疗费用。\n\n抗菌药物使用强度（AUD）= 某抗菌药物消耗量（DDD数）/同期患者收治总床日数×100。用于监测抗菌药物使用量。\n\n...",
+    "content_length": 1275,
+    "created_at": "2026-07-17T06:28:53.054097+00:00",
+    "updated_at": "2026-07-17T07:39:25.074905+00:00",
+    "file_path": "非限制",
+    "track_id": "insert_20260717_142853_9dfb6a48",
+    "content_hash": "634cafe5c3f35920bfeb72fdaba761f3",
+    "metadata": {
+      "parse_start_time": 1784272918,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784272919,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784273925,
+      "process_end_time": 1784273965,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000"
+    ]
+  },
+  "doc-df9c9706d4cb2784f68be6d996502e1b": {
+    "status": "processed",
+    "content_summary": "抗菌药物分级管理的目的：在保证临床疗效的前提下，减少不良反应和细菌耐药性的产生，降低患者医疗费用。\n\n抗菌药物使用强度（AUD）= 某抗菌药物消耗量（DDD数）/同期患者收治总床日数×100。用于监测抗菌药物使用量。\n\n抗菌药物使用率控制目标：住院患者抗菌药物使用率<60%，门诊患者抗菌药物使用率<20%，急诊患者抗菌药物使用率<40%。\n\n非限制级抗菌药物：经长期临床应用证明安全有效、价格较低的抗菌药物，如青霉素、阿莫西林、头孢氨苄、头孢唑林等。各级医师均可开具处方。\n\n限制级抗菌药物：经长期...",
+    "content_length": 1245,
+    "created_at": "2026-07-17T06:28:55.130732+00:00",
+    "updated_at": "2026-07-17T07:45:32.215215+00:00",
+    "file_path": "限制",
+    "track_id": "insert_20260717_142855_7e75425d",
+    "content_hash": "3e1de4b32a0710a698a9c1196c1b1ae7",
+    "metadata": {
+      "parse_start_time": 1784272918,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784272919,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784273937,
+      "process_end_time": 1784274332,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ]
+  },
+  "doc-974a7164e1ce6a62eb6d2226c124a1ee": {
+    "status": "processed",
+    "content_summary": "社区获得性肺炎住院患者经验用药：非ICU患者首选β-内酰胺类+大环内酯类或呼吸氟喹诺酮类单药。ICU患者首选β-内酰胺类+呼吸氟喹诺酮类或+大环内酯类。\n\n医院获得性肺炎（HAP）经验用药：需覆盖革兰阴性杆菌（包括铜绿假单胞菌），常用抗假单胞菌β-内酰胺类±氟喹诺酮类。\n\n腹腔感染经验用药需覆盖肠道革兰阴性杆菌和厌氧菌。轻中度：头孢二代/三代+甲硝唑，或β-内酰胺/酶抑制剂复合制剂。\n\n重症腹腔感染经验用药需覆盖耐药菌：碳青霉烯类（美罗培南/亚胺培南）或哌拉西林他唑巴坦，必要时加抗MRSA药物。...",
+    "content_length": 1903,
+    "created_at": "2026-07-17T06:28:57.213508+00:00",
+    "updated_at": "2026-07-17T08:11:07.400208+00:00",
+    "file_path": "肺部",
+    "track_id": "insert_20260717_142857_604b8f1c",
+    "content_hash": "df71708c3723e1e0aae0beb9c5b7cf9b",
+    "metadata": {
+      "parse_start_time": 1784274916,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784274916,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784275648,
+      "process_end_time": 1784275867,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 2,
+    "chunks_list": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ]
+  },
+  "doc-73bd92f3f1bdf0397b4e9ddbdefb66db": {
+    "status": "processed",
+    "content_summary": "发热的热型：稽留热（体温持续39-40℃，24h波动<1℃）见于大叶性肺炎；弛张热（24h波动>2℃）见于败血症；间歇热见于疟疾。\n\n咳嗽的性质：干咳见于上呼吸道感染、胸膜炎、肺栓塞等。湿咳（有痰）见于肺炎、支气管扩张、肺脓肿等。犬吠样咳嗽见于喉炎。\n\n痰的性状：铁锈色痰见于肺炎链球菌肺炎；粉红色泡沫痰见于急性肺水肿；砖红色胶冻样痰见于克雷伯杆菌肺炎；黄绿色痰见于铜绿假单胞菌感染。\n\n胸痛的性质：压榨性疼痛见于心绞痛、心肌梗死；刺痛见于胸膜炎、带状疱疹；撕裂样疼痛见于主动脉夹层；烧灼样疼痛见于胃...",
+    "content_length": 1325,
+    "created_at": "2026-07-17T06:28:59.280773+00:00",
+    "updated_at": "2026-07-17T08:37:40.904306+00:00",
+    "file_path": "发热",
+    "track_id": "insert_20260717_142859_c767242d",
+    "content_hash": "1380c35d957a52c2a1e9ea8ef84c2824",
+    "metadata": {
+      "parse_start_time": 1784277373,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784277373,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784277373,
+      "process_end_time": 1784277460,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 2,
+    "chunks_list": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001"
+    ]
+  },
+  "doc-65264c873eaf4a8a6489dc4944443dd7": {
+    "status": "processed",
+    "content_summary": "痰的性状：铁锈色痰见于肺炎链球菌肺炎；粉红色泡沫痰见于急性肺水肿；砖红色胶冻样痰见于克雷伯杆菌肺炎；黄绿色痰见于铜绿假单胞菌感染。\n\n胸痛的性质：压榨性疼痛见于心绞痛、心肌梗死；刺痛见于胸膜炎、带状疱疹；撕裂样疼痛见于主动脉夹层；烧灼样疼痛见于胃食管反流。\n\n胸痛的鉴别诊断要点：发病年龄、疼痛部位、性质、持续时间、诱因、缓解因素、伴随症状。高危胸痛包括急性冠脉综合征、肺栓塞、主动脉夹层、张力性气胸。\n\n发热的分度：低热37.3-38℃，中等度热38.1-39℃，高热39.1-41℃，超高热>41...",
+    "content_length": 1328,
+    "created_at": "2026-07-17T06:29:01.346360+00:00",
+    "updated_at": "2026-07-17T08:38:02.665227+00:00",
+    "file_path": "咳嗽",
+    "track_id": "insert_20260717_142901_72776c07",
+    "content_hash": "cde9ddf147299fa90b4a9bd5e98af1a5",
+    "metadata": {
+      "parse_start_time": 1784277373,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784277373,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784277373,
+      "process_end_time": 1784277482,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 2,
+    "chunks_list": [
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ]
+  },
+  "doc-116a736879f818ef2c41e2559f7b0b24": {
+    "status": "processed",
+    "content_summary": "胸痛的鉴别诊断要点：发病年龄、疼痛部位、性质、持续时间、诱因、缓解因素、伴随症状。高危胸痛包括急性冠脉综合征、肺栓塞、主动脉夹层、张力性气胸。\n\n发热的分度：低热37.3-38℃，中等度热38.1-39℃，高热39.1-41℃，超高热>41℃。发热伴寒战常见于大叶性肺炎、败血症等。\n\n发热的热型：稽留热（体温持续39-40℃，24h波动<1℃）见于大叶性肺炎；弛张热（24h波动>2℃）见于败血症；间歇热见于疟疾。\n\n咳嗽的性质：干咳见于上呼吸道感染、胸膜炎、肺栓塞等。湿咳（有痰）见于肺炎、支气管...",
+    "content_length": 1341,
+    "created_at": "2026-07-17T06:29:03.407200+00:00",
+    "updated_at": "2026-07-17T08:36:10.739352+00:00",
+    "file_path": "胸痛",
+    "track_id": "insert_20260717_142903_fbb5f617",
+    "content_hash": "0c769166f020cb7df54bbf6c9eb5f468",
+    "metadata": {
+      "parse_start_time": 1784276527,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784276527,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784277004,
+      "process_end_time": 1784277370,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 2,
+    "chunks_list": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001"
+    ]
+  },
+  "doc-5f492e9b07e87ddac7d9214b434c061b": {
+    "status": "processed",
+    "content_summary": "肺结节的CT评估：大小（<6mm、6-8mm、>8mm）、密度（实性、部分实性、磨玻璃）、形态（分叶、毛刺、胸膜牵拉）是判断良恶性的关键。\n\n肺炎的CT表现：磨玻璃影、实变影、小叶间隔增厚、树芽征等。不同病原体肺炎的CT表现有一定特征性。\n\n肺栓塞的CT肺动脉造影（CTPA）表现：肺动脉内充盈缺损、轨道征、截断征。CTPA是肺栓塞确诊的首选检查。\n\n胸部CT的辐射剂量：常规胸部CT约7mSv，低剂量胸部CT约1-2mSv。对于需要反复检查的患者，推荐低剂量CT。\n\n增强CT造影剂不良反应：轻度（...",
+    "content_length": 3558,
+    "created_at": "2026-07-17T06:29:05.475175+00:00",
+    "updated_at": "2026-07-17T08:21:59.054897+00:00",
+    "file_path": "胸部CT",
+    "track_id": "insert_20260717_142905_17dd62b5",
+    "content_hash": "b659aac1d012b1892df2f750d5f42e65",
+    "metadata": {
+      "parse_start_time": 1784274916,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1784274918,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1784276193,
+      "process_end_time": 1784276519,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 3,
+    "chunks_list": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ]
+  },
+  "dup-ff88e3c937f6f806f033965deabbdefa": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-90fa44500bccd427737678c4f12ce717",
+    "content_length": 6098,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T06:32:08.147039+00:00",
+    "updated_at": "2026-07-17T06:32:08.147043+00:00",
+    "file_path": "J18",
+    "track_id": "insert_20260717_143208_b76ae834",
+    "error_msg": "File name already exists. Original doc_id: doc-90fa44500bccd427737678c4f12ce717, Status: processing",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-90fa44500bccd427737678c4f12ce717",
+      "original_track_id": "insert_20260717_141629_1b128ce4"
+    }
+  },
+  "dup-cde09f39abbd504a3d6f00eddc6210e5": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-90fa44500bccd427737678c4f12ce717",
+    "content_length": 6098,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T07:21:57.986559+00:00",
+    "updated_at": "2026-07-17T07:21:57.986564+00:00",
+    "file_path": "J18",
+    "track_id": "insert_20260717_152157_25a2e987",
+    "error_msg": "File name already exists. Original doc_id: doc-90fa44500bccd427737678c4f12ce717, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-90fa44500bccd427737678c4f12ce717",
+      "original_track_id": "insert_20260717_141629_1b128ce4"
+    }
+  },
+  "dup-78079df638af70c0cc4b198bc6e787ad": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-90fa44500bccd427737678c4f12ce717",
+    "content_length": 6098,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T07:55:16.737265+00:00",
+    "updated_at": "2026-07-17T07:55:16.737275+00:00",
+    "file_path": "J18",
+    "track_id": "insert_20260717_155516_161d41d5",
+    "error_msg": "File name already exists. Original doc_id: doc-90fa44500bccd427737678c4f12ce717, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-90fa44500bccd427737678c4f12ce717",
+      "original_track_id": "insert_20260717_141629_1b128ce4"
+    }
+  },
+  "dup-f79b5d7bec3a4c33c167e3ba1f572e1c": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-37c551f96df8006ffc09d20d5b7a5d48",
+    "content_length": 5268,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:22:07.530589+00:00",
+    "updated_at": "2026-07-17T08:22:07.530596+00:00",
+    "file_path": "J44",
+    "track_id": "insert_20260717_162207_62d99f7b",
+    "error_msg": "File name already exists. Original doc_id: doc-37c551f96df8006ffc09d20d5b7a5d48, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-37c551f96df8006ffc09d20d5b7a5d48",
+      "original_track_id": "insert_20260717_142333_7ce71589"
+    }
+  },
+  "dup-61cf36e7d6d0ad650a492ddc476fd471": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-1a9368583c51755c249c96754f37bc8c",
+    "content_length": 3268,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:36:13.032154+00:00",
+    "updated_at": "2026-07-17T08:36:13.032161+00:00",
+    "file_path": "J45",
+    "track_id": "insert_20260717_163613_0a72c392",
+    "error_msg": "File name already exists. Original doc_id: doc-1a9368583c51755c249c96754f37bc8c, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-1a9368583c51755c249c96754f37bc8c",
+      "original_track_id": "insert_20260717_142835_4e89c323"
+    }
+  },
+  "dup-fa7237466c79da9bcba5aedfd50e25ce": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-1aaff13c12591e42b44bb47d77f2d4f4",
+    "content_length": 5988,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.677557+00:00",
+    "updated_at": "2026-07-17T08:38:08.677566+00:00",
+    "file_path": "I25",
+    "track_id": "insert_20260717_163808_4876ae74",
+    "error_msg": "File name already exists. Original doc_id: doc-1aaff13c12591e42b44bb47d77f2d4f4, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-1aaff13c12591e42b44bb47d77f2d4f4",
+      "original_track_id": "insert_20260717_142837_64c96bce"
+    }
+  },
+  "dup-5dab6139a227854e67b8198fc31a1938": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-ce182e3aa85175576ab687a8f471f1c7",
+    "content_length": 4308,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.684733+00:00",
+    "updated_at": "2026-07-17T08:38:08.684740+00:00",
+    "file_path": "I50",
+    "track_id": "insert_20260717_163808_4789e58b",
+    "error_msg": "File name already exists. Original doc_id: doc-ce182e3aa85175576ab687a8f471f1c7, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-ce182e3aa85175576ab687a8f471f1c7",
+      "original_track_id": "insert_20260717_142839_64e1bdb9"
+    }
+  },
+  "dup-f3a5173224f49c3e982c1d7798bb606d": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-744515d9964b7052340a875e5c4e6570",
+    "content_length": 4438,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.690737+00:00",
+    "updated_at": "2026-07-17T08:38:08.690741+00:00",
+    "file_path": "I10",
+    "track_id": "insert_20260717_163808_01ad7873",
+    "error_msg": "File name already exists. Original doc_id: doc-744515d9964b7052340a875e5c4e6570, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-744515d9964b7052340a875e5c4e6570",
+      "original_track_id": "insert_20260717_142841_aa64ae28"
+    }
+  },
+  "dup-6e6dc721cb491edf8fa7b76484f535ab": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-0ef47a77cab9066c33b05a98b8b9e284",
+    "content_length": 4848,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.696992+00:00",
+    "updated_at": "2026-07-17T08:38:08.697002+00:00",
+    "file_path": "K25",
+    "track_id": "insert_20260717_163808_a628d293",
+    "error_msg": "File name already exists. Original doc_id: doc-0ef47a77cab9066c33b05a98b8b9e284, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-0ef47a77cab9066c33b05a98b8b9e284",
+      "original_track_id": "insert_20260717_142843_4da89360"
+    }
+  },
+  "dup-8c3da25da1bfd987fe67682bad8cfc11": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-550ecafcd47776fc50b37277c3480ffd",
+    "content_length": 3528,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.703829+00:00",
+    "updated_at": "2026-07-17T08:38:08.703836+00:00",
+    "file_path": "K35",
+    "track_id": "insert_20260717_163808_61d18967",
+    "error_msg": "File name already exists. Original doc_id: doc-550ecafcd47776fc50b37277c3480ffd, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-550ecafcd47776fc50b37277c3480ffd",
+      "original_track_id": "insert_20260717_142845_42f7811c"
+    }
+  },
+  "dup-7626e7fe5aa25f26a86d3e18e496597e": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-544fac400db790f57ea8ee4207cbeb6b",
+    "content_length": 5518,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.709804+00:00",
+    "updated_at": "2026-07-17T08:38:08.709810+00:00",
+    "file_path": "标准",
+    "track_id": "insert_20260717_163808_88c2102f",
+    "error_msg": "File name already exists. Original doc_id: doc-544fac400db790f57ea8ee4207cbeb6b, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-544fac400db790f57ea8ee4207cbeb6b",
+      "original_track_id": "insert_20260717_142847_996b108f"
+    }
+  },
+  "dup-e2eabf9cbc74efa9183bdc8ea48b5868": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-153fa67a7fb6ada66a1fcccabbbfab72",
+    "content_length": 4938,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.716466+00:00",
+    "updated_at": "2026-07-17T08:38:08.716474+00:00",
+    "file_path": "选择",
+    "track_id": "insert_20260717_163808_5ee565fc",
+    "error_msg": "File name already exists. Original doc_id: doc-153fa67a7fb6ada66a1fcccabbbfab72, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-153fa67a7fb6ada66a1fcccabbbfab72",
+      "original_track_id": "insert_20260717_142849_fec23cce"
+    }
+  },
+  "dup-85a1db4bdd2c018a1f6fedb204a8c87e": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-b1c6b3f6bd469c518cdfd861316f8d8e",
+    "content_length": 1275,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.722475+00:00",
+    "updated_at": "2026-07-17T08:38:08.722482+00:00",
+    "file_path": "非限制",
+    "track_id": "insert_20260717_163808_1705fbee",
+    "error_msg": "File name already exists. Original doc_id: doc-b1c6b3f6bd469c518cdfd861316f8d8e, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-b1c6b3f6bd469c518cdfd861316f8d8e",
+      "original_track_id": "insert_20260717_142853_9dfb6a48"
+    }
+  },
+  "dup-3fff6262723526f8e9edcee6e1936156": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-df9c9706d4cb2784f68be6d996502e1b",
+    "content_length": 1245,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.728421+00:00",
+    "updated_at": "2026-07-17T08:38:08.728433+00:00",
+    "file_path": "限制",
+    "track_id": "insert_20260717_163808_7ebc138d",
+    "error_msg": "File name already exists. Original doc_id: doc-df9c9706d4cb2784f68be6d996502e1b, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-df9c9706d4cb2784f68be6d996502e1b",
+      "original_track_id": "insert_20260717_142855_7e75425d"
+    }
+  },
+  "dup-617ff6df943e5f4fe43f32a4ae983b62": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-974a7164e1ce6a62eb6d2226c124a1ee",
+    "content_length": 1903,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.735754+00:00",
+    "updated_at": "2026-07-17T08:38:08.735761+00:00",
+    "file_path": "肺部",
+    "track_id": "insert_20260717_163808_cecdd317",
+    "error_msg": "File name already exists. Original doc_id: doc-974a7164e1ce6a62eb6d2226c124a1ee, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-974a7164e1ce6a62eb6d2226c124a1ee",
+      "original_track_id": "insert_20260717_142857_604b8f1c"
+    }
+  },
+  "dup-ea8a75a0cb4ca21fd2e119a479c28573": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-73bd92f3f1bdf0397b4e9ddbdefb66db",
+    "content_length": 1325,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.741932+00:00",
+    "updated_at": "2026-07-17T08:38:08.741939+00:00",
+    "file_path": "发热",
+    "track_id": "insert_20260717_163808_97f57b66",
+    "error_msg": "File name already exists. Original doc_id: doc-73bd92f3f1bdf0397b4e9ddbdefb66db, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-73bd92f3f1bdf0397b4e9ddbdefb66db",
+      "original_track_id": "insert_20260717_142859_c767242d"
+    }
+  },
+  "dup-cf7c6330578e419aa24bcbac49ca3bac": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-65264c873eaf4a8a6489dc4944443dd7",
+    "content_length": 1328,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.748899+00:00",
+    "updated_at": "2026-07-17T08:38:08.748904+00:00",
+    "file_path": "咳嗽",
+    "track_id": "insert_20260717_163808_7ca0eda2",
+    "error_msg": "File name already exists. Original doc_id: doc-65264c873eaf4a8a6489dc4944443dd7, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-65264c873eaf4a8a6489dc4944443dd7",
+      "original_track_id": "insert_20260717_142901_72776c07"
+    }
+  },
+  "dup-6af71cd83dcab829c1f86370bc24a517": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-116a736879f818ef2c41e2559f7b0b24",
+    "content_length": 1341,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.754966+00:00",
+    "updated_at": "2026-07-17T08:38:08.754970+00:00",
+    "file_path": "胸痛",
+    "track_id": "insert_20260717_163808_94a126c4",
+    "error_msg": "File name already exists. Original doc_id: doc-116a736879f818ef2c41e2559f7b0b24, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-116a736879f818ef2c41e2559f7b0b24",
+      "original_track_id": "insert_20260717_142903_fbb5f617"
+    }
+  },
+  "dup-7447420da5bc83297b29a28a3790cb24": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-5f492e9b07e87ddac7d9214b434c061b",
+    "content_length": 3558,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-17T08:38:08.761247+00:00",
+    "updated_at": "2026-07-17T08:38:08.761254+00:00",
+    "file_path": "胸部CT",
+    "track_id": "insert_20260717_163808_f5dae56c",
+    "error_msg": "File name already exists. Original doc_id: doc-5f492e9b07e87ddac7d9214b434c061b, Status: DocStatus.PROCESSED",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-5f492e9b07e87ddac7d9214b434c061b",
+      "original_track_id": "insert_20260717_142905_17dd62b5"
+    }
+  },
+  "doc-07978586e47c8709a63e895fbf3c3c7d": {
+    "status": "processed",
+    "content_summary": "社区获得性肺炎（CAP）是指在医院外罹患的感染性肺实质炎症。常见病原体包括肺炎链球菌、流感嗜血杆菌、卡他莫拉菌、肺炎支原体、肺炎衣原体等。诊断标准：社区发病，发热大于38度，咳嗽咳痰，肺实变体征或湿啰音，白细胞升高或降低。治疗方面，门诊患者首选阿莫西林或多西环素，住院患者首选β-内酰胺类联合大环内酯类。抗菌药物分为非限制使用级、限制使用级和特殊使用级三级管理。",
+    "content_length": 181,
+    "created_at": "2026-07-28T09:21:54.196888+00:00",
+    "updated_at": "2026-07-28T09:22:48.914135+00:00",
+    "file_path": "benchmark",
+    "track_id": "insert_20260728_172154_1eb76dee",
+    "content_hash": "5e9b2ad40b537ed0dbf186b8bf278cc2",
+    "metadata": {
+      "parse_start_time": 1785230514,
+      "parse_stage_skipped": true,
+      "parse_format": "raw",
+      "parse_engine": "legacy",
+      "analyzing_start_time": 1785230514,
+      "analyzing_stage_skipped": true,
+      "process_start_time": 1785230514,
+      "process_end_time": 1785230568,
+      "chunk_method": "legacy_chunking_func",
+      "chunk_opts": "size=1200, split_only=False, overlap=100"
+    },
+    "chunks_count": 1,
+    "chunks_list": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ]
+  },
+  "dup-9fa3378f9801753bf2b4e90ddf850cae": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE:filename] Original document: doc-07978586e47c8709a63e895fbf3c3c7d",
+    "content_length": 181,
+    "chunks_count": 0,
+    "chunks_list": [],
+    "created_at": "2026-07-28T09:26:51.319703+00:00",
+    "updated_at": "2026-07-28T09:26:51.319711+00:00",
+    "file_path": "benchmark",
+    "track_id": "insert_20260728_172651_0d788a6f",
+    "error_msg": "File name already exists. Original doc_id: doc-07978586e47c8709a63e895fbf3c3c7d, Status: processed",
+    "metadata": {
+      "is_duplicate": true,
+      "duplicate_kind": "filename",
+      "original_doc_id": "doc-07978586e47c8709a63e895fbf3c3c7d",
+      "original_track_id": "insert_20260728_172154_1eb76dee"
+    }
+  }
+}

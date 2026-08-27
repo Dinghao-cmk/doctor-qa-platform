@@ -1,0 +1,2408 @@
+{
+  "generatedAt": "2026-08-05T01:19:02.060Z",
+  "summary": {
+    "total": 25,
+    "ok": 25,
+    "fail": 0,
+    "failDetails": [],
+    "noResult": 0,
+    "withSources": 25,
+    "noResultRate": 0,
+    "avgSources": 4.92,
+    "avgBooks": 2.92,
+    "avgDuration": 10135,
+    "avgAnswerLen": 340,
+    "refTotal": 67,
+    "refInvalid": 0,
+    "refFixed": 0,
+    "refRetried": 0,
+    "refCoverageAvg": 0.41,
+    "modelDist": {
+      "deepseek-v4-flash": 13,
+      "deepseek-reasoner": 12
+    },
+    "promptVersions": [
+      "v2"
+    ]
+  },
+  "results": [
+    {
+      "id": "q3",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "COPD",
+      "category": "diagnosis",
+      "question": "COPD的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 5921,
+      "answer": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%即可诊断。[参考3]\n\nGOLD分级（基于吸入支气管扩张剂后FEV1占预计值%）：\n- GOLD 1级：FEV1≥80%\n- GOLD 2级：FEV1 50%～79%\n- GOLD 3级：FEV1 30%～49%\n- GOLD 4级：FEV1<30%[参考3]\n\n临床提示：诊断COPD需结合症状、危险因素接触史，肺功能检查是确诊金标准。",
+      "sources": [
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "COPD的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 6,
+        "rerankedCount": 4,
+        "finalCount": 4,
+        "bookCount": 2,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 2,
+          "invalid": [],
+          "coverage": 0.25,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 5883,
+        "newSession": true
+      },
+      "sessionId": "2e243e2d"
+    },
+    {
+      "id": "q1",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "肺炎",
+      "category": "diagnosis",
+      "question": "肺炎的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 10364,
+      "answer": "社区获得性肺炎诊断标准（需结合临床）：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。[参考2] 影像学检查可见肺纹理增粗、斑片状浸润影、大片实变影等，胸部CT可更清晰显示病变范围。[参考5] 肺炎CT表现包括磨玻璃影、实变影、小叶间隔增厚、树芽征等。[参考4]\n\n重症肺炎诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。[参考1]\n\n**临床提示**：诊断肺炎时应结合临床表现、实验室及影像学证据综合判断，并评估是否达到重症标准，以便及时调整治疗策略。",
+      "sources": [
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10982,
+          "docId": 285,
+          "docTitle": "胸部CT",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/影像/胸部CT/",
+          "pageNo": null,
+          "content": "肺炎的CT表现：磨玻璃影、实变影、小叶间隔增厚、树芽征等。不同病原体肺炎的CT表现有一定特征性。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10003,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "肺炎的胸部X线检查可见肺纹理增粗、斑片状浸润影、大片实变影等。胸部CT可更清晰显示病变范围和性质。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "肺炎的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.8,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 10307,
+        "newSession": true
+      },
+      "sessionId": "94f38473"
+    },
+    {
+      "id": "q2",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "肺炎",
+      "category": "treatment",
+      "question": "肺炎的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 10584,
+      "answer": "肺炎的治疗原则：根据病原学及病情严重程度分层施治，首选经验性抗感染治疗，同时评估是否需住院或重症监护。[参考1][参考4]\n\n**分层/阶梯方案**  \n- 门诊轻症患者：首选阿莫西林或多西环素口服。[参考1]  \n- 住院患者：首选β-内酰胺类联合大环内酯类，或呼吸氟喹诺酮类单药治疗。[参考1]  \n- 重症肺炎：若符合主要标准（需机械通气或感染性休克）或次要标准（呼吸频率≥30次/分、氧合指数≤250、多肺叶浸润），应考虑ICU收治，经验性方案需覆盖重症病原体并联合用药。[参考4]\n\n**注意事项**  \n- 经验性治疗48-72小时后需评估疗效，根据病原学结果及影像学特征（如CT磨玻璃影、实变影等）调整目标治疗。[参考2]  \n- 治疗过程中应动态监测生命体征、氧合及感染指标，警惕病情恶化转为重症。\n\n临床提示：对住院肺炎患者，早期合理联合抗感染并识别重症预警指标，可显著改善预后。",
+      "sources": [
+        {
+          "id": 10004,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎经验性抗感染治疗：门诊患者首选阿莫西林或多西环素；住院患者首选β-内酰胺类联合大环内酯类或呼吸氟喹诺酮类。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10982,
+          "docId": 285,
+          "docTitle": "胸部CT",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/影像/胸部CT/",
+          "pageNo": null,
+          "content": "肺炎的CT表现：磨玻璃影、实变影、小叶间隔增厚、树芽征等。不同病原体肺炎的CT表现有一定特征性。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "肺炎的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 6,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 10551,
+        "newSession": true
+      },
+      "sessionId": "c4d417a0"
+    },
+    {
+      "id": "q5",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "支气管哮喘",
+      "category": "diagnosis",
+      "question": "支气管哮喘的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 6997,
+      "answer": "支气管哮喘的诊断依据包括：①具有可变气流受限的证据，如支气管舒张试验阳性、呼气峰流速（PEF）变异率>10%；②症状特征符合哮喘。[参考2] 哮喘的本质是慢性气道炎症，以气道高反应性和可逆性气流受限为主要特征。[参考1]\n\n临床提示：确诊哮喘需结合症状与客观气流受限证据，避免仅凭单次肺功能结果下诊断。",
+      "sources": [
+        {
+          "id": 10186,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "支气管哮喘是一种以慢性气道炎症为特征的异质性疾病，主要特征为气道高反应性和可逆性气流受限。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10182,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘的诊断依据：①可变气流受限的证据（支气管舒张试验阳性、PEF变异率>10%）；②症状特征符合哮喘。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10862,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "咳嗽的性质：干咳见于上呼吸道感染、胸膜炎、肺栓塞等。湿咳（有痰）见于肺炎、支气管扩张、肺脓肿等。犬吠样咳嗽见于喉炎。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "支气管哮喘的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 9,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 2,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 6996,
+        "newSession": true
+      },
+      "sessionId": "5ebfd75c"
+    },
+    {
+      "id": "q4",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "COPD",
+      "category": "treatment",
+      "question": "COPD的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 12800,
+      "answer": "COPD治疗分稳定期和急性加重期（AECOPD）两阶段管理：\n\n**一、稳定期治疗原则**  \n- 首要措施：戒烟 [参考2]  \n- 药物治疗：支气管扩张剂为基础，包括β2受体激动剂（如沙丁胺醇、沙美特罗）、抗胆碱能药物（如异丙托溴铵、噻托溴铵）；症状反复或急性加重频繁者可联合吸入糖皮质激素 [参考2]  \n- 阶梯调整：根据症状和急性加重风险逐步升级，优选吸入剂型，不推荐长期口服激素。\n\n**二、AECOPD治疗原则**  \n- 控制性氧疗：目标SpO2 88–92%，避免高浓度氧导致CO₂潴留 [参考1]  \n- 支气管扩张剂：短效β2受体激动剂联合抗胆碱能药物雾化吸入 [参考1]  \n- 全身糖皮质激素：短期使用（如泼尼松），减轻轻度气道炎症 [参考1]  \n- 抗生素：仅在存在感染征象（痰量增多、脓性痰、发热等）时使用 [参考1][参考3]  \n- 严重呼吸衰竭者：尽早无创通气，无效或禁忌时行有创机械通气 [参考1]\n\n**注意事项**  \n- 感染是AECOPD最常见诱因，需动态评估病原学并合理选药 [参考3]  \n- 氧疗期间密切监测血气，警惕CO₂潴留。\n\n**临床提示**：稳定期教育中应强调吸入技术规范性及长期随访，减少急性加重风险。",
+      "sources": [
+        {
+          "id": 10106,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "AECOPD的治疗：控制性氧疗（目标SpO2 88-92%）、支气管扩张剂、全身糖皮质激素、必要时抗生素治疗。严重者可需无创或有创机械通气。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10104,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD稳定期治疗：戒烟是首要措施。药物治疗包括支气管扩张剂（β2受体激动剂、抗胆碱能药物）、吸入糖皮质激素等。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10105,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD急性加重（AECOPD）最常见原因是呼吸道感染，表现为呼吸困难加重、咳嗽加剧、痰量增多或呈脓性。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11044,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的治疗：首选腹腔镜阑尾切除术。发病72小时内手术。对于阑尾周围脓肿，先行保守治疗（抗感染），3个月后择期手术。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "COPD的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 8,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 9,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 12798,
+        "newSession": true
+      },
+      "sessionId": "75688d0d"
+    },
+    {
+      "id": "q6",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "支气管哮喘",
+      "category": "treatment",
+      "question": "支气管哮喘的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 9923,
+      "answer": "知识库未收录该内容。基于临床常识谨慎回答，仅供参考。支气管哮喘治疗原则为“长期规范、阶梯调整、控制炎症、缓解症状”。[参考1] 治疗方案分阶梯：①控制药物（每日使用）：吸入性糖皮质激素（如布地奈德）为基石，联合长效β2受体激动剂（如福莫特罗/沙美特罗）；②缓解药物（按需使用）：短效β2受体激动剂（如沙丁胺醇）。起始方案依据症状频率、急性发作风险选择阶梯级别，每2-4周评估，逐步升级或降级，最低有效剂量维持。注意事项：规律随访肺功能及症状控制评估，吸入技术培训，识别并规避诱因，急性发作时及时加用全身激素及氧疗，危重者需机械通气。[参考4] 临床提示：哮喘治疗需个体化，避免长期依赖短效β2受体激动剂单药治疗。",
+      "sources": [
+        {
+          "id": 10186,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "支气管哮喘是一种以慢性气道炎症为特征的异质性疾病，主要特征为气道高反应性和可逆性气流受限。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10182,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘的诊断依据：①可变气流受限的证据（支气管舒张试验阳性、PEF变异率>10%）；②症状特征符合哮喘。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10106,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "AECOPD的治疗：控制性氧疗（目标SpO2 88-92%）、支气管扩张剂、全身糖皮质激素、必要时抗生素治疗。严重者可需无创或有创机械通气。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11044,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的治疗：首选腹腔镜阑尾切除术。发病72小时内手术。对于阑尾周围脓肿，先行保守治疗（抗感染），3个月后择期手术。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "支气管哮喘的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 2,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 9921,
+        "newSession": true
+      },
+      "sessionId": "0748e9b3"
+    },
+    {
+      "id": "q8",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "急性阑尾炎",
+      "category": "treatment",
+      "question": "急性阑尾炎的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 6124,
+      "answer": "急性阑尾炎的治疗原则：首选腹腔镜阑尾切除术，发病72小时内手术。[参考1]\n\n- **分层方案**：单纯性/化脓性阑尾炎尽早手术；阑尾周围脓肿先行保守治疗（抗感染），3个月后择期手术。[参考1]\n- **注意事项**：诊断明确后应尽快手术，避免延误导致穿孔或腹膜炎；保守治疗期间需密切观察病情变化。[参考1]\n\n临床提示：术后注意预防切口感染及肠粘连。",
+      "sources": [
+        {
+          "id": 11044,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的治疗：首选腹腔镜阑尾切除术。发病72小时内手术。对于阑尾周围脓肿，先行保守治疗（抗感染），3个月后择期手术。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11042,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的实验室检查：白细胞升高（10-20×10^9/L），中性粒细胞比例升高。CRP升高。尿常规一般正常（排除泌尿系疾病）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11041,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的体征：麦氏点压痛（右下腹）、反跳痛、肌紧张。腰大肌试验阳性提示盲肠后位阑尾，闭孔肌试验阳性提示盆腔位阑尾。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10345,
+          "docId": 221,
+          "docTitle": "I50 心力衰竭",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/心血管/I50/",
+          "pageNo": null,
+          "content": "急性心衰的治疗：坐位、吸氧、利尿（呋塞米）、血管扩张剂（硝普钠/硝酸甘油）、必要时正性肌力药物（多巴酚丁胺）。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "急性阑尾炎的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 7,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 6123,
+        "newSession": true
+      },
+      "sessionId": "27197bcd"
+    },
+    {
+      "id": "q9",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "腹股沟疝",
+      "category": "diagnosis",
+      "question": "腹股沟疝的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 5907,
+      "answer": "知识库未收录该内容。基于临床常识，腹股沟疝的诊断主要依靠体格检查和病史，通常表现腹股沟区可复性肿块，站立或腹压增高时出现，平卧后缩小或消失；可伴坠胀感。若发生嵌顿或绞窄，则出现疼痛、肠梗阻甚至腹膜炎体征。影像学如超声或CT可辅助确认，尤其在隐匿性或复杂病例中。以上仅供参考，建议结合患者症状及体征综合判断。临床提示：若肿块不能回纳且伴剧烈腹痛，应警惕嵌顿疝，需急诊处理。",
+      "sources": [
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "腹股沟疝的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 6,
+        "rerankedCount": 4,
+        "finalCount": 4,
+        "bookCount": 2,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 0,
+          "invalid": [],
+          "coverage": 0,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 5906,
+        "newSession": true
+      },
+      "sessionId": "9dcea33a"
+    },
+    {
+      "id": "q7",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "急性阑尾炎",
+      "category": "diagnosis",
+      "question": "急性阑尾炎的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 10150,
+      "answer": "知识库未收录急性阑尾炎的完整诊断标准，以下根据参考资料结合临床常识归纳，仅供参考：\n\n1. **症状**：典型为转移性右下腹痛（临床常识，参考资料未直接提及）。\n2. **体征**：右下腹麦氏点压痛、反跳痛、肌紧张；腰大肌试验阳性提示盲肠后位阑尾，闭孔肌试验阳性提示盆腔位阑尾。[参考3]\n3. **实验室检查**：白细胞升高（10–20×10^9/L），中性粒细胞比例升高，CRP升高；尿常规一般正常，用于排除泌尿系疾病。[参考2]\n4. **影像学检查**：腹部超声示阑尾肿大（直径>6mm）；腹部CT诊断准确率更高，尤其对不典型病例。[参考1]\n\n临床提示：诊断需结合症状、体征及实验室检查综合判断，不典型者建议行腹部CT明确。",
+      "sources": [
+        {
+          "id": 11043,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的影像学检查：腹部超声可显示肿大的阑尾（直径>6mm）。腹部CT诊断准确率更高，尤其对不典型病例。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11042,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的实验室检查：白细胞升高（10-20×10^9/L），中性粒细胞比例升高。CRP升高。尿常规一般正常（排除泌尿系疾病）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11041,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的体征：麦氏点压痛（右下腹）、反跳痛、肌紧张。腰大肌试验阳性提示盲肠后位阑尾，闭孔肌试验阳性提示盆腔位阑尾。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "急性阑尾炎的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 10,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 10149,
+        "newSession": true
+      },
+      "sessionId": "d24c1bbe"
+    },
+    {
+      "id": "q11",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "高血压诊断标准",
+      "category": "diagnosis",
+      "question": "高血压诊断标准有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 6249,
+      "answer": "高血压诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。[参考1]\n\n临床提示：需排除继发性高血压及白大衣高血压，并关注家庭血压监测。",
+      "sources": [
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10865,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "胸痛的鉴别诊断要点：发病年龄、疼痛部位、性质、持续时间、诱因、缓解因素、伴随症状。高危胸痛包括急性冠脉综合征、肺栓塞、主动脉夹层、张力性气胸。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "高血压诊断标准有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 13,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 6248,
+        "newSession": true
+      },
+      "sessionId": "66071e4c"
+    },
+    {
+      "id": "q10",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "腹股沟疝",
+      "category": "treatment",
+      "question": "腹股沟疝的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 7965,
+      "answer": "知识库未收录该内容。以下基于临床常识作答，仅供参考：  \n**治疗原则**：腹股沟疝一经诊断，除特殊情况外，原则上应择期手术修补，以消除疝块、预防嵌顿和绞窄。  \n**分层/阶梯方案**：  \n- 成人无症状或症状轻微者：可观察等待，但嵌顿风险存在，需告知患者定期随访；有症状或疝块增大者，建议手术。  \n- 成人手术方式：首选腹腔镜疝修补术（如TAPP/TEP）或开放无张力疝修补术（使用补片），直接缝合修补已少用。  \n- 嵌顿或绞窄性疝：需急诊手术，若肠管坏死需行肠切除并视污染情况决定是否一期补片修补。  \n- 婴幼儿：多采用单纯疝囊高位结扎术，因腹股沟管尚未发育完全。  \n**注意事项**：合并严重心肺疾病等手术禁忌者，可使用疝带等保守措施，但无法根治；术后应避免短期内重体力劳动和慢性咳嗽、便秘等腹压增高因素。  \n**临床提示**：腹股沟疝若突然不能回纳且伴剧烈腹痛、呕吐，警惕嵌顿绞窄，需立即急诊处理。",
+      "sources": [
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10184,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘急性发作的治疗：重复吸入SABA、早期全身使用糖皮质激素、氧疗维持SpO2 93-95%。严重发作需静脉用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10106,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "AECOPD的治疗：控制性氧疗（目标SpO2 88-92%）、支气管扩张剂、全身糖皮质激素、必要时抗生素治疗。严重者可需无创或有创机械通气。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10345,
+          "docId": 221,
+          "docTitle": "I50 心力衰竭",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/心血管/I50/",
+          "pageNo": null,
+          "content": "急性心衰的治疗：坐位、吸氧、利尿（呋塞米）、血管扩张剂（硝普钠/硝酸甘油）、必要时正性肌力药物（多巴酚丁胺）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11044,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的治疗：首选腹腔镜阑尾切除术。发病72小时内手术。对于阑尾周围脓肿，先行保守治疗（抗感染），3个月后择期手术。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "腹股沟疝的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 8,
+        "rerankedCount": 5,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 0,
+          "invalid": [],
+          "coverage": 0,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 7965,
+        "newSession": true
+      },
+      "sessionId": "eca9b748"
+    },
+    {
+      "id": "q14",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "非限制级抗菌药物",
+      "category": "diagnosis",
+      "question": "非限制级抗菌药物的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 9365,
+      "answer": "知识库未收录该内容。抗菌药物分级管理中的“非限制级”并无“诊断标准”，其属于药物分类管理范畴，判断依据是药物安全性、耐药性及价格，而非疾病诊断。[参考1] 根据参考资料，非限制级抗菌药物指“经长期临床应用证明安全有效、价格较低的抗菌药物”，如青霉素、阿莫西林、头孢氨苄、头孢唑林等，各级医师均可开具处方。[参考1]\n\n如需判断是否使用该类药物，通常依据感染性疾病的诊疗指南，例如社区获得性肺炎需符合相应临床诊断标准。[参考5] 但这一标准与“非限制级抗菌药物”本身无关。\n\n临床提示：抗菌药物应依据病原学及药敏结果、感染部位和严重程度选择，非限制级≠无条件首选，仍需遵循抗菌药物临床应用指导原则。",
+      "sources": [
+        {
+          "id": 10746,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "非限制级抗菌药物：经长期临床应用证明安全有效、价格较低的抗菌药物，如青霉素、阿莫西林、头孢氨苄、头孢唑林等。各级医师均可开具处方。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10741,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "非限制级抗菌药物的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 9363,
+        "newSession": true
+      },
+      "sessionId": "d931f9b2"
+    },
+    {
+      "id": "q13",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "联合用药方案",
+      "category": "treatment",
+      "question": "联合用药方案有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 13002,
+      "answer": "联合用药方案需遵循“明确指征、机制互补、疗程充分、个体化调整”的原则。根据现有资料，不同疾病的联合用药要点如下：\n\n**一、治疗原则**  \n所有联合用药均以生活方式干预为基础，起始治疗宜小剂量，优选长效制剂，并强调联合用药的协同作用。[参考1]\n\n**二、分层/阶梯方案**  \n1. **高血压**：药物治疗从小剂量开始，优选长效制剂，联合用药是重要策略（具体药物组合资料未详述）。[参考1]  \n2. **胃溃疡Hp根除**：推荐铋剂四联方案，即PPI + 铋剂 + 两种抗菌药物，疗程14天。常用抗菌药物组合为：阿莫西林+克拉霉素，或阿莫西林+左氧氟沙星。[参考4]  \n3. **社区获得性肺炎**：  \n   - 非ICU住院患者：首选β-内酰胺类+大环内酯类，或呼吸氟喹诺酮类单药。[参考5]  \n   - ICU患者：首选β-内酰胺类+呼吸氟喹诺酮类，或β-内酰胺类+大环内酯类。[参考5]\n\n**三、注意事项**  \n- 联合用药需关注药物相互作用、不良反应叠加及耐药风险，尤其是抗菌药物疗程应足量足疗程，避免随意更换或停药。  \n- 降压联合方案需根据患者血压水平、合并症及耐受性调整，起始小剂量，逐步滴定。[参考1]\n\n临床提示：联合用药时需动态评估疗效与安全性，及时根据病原学或血压监测结果调整方案。",
+      "sources": [
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10184,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘急性发作的治疗：重复吸入SABA、早期全身使用糖皮质激素、氧疗维持SpO2 93-95%。严重发作需静脉用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10247,
+          "docId": 220,
+          "docTitle": "I25 冠心病",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/心血管/I25/",
+          "pageNo": null,
+          "content": "冠状动脉造影是诊断冠心病的金标准，可明确病变部位、范围和程度，并指导治疗方案选择（药物/PCI/CABG）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10423,
+          "docId": 230,
+          "docTitle": "K25 胃溃疡",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/消化/K25/",
+          "pageNo": null,
+          "content": "Hp根除治疗推荐铋剂四联方案：PPI + 铋剂 + 两种抗菌药物，疗程14天。常用抗菌药物组合：阿莫西林+克拉霉素、阿莫西林+左氧氟沙星。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10801,
+          "docId": 273,
+          "docTitle": "肺部感染经验用药",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/经验/肺部/",
+          "pageNo": null,
+          "content": "社区获得性肺炎住院患者经验用药：非ICU患者首选β-内酰胺类+大环内酯类或呼吸氟喹诺酮类单药。ICU患者首选β-内酰胺类+呼吸氟喹诺酮类或+大环内酯类。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "联合用药方案有哪些要点？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 8,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 6,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 13001,
+        "newSession": true
+      },
+      "sessionId": "c2bc55c0"
+    },
+    {
+      "id": "q12",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "降压药物选择",
+      "category": "treatment",
+      "question": "降压药物选择有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 18266,
+      "answer": "知识库未收录各降压药物的具体适应症、禁忌症及常规剂量细节，以下结合参考资料及相关临床常识谨慎回答，仅供参考。\n\n1. **药物类别**：常用降压药包括钙通道阻滞剂（CCB）、血管紧张素转换酶抑制剂（ACEI）、血管紧张素受体拮抗剂（ARB）、利尿剂和β受体阻滞剂，需根据合并症个体化选择。[参考1][参考3]\n\n2. **治疗原则**：生活方式干预（限盐、减重、运动、戒烟限酒）是基础；药物治疗从小剂量开始，优选长效制剂，必要时联合用药。[参考5]\n\n3. **特殊人群禁忌**：妊娠期高血压可选甲基多巴、拉贝洛尔、硝苯地平，但ACEI/ARB妊娠期禁用。[参考2]\n\n4. **常见选择思路（常识性补充，仅供参考）**：\n   - 合并糖尿病肾病或心衰：优先考虑ACEI/ARB；\n   - 合并冠心病或快速性心律失常：优先考虑β受体阻滞剂；\n   - 老年单纯收缩期高血压：可选用CCB或利尿剂；\n   - 合并痛风者慎用噻嗪类利尿剂；\n   - 双侧肾动脉狭窄者禁用ACEI/ARB。\n   - 常规剂量需个体化调整，例如氨氯地平5-10mg每日一次、贝那普利10-20mg每日一次等，但具体应由临床医师根据血压水平及耐受性决定。\n\n**临床提示**：降压药物选择的核心是“个体化”，应综合合并症、靶器官损害、年龄及耐受性，并定期监测血压和不良反应。",
+      "sources": [
+        {
+          "id": 18,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "常用降压药物：ACEI、ARB、CCB、利尿剂、β受体阻滞剂五大类，根据合并症个体化选择。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11107,
+          "docId": 222,
+          "docTitle": "I10 高血压",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/心血管/I10/",
+          "pageNo": null,
+          "content": "妊娠期高血压疾病：包括妊娠期高血压、子痫前期、子痫。治疗药物选择甲基多巴、拉贝洛尔、硝苯地平。ACEI/ARB妊娠期禁用。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10668,
+          "docId": 261,
+          "docTitle": "降压药物选择",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/药物/选择/",
+          "pageNo": null,
+          "content": "常用降压药物包括五大类：钙通道阻滞剂（CCB）、血管紧张素转换酶抑制剂（ACEI）、血管紧张素受体拮抗剂（ARB）、利尿剂和β受体阻滞剂。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10588,
+          "docId": 260,
+          "docTitle": "高血压诊断标准",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/诊断/标准/",
+          "pageNo": null,
+          "content": "高血压定义为：在未使用降压药物的情况下，非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "降压药物选择有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 18,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.8,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 18264,
+        "newSession": true
+      },
+      "sessionId": "e01e3dec"
+    },
+    {
+      "id": "q15",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "非限制级抗菌药物",
+      "category": "treatment",
+      "question": "非限制级抗菌药物的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 10136,
+      "answer": "知识库未收录该内容，以下基于临床常识谨慎回答，仅供参考。\n\n非限制级抗菌药物的治疗原则：严格把握适应证，仅用于细菌感染，避免病毒性感染或不明原因发热时滥用；根据感染部位、病原学及药敏结果选药，优先选用非限制级药物；剂量按体重或肝肾功能调整，疗程宜短不宜长，一般至症状体征改善后继续2-3天（特殊感染除外）。\n\n分层/阶梯方案：经验性治疗可选用非限制级药物（如青霉素、阿莫西林、头孢唑林）[参考1]；若疗效不佳或病原菌耐药，再升级为限制级药物（如头孢呋辛、头孢曲松、左氧氟沙星）[参考2]，需主治医师以上审批。特殊感染或重症才考虑特殊级（如美罗培南、万古霉素）[参考4]。\n\n注意事项：使用前询问过敏史（尤其青霉素类）；避免无指征联合使用；注意观察不良反应及二重感染；疗程结束后及时停药或降阶梯。\n\n临床提示：非限制级≠可以随意用，仍需遵循“能窄谱不广谱、能单药不联合”的基本原则。",
+      "sources": [
+        {
+          "id": 10746,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "非限制级抗菌药物：经长期临床应用证明安全有效、价格较低的抗菌药物，如青霉素、阿莫西林、头孢氨苄、头孢唑林等。各级医师均可开具处方。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10741,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10423,
+          "docId": 230,
+          "docTitle": "K25 胃溃疡",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/消化/K25/",
+          "pageNo": null,
+          "content": "Hp根除治疗推荐铋剂四联方案：PPI + 铋剂 + 两种抗菌药物，疗程14天。常用抗菌药物组合：阿莫西林+克拉霉素、阿莫西林+左氧氟沙星。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10742,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "特殊级抗菌药物：不良反应大、不宜随意使用或易产生耐药的抗菌药物，如美罗培南、亚胺培南、万古霉素、利奈唑胺等。需高级职称医师审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "非限制级抗菌药物的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 10134,
+        "newSession": true
+      },
+      "sessionId": "02fc6ecf"
+    },
+    {
+      "id": "q16",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "限制级抗菌药物",
+      "category": "diagnosis",
+      "question": "限制级抗菌药物的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 7981,
+      "answer": "知识库未收录该内容；抗菌药物本身无“诊断标准”，其使用属于分级管理。根据参考资料，限制级抗菌药物是指经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等，需主治医师以上审批后方可使用。[参考2] 与诊断相关的是感染性疾病（如肺炎）的诊断标准，而非抗菌药物分级标准。[参考3][参考5] 若需判断是否使用限制级抗菌药物，应依据感染严重程度及病原学结果，由主治医师及以上决定。仅供参考。\n\n临床提示：抗菌药物使用应结合感染诊断、病原检查及当地耐药监测数据，严格遵循分级管理原则。",
+      "sources": [
+        {
+          "id": 10746,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "非限制级抗菌药物：经长期临床应用证明安全有效、价格较低的抗菌药物，如青霉素、阿莫西林、头孢氨苄、头孢唑林等。各级医师均可开具处方。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10741,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "限制级抗菌药物的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 7979,
+        "newSession": true
+      },
+      "sessionId": "be9da1b8"
+    },
+    {
+      "id": "q17",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "限制级抗菌药物",
+      "category": "treatment",
+      "question": "限制级抗菌药物的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11152,
+      "answer": "知识库未收录该内容，以下基于临床常识谨慎回答，仅供参考。\n\n限制级抗菌药物的治疗原则：\n1. **严格掌握适应证**：仅用于敏感菌感染或经病原学检查确认的感染，避免无指征使用。\n2. **分级管理**：需由主治及以上医师审批后方可使用，并记录用药理由。[参考2]\n3. **经验与目标治疗结合**：初始可经验性选用，但应及时送检病原学标本，根据药敏结果调整为目标治疗。\n4. **优化给药方案**：按药物PK/PD特点确定剂量、给药间隔及疗程，避免长期使用；尽量选择窄谱、低耐药倾向的药物。\n5. **监测与评估**：用药期间密切观察疗效和不良反应，及时降阶梯或停药。\n\n临床提示：限制级抗菌药物因耐药性较高或价格较高，应严格限定使用范围，并加强耐药监测。[参考2]",
+      "sources": [
+        {
+          "id": 10746,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "非限制级抗菌药物：经长期临床应用证明安全有效、价格较低的抗菌药物，如青霉素、阿莫西林、头孢氨苄、头孢唑林等。各级医师均可开具处方。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10741,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10742,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "特殊级抗菌药物：不良反应大、不宜随意使用或易产生耐药的抗菌药物，如美罗培南、亚胺培南、万古霉素、利奈唑胺等。需高级职称医师审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10423,
+          "docId": 230,
+          "docTitle": "K25 胃溃疡",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/消化/K25/",
+          "pageNo": null,
+          "content": "Hp根除治疗推荐铋剂四联方案：PPI + 铋剂 + 两种抗菌药物，疗程14天。常用抗菌药物组合：阿莫西林+克拉霉素、阿莫西林+左氧氟沙星。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "限制级抗菌药物的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 2,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 11151,
+        "newSession": true
+      },
+      "sessionId": "42bb140b"
+    },
+    {
+      "id": "q18",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "特殊级抗菌药物",
+      "category": "diagnosis",
+      "question": "特殊级抗菌药物的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 9468,
+      "answer": "知识库未收录该内容。特殊级抗菌药物属于抗菌药物分级管理中的类别，并非疾病诊断，因此无“诊断标准”一说。临床使用特殊级抗菌药物需满足以下条件（仅供参考）：\n\n- 适应证：用于敏感细菌所致的重症感染，或耐药菌（如产ESBL肠杆菌、MRSA、铜绿假单胞菌、碳青霉烯耐药菌等）感染；\n- 病原学依据：尽可能在用药前留取培养及药敏试验，明确或高度怀疑需覆盖耐药菌；\n- 审批要求：需具有高级职称医师审批后方可开具，如美罗培南、亚胺培南、万古霉素、利奈唑胺等。[参考1]\n\n临床提示：特殊级抗菌药物应严格避免经验性滥用，用药后需根据药敏结果及时降阶梯或停用。",
+      "sources": [
+        {
+          "id": 10742,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "特殊级抗菌药物：不良反应大、不宜随意使用或易产生耐药的抗菌药物，如美罗培南、亚胺培南、万古霉素、利奈唑胺等。需高级职称医师审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10741,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "特殊级抗菌药物的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 9467,
+        "newSession": true
+      },
+      "sessionId": "0e8bf536"
+    },
+    {
+      "id": "q19",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "特殊级抗菌药物",
+      "category": "treatment",
+      "question": "特殊级抗菌药物的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11382,
+      "answer": "知识库未收录该内容。根据临床常识，特殊级抗菌药物治疗原则如下（仅供参考）：\n\n**治疗原则**：严格掌握适应证，用于耐药菌感染或重症感染；病原学确诊后尽早目标治疗；实行会诊与审批制度，经验性用药需高级职称医师审批。[参考1]\n\n**分层/阶梯方案**：一般先选用非限制级或限制级药物，疗效不佳或病原学证实耐药时，再升级为特殊级。特殊级药物如美罗培南、万古霉素等，不作为首选。[参考1]\n\n**注意事项**：用药前送检微生物标本；根据药敏结果降阶梯；疗程尽量短；监测不良反应与耐药性；需高级职称医师审批后使用。[参考1]\n\n临床提示：特殊级抗菌药物使用后48-72小时应评估疗效，及时调整或降级。",
+      "sources": [
+        {
+          "id": 10742,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "特殊级抗菌药物：不良反应大、不宜随意使用或易产生耐药的抗菌药物，如美罗培南、亚胺培南、万古霉素、利奈唑胺等。需高级职称医师审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10746,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "非限制级抗菌药物：经长期临床应用证明安全有效、价格较低的抗菌药物，如青霉素、阿莫西林、头孢氨苄、头孢唑林等。各级医师均可开具处方。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10741,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "限制级抗菌药物：经长期临床应用证明安全有效，但耐药性较高或价格较高的抗菌药物，如头孢呋辛、头孢曲松、阿奇霉素、左氧氟沙星等。需主治医师以上审批。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10423,
+          "docId": 230,
+          "docTitle": "K25 胃溃疡",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/消化/K25/",
+          "pageNo": null,
+          "content": "Hp根除治疗推荐铋剂四联方案：PPI + 铋剂 + 两种抗菌药物，疗程14天。常用抗菌药物组合：阿莫西林+克拉霉素、阿莫西林+左氧氟沙星。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "特殊级抗菌药物的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 11382,
+        "newSession": true
+      },
+      "sessionId": "f31f26a3"
+    },
+    {
+      "id": "q20",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "发热",
+      "category": "diagnosis",
+      "question": "发热的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11397,
+      "answer": "知识库未明确单列“发热诊断标准”，但根据发热分度可判断：以腋温为例，体温≥37.3℃即为发热。[参考5] 具体分度如下：  \n- 低热：37.3～38℃  \n- 中等度热：38.1～39℃  \n- 高热：39.1～41℃  \n- 超高热：>41℃  \n\n临床提示：不同测量部位（口温、肛温、腋温）正常值略有差异，诊断时需结合测量方式及患者基础体温综合判断。",
+      "sources": [
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10861,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "发热的热型：稽留热（体温持续39-40℃，24h波动<1℃）见于大叶性肺炎；弛张热（24h波动>2℃）见于败血症；间歇热见于疟疾。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10866,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "发热的分度：低热37.3-38℃，中等度热38.1-39℃，高热39.1-41℃，超高热>41℃。发热伴寒战常见于大叶性肺炎、败血症等。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "发热的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 9,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 11395,
+        "newSession": true
+      },
+      "sessionId": "51d02ee6"
+    },
+    {
+      "id": "q21",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "发热",
+      "category": "treatment",
+      "question": "发热的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11393,
+      "answer": "知识库未收录该内容，以下基于临床常识谨慎回答，仅供参考。\n\n**治疗原则**：发热本身是防御反应，治疗核心是处理病因，而非单纯退热。对症降温适用于高热（≥39℃）或患者明显不适时；低热以观察和病因治疗为主。\n\n**分层/阶梯方案**：\n- 物理降温：温水擦浴、冰袋冷敷（忌用酒精擦浴），适用于所有发热患者。\n- 药物退热：首选对乙酰氨基酚或布洛芬（非甾体抗炎药），按说明书剂量使用，间隔4-6小时，每日不超过4次。\n- 病因治疗：疑细菌感染（如大叶性肺炎、败血症）时经验性使用抗生素；病毒感染以支持治疗为主。\n- 补液与营养：维持水电解质平衡，鼓励饮水，必要时静脉补液。\n\n**注意事项**：\n- 避免滥用糖皮质激素退热，以免掩盖病情。\n- 退热药不推荐联合使用或交替使用，防止肝损伤或肾损伤。\n- 超高热（>41℃）需紧急处理，警惕中枢性发热或中暑等危重病因。\n- 关注热型变化，如稽留热、弛张热、间歇热对鉴别诊断有重要价值。[参考1]\n\n**临床提示**：退热后症状反复或伴寒战、精神状态差，应尽快明确感染灶并调整抗感染方案。",
+      "sources": [
+        {
+          "id": 10861,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "发热的热型：稽留热（体温持续39-40℃，24h波动<1℃）见于大叶性肺炎；弛张热（24h波动>2℃）见于败血症；间歇热见于疟疾。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10866,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "发热的分度：低热37.3-38℃，中等度热38.1-39℃，高热39.1-41℃，超高热>41℃。发热伴寒战常见于大叶性肺炎、败血症等。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11046,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎是最常见的急腹症，典型表现为转移性右下腹痛（先脐周后转右下腹），伴恶心、呕吐、发热。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "发热的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 4,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 11391,
+        "newSession": true
+      },
+      "sessionId": "43978693"
+    },
+    {
+      "id": "q22",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "咳嗽与咳痰",
+      "category": "diagnosis",
+      "question": "咳嗽与咳痰的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 9382,
+      "answer": "知识库未收录该内容。基于临床常识，咳嗽与咳痰通常依据病程和临床表现判断：急性咳嗽<3周，亚急性3-8周，慢性>8周；咳痰需评估痰量、性状（黏液性、脓性、血性等）。具体诊断需结合病因（感染、哮喘、COPD等）进一步检查。仅供参考。\n\n临床提示：若咳嗽伴发热、呼吸困难或脓痰，需警惕肺炎，可参考社区获得性肺炎诊断标准。[参考1]",
+      "sources": [
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11043,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的影像学检查：腹部超声可显示肿大的阑尾（直径>6mm）。腹部CT诊断准确率更高，尤其对不典型病例。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "咳嗽与咳痰的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 8,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 9381,
+        "newSession": true
+      },
+      "sessionId": "c1f09234"
+    },
+    {
+      "id": "q23",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "咳嗽与咳痰",
+      "category": "treatment",
+      "question": "咳嗽与咳痰的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 13259,
+      "answer": "知识库未收录该内容，以下基于临床常识谨慎回答，仅供参考。\n\n咳嗽与咳痰的治疗原则：**明确病因、对症处理、标本兼治**。首要步骤是评估病因（感染、过敏、气道疾病、药物等），针对原发病治疗；同时缓解咳嗽、促进排痰。\n\n**分层/阶梯方案**：\n1. **轻度、干咳为主**：以镇咳为主，可选用中枢性镇咳药（如右美沙芬）或外周性镇咳药。避免用于痰多者。\n2. **痰多、湿咳**：以祛痰为主，促进痰液排出，可选用黏液溶解剂（如氨溴索、乙酰半胱氨酸）或祛痰药（如愈创木酚甘油醚）。慎用强力镇咳药，以免痰液潴留。\n3. **合并感染**：若脓痰、发热等提示细菌感染，加用抗生素（如β-内酰胺类、呼吸喹诺酮类）。\n4. **慢性气道疾病（如COPD、哮喘）**：参照相应疾病急性加重治疗方案，如支气管扩张剂、糖皮质激素、控制性氧疗等（可参见参考2、参考4相关内容，但具体用药需结合专科指南）。\n\n**注意事项**：\n- 镇咳与祛痰需平衡，痰多时禁用强镇咳药。\n- 注意鉴别咳嗽变异性哮喘、胃食管反流、心功能不全等非呼吸系统病因。\n- 持续咳嗽超过3周或伴咯血、胸痛、消瘦等警示症状，需进一步检查。\n\n**临床提示**：咳嗽是保护性反射，治疗核心是病因管理，而非单纯抑制症状。",
+      "sources": [
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10106,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "AECOPD的治疗：控制性氧疗（目标SpO2 88-92%）、支气管扩张剂、全身糖皮质激素、必要时抗生素治疗。严重者可需无创或有创机械通气。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10102,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的症状包括慢性咳嗽、咳痰、气短或呼吸困难。呼吸困难是COPD的标志性症状，早期于劳力时出现，后逐渐加重。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10184,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘急性发作的治疗：重复吸入SABA、早期全身使用糖皮质激素、氧疗维持SpO2 93-95%。严重发作需静脉用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11044,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的治疗：首选腹腔镜阑尾切除术。发病72小时内手术。对于阑尾周围脓肿，先行保守治疗（抗感染），3个月后择期手术。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "咳嗽与咳痰的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 10,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 0,
+          "invalid": [],
+          "coverage": 0,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 13259,
+        "newSession": true
+      },
+      "sessionId": "11bc883f"
+    },
+    {
+      "id": "q24",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "胸痛",
+      "category": "diagnosis",
+      "question": "胸痛的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11905,
+      "answer": "知识库未收录该内容。胸痛本身是症状而非独立疾病，无统一的量化诊断标准，临床诊断以病因鉴别为导向。基于临床常识，胸痛的评估标准通常包括以下要点（仅供参考，非指南原文）：\n\n1. **高危胸痛快速识别**：需优先排除急性冠脉综合征、肺栓塞、主动脉夹层、张力性气胸。存在以下任一表现应警惕：①持续胸痛伴大汗、濒死感；②血流动力学不稳定（血压下降、休克）；③血氧饱和度降低或呼吸困难；④双侧脉搏/血压不对称。 [参考4]\n\n2. **病因诊断依据**（结合疼痛性质与伴随特征）：\n   - 压榨性胸痛，活动后加重、含服硝酸甘油可缓解，提示心绞痛/心肌梗死；需心电图、心肌酶学检查确认。 [参考5]\n   - 撕裂样剧烈胸痛，向背部放射，伴血压差异，提示主动脉夹层；需CT血管造影确诊。 [参考5]\n   - 胸膜炎性刺痛，与呼吸相关，伴发热、咳嗽，提示肺炎/胸膜炎；需胸片/CT及感染指标支持。 [参考5][参考1]\n   - 烧灼样胸痛，与进食相关，平卧加重，提示胃食管反流；需胃镜或试验性抑酸治疗。 [参考5]\n\n3. **常规检查流程**：所有急性胸痛患者应尽快完成心电图、心肌损伤标志物（肌钙蛋白）、胸部X线/CT、D-二聚体（疑肺栓塞时）等检查，结合病史和体征综合判断。\n\n临床提示：胸痛急诊处理遵循“先排除致命性疾病，再考虑其他病因”原则，切忌仅凭疼痛性质延误诊断。",
+      "sources": [
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 16,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "高血压的诊断标准：非同日3次测量诊室血压，收缩压≥140mmHg和/或舒张压≥90mmHg，可诊断为高血压。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10865,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "胸痛的鉴别诊断要点：发病年龄、疼痛部位、性质、持续时间、诱因、缓解因素、伴随症状。高危胸痛包括急性冠脉综合征、肺栓塞、主动脉夹层、张力性气胸。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10864,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "胸痛的性质：压榨性疼痛见于心绞痛、心肌梗死；刺痛见于胸膜炎、带状疱疹；撕裂样疼痛见于主动脉夹层；烧灼样疼痛见于胃食管反流。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "胸痛的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v2",
+        "searchCount": 7,
+        "rerankedCount": 6,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 6,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 11903,
+        "newSession": true
+      },
+      "sessionId": "f646db0a"
+    },
+    {
+      "id": "q25",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "胸痛",
+      "category": "treatment",
+      "question": "胸痛的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 12299,
+      "answer": "知识库未收录该内容，以下基于临床常识谨慎回答，仅供参考。\n\n胸痛治疗核心原则：**先评估生命体征，快速鉴别高危胸痛**（急性冠脉综合征、主动脉夹层、肺栓塞、张力性气胸）[参考1]，再针对病因分层处理。\n\n**一、紧急处理（高危胸痛）**\n- 立即心电监护、建立静脉通路、吸氧，监测血压、血氧。\n- 疑似急性冠脉综合征：即刻嚼服阿司匹林，硝酸甘油舌下含服（血压不低时），明确后行再灌注治疗。\n- 疑似主动脉夹层：严格控制血压及心率（β受体阻滞剂），避免抗凝抗血小板。\n- 疑似肺栓塞：血流动力学不稳定时溶栓或介入；稳定时抗凝治疗。\n- 张力性气胸：立即穿刺减压或胸腔闭式引流。\n\n**二、病因治疗（非高危胸痛）**\n- 心绞痛/心肌梗死：抗血小板、他汀、β受体阻滞剂、硝酸酯类，必要时介入。\n- 胸膜炎/带状疱疹：止痛、抗炎、抗病毒。\n- 胃食管反流：抑酸（质子泵抑制剂）、促胃动力药。\n\n**三、注意事项**\n- 病因未明确前避免盲目使用镇痛药，以免掩盖病情。\n- 主动脉夹层禁用溶栓及抗凝。\n- 所有胸痛均需排除心血管急症后方可对症处理。\n\n临床提示：首诊胸痛患者务必先做心电图，并在10分钟内完成，动态对比。",
+      "sources": [
+        {
+          "id": 10865,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "胸痛的鉴别诊断要点：发病年龄、疼痛部位、性质、持续时间、诱因、缓解因素、伴随症状。高危胸痛包括急性冠脉综合征、肺栓塞、主动脉夹层、张力性气胸。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10864,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "胸痛的性质：压榨性疼痛见于心绞痛、心肌梗死；刺痛见于胸膜炎、带状疱疹；撕裂样疼痛见于主动脉夹层；烧灼样疼痛见于胃食管反流。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 17,
+          "docId": 15,
+          "docTitle": "正文",
+          "bookTitle": "test_book",
+          "sectionPath": "正文",
+          "pageNo": null,
+          "content": "降压治疗原则：生活方式干预是基础，包括限盐、减重、运动、戒烟限酒。药物治疗从小剂量开始，优选长效制剂，联合用药。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10345,
+          "docId": 221,
+          "docTitle": "I50 心力衰竭",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/心血管/I50/",
+          "pageNo": null,
+          "content": "急性心衰的治疗：坐位、吸氧、利尿（呋塞米）、血管扩张剂（硝普钠/硝酸甘油）、必要时正性肌力药物（多巴酚丁胺）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10504,
+          "docId": 232,
+          "docTitle": "K74 肝硬化",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/消化/K74/",
+          "pageNo": null,
+          "content": "肝硬化腹水的治疗：限钠（<2g/d）、利尿（螺内酯:呋塞米=100:40）、大量放腹水+白蛋白补充、TIPS。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "胸痛的治疗原则是什么？",
+        "model": "deepseek-reasoner",
+        "promptVersion": "v2",
+        "searchCount": 10,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 12298,
+        "newSession": true
+      },
+      "sessionId": "eb62cfa9"
+    }
+  ]
+}

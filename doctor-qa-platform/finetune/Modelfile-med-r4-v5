@@ -1,0 +1,1 @@
+FROM "c:\在水医方\doctor-qa-platform\finetune\output\qwen2.5-7b-med-r4-v5-q8_0.gguf"

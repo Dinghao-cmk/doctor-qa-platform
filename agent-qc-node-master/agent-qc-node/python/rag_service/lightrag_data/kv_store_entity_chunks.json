@@ -1,0 +1,5429 @@
+{
+  "高血压": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 14,
+    "update_time": 1784276620,
+    "_id": "高血压"
+  },
+  "生活方式干预": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784276602,
+    "_id": "生活方式干预"
+  },
+  "药物治疗": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172703,
+    "update_time": 1784172703,
+    "_id": "药物治疗"
+  },
+  "低盐饮食": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172703,
+    "update_time": 1784172703,
+    "_id": "低盐饮食"
+  },
+  "适量运动": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172703,
+    "update_time": 1784172703,
+    "_id": "适量运动"
+  },
+  "控制体重": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172703,
+    "update_time": 1784172703,
+    "_id": "控制体重"
+  },
+  "戒烟限酒": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172703,
+    "update_time": 1784172703,
+    "_id": "戒烟限酒"
+  },
+  "钙通道阻滞剂": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 5,
+    "update_time": 1784276602,
+    "_id": "钙通道阻滞剂"
+  },
+  "硝苯地平": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 5,
+    "update_time": 1784271454,
+    "_id": "硝苯地平"
+  },
+  "血管紧张素转换酶抑制剂": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 5,
+    "update_time": 1784276602,
+    "_id": "血管紧张素转换酶抑制剂"
+  },
+  "依那普利": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 5,
+    "update_time": 1784276600,
+    "_id": "依那普利"
+  },
+  "利尿剂": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 8,
+    "update_time": 1784276602,
+    "_id": "利尿剂"
+  },
+  "氢氯噻嗪": {
+    "chunk_ids": [
+      "doc-36d2cbd685fe77230b9dff2dd3a9ced2-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 5,
+    "update_time": 1784276601,
+    "_id": "氢氯噻嗪"
+  },
+  "糖尿病": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 9,
+    "update_time": 1784276603,
+    "_id": "糖尿病"
+  },
+  "血糖升高": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "血糖升高"
+  },
+  "饮食控制": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "饮食控制"
+  },
+  "运动": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "运动"
+  },
+  "降糖药物": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "降糖药物"
+  },
+  "二甲双胍": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "二甲双胍"
+  },
+  "磺脲类": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "磺脲类"
+  },
+  "格列本脲": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "格列本脲"
+  },
+  "胰岛素": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "胰岛素"
+  },
+  "血糖监测": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "血糖监测"
+  },
+  "碳水化合物摄入": {
+    "chunk_ids": [
+      "doc-b41877e5d586b1b557850fd91ad9fe5e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784172736,
+    "update_time": 1784172736,
+    "_id": "碳水化合物摄入"
+  },
+  "哮喘": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 7,
+    "update_time": 1784276602,
+    "_id": "哮喘"
+  },
+  "喘息": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "喘息"
+  },
+  "气急": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "气急"
+  },
+  "胸闷": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "胸闷"
+  },
+  "咳嗽": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 7,
+    "update_time": 1784277475,
+    "_id": "咳嗽"
+  },
+  "支气管舒张试验": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "支气管舒张试验"
+  },
+  "PEF变异率": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "PEF变异率"
+  },
+  "SABA": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "SABA"
+  },
+  "ICS": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "ICS"
+  },
+  "LABA": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "LABA"
+  },
+  "生物制剂": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "生物制剂"
+  },
+  "糖皮质激素": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "糖皮质激素"
+  },
+  "氧疗": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "氧疗"
+  },
+  "ACT评分": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "ACT评分"
+  },
+  "气道炎症": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "气道炎症"
+  },
+  "气道高反应性": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "气道高反应性"
+  },
+  "可逆性气流受限": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "可逆性气流受限"
+  },
+  "夜间或凌晨发作": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "夜间或凌晨发作"
+  },
+  "可变气流受限": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "可变气流受限"
+  },
+  "静脉用药": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-001",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-002",
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "静脉用药"
+  },
+  "慢性气道炎症": {
+    "chunk_ids": [
+      "doc-1a9368583c51755c249c96754f37bc8c-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784270457,
+    "update_time": 1784270457,
+    "_id": "慢性气道炎症"
+  },
+  "HFrEF": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "HFrEF"
+  },
+  "HFmrEF": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "HFmrEF"
+  },
+  "HFpEF": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "HFpEF"
+  },
+  "呼吸困难": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1784275286,
+    "_id": "呼吸困难"
+  },
+  "乏力": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "乏力"
+  },
+  "液体潴留": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "液体潴留"
+  },
+  "BNP/NT-proBNP": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "BNP/NT-proBNP"
+  },
+  "超声心动图": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "超声心动图"
+  },
+  "ARNI/ACEI": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "ARNI/ACEI"
+  },
+  "β受体阻滞剂": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 13,
+    "update_time": 1784276612,
+    "_id": "β受体阻滞剂"
+  },
+  "MRA": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "MRA"
+  },
+  "SGLT2抑制剂": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "SGLT2抑制剂"
+  },
+  "呋塞米": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "呋塞米"
+  },
+  "硝普钠/硝酸甘油": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "硝普钠/硝酸甘油"
+  },
+  "多巴酚丁胺": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "多巴酚丁胺"
+  },
+  "心脏再同步化治疗": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "心脏再同步化治疗"
+  },
+  "植入式心脏除颤器": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "植入式心脏除颤器"
+  },
+  "左室辅助装置": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "左室辅助装置"
+  },
+  "心脏移植": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "心脏移植"
+  },
+  "NYHA分级": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "NYHA分级"
+  },
+  "心室充盈": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ],
+    "count": 2,
+    "update_time": 1784271391,
+    "_id": "心室充盈"
+  },
+  "射血能力": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ],
+    "count": 2,
+    "update_time": 1784271391,
+    "_id": "射血能力"
+  },
+  "劳力性": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "劳力性"
+  },
+  "端坐呼吸": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "端坐呼吸"
+  },
+  "夜间阵发性": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "夜间阵发性"
+  },
+  "下肢水肿": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "下肢水肿"
+  },
+  "腹水": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "腹水"
+  },
+  "终末阶段": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ],
+    "count": 2,
+    "update_time": 1784271391,
+    "_id": "终末阶段"
+  },
+  "CRT": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ],
+    "count": 2,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "CRT"
+  },
+  "ICD": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ],
+    "count": 2,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "ICD"
+  },
+  "夜间阵发性呼吸困难": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "夜间阵发性呼吸困难"
+  },
+  "射血能力受损": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "射血能力受损"
+  },
+  "心室充盈受损": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "心室充盈受损"
+  },
+  "硝普钠": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "硝普钠"
+  },
+  "硝酸甘油": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784276621,
+    "_id": "硝酸甘油"
+  },
+  "劳力性呼吸困难": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "劳力性呼吸困难"
+  },
+  "体征": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "体征"
+  },
+  "急性心衰": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 7,
+    "update_time": 1784271454,
+    "_id": "急性心衰"
+  },
+  "心衰": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 10,
+    "update_time": 1784276600,
+    "_id": "心衰"
+  },
+  "心力衰竭": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-002",
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-000"
+    ],
+    "count": 3,
+    "update_time": 1784271391,
+    "_id": "心力衰竭"
+  },
+  "心脏疾病": {
+    "chunk_ids": [
+      "doc-ce182e3aa85175576ab687a8f471f1c7-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784271391,
+    "update_time": 1784271391,
+    "_id": "心脏疾病"
+  },
+  "慢性肾病": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 5,
+    "update_time": 1784276600,
+    "_id": "慢性肾病"
+  },
+  "妊娠期高血压": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "妊娠期高血压"
+  },
+  "子痫前期": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "子痫前期"
+  },
+  "子痫": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "子痫"
+  },
+  "原发性高血压": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "原发性高血压"
+  },
+  "ACEI": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 8,
+    "update_time": 1784276603,
+    "_id": "ACEI"
+  },
+  "ARB": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 8,
+    "update_time": 1784276603,
+    "_id": "ARB"
+  },
+  "CCB": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003"
+    ],
+    "count": 6,
+    "update_time": 1784276600,
+    "_id": "CCB"
+  },
+  "甲基多巴": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "甲基多巴"
+  },
+  "拉贝洛尔": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "拉贝洛尔"
+  },
+  "血钾": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 8,
+    "update_time": 1784276601,
+    "_id": "血钾"
+  },
+  "肌酐": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "肌酐"
+  },
+  "血压": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 2,
+    "update_time": 1784276602,
+    "_id": "血压"
+  },
+  "高血压急症": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "高血压急症"
+  },
+  "高血压脑病": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "高血压脑病"
+  },
+  "主动脉夹层": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 10,
+    "update_time": 1784277477,
+    "_id": "主动脉夹层"
+  },
+  "老年高血压": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 7,
+    "update_time": 1784276637,
+    "_id": "老年高血压"
+  },
+  "体位性低血压": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "体位性低血压"
+  },
+  "小动脉玻璃样变": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "小动脉玻璃样变"
+  },
+  "动脉硬化": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "动脉硬化"
+  },
+  "左心室肥厚": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 8,
+    "update_time": 1784273897,
+    "_id": "左心室肥厚"
+  },
+  "肾小球硬化": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "肾小球硬化"
+  },
+  "视网膜动脉硬化": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "视网膜动脉硬化"
+  },
+  "头痛": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "头痛"
+  },
+  "头晕": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "头晕"
+  },
+  "心悸": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "心悸"
+  },
+  "眼花": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-003",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "眼花"
+  },
+  "妊娠期高血压疾病": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784271454,
+    "_id": "妊娠期高血压疾病"
+  },
+  "高血压合并糖尿病": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784276602,
+    "_id": "高血压合并糖尿病"
+  },
+  "高血压合并慢性肾病": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000"
+    ],
+    "count": 3,
+    "update_time": 1784271454,
+    "_id": "高血压合并慢性肾病"
+  },
+  "遗传": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "遗传"
+  },
+  "环境": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "环境"
+  },
+  "生活方式": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "生活方式"
+  },
+  "靶器官损害": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 8,
+    "update_time": 1784276602,
+    "_id": "靶器官损害"
+  },
+  "单纯收缩期高血压": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 7,
+    "update_time": 1784276600,
+    "_id": "单纯收缩期高血压"
+  },
+  "降压目标": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 5,
+    "update_time": 1784276602,
+    "_id": "降压目标"
+  },
+  "肾功能恶化": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "肾功能恶化"
+  },
+  "ACEI/ARB": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 2,
+    "update_time": 1784276603,
+    "_id": "ACEI/ARB"
+  },
+  "遗传因素": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "遗传因素"
+  },
+  "环境因素": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "环境因素"
+  },
+  "生活方式因素": {
+    "chunk_ids": [
+      "doc-744515d9964b7052340a875e5c4e6570-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784271454,
+    "update_time": 1784271454,
+    "_id": "生活方式因素"
+  },
+  "家庭血压监测": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "家庭血压监测"
+  },
+  "动态血压监测": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "动态血压监测"
+  },
+  "继发性高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "继发性高血压"
+  },
+  "白大衣高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "白大衣高血压"
+  },
+  "隐匿性高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "隐匿性高血压"
+  },
+  "心血管危险因素": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "心血管危险因素"
+  },
+  "血压分级": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "血压分级"
+  },
+  "心血管风险分层": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "心血管风险分层"
+  },
+  "低钾血症": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "低钾血症"
+  },
+  "肾脏疾病": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "肾脏疾病"
+  },
+  "嗜铬细胞瘤": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "嗜铬细胞瘤"
+  },
+  "颈动脉内膜中层厚度增厚": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "颈动脉内膜中层厚度增厚"
+  },
+  "eGFR下降": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "eGFR下降"
+  },
+  "微量白蛋白尿": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "微量白蛋白尿"
+  },
+  "脉搏波传导速度增快": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-003",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "脉搏波传导速度增快"
+  },
+  "1级高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 5,
+    "update_time": 1784276602,
+    "_id": "1级高血压"
+  },
+  "2级高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "2级高血压"
+  },
+  "3级高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "3级高血压"
+  },
+  "动态血压监测(ABPM)": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "动态血压监测(ABPM)"
+  },
+  "家庭血压监测(HBPM)": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "家庭血压监测(HBPM)"
+  },
+  "难治性高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784273932,
+    "_id": "难治性高血压"
+  },
+  "正常血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "正常血压"
+  },
+  "正常高值": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "正常高值"
+  },
+  "肥胖": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 4,
+    "update_time": 1784276603,
+    "_id": "肥胖"
+  },
+  "缺乏体力活动": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "缺乏体力活动"
+  },
+  "诊室血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784273897,
+    "update_time": 1784273897,
+    "_id": "诊室血压"
+  },
+  "急性阑尾炎": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "急性阑尾炎"
+  },
+  "麦氏点压痛": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "麦氏点压痛"
+  },
+  "反跳痛": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "反跳痛"
+  },
+  "肌紧张": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "肌紧张"
+  },
+  "腰大肌试验": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腰大肌试验"
+  },
+  "闭孔肌试验": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "闭孔肌试验"
+  },
+  "白细胞升高": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "白细胞升高"
+  },
+  "CRP升高": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "CRP升高"
+  },
+  "尿常规": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "尿常规"
+  },
+  "腹部超声": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腹部超声"
+  },
+  "腹部CT": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腹部CT"
+  },
+  "腹腔镜阑尾切除术": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腹腔镜阑尾切除术"
+  },
+  "阑尾穿孔": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "阑尾穿孔"
+  },
+  "腹腔脓肿": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腹腔脓肿"
+  },
+  "门静脉炎": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "门静脉炎"
+  },
+  "阑尾周围脓肿": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "阑尾周围脓肿"
+  },
+  "切口感染": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "切口感染"
+  },
+  "腹腔出血": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腹腔出血"
+  },
+  "阑尾残株炎": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "阑尾残株炎"
+  },
+  "转移性右下腹痛": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "转移性右下腹痛"
+  },
+  "恶心": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-003",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 5,
+    "update_time": 1784276519,
+    "_id": "恶心"
+  },
+  "呕吐": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-003",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1784273914,
+    "_id": "呕吐"
+  },
+  "发热": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-003",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 8,
+    "update_time": 1785230568,
+    "_id": "发热"
+  },
+  "保守治疗": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-001",
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "保守治疗"
+  },
+  "CRP": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "CRP"
+  },
+  "右下腹": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "右下腹"
+  },
+  "盲肠后位阑尾": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "盲肠后位阑尾"
+  },
+  "盆腔位阑尾": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "盆腔位阑尾"
+  },
+  "不典型病例": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "不典型病例"
+  },
+  "择期手术": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "择期手术"
+  },
+  "腰大肌试验阳性": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "腰大肌试验阳性"
+  },
+  "中性粒细胞比例升高": {
+    "chunk_ids": [
+      "doc-550ecafcd47776fc50b37277c3480ffd-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784273914,
+    "update_time": 1784273914,
+    "_id": "中性粒细胞比例升高"
+  },
+  "年轻发病": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273932,
+    "update_time": 1784273932,
+    "_id": "年轻发病"
+  },
+  "突发高血压": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273932,
+    "update_time": 1784273932,
+    "_id": "突发高血压"
+  },
+  "阵发性症状": {
+    "chunk_ids": [
+      "doc-544fac400db790f57ea8ee4207cbeb6b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273932,
+    "update_time": 1784273932,
+    "_id": "阵发性症状"
+  },
+  "限制级抗菌药物": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "限制级抗菌药物"
+  },
+  "头孢呋辛": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "头孢呋辛"
+  },
+  "头孢曲松": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "头孢曲松"
+  },
+  "阿奇霉素": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "阿奇霉素"
+  },
+  "左氧氟沙星": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 6,
+    "update_time": 1784275703,
+    "_id": "左氧氟沙星"
+  },
+  "特殊级抗菌药物": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "特殊级抗菌药物"
+  },
+  "美罗培南": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784275860,
+    "_id": "美罗培南"
+  },
+  "亚胺培南": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784275860,
+    "_id": "亚胺培南"
+  },
+  "万古霉素": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "万古霉素"
+  },
+  "利奈唑胺": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "利奈唑胺"
+  },
+  "抗菌药物分级管理": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "抗菌药物分级管理"
+  },
+  "抗菌药物使用强度": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784273965,
+    "update_time": 1784273965,
+    "_id": "抗菌药物使用强度"
+  },
+  "抗菌药物使用率控制目标": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "抗菌药物使用率控制目标"
+  },
+  "非限制级抗菌药物": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "非限制级抗菌药物"
+  },
+  "青霉素": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "青霉素"
+  },
+  "阿莫西林": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 14,
+    "update_time": 1785230568,
+    "_id": "阿莫西林"
+  },
+  "头孢氨苄": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "头孢氨苄"
+  },
+  "头孢唑林": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "头孢唑林"
+  },
+  "主治医师": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "主治医师"
+  },
+  "高级职称医师": {
+    "chunk_ids": [
+      "doc-b1c6b3f6bd469c518cdfd861316f8d8e-chunk-000",
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784274332,
+    "_id": "高级职称医师"
+  },
+  "抗菌药物使用强度(AUD)": {
+    "chunk_ids": [
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784274332,
+    "update_time": 1784274332,
+    "_id": "抗菌药物使用强度(AUD)"
+  },
+  "DDD数": {
+    "chunk_ids": [
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784274332,
+    "update_time": 1784274332,
+    "_id": "DDD数"
+  },
+  "住院患者抗菌药物使用率": {
+    "chunk_ids": [
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784274332,
+    "update_time": 1784274332,
+    "_id": "住院患者抗菌药物使用率"
+  },
+  "门诊患者抗菌药物使用率": {
+    "chunk_ids": [
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784274332,
+    "update_time": 1784274332,
+    "_id": "门诊患者抗菌药物使用率"
+  },
+  "急诊患者抗菌药物使用率": {
+    "chunk_ids": [
+      "doc-df9c9706d4cb2784f68be6d996502e1b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784274332,
+    "update_time": 1784274332,
+    "_id": "急诊患者抗菌药物使用率"
+  },
+  "慢性阻塞性肺疾病": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "慢性阻塞性肺疾病"
+  },
+  "吸烟": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 8,
+    "update_time": 1784276603,
+    "_id": "吸烟"
+  },
+  "职业粉尘和化学物质": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "职业粉尘和化学物质"
+  },
+  "室内外空气污染": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "室内外空气污染"
+  },
+  "呼吸道感染": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "呼吸道感染"
+  },
+  "慢性咳嗽": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "慢性咳嗽"
+  },
+  "咳痰": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 6,
+    "update_time": 1784277475,
+    "_id": "咳痰"
+  },
+  "气短或呼吸困难": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "气短或呼吸困难"
+  },
+  "FEV1/FVC<70%": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "FEV1/FVC<70%"
+  },
+  "GOLD分级": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 4,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "GOLD分级"
+  },
+  "支气管扩张剂": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "支气管扩张剂"
+  },
+  "β2受体激动剂": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "β2受体激动剂"
+  },
+  "抗胆碱能药物": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "抗胆碱能药物"
+  },
+  "吸入糖皮质激素": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "吸入糖皮质激素"
+  },
+  "COPD急性加重": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001"
+    ],
+    "count": 2,
+    "update_time": 1784275286,
+    "_id": "COPD急性加重"
+  },
+  "控制性氧疗": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "控制性氧疗"
+  },
+  "全身糖皮质激素": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "全身糖皮质激素"
+  },
+  "抗生素": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "抗生素"
+  },
+  "无创或有创机械通气": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "无创或有创机械通气"
+  },
+  "长期家庭氧疗": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "长期家庭氧疗"
+  },
+  "FEV1": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "FEV1"
+  },
+  "FVC": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "FVC"
+  },
+  "GOLD1级": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "GOLD1级"
+  },
+  "GOLD2级": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "GOLD2级"
+  },
+  "GOLD3级": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "GOLD3级"
+  },
+  "GOLD4级": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "GOLD4级"
+  },
+  "PaO2≤55mmHg": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "PaO2≤55mmHg"
+  },
+  "SaO2≤88%": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "SaO2≤88%"
+  },
+  "PaO2 55-60mmHg": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "PaO2 55-60mmHg"
+  },
+  "肺动脉高压": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "肺动脉高压"
+  },
+  "红细胞增多症": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-003",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "红细胞增多症"
+  },
+  "COPD": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "COPD"
+  },
+  "无创机械通气": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "无创机械通气"
+  },
+  "有创机械通气": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001",
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "有创机械通气"
+  },
+  "戒烟": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "戒烟"
+  },
+  "PaO2≤55mmHg或SaO2≤88%": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "PaO2≤55mmHg或SaO2≤88%"
+  },
+  "SpO2 88-92%": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "SpO2 88-92%"
+  },
+  "每日吸氧时间>15小时": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "每日吸氧时间>15小时"
+  },
+  "气短": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "气短"
+  },
+  "AECOPD": {
+    "chunk_ids": [
+      "doc-37c551f96df8006ffc09d20d5b7a5d48-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784275286,
+    "update_time": 1784275286,
+    "_id": "AECOPD"
+  },
+  "胃溃疡": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-004",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 5,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "胃溃疡"
+  },
+  "十二指肠溃疡": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-004",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 5,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "十二指肠溃疡"
+  },
+  "幽门螺杆菌": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-004",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "幽门螺杆菌"
+  },
+  "PPI": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 3,
+    "update_time": 1784275704,
+    "_id": "PPI"
+  },
+  "铋剂四联方案": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "铋剂四联方案"
+  },
+  "克拉霉素": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "克拉霉素"
+  },
+  "胃镜活检快速尿素酶试验": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000"
+    ],
+    "count": 2,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "胃镜活检快速尿素酶试验"
+  },
+  "13C/14C尿素呼气试验": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "13C/14C尿素呼气试验"
+  },
+  "粪便抗原检测": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "粪便抗原检测"
+  },
+  "Forrest分级": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "Forrest分级"
+  },
+  "奥美拉唑": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 3,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "奥美拉唑"
+  },
+  "兰索拉唑": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 3,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "兰索拉唑"
+  },
+  "泮托拉唑": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 3,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "泮托拉唑"
+  },
+  "H2受体拮抗剂": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "H2受体拮抗剂"
+  },
+  "组织学检查": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "组织学检查"
+  },
+  "出血": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "出血"
+  },
+  "穿孔": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "穿孔"
+  },
+  "幽门梗阻": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "幽门梗阻"
+  },
+  "癌变": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "update_time": 1784275703,
+    "_id": "癌变"
+  },
+  "胃镜随访": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "胃镜随访"
+  },
+  "内镜下止血治疗": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "内镜下止血治疗"
+  },
+  "NSAIDs": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "NSAIDs"
+  },
+  "COX-2选择性抑制剂": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-002",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 4,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "COX-2选择性抑制剂"
+  },
+  "幽门螺杆菌(Hp)": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "幽门螺杆菌(Hp)"
+  },
+  "质子泵抑制剂(PPI)": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "质子泵抑制剂(PPI)"
+  },
+  "快速尿素酶试验": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 2,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "快速尿素酶试验"
+  },
+  "NSAIDs相关溃疡": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001"
+    ],
+    "count": 2,
+    "update_time": 1784275704,
+    "_id": "NSAIDs相关溃疡"
+  },
+  "消化性溃疡": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784275703,
+    "_id": "消化性溃疡"
+  },
+  "胃镜": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-000",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 2,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "胃镜"
+  },
+  "质子泵抑制剂": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "质子泵抑制剂"
+  },
+  "铋剂": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784275703,
+    "update_time": 1784275703,
+    "_id": "铋剂"
+  },
+  "消化性溃疡出血": {
+    "chunk_ids": [
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-001",
+      "doc-0ef47a77cab9066c33b05a98b8b9e284-chunk-003"
+    ],
+    "count": 2,
+    "update_time": 1784275704,
+    "_id": "消化性溃疡出血"
+  },
+  "β-内酰胺类": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 8,
+    "update_time": 1785230568,
+    "_id": "β-内酰胺类"
+  },
+  "大环内酯类": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 8,
+    "update_time": 1785230568,
+    "_id": "大环内酯类"
+  },
+  "呼吸氟喹诺酮类": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 7,
+    "update_time": 1784277475,
+    "_id": "呼吸氟喹诺酮类"
+  },
+  "抗假单胞菌β-内酰胺类": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "抗假单胞菌β-内酰胺类"
+  },
+  "氟喹诺酮类": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "氟喹诺酮类"
+  },
+  "甲硝唑": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "甲硝唑"
+  },
+  "碳青霉烯类": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "碳青霉烯类"
+  },
+  "哌拉西林他唑巴坦": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "哌拉西林他唑巴坦"
+  },
+  "抗MRSA药物": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "抗MRSA药物"
+  },
+  "降钙素原": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "降钙素原"
+  },
+  "社区获得性肺炎": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 7,
+    "update_time": 1785230568,
+    "_id": "社区获得性肺炎"
+  },
+  "医院获得性肺炎": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 6,
+    "update_time": 1784277475,
+    "_id": "医院获得性肺炎"
+  },
+  "腹腔感染": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "腹腔感染"
+  },
+  "革兰阴性杆菌": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "革兰阴性杆菌"
+  },
+  "铜绿假单胞菌": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 7,
+    "update_time": 1784277475,
+    "_id": "铜绿假单胞菌"
+  },
+  "厌氧菌": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "厌氧菌"
+  },
+  "耐药菌": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "耐药菌"
+  },
+  "头孢二代/三代": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "头孢二代/三代"
+  },
+  "β-内酰胺/酶抑制剂复合制剂": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784275859,
+    "update_time": 1784275859,
+    "_id": "β-内酰胺/酶抑制剂复合制剂"
+  },
+  "社区获得性肺炎(CAP)": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275860,
+    "update_time": 1784275860,
+    "_id": "社区获得性肺炎(CAP)"
+  },
+  "医院获得性肺炎(HAP)": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275860,
+    "update_time": 1784275860,
+    "_id": "医院获得性肺炎(HAP)"
+  },
+  "肠道革兰阴性杆菌": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275860,
+    "update_time": 1784275860,
+    "_id": "肠道革兰阴性杆菌"
+  },
+  "经验性抗感染治疗": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784275867,
+    "_id": "经验性抗感染治疗"
+  },
+  "体温": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275860,
+    "update_time": 1784275860,
+    "_id": "体温"
+  },
+  "白细胞": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 2,
+    "update_time": 1784277475,
+    "_id": "白细胞"
+  },
+  "重症腹腔感染": {
+    "chunk_ids": [
+      "doc-974a7164e1ce6a62eb6d2226c124a1ee-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784275867,
+    "update_time": 1784275867,
+    "_id": "重症腹腔感染"
+  },
+  "胸部CT": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 8,
+    "update_time": 1784277475,
+    "_id": "胸部CT"
+  },
+  "低剂量CT": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "低剂量CT"
+  },
+  "增强CT": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "增强CT"
+  },
+  "造影剂": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "造影剂"
+  },
+  "碘过敏": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "碘过敏"
+  },
+  "肺部结节": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "肺部结节"
+  },
+  "肺栓塞": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 9,
+    "update_time": 1784277477,
+    "_id": "肺栓塞"
+  },
+  "CTPA": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "CTPA"
+  },
+  "肺炎": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 13,
+    "update_time": 1784277487,
+    "_id": "肺炎"
+  },
+  "磨玻璃影": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "磨玻璃影"
+  },
+  "实变影": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "实变影"
+  },
+  "小叶间隔增厚": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "小叶间隔增厚"
+  },
+  "树芽征": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "树芽征"
+  },
+  "肺动脉内充盈缺损": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "肺动脉内充盈缺损"
+  },
+  "轨道征": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "轨道征"
+  },
+  "截断征": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "截断征"
+  },
+  "纵隔病变": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "纵隔病变"
+  },
+  "胸膜疾病": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "胸膜疾病"
+  },
+  "胸部外伤": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-001",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "胸部外伤"
+  },
+  "肺结节": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "肺结节"
+  },
+  "CT": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "CT"
+  },
+  "低剂量胸部CT": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "低剂量胸部CT"
+  },
+  "造影剂不良反应": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "造影剂不良反应"
+  },
+  "胸部CT适应证": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "胸部CT适应证"
+  },
+  "常规胸部CT": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-000",
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "常规胸部CT"
+  },
+  "形态(分叶、毛刺、胸膜牵拉)": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "形态(分叶、毛刺、胸膜牵拉)"
+  },
+  "肺部感染": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "肺部感染"
+  },
+  "荨麻疹": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "荨麻疹"
+  },
+  "喉头水肿": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "喉头水肿"
+  },
+  "支气管痉挛": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "支气管痉挛"
+  },
+  "过敏性休克": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "过敏性休克"
+  },
+  "心跳骤停": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "心跳骤停"
+  },
+  "含碘造影剂": {
+    "chunk_ids": [
+      "doc-5f492e9b07e87ddac7d9214b434c061b-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276519,
+    "update_time": 1784276519,
+    "_id": "含碘造影剂"
+  },
+  "氨氯地平": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "氨氯地平"
+  },
+  "硝苯地平控释片": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "硝苯地平控释片"
+  },
+  "心绞痛": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 7,
+    "update_time": 1784277477,
+    "_id": "心绞痛"
+  },
+  "踝部水肿": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "踝部水肿"
+  },
+  "面部潮红": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "面部潮红"
+  },
+  "贝那普利": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "贝那普利"
+  },
+  "心梗后": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "心梗后"
+  },
+  "干咳": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 8,
+    "update_time": 1784277467,
+    "_id": "干咳"
+  },
+  "血管神经性水肿": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276600,
+    "update_time": 1784276600,
+    "_id": "血管神经性水肿"
+  },
+  "缬沙坦": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276601,
+    "update_time": 1784276601,
+    "_id": "缬沙坦"
+  },
+  "氯沙坦": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276601,
+    "update_time": 1784276601,
+    "_id": "氯沙坦"
+  },
+  "噻嗪类利尿剂": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276601,
+    "update_time": 1784276601,
+    "_id": "噻嗪类利尿剂"
+  },
+  "吲达帕胺": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276601,
+    "update_time": 1784276601,
+    "_id": "吲达帕胺"
+  },
+  "尿酸": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276601,
+    "update_time": 1784276601,
+    "_id": "尿酸"
+  },
+  "美托洛尔": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276601,
+    "update_time": 1784276601,
+    "_id": "美托洛尔"
+  },
+  "比索洛尔": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "比索洛尔"
+  },
+  "快速心律失常": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "快速心律失常"
+  },
+  "严重心动过缓": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "严重心动过缓"
+  },
+  "高危/很高危因素": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "高危/很高危因素"
+  },
+  "血管紧张素受体拮抗剂": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-000",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004",
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "血管紧张素受体拮抗剂"
+  },
+  "高血压合并心绞痛": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "高血压合并心绞痛"
+  },
+  "老年患者(≥65岁)": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "老年患者(≥65岁)"
+  },
+  "一般患者": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "一般患者"
+  },
+  "老年患者": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "老年患者"
+  },
+  "140/90mmHg": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "140/90mmHg"
+  },
+  "130/80mmHg": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "130/80mmHg"
+  },
+  "150mmHg": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "150mmHg"
+  },
+  "140mmHg": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276602,
+    "update_time": 1784276602,
+    "_id": "140mmHg"
+  },
+  "冠心病": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "冠心病"
+  },
+  "高血脂": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 4,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "高血脂"
+  },
+  "稳定型心绞痛": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "稳定型心绞痛"
+  },
+  "急性冠脉综合征": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 8,
+    "update_time": 1784277468,
+    "_id": "急性冠脉综合征"
+  },
+  "ST段抬高型心肌梗死": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "ST段抬高型心肌梗死"
+  },
+  "非ST段抬高型心肌梗死": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "非ST段抬高型心肌梗死"
+  },
+  "不稳定型心绞痛": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "不稳定型心绞痛"
+  },
+  "PCI": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "PCI"
+  },
+  "溶栓治疗": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "溶栓治疗"
+  },
+  "LDL-C": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "LDL-C"
+  },
+  "阿司匹林": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "阿司匹林"
+  },
+  "氯吡格雷": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "氯吡格雷"
+  },
+  "替格瑞洛": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "替格瑞洛"
+  },
+  "他汀类": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "他汀类"
+  },
+  "硝酸酯类": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "硝酸酯类"
+  },
+  "冠状动脉造影": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 5,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "冠状动脉造影"
+  },
+  "冠状动脉旁路移植术": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "冠状动脉旁路移植术"
+  },
+  "左主干病变": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "左主干病变"
+  },
+  "三支病变": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-000",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 4,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "三支病变"
+  },
+  "CABG": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "CABG"
+  },
+  "STEMI": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "STEMI"
+  },
+  "NSTEMI": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "NSTEMI"
+  },
+  "缺乏运动": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "缺乏运动"
+  },
+  "家族史": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-001"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "家族史"
+  },
+  "合理饮食": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "合理饮食"
+  },
+  "运动教育": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 2,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "运动教育"
+  },
+  "胸骨后压榨性疼痛": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "胸骨后压榨性疼痛"
+  },
+  "左室功能低下": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 3,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "左室功能低下"
+  },
+  "他汀类药物": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "他汀类药物"
+  },
+  "β阻滞剂": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "β阻滞剂"
+  },
+  "PCI失败": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "PCI失败"
+  },
+  "再狭窄": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004",
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-003"
+    ],
+    "count": 2,
+    "update_time": 1784276621,
+    "_id": "再狭窄"
+  },
+  "绞痛": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "绞痛"
+  },
+  "抗血小板治疗": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "抗血小板治疗"
+  },
+  "ACS": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "ACS"
+  },
+  "危险因素": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "危险因素"
+  },
+  "心肌缺血缺氧": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784276603,
+    "update_time": 1784276603,
+    "_id": "心肌缺血缺氧"
+  },
+  "冠状动脉粥样硬化": {
+    "chunk_ids": [
+      "doc-1aaff13c12591e42b44bb47d77f2d4f4-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276621,
+    "update_time": 1784276621,
+    "_id": "冠状动脉粥样硬化"
+  },
+  "1级高血压低危": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-003"
+    ],
+    "count": 1,
+    "create_time": 1784276637,
+    "update_time": 1784276637,
+    "_id": "1级高血压低危"
+  },
+  "降压药物": {
+    "chunk_ids": [
+      "doc-153fa67a7fb6ada66a1fcccabbbfab72-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784276637,
+    "update_time": 1784276637,
+    "_id": "降压药物"
+  },
+  "克雷伯杆菌肺炎": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277477,
+    "_id": "克雷伯杆菌肺炎"
+  },
+  "铜绿假单胞菌感染": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277477,
+    "_id": "铜绿假单胞菌感染"
+  },
+  "心肌梗死": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277477,
+    "_id": "心肌梗死"
+  },
+  "胸膜炎": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 6,
+    "update_time": 1784277477,
+    "_id": "胸膜炎"
+  },
+  "带状疱疹": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277477,
+    "_id": "带状疱疹"
+  },
+  "胃食管反流": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277477,
+    "_id": "胃食管反流"
+  },
+  "张力性气胸": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1784277468,
+    "_id": "张力性气胸"
+  },
+  "大叶性肺炎": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 5,
+    "update_time": 1784277467,
+    "_id": "大叶性肺炎"
+  },
+  "败血症": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 6,
+    "update_time": 1784277467,
+    "_id": "败血症"
+  },
+  "低热": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "低热"
+  },
+  "中等度热": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "中等度热"
+  },
+  "高热": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "高热"
+  },
+  "超高热": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "超高热"
+  },
+  "胸痛": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784277370,
+    "update_time": 1784277370,
+    "_id": "胸痛"
+  },
+  "疟疾": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 5,
+    "update_time": 1784277467,
+    "_id": "疟疾"
+  },
+  "上呼吸道感染": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 5,
+    "update_time": 1784277477,
+    "_id": "上呼吸道感染"
+  },
+  "支气管扩张": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 5,
+    "update_time": 1784277482,
+    "_id": "支气管扩张"
+  },
+  "肺脓肿": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 5,
+    "update_time": 1784277482,
+    "_id": "肺脓肿"
+  },
+  "喉炎": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 5,
+    "update_time": 1784277477,
+    "_id": "喉炎"
+  },
+  "压榨性疼痛": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "压榨性疼痛"
+  },
+  "铁锈色痰": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "铁锈色痰"
+  },
+  "黄绿色痰": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "黄绿色痰"
+  },
+  "刺痛": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "刺痛"
+  },
+  "烧灼样疼痛": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "烧灼样疼痛"
+  },
+  "撕裂样疼痛": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "撕裂样疼痛"
+  },
+  "发热伴寒战": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 3,
+    "update_time": 1784277477,
+    "_id": "发热伴寒战"
+  },
+  "37.3-38℃": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277370,
+    "update_time": 1784277370,
+    "_id": "37.3-38℃"
+  },
+  "38.1-39℃": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277370,
+    "update_time": 1784277370,
+    "_id": "38.1-39℃"
+  },
+  "39.1-41℃": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277370,
+    "update_time": 1784277370,
+    "_id": "39.1-41℃"
+  },
+  "41℃以上": {
+    "chunk_ids": [
+      "doc-116a736879f818ef2c41e2559f7b0b24-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277370,
+    "update_time": 1784277370,
+    "_id": "41℃以上"
+  },
+  "稽留热": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 3,
+    "update_time": 1784277467,
+    "_id": "稽留热"
+  },
+  "弛张热": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 3,
+    "update_time": 1784277467,
+    "_id": "弛张热"
+  },
+  "间歇热": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277477,
+    "_id": "间歇热"
+  },
+  "湿咳": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277467,
+    "_id": "湿咳"
+  },
+  "犬吠样咳嗽": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 4,
+    "update_time": 1784277468,
+    "_id": "犬吠样咳嗽"
+  },
+  "粉红色泡沫痰": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784277467,
+    "_id": "粉红色泡沫痰"
+  },
+  "砖红色胶冻样痰": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784277467,
+    "_id": "砖红色胶冻样痰"
+  },
+  "肺炎链球菌肺炎": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784277477,
+    "_id": "肺炎链球菌肺炎"
+  },
+  "急性肺水肿": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 3,
+    "update_time": 1784277477,
+    "_id": "急性肺水肿"
+  },
+  "高危胸痛": {
+    "chunk_ids": [
+      "doc-73bd92f3f1bdf0397b4e9ddbdefb66db-chunk-001",
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-000"
+    ],
+    "count": 2,
+    "update_time": 1784277477,
+    "_id": "高危胸痛"
+  },
+  "胸部X线检查": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "胸部X线检查"
+  },
+  "多西环素": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1785230568,
+    "_id": "多西环素"
+  },
+  "机械通气": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 5,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "机械通气"
+  },
+  "感染性休克": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "感染性休克"
+  },
+  "肺炎球菌疫苗": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 5,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "肺炎球菌疫苗"
+  },
+  "肺炎链球菌": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1785230568,
+    "_id": "肺炎链球菌"
+  },
+  "鲍曼不动杆菌": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 5,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "鲍曼不动杆菌"
+  },
+  "MRSA": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 5,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "MRSA"
+  },
+  "流感嗜血杆菌": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1785230568,
+    "_id": "流感嗜血杆菌"
+  },
+  "卡他莫拉菌": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1785230568,
+    "_id": "卡他莫拉菌"
+  },
+  "肺炎支原体": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1785230568,
+    "_id": "肺炎支原体"
+  },
+  "肺炎衣原体": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 6,
+    "update_time": 1785230568,
+    "_id": "肺炎衣原体"
+  },
+  "23价多糖疫苗": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "23价多糖疫苗"
+  },
+  "13价结合疫苗": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "13价结合疫苗"
+  },
+  "呼吸频率≥30次/分": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "呼吸频率≥30次/分"
+  },
+  "氧合指数≤250": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000"
+    ],
+    "count": 3,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "氧合指数≤250"
+  },
+  "多肺叶浸润": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "多肺叶浸润"
+  },
+  "细菌性肺炎": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "细菌性肺炎"
+  },
+  "重症肺炎": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-003"
+    ],
+    "count": 5,
+    "update_time": 1784277482,
+    "_id": "重症肺炎"
+  },
+  "胸部X线": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "胸部X线"
+  },
+  "血管活性药物": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "血管活性药物"
+  },
+  "补液": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "补液"
+  },
+  "退热": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "退热"
+  },
+  "止咳": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "止咳"
+  },
+  "吸氧": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-002",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 4,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "吸氧"
+  },
+  "65岁以上老年人": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "65岁以上老年人"
+  },
+  "免疫功能低下者": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "免疫功能低下者"
+  },
+  "肺实变体征": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1785230568,
+    "_id": "肺实变体征"
+  },
+  "湿啰音": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000",
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001",
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 4,
+    "update_time": 1785230568,
+    "_id": "湿啰音"
+  },
+  "社区发病": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "社区发病"
+  },
+  "发热≥38℃": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "发热≥38℃"
+  },
+  "白细胞>10×10^9/L或<4×10^9/L": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "白细胞>10×10^9/L或<4×10^9/L"
+  },
+  "肺纹理增粗": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "肺纹理增粗"
+  },
+  "斑片状浸润影": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "斑片状浸润影"
+  },
+  "大片实变影": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "大片实变影"
+  },
+  "呼吸频率": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "呼吸频率"
+  },
+  "氧合指数": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "氧合指数"
+  },
+  "水电解质平衡": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "水电解质平衡"
+  },
+  "生命体征监测": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "生命体征监测"
+  },
+  "器官功能监测": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "器官功能监测"
+  },
+  "免疫损伤": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "免疫损伤"
+  },
+  "理化因素": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "理化因素"
+  },
+  "药物": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277475,
+    "update_time": 1784277475,
+    "_id": "药物"
+  },
+  "体温波动>2℃": {
+    "chunk_ids": [
+      "doc-65264c873eaf4a8a6489dc4944443dd7-chunk-001"
+    ],
+    "count": 1,
+    "create_time": 1784277477,
+    "update_time": 1784277477,
+    "_id": "体温波动>2℃"
+  },
+  "肺炎支持治疗": {
+    "chunk_ids": [
+      "doc-90fa44500bccd427737678c4f12ce717-chunk-004"
+    ],
+    "count": 1,
+    "create_time": 1784277487,
+    "update_time": 1784277487,
+    "_id": "肺炎支持治疗"
+  },
+  "咳嗽咳痰": {
+    "chunk_ids": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785230568,
+    "update_time": 1785230568,
+    "_id": "咳嗽咳痰"
+  },
+  "白细胞升高或降低": {
+    "chunk_ids": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785230568,
+    "update_time": 1785230568,
+    "_id": "白细胞升高或降低"
+  },
+  "抗菌药物": {
+    "chunk_ids": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785230568,
+    "update_time": 1785230568,
+    "_id": "抗菌药物"
+  },
+  "非限制使用级": {
+    "chunk_ids": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785230568,
+    "update_time": 1785230568,
+    "_id": "非限制使用级"
+  },
+  "限制使用级": {
+    "chunk_ids": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785230568,
+    "update_time": 1785230568,
+    "_id": "限制使用级"
+  },
+  "特殊使用级": {
+    "chunk_ids": [
+      "doc-07978586e47c8709a63e895fbf3c3c7d-chunk-000"
+    ],
+    "count": 1,
+    "create_time": 1785230568,
+    "update_time": 1785230568,
+    "_id": "特殊使用级"
+  }
+}

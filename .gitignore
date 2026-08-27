@@ -1,0 +1,71 @@
+# â”€â”€ ä¾èµ– â”€â”€
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# â”€â”€ Ollama æœ¬åœ°æ¨¡å‹åº“ï¼ˆGGUF å·¨å¤§ï¼Œä¸å…¥åº“ï¼‰â”€â”€
+.ollama-models/
+
+# â”€â”€ è®­ç»ƒäº§ç‰©ï¼ˆæ¨¡å‹æƒé‡ä¸å…¥åº“ï¼Œè„šæœ¬/æ•°æ®ä¿ç•™ï¼‰â”€â”€
+doctor-qa-platform/finetune/output/
+doctor-qa-platform/unsloth_compiled_cache/
+doctor-qa-platform/finetune/*.log
+
+# â”€â”€ è¿è¡Œæ—¶æ•°æ®/è´¨æ£€ç»“æœ â”€â”€
+doctor-qa-platform/qc_results/
+agent-qc-node-master/agent-qc-node/qc_results/
+doctor-qa-platform/test_lightrag_data/
+agent-qc-node-master/agent-qc-node/cross-txt-context/
+agent-qc-node-master/agent-qc-node/dist/
+doctor-qa-platform/dist/
+
+# â”€â”€ ç¯å¢ƒä¸æ•æ„Ÿé…ç½®ï¼ˆä¿ç•™ .env.exampleï¼‰â”€â”€
+.env
+.env.local
+
+# â”€â”€ å¤§æ–‡æ¡£/å‹ç¼©åŒ… â”€â”€
+*.pdf
+*.docx
+*.zip
+
+# â”€â”€ æ ¹ç›®å½•ä¸´æ—¶æ–‡ä»¶ â”€â”€
+/chunk1.txt
+/chunk2.txt
+/chunk3.txt
+/b64cmd.txt
+/C
+
+# â”€â”€ æ—¥å¿— â”€â”€
+*.log
+
+# â”€â”€ IDE/ç³»ç»Ÿ â”€â”€
+.qoder/
+.idea/
+.vscode/
+Thumbs.db
+
+# â”€â”€ ä¸€æ¬¡æ€§è¯Šæ–­/éªŒè¯è„šæœ¬ï¼ˆå¯¹æ¯”å®éªŒè„šæœ¬ compare_*.js ä¿ç•™ï¼‰â”€â”€
+diag_*.js
+verify_*.js
+check_*.js
+link_*.js
+test_*.js
+start_ollama_test.js
+check_port.js
+unsloth_compiled_cache/
+doctor-qa-platform/finetune/unsloth_compiled_cache/
+doctor-qa-platform/finetune/output/
+**/unsloth_compiled_cache/
+
+# ©¤©¤ ·ÇÆ½Ì¨´úÂë£¨¹«Ë¾ HIS/¸öÈËÏîÄ¿£¬²»Èë¿â£©©¤©¤
+zk-core-master/
+blood-sea-world/
+# ©¤©¤ ¸ùÄ¿Â¼ÑéÖ¤²úÎï£¨½ØÍ¼/ÏìÓ¦£©©¤©¤
+/*.png
+/*.txt
+/*.json
+
+# ©¤©¤ ÖÊ¿Øagent½ö±£ÁôRAG²¿·Ö£¨ÆäÓà·Ç±¾ÈË´úÂë£©©¤©¤
+agent-qc-node-master/

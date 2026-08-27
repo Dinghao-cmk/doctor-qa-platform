@@ -1,0 +1,455 @@
+{
+  "generatedAt": "2026-08-07T01:27:57.141Z",
+  "questions": [
+    {
+      "id": "q1",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "肺炎",
+      "category": "diagnosis",
+      "question": "肺炎的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q2",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "肺炎",
+      "category": "treatment",
+      "question": "肺炎的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q3",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "COPD",
+      "category": "diagnosis",
+      "question": "COPD的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q4",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "COPD",
+      "category": "treatment",
+      "question": "COPD的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q5",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "支气管哮喘",
+      "category": "diagnosis",
+      "question": "支气管哮喘的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q6",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "支气管哮喘",
+      "category": "treatment",
+      "question": "支气管哮喘的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q7",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "急性阑尾炎",
+      "category": "diagnosis",
+      "question": "急性阑尾炎的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q8",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "急性阑尾炎",
+      "category": "treatment",
+      "question": "急性阑尾炎的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q9",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "高血压诊断标准",
+      "category": "diagnosis",
+      "question": "高血压诊断标准有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q10",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "降压药物选择",
+      "category": "treatment",
+      "question": "降压药物选择有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q11",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "非限制级抗菌药物",
+      "category": "diagnosis",
+      "question": "非限制级抗菌药物的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q12",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "非限制级抗菌药物",
+      "category": "treatment",
+      "question": "非限制级抗菌药物的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q13",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "肺部感染经验用药",
+      "category": "treatment",
+      "question": "肺部感染经验用药有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q14",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "腹腔感染经验用药",
+      "category": "treatment",
+      "question": "腹腔感染经验用药有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q15",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "发热",
+      "category": "diagnosis",
+      "question": "发热的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q16",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "发热",
+      "category": "treatment",
+      "question": "发热的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q17",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "血常规检查",
+      "category": "diagnosis",
+      "question": "血常规检查的临床意义是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q18",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "胸部CT",
+      "category": "diagnosis",
+      "question": "胸部CT的临床意义是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q19",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "疾病特点与分型",
+      "category": "diagnosis",
+      "question": "成人糖尿病食养指南（2023年版）的疾病特点与分型的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q20",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "疾病特点与分型",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的疾病特点与分型的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q21",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "食养原则和建议",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的食养原则和建议有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q22",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "食物选择",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的食物选择有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q23",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "不同证型食药物质推荐",
+      "category": "diagnosis",
+      "question": "成人糖尿病食养指南（2023年版）的不同证型食药物质推荐的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q24",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "不同证型食药物质推荐",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的不同证型食药物质推荐的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q25",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑梗死",
+      "category": "diagnosis",
+      "question": "中国重症卒中管理指南2024的重症脑梗死的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q26",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑梗死",
+      "category": "treatment",
+      "question": "中国重症卒中管理指南2024的重症脑梗死的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q27",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑出血",
+      "category": "diagnosis",
+      "question": "中国重症卒中管理指南2024的重症脑出血的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q28",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑出血",
+      "category": "treatment",
+      "question": "中国重症卒中管理指南2024的重症脑出血的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q29",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "动脉瘤破裂性 SAH",
+      "category": "diagnosis",
+      "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    },
+    {
+      "id": "q30",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "动脉瘤破裂性 SAH",
+      "category": "treatment",
+      "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": ""
+    }
+  ]
+}

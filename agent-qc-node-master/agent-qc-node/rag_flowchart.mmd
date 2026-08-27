@@ -1,0 +1,100 @@
+graph TB
+    subgraph 用户输入
+        Q[用户查询: 缺陷描述 / 质控编码]
+    end
+
+    subgraph Stage1[Stage 1: PageIndex 路由 — 解决去哪找]
+        direction TB
+        QC{有质控编码?}
+        STATIC[静态路由: getPageRoute]
+        STATIC_SQL[查 rag_rule_doc_map 表]
+        HIT{命中?}
+
+        QC -->|有编码| STATIC
+        STATIC --> STATIC_SQL
+        STATIC_SQL --> HIT
+
+        HIT -->|命中| ROUTED[获得 docIds + passageIds]
+
+        HIT -->|未命中| TWO_LEVEL[两级路由 LLM 推理]
+
+        subgraph 两级路由
+            direction TB
+            COARSE[第一级: SQL 粗筛]
+            COARSE_DETAIL[三级匹配: 书名+章节+子章节]
+            ICD[ICD 编码导航加分]
+            DRUG_COARSE[药物同义词辅助]
+            AUTH[权威性加权排序]
+            LLM_FINE[第二级: LLM 精筛章节]
+
+            COARSE --> COARSE_DETAIL
+            COARSE_DETAIL --> ICD
+            ICD --> DRUG_COARSE
+            DRUG_COARSE --> AUTH
+            AUTH --> LLM_FINE
+        end
+
+        HIT --> TWO_LEVEL
+        TWO_LEVEL --> COARSE
+        LLM_FINE --> ROUTED
+
+        ROUTED --> SCOPE[搜索范围: 5-10 本书的章节/段落]
+    end
+
+    subgraph Stage2[Stage 2: 多路并行搜索 — 解决怎么找]
+        direction TB
+
+        subgraph 向量搜索
+            V[pageIndexSearch]
+            V_HNSW[HNSW 向量索引]
+            V_EMB[embedding 相似度]
+            V --> V_HNSW --> V_EMB
+        end
+
+        subgraph 关键词搜索
+            K[keywordSearch]
+            K_SYN[药物同义词扩展]
+            K_STRICT[严格模式: AND 原始关键词]
+            K_RELAX[宽松模式: OR 扩展关键词]
+            K_TRGM[pg_trgm 三元组索引]
+            K --> K_SYN --> K_STRICT
+            K_STRICT -->|无结果| K_RELAX
+            K_RELAX --> K_TRGM
+            K_STRICT -->|有结果| K_TRGM
+        end
+
+        SCOPE --> V
+        SCOPE --> K
+    end
+
+    subgraph Stage3[Stage 3: GraphRAG — 解决还缺什么]
+        direction TB
+        G[graph_search]
+        G_ENT[实体识别: 疾病/药物/检查]
+        G_REL[关系遍历: 确诊/治疗/支持/提示]
+        G_CROSS[跨书关联发现]
+        G_COMM[社区摘要: 可解释性]
+        G_WEIGHT[RELATION_WEIGHTS 加权]
+
+        G --> G_ENT --> G_REL
+        G_REL --> G_CROSS
+        G_CROSS --> G_COMM
+        G_COMM --> G_WEIGHT
+    end
+
+    subgraph 结果融合
+        MERGE[多路结果合并]
+        RANK[按相关性 + 权威性排序]
+        TRACE[来源溯源: 书→章→段]
+        MERGE --> RANK --> TRACE
+    end
+
+    subgraph 输出
+        OUT[返回: 匹配段落 + 来源 + 关系链]
+    end
+
+    Q --> QC
+    V_EMB --> MERGE
+    K_TRGM --> MERGE
+    G_WEIGHT --> MERGE
+    TRACE --> OUT

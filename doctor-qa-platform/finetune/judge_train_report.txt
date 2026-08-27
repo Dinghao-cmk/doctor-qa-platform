@@ -1,0 +1,6 @@
+输入: c:\在水医方\doctor-qa-platform\finetune\rag_train_v3.jsonl
+输出: c:\在水医方\doctor-qa-platform\finetune\rag_train_v5.jsonl
+问答样本: 249 条
+新增判定样本: 30 条（正 15 / 负 15）
+合计: 279 条
+防重叠检查: 通过（与评测集 v2 无重复）

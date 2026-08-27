@@ -1,0 +1,24 @@
+{
+    "name": "doctor-qa-platform",
+    "version": "1.0.0",
+    "description": "医学知识问答平台 - 基于 PageIndex 知识库为医生提供即时问答服务",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "node --watch src/server.js"
+    },
+    "author": "zsyf",
+    "license": "ISC",
+    "dependencies": {
+        "@node-rs/jieba": "^2.0.1",
+        "cors": "^2.8.5",
+        "debug": "^4.4.1",
+        "dotenv": "^17.4.2",
+        "express": "^4.21.0",
+        "knex": "^0.95.11",
+        "multer": "^2.2.0",
+        "pdf-parse": "^2.4.5",
+        "pg": "^8.13.0",
+        "superagent": "^10.1.0"
+    }
+}

@@ -1,0 +1,3052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医学知识问答平台</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --accent: #2563eb; /* 与 --primary 同色系：选中态/徽标（历史引用但缺失，补齐） */
+            --bg: #f4f6fb;
+            --bg-card: #ffffff;
+            --bg-page: #f4f6fb;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-1: #1e293b;
+            --text-2: #64748b;
+            --text-3: #94a3b8;
+            --border: #e2e8f0;
+            --user-bubble: #3b82f6;
+            --sidebar-w: 250px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* ── 左侧会话栏 ── */
+        .sidebar {
+            width: var(--sidebar-w);
+            flex-shrink: 0;
+            background: var(--card);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            z-index: 200;
+            transition: transform .25s ease;
+        }
+        .sidebar-header { padding: 14px 14px 10px; border-bottom: 1px solid var(--border); }
+        .sidebar-header .side-brand { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+        .conv-search {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: var(--bg);
+            font-size: 12.5px;
+            font-family: inherit;
+            outline: none;
+            margin-bottom: 10px;
+            color: var(--text);
+            transition: border-color .15s, box-shadow .15s;
+        }
+        .conv-search:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59,130,246,.1); background: #fff; }
+        .conv-search::placeholder { color: var(--text-3); }
+        .new-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #fff;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .15s;
+            box-shadow: 0 2px 8px rgba(59,130,246,.25);
+        }
+        .new-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(59,130,246,.3); }
+        .conv-list { flex: 1; overflow-y: auto; padding: 8px; }
+        .conv-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 2px;
+            transition: background .15s;
+            position: relative;
+            border: 1px solid transparent;
+        }
+        .conv-item:hover { background: var(--bg); }
+        .conv-item.active { background: var(--primary-light); border-color: #bfdbfe; }
+        .conv-item .conv-title {
+            flex: 1;
+            font-size: 13px;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .conv-item .conv-time { font-size: 10.5px; color: var(--text-3); flex-shrink: 0; }
+        .conv-item .conv-del {
+            display: none;
+            border: none;
+            background: transparent;
+            color: var(--text-3);
+            font-size: 12px;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+        .conv-item:hover .conv-del { display: block; }
+        .conv-item .conv-del:hover { color: #dc2626; background: #fef2f2; }
+        .conv-empty { text-align: center; color: var(--text-3); font-size: 12px; padding: 30px 10px; line-height: 1.7; }
+
+        /* ── 右侧主区 ── */
+        .main { flex: 1; display: flex; flex-direction: column; min-width: 0; height: 100vh; }
+
+        .header {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            flex-shrink: 0;
+            z-index: 100;
+        }
+        .header-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; row-gap: 8px; }
+        .brand { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: var(--primary); }
+        .brand .logo {
+            width: 32px; height: 32px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px; color: #fff;
+        }
+        .menu-btn { display: none; border: 1px solid var(--border); background: var(--card); border-radius: 8px; padding: 6px 10px; font-size: 15px; cursor: pointer; }
+        .header-right { display: flex; align-items: center; gap: 10px; }
+        .header-right select {
+            padding: 6px 10px;
+            font-size: 12.5px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--bg);
+            color: var(--text);
+            outline: none;
+            cursor: pointer;
+            max-width: 170px;
+        }
+        .badge {
+            font-size: 11px;
+            color: var(--text-2);
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+        }
+        .btn-ghost {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-2);
+            padding: 6px 12px;
+            font-size: 12.5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all .15s;
+            white-space: nowrap;
+        }
+        .btn-ghost:hover { background: var(--bg); color: var(--text); }
+
+        /* 消息区 */
+        .chat-area { flex: 1; overflow-y: auto; padding: 24px 16px; scroll-behavior: smooth; }
+        .chat-inner { max-width: 860px; margin: 0 auto; }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 52vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .empty-state .icon {
+            width: 68px; height: 68px;
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            border-radius: 22px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 34px;
+            box-shadow: 0 8px 24px rgba(59,130,246,.25);
+            margin-bottom: 18px;
+        }
+        .empty-state h2 { font-size: 21px; margin-bottom: 8px; }
+        .empty-state p { font-size: 13.5px; color: var(--text-2); margin-bottom: 22px; }
+        .chips { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 520px; }
+        .chip {
+            padding: 8px 16px;
+            font-size: 13px;
+            color: var(--primary);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            cursor: pointer;
+            transition: all .15s;
+            box-shadow: 0 1px 2px rgba(0,0,0,.04);
+        }
+        .chip:hover { border-color: var(--primary); background: var(--primary-light); transform: translateY(-1px); }
+
+        .msg-user { display: flex; justify-content: flex-end; margin-bottom: 14px; animation: fadeIn .25s ease; }
+        .msg-user .bubble {
+            background: var(--user-bubble);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 16px 16px 4px 16px;
+            font-size: 14.5px;
+            line-height: 1.6;
+            max-width: 76%;
+            word-break: break-word;
+            box-shadow: 0 1px 2px rgba(59,130,246,.2);
+        }
+
+        .msg-assistant { display: flex; gap: 10px; margin-bottom: 18px; animation: fadeIn .3s ease; }
+        .avatar {
+            width: 34px; height: 34px;
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(59,130,246,.25);
+        }
+        .ai-body { flex: 1; min-width: 0; }
+        .ai-bubble {
+            background: var(--card);
+            border-radius: 4px 16px 16px 16px;
+            padding: 14px 18px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.05);
+            position: relative;
+        }
+        .ai-bubble .copy-btn {
+            position: absolute;
+            top: 8px; right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 13px;
+            color: var(--text-3);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity .15s;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+        .ai-bubble:hover .copy-btn { opacity: 1; }
+        .ai-bubble .copy-btn:hover { background: var(--bg); color: var(--text); }
+
+        /* ── 回答反馈（点赞/点踩） ── */
+        .feedback-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px dashed var(--border);
+        }
+        .feedback-bar .fb-label { font-size: 11px; color: var(--text-3); }
+        .feedback-bar .fb-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            font-size: 12px;
+            color: var(--text-3);
+            padding: 3px 12px;
+            cursor: pointer;
+            transition: all .15s;
+            font-family: inherit;
+        }
+        .feedback-bar .fb-btn:hover { border-color: var(--primary); color: var(--primary); background: rgba(59,130,246,.05); }
+        .feedback-bar .fb-btn.liked { border-color: #3b82f6; background: #3b82f6; color: #fff; cursor: default; }
+        .feedback-bar .fb-btn.disliked { border-color: #ef4444; background: #ef4444; color: #fff; cursor: default; }
+
+        /* 点踩原因弹窗 */
+        .fb-q { font-size: 13px; color: var(--text-2); margin-bottom: 12px; line-height: 1.5; }
+        .fb-reasons { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+        .fb-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 5px 12px;
+            font-size: 12.5px;
+            color: var(--text-2);
+            cursor: pointer;
+            transition: all .15s;
+            user-select: none;
+        }
+        .fb-chip:hover { border-color: var(--primary); color: var(--primary); }
+        .fb-chip input { display: none; }
+        .fb-chip.checked { border-color: #ef4444; background: #fef2f2; color: #dc2626; }
+        .fb-reason-text {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 13px;
+            font-family: inherit;
+            resize: vertical;
+            outline: none;
+            color: var(--text);
+            background: var(--bg);
+        }
+        .fb-reason-text:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59,130,246,.1); }
+        .fb-hint { font-size: 11.5px; color: var(--text-3); margin-top: 6px; }
+
+        /* 书籍管理 */
+        .manage-list { max-height: 46vh; overflow-y: auto; }
+        .manage-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            background: var(--bg);
+        }
+        .manage-item .mi-info { flex: 1; min-width: 0; }
+        .manage-item .mi-title { font-size: 13.5px; font-weight: 600; color: var(--text); }
+        .manage-item .mi-meta { font-size: 11.5px; color: var(--text-3); margin-top: 2px; }
+        .manage-item .mi-status {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+        .manage-item .mi-status.on { background: #ecfdf5; color: #059669; }
+        .manage-item .mi-status.off { background: #f3f4f6; color: #6b7280; }
+        .manage-item .mi-actions { display: flex; gap: 6px; }
+        .manage-item .mi-btn {
+            border: 1px solid var(--border);
+            background: #fff;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            color: var(--text-2);
+            transition: all .15s;
+            font-family: inherit;
+        }
+        .manage-item .mi-btn:hover { border-color: var(--primary); color: var(--primary); }
+        .manage-item .mi-btn.danger:hover { border-color: #ef4444; color: #dc2626; background: #fef2f2; }
+        .manage-loading { text-align: center; color: var(--text-3); padding: 24px 0; font-size: 13px; }
+        .manage-empty { text-align: center; color: var(--text-3); padding: 24px 0; font-size: 13px; }
+
+        .answer-content { font-size: 14.5px; line-height: 1.7; word-break: break-word; }
+        .answer-content h3 { font-size: 15px; font-weight: 600; margin: 12px 0 4px; }
+        .answer-content h3:first-child { margin-top: 0; }
+        .answer-content ul, .answer-content ol { padding-left: 20px; margin: 4px 0; }
+        .answer-content li { margin: 2px 0; }
+        .answer-content strong { font-weight: 600; }
+        .answer-content p { margin: 4px 0; }
+
+        .sources-section { margin-top: 12px; border-top: 1px dashed var(--border); padding-top: 10px; }
+        .sources-header {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .sources-header:hover { color: var(--text); }
+        .sources-header .arrow { display: inline-block; transition: transform .2s; font-size: 10px; }
+        .sources-header .arrow.collapsed { transform: rotate(-90deg); }
+        .sources-body.hidden { display: none; }
+        /* 页面化展示：来源卡片流（每张卡片 = 一页，带页码角标） */
+        .sources-body { display: flex; gap: 10px; overflow-x: auto; padding: 10px 2px 4px; scroll-snap-type: x proximity; }
+        .page-card {
+            flex: 0 0 300px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,.05);
+            overflow: hidden;
+            cursor: pointer;
+            scroll-snap-align: start;
+            transition: box-shadow .15s, border-color .15s;
+        }
+        .page-card:hover { border-color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,.09); }
+        .page-card .page-head { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-bottom: 1px dashed var(--border); }
+        .page-card .page-tag {
+            flex-shrink: 0;
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #fff;
+            background: var(--primary);
+            border-radius: 6px;
+            padding: 2px 7px;
+            letter-spacing: .5px;
+        }
+        .page-card .book-label { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .page-card .page-body { padding: 8px 12px 10px; }
+        .page-card .path-label { font-size: 11px; color: var(--text-3); margin-bottom: 6px; }
+        .page-card .page-excerpt {
+            font-size: 12px;
+            line-height: 1.65;
+            color: var(--text-2);
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .page-card.expanded .page-excerpt { display: block; }
+        .page-card .expand-hint { font-size: 10px; color: var(--text-3); margin-top: 6px; }
+        .page-card.expanded .expand-hint { display: none; }
+
+        .meta-bar { font-size: 10.5px; color: var(--text-3); padding: 6px 2px 0; }
+
+        /* 🧠 LLM 重排过程面板（候选 → 级别 → 保留/删除） */
+        .rerank-section { margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 8px; }
+        .rerank-header { font-size: 12px; font-weight: 600; color: var(--text-2); display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; }
+        .rerank-header:hover { color: var(--text); }
+        .rerank-header .arrow { display: inline-block; transition: transform .2s; font-size: 10px; }
+        .rerank-header .arrow.collapsed { transform: rotate(-90deg); }
+        .rerank-body { margin-top: 6px; }
+        .rerank-body.hidden { display: none; }
+        .rerank-row { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 8px; background: var(--bg); margin-top: 4px; font-size: 11.5px; }
+        .rerank-row.dropped { opacity: .5; }
+        .rerank-lv { flex-shrink: 0; font-size: 10px; font-weight: 700; color: #fff; border-radius: 5px; padding: 1px 6px; }
+        .rerank-lv.lv2 { background: #16a34a; }
+        .rerank-lv.lv1 { background: #d97706; }
+        .rerank-lv.lv0 { background: #9ca3af; }
+        .rerank-book { flex-shrink: 0; max-width: 28%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+        .rerank-text { flex: 1; min-width: 0; color: var(--text-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .rerank-mark { flex-shrink: 0; font-size: 10px; font-weight: 700; border-radius: 5px; padding: 1px 6px; }
+        .rerank-mark.keep { color: #16a34a; background: #f0fdf4; }
+        .rerank-mark.drop { color: #dc2626; background: #fef2f2; }
+
+        /* 知识库未收录提示 */
+        .noresult-banner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 12px;
+            font-size: 12.5px;
+            color: #92400e;
+        }
+        .noresult-banner .nr-text { flex: 1; min-width: 200px; }
+        .noresult-banner .nr-btn {
+            border: 1px solid #f59e0b;
+            background: #fff;
+            color: #b45309;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all .15s;
+            white-space: nowrap;
+        }
+        .noresult-banner .nr-btn:hover { background: #fef3c7; }
+        .loading-indicator { display: none; }
+        .loading-indicator.visible { display: flex; }
+
+        .error-card {
+            display: none;
+            max-width: 860px;
+            margin: 0 auto 8px;
+            background: #fef2f2;
+            border-radius: 10px;
+            padding: 10px 16px;
+            color: #dc2626;
+            font-size: 13px;
+            border: 1px solid #fecaca;
+        }
+        .error-card.visible { display: block; }
+
+        /* 底部输入区 */
+        .input-bar {
+            flex-shrink: 0;
+            padding: 10px 16px 14px;
+            background: linear-gradient(to top, var(--bg) 70%, transparent);
+        }
+        /* 提问前模型选择器：一键切换本次回答的模型（自动路由/云端/本地微调） */
+        .model-picker { max-width: 860px; margin: 0 auto 6px; display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--text-3); }
+        .model-picker select { padding: 3px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 11.5px; background: var(--bg-card); color: var(--text-1); cursor: pointer; outline: none; }
+        .model-picker select:hover { border-color: var(--primary); }
+        .input-box {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            background: var(--card);
+            border-radius: 24px;
+            padding: 8px 8px 8px 18px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.08);
+            border: 1.5px solid var(--border);
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .input-box:focus-within { border-color: var(--primary); box-shadow: 0 4px 24px rgba(59,130,246,.15); }
+        .input-box textarea {
+            flex: 1;
+            border: none;
+            outline: none;
+            resize: none;
+            background: transparent;
+            font-size: 14.5px;
+            font-family: inherit;
+            line-height: 1.5;
+            color: var(--text);
+            min-height: 26px;
+            max-height: 120px;
+            padding: 6px 0;
+        }
+        .input-box textarea::placeholder { color: var(--text-3); }
+        .send-btn {
+            width: 38px; height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all .15s;
+            box-shadow: 0 2px 8px rgba(59,130,246,.3);
+        }
+        .send-btn:hover { transform: scale(1.06); background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+        .send-btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+        .send-btn .spinner {
+            display: none;
+            width: 16px; height: 16px;
+            border: 2px solid rgba(255,255,255,.4);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin .6s linear infinite;
+        }
+        .send-btn.btn-loading .spinner { display: inline-block; }
+        .send-btn.btn-loading { font-size: 0; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .input-hint { max-width: 860px; margin: 6px auto 0; text-align: center; font-size: 11px; color: var(--text-3); }
+
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: var(--text);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            opacity: 0;
+            transition: all .25s;
+            pointer-events: none;
+            z-index: 999;
+        }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        .sidebar-mask {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.3);
+            z-index: 150;
+        }
+
+        /* ── 上传弹窗 ── */
+        .modal-mask {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.4);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-mask.visible { display: flex; }
+        .modal {
+            background: var(--card);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 560px;
+            max-height: 82vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 16px 48px rgba(0,0,0,.15);
+            animation: fadeIn .2s ease;
+        }
+        .modal.modal-lg { max-width: 760px; }
+                .modal.modal-xl { max-width: 1000px; }
+                /* ── PageIndex 结构浏览 ── */
+                .pi-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+                .pi-stat { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 8px 14px; font-size: 12.5px; color: var(--text-2); }
+                .pi-stat b { color: var(--primary); font-size: 16px; margin-right: 4px; }
+                .pi-layout { display: flex; gap: 14px; height: 430px; }
+                .pi-booklist { width: 220px; flex-shrink: 0; overflow-y: auto; border: 1px solid var(--border); border-radius: 10px; padding: 6px; }
+                .pi-book { display: flex; align-items: center; gap: 6px; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 12.5px; }
+                .pi-book:hover { background: var(--bg); }
+                .pi-book.active { background: var(--primary); color: #fff; }
+                .pi-book .cnt { margin-left: auto; font-size: 10.5px; opacity: .75; }
+                .pi-right { flex: 1; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+                .pi-tree { flex: 1.15; overflow-y: auto; border: 1px solid var(--border); border-radius: 10px; padding: 8px; }
+                .pi-node { display: flex; align-items: center; gap: 6px; padding: 6px 8px; border-radius: 6px; cursor: pointer; font-size: 12.5px; }
+                .pi-node:hover { background: var(--bg); }
+                .pi-node .pi-arrow { font-size: 10px; color: var(--text-3); width: 14px; text-align: center; flex-shrink: 0; }
+                .pi-node .pi-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+                .pi-node .pi-count { font-size: 10.5px; color: #fff; background: var(--primary); border-radius: 8px; padding: 1px 7px; flex-shrink: 0; }
+                .pi-passages { flex: 1; overflow-y: auto; border: 1px solid var(--border); border-radius: 10px; padding: 8px; background: var(--bg); }
+                .pi-passage { border-left: 3px solid var(--primary); background: var(--card); border-radius: 0 8px 8px 0; margin-bottom: 8px; padding: 8px 10px; font-size: 12px; line-height: 1.65; color: var(--text-2); cursor: pointer; }
+                .pi-passage .p-head { display: flex; justify-content: space-between; color: var(--text-3); font-size: 10.5px; margin-bottom: 4px; }
+                .pi-passage .p-text { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+                .pi-passage.expanded .p-text { display: block; }
+                .pi-empty { text-align: center; color: var(--text-3); padding: 30px 0; font-size: 13px; }
+        .wl-tabs { display: flex; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .wl-tab { border: 1px solid var(--border); background: transparent; border-radius: 8px; padding: 7px 16px; font-size: 13.5px; color: var(--text-2); cursor: pointer; }
+        .wl-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+        .req-item { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; background: var(--bg-card); }
+        .req-item .req-actions { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+        .req-domain { font-size: 11px; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 5px; margin-left: 4px; }
+        .req-count { font-size: 11px; color: #d97706; background: #fef3c7; border-radius: 4px; padding: 0 6px; margin-left: 4px; }
+        .wl-btn { position: relative; }
+        .wl-nav-badge { display: none; position: absolute; top: -6px; right: -6px; min-width: 16px; height: 16px; line-height: 16px; padding: 0 4px; border-radius: 8px; background: #ef4444; color: #fff; font-size: 10px; text-align: center; box-shadow: 0 0 0 2px var(--bg-page); }
+                .req-suggest { margin-top: 6px; font-size: 12px; color: #555; background: #f0f7ff; border-left: 3px solid #3b82f6; padding: 5px 8px; border-radius: 0 6px 6px 0; }
+                .req-gap { margin-top: 6px; font-size: 12.5px; color: #9a3412; background: #fff7ed; border-left: 3px solid #f97316; padding: 5px 8px; border-radius: 0 6px 6px 0; }
+        .req-books { margin-top: 6px; font-size: 12.5px; color: #166534; background: #f0fdf4; border-left: 3px solid #22c55e; padding: 5px 8px; border-radius: 0 6px 6px 0; line-height: 1.7; }
+        .upload-req-hint { margin-bottom: 10px; font-size: 12.5px; line-height: 1.6; color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 8px 12px; }
+                .domain-candidates { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; background: var(--bg-card); margin-bottom: 8px; }
+        .dc-group { font-size: 12px; color: var(--text-3); margin: 4px 0 6px; }
+        .dc-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+        .dc-item { border: 1px solid var(--border); background: transparent; border-radius: 8px; padding: 4px 10px; font-size: 12.5px; color: var(--text-2); cursor: pointer; display: inline-flex; align-items: baseline; gap: 6px; }
+        .dc-item .dc-em { font-style: normal; font-size: 11px; color: #999; }
+        .dc-item.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
+        .dc-item.selected .dc-em { color: #dbeafe; }
+        .domain-add { display: flex; gap: 6px; align-items: center; }
+        .domain-add input { flex: 1; padding: 6px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 12.5px; background: var(--bg-card); color: var(--text-1); }
+        .domain-hint { font-size: 11.5px; color: var(--text-3); margin-top: 6px; }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .modal-close {
+            border: none;
+            background: transparent;
+            font-size: 15px;
+            color: var(--text-3);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+        .modal-close:hover { background: var(--bg); color: var(--text); }
+        .modal-body { flex: 1; overflow-y: auto; padding: 20px; }
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 14px 20px;
+            border-top: 1px solid var(--border);
+        }
+        .btn-confirm {
+            padding: 9px 22px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #fff;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .15s;
+            box-shadow: 0 2px 8px rgba(59,130,246,.25);
+        }
+        .btn-confirm:hover { transform: translateY(-1px); }
+        .btn-confirm:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+        /* ── 设置弹窗 ── */
+        .set-group { margin-bottom: 18px; }
+        .set-group-title {
+            font-size: 13px; font-weight: 700; color: var(--primary);
+            padding-bottom: 8px; margin-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .set-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .set-row label { width: 86px; font-size: 12.5px; color: var(--text-2); flex-shrink: 0; }
+        .set-row input[type="text"], .set-row input[type="password"], .set-row input[type="url"] {
+            flex: 1; padding: 8px 12px; font-size: 12.5px;
+            border: 1px solid var(--border); border-radius: 8px;
+            background: var(--bg); color: var(--text); outline: none;
+        }
+        .set-row input:focus { border-color: var(--primary); }
+        .set-row input::placeholder { color: var(--text-3); }
+        .set-hint { font-size: 11.5px; color: var(--text-3); line-height: 1.6; margin: -4px 0 10px 96px; }
+        .set-toggle { display: flex; align-items: center; gap: 8px; margin: 4px 0 10px 96px; font-size: 12.5px; color: var(--text-2); cursor: pointer; }
+        .set-toggle input { accent-color: var(--primary); }
+        .set-test {
+            margin-left: 96px; margin-top: 2px;
+            border: 1px dashed var(--border); background: transparent;
+            color: var(--text-2); font-size: 12px; padding: 6px 14px; border-radius: 8px;
+            cursor: pointer; transition: all .15s;
+        }
+        .set-test:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+        .set-test:disabled { opacity: .5; cursor: not-allowed; }
+        .set-test-result { font-size: 12px; margin: 8px 0 0 96px; line-height: 1.6; }
+        .set-test-result.ok { color: #16a34a; }
+        .set-test-result.err { color: #dc2626; }
+        .set-rebuild { margin-top: 4px; }
+        .set-status {
+            font-size: 11.5px; margin: 6px 0 0 96px; line-height: 1.6;
+            display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+        }
+        .set-status .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        .set-status .dot.on { background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,.15); }
+        .set-status .dot.off { background: #9ca3af; }
+        .set-status .dot.busy { background: #f59e0b; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+
+        .drop-zone {
+            border: 2px dashed var(--border);
+            border-radius: 14px;
+            padding: 36px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .drop-zone:hover, .drop-zone.dragover { border-color: var(--primary); background: var(--primary-light); }
+        .drop-zone .dz-icon { font-size: 36px; margin-bottom: 10px; }
+        .drop-zone p { font-size: 14px; color: var(--text); }
+        .drop-zone .dz-hint { font-size: 12px; color: var(--text-3); margin-top: 6px; }
+        .drop-zone.uploading { pointer-events: none; opacity: .6; }
+
+        .up-title { font-size: 14.5px; font-weight: 700; margin-bottom: 8px; }
+        .up-stats {
+            display: flex;
+            gap: 16px;
+            padding: 10px 14px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            font-size: 12.5px;
+            color: var(--primary-dark);
+        }
+        .up-stats b { font-size: 15px; }
+        .up-chapters {
+            max-height: 180px;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: var(--text-2);
+            line-height: 1.9;
+        }
+        .up-chapters .more { color: var(--text-3); }
+        .upload-result {
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        .upload-result.ok { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+        .upload-result.err { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+        .upload-result .ur-title { font-size: 15px; font-weight: 700; }
+        .upload-error { margin-top: 10px; font-size: 12.5px; color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 10px 14px; display: none; }
+        .upload-error.visible { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .sidebar { position: fixed; left: 0; top: 0; transform: translateX(-100%); box-shadow: 2px 0 20px rgba(0,0,0,.1); }
+            .sidebar.open { transform: translateX(0); }
+            .sidebar-mask.visible { display: block; }
+            .menu-btn { display: block; }
+            .badge { display: none; }
+            .header { padding: 8px 12px; }
+            .header-inner { justify-content: flex-start; }
+            .header-right { flex-wrap: wrap; gap: 8px; }
+            .header-right select { max-width: 130px; }
+            .header-right .btn-ghost { padding: 5px 9px; font-size: 13px; }
+            .chat-area { padding: 16px 12px; }
+            .msg-user .bubble { max-width: 88%; }
+        }
+        /* ── 对比实验演示（🔬 RAG vs 无RAG vs 差RAG vs 本地） ── */
+        .compare-section { margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 8px; }
+                .compare-block + .compare-block { border-top: 1px dashed var(--border); margin-top: 12px; padding-top: 10px; }
+        .compare-head { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text-1); }
+        .compare-hint { font-weight: 400; color: #999; font-size: 11.5px; }
+        .compare-btn { margin-left: auto; }
+                .compare-select { font-size: 11.5px; padding: 4px 8px; border: 1px solid var(--border); border-radius: 7px; background: var(--bg); color: var(--text-1); max-width: 220px; }
+        .compare-grid { margin-top: 8px; display: flex; flex-direction: column; gap: 8px; }
+        .compare-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--bg-card); }
+        .cc-head { display: flex; align-items: baseline; gap: 8px; padding: 6px 10px; background: #f5f6fa; font-size: 12.5px; }
+        .cc-head b { color: var(--text-1); }
+        .cc-desc { color: #999; font-size: 11px; }
+        .cc-tags { margin-left: auto; color: #777; font-size: 11px; white-space: nowrap; }
+        .cc-body { padding: 8px 10px; font-size: 13px; max-height: 320px; overflow-y: auto; }
+        .cc-answer { white-space: pre-wrap; word-break: break-word; line-height: 1.7; color: var(--text-1); }
+        .cc-src-head { margin-top: 6px; font-size: 12px; color: #2563eb; cursor: pointer; }
+        .cc-src-body { margin-top: 4px; font-size: 11.5px; color: #777; }
+        .cc-src-item { padding: 2px 0; border-bottom: 1px dashed #eee; }
+        .cc-page-tag { float: right; color: #fff; background: #2563eb; border-radius: 5px; padding: 0 6px; font-size: 10px; line-height: 16px; margin-left: 6px; }
+        /* 技术参数面板（老板看板）：等宽字体展示实验参数 */
+        .cc-param-head { margin-top: 6px; font-size: 12px; color: #0f766e; cursor: pointer; }
+        .cc-param-body { margin-top: 4px; border: 1px dashed #d1d5db; border-radius: 6px; padding: 6px 8px; background: #f9fafb; font-size: 11px; }
+        .cc-param-row { display: flex; gap: 8px; padding: 2px 0; }
+        .cc-param-k { flex-shrink: 0; width: 88px; color: #6b7280; font-family: Consolas, Monaco, monospace; }
+        .cc-param-v { flex: 1; color: #1f2937; font-family: Consolas, Monaco, monospace; word-break: break-all; }
+        .cc-error { color: #dc2626; }
+        .cc-pending { color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <!-- 左侧会话栏 -->
+    <div class="sidebar-mask" id="sidebarMask" onclick="closeSidebar()"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="side-brand">💬 对话列表</div>
+            <input class="conv-search" id="convSearch" type="text" placeholder="🔍 搜索会话..." oninput="onConvSearch(this.value)">
+            <button class="new-btn" onclick="newConversation()">＋ 新建对话</button>
+        </div>
+        <div class="conv-list" id="convList"></div>
+    </aside>
+
+    <!-- 右侧主区 -->
+    <div class="main">
+        <header class="header">
+            <div class="header-inner">
+                <div class="brand">
+                    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+                    <div class="logo">🏥</div>
+                    <span>医学知识问答</span>
+                </div>
+                <div class="header-right">
+                    <select id="bookSelect" title="限定搜索范围">
+                        <option value="">📚 全部书籍</option>
+                    </select>
+                    <span class="badge" id="sessionBadge">新对话</span>
+                    <button class="btn-ghost" onclick="exportConversation()" title="导出当前对话为 Markdown">📄 导出</button>
+                    <button class="btn-ghost" onclick="openUpload()">📤 上传书籍</button>
+                    <button class="btn-ghost" onclick="openManageBooks()">🗂 管理书籍</button>
+                    <button class="btn-ghost" onclick="openPageIndex()" title="查看知识库 PageIndex 结构索引">📖 PageIndex</button>
+                                    <button class="btn-ghost wl-btn" onclick="openWhitelist()">📚 权威书目库<span class="wl-nav-badge" id="wlNavBadge"></span></button>
+                    <button class="btn-ghost" onclick="openSettings()" title="API 设置">⚙️ 设置</button>
+                    <button class="btn-ghost" onclick="newConversation()">🔄 新对话</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="chat-area" id="chatArea">
+            <div class="chat-inner" id="chatInner">
+                <div class="empty-state" id="emptyState">
+                    <div class="icon">🩺</div>
+                    <h2>有什么医学问题想问我？</h2>
+                    <p>基于医学书籍知识库，支持追问和限定书籍范围</p>
+                    <div class="chips">
+                        <span class="chip" onclick="askEx(this)">高血压诊断标准</span>
+                        <span class="chip" onclick="askEx(this)">肺炎的诊断标准</span>
+                        <span class="chip" onclick="askEx(this)">社区获得性肺炎的抗菌药物选择</span>
+                        <span class="chip" onclick="askEx(this)">心力衰竭的治疗原则</span>
+                    </div>
+                </div>
+
+                <div class="msg-assistant loading-indicator" id="loadingIndicator">
+                    <div class="avatar">🩺</div>
+                    <div class="ai-body">
+                        <div class="ai-bubble">
+                            <div class="loading-dots" id="loadingDots"><span></span><span></span><span></span></div>
+                            <div class="loading-text" id="loadingText">正在搜索知识库...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="error-card" id="errorCard"></div>
+
+        <footer class="input-bar">
+            <div class="model-picker"><span>模型</span><select id="modelSelect" title="选择本次回答使用的模型">
+                    <option value="auto">自动路由（推荐）</option>
+                    <option value="deepseek-v4-flash">快模型 flash（云端）</option>
+                    <option value="deepseek-v4-pro">强模型 pro（云端，较慢）</option>
+                    <option value="qwen2.5-7b-med-qa">本地 med-qa（微调问答版）</option>
+                    <option value="qwen2.5-7b-med-r4-v5">本地 med-r4-v5（质控判定版）</option>
+                </select></div>
+            <div class="input-box">
+                <textarea id="qInput" placeholder="输入医学问题，Enter 发送" rows="1"></textarea>
+                <button class="send-btn" id="askBtn" onclick="ask()" title="发送">➤<span class="spinner"></span></button>
+            </div>
+            <div class="input-hint">支持多会话 · 左侧切换历史对话 · 支持追问</div>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <!-- 上传弹窗 -->
+    <div class="modal-mask" id="uploadMask">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span>📤 上传书籍</span>
+                <button class="modal-close" onclick="closeUpload()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-req-hint" id="uploadReqHint" hidden></div>
+                <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+                    <div class="dz-icon">📚</div>
+                    <p>点击选择 或 拖拽文件到此处</p>
+                    <p class="dz-hint" id="dzHint">支持 TXT / MD / PDF，最大 200MB · 同名书籍重新上传会覆盖</p>
+                    <input type="file" id="fileInput" accept=".txt,.md,.pdf" hidden>
+                </div>
+                <div class="upload-error" id="uploadError"></div>
+                <div class="upload-preview" id="uploadPreview" hidden>
+                    <div class="up-title">📖 书名（可修改）：<input type="text" id="upTitleInput" style="flex:1;min-width:0;padding:5px 10px;border:1px solid var(--border);border-radius:8px;font-size:13.5px;background:var(--bg-card);color:var(--text-1)"></div>
+                    <div class="up-stats" id="upStats"></div>
+                    <div class="up-chapters" id="upChapters"></div>
+                </div>
+                <div class="upload-result" id="uploadResult" hidden></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-ghost" onclick="closeUpload()">关闭</button>
+                <button class="btn-confirm" id="confirmBtn" onclick="confirmUpload()" hidden>确认入库</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 书籍管理弹窗 -->
+    <div class="modal-mask" id="manageMask">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span>🗂 管理书籍</span>
+                <button class="modal-close" onclick="closeManageBooks()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="manage-list" id="manageList">
+                    <div class="manage-loading">加载中...</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-ghost" onclick="closeManageBooks()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PageIndex 知识库结构弹窗 -->
+    <div class="modal-mask" id="pageIndexMask">
+        <div class="modal modal-xl" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span>📖 PageIndex 知识库结构（书 → 章节 → 段落索引）</span>
+                <button class="modal-close" onclick="closePageIndex()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="pi-stats" id="piStats"></div>
+                <div class="pi-layout">
+                    <div class="pi-booklist" id="piBookList"></div>
+                    <div class="pi-right">
+                        <div class="pi-tree" id="piTree"><div class="pi-empty">👈 选择一本书查看结构</div></div>
+                        <div class="pi-passages" id="piPassages"><div class="pi-empty">点击章节查看该页段落索引</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-ghost" onclick="closePageIndex()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 权威书目白名单弹窗 -->
+    <div class="modal-mask" id="whitelistMask">
+        <div class="modal modal-lg" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span>📚 权威书目库（推荐书籍时从这里出书，全部真实可验证）</span>
+                <button class="modal-close" onclick="closeWhitelist()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="wl-tabs">
+                    <button class="wl-tab active" id="wlTabList" onclick="switchWlTab('list')">📖 权威书目</button>
+                    <button class="wl-tab" id="wlTabReq" onclick="switchWlTab('req')">📋 待补书目（<span id="reqBadge">0</span>）</button>
+                </div>
+                <div id="wlPaneList">
+                <div class="set-group">
+                    <div class="set-group-title">➕ 新增 / 编辑书目</div>
+                    <div class="set-row">
+                        <label>书名 *</label>
+                        <input type="text" id="wlTitle" placeholder="如：中国心力衰竭诊断和治疗指南2024">
+                    </div>
+                    <div class="set-row">
+                        <label>领域</label>
+                        <select id="wlDomain">
+                            <option value="心血管">心血管</option><option value="呼吸">呼吸</option>
+                            <option value="神经">神经</option><option value="内分泌">内分泌</option>
+                            <option value="消化">消化</option><option value="肾脏">肾脏</option>
+                            <option value="血液">血液</option><option value="感染">感染</option>
+                            <option value="肿瘤">肿瘤</option><option value="外科">外科</option>
+                            <option value="妇产">妇产</option><option value="儿科">儿科</option>
+                            <option value="急诊重症">急诊重症</option><option value="影像检验">影像检验</option>
+                            <option value="口腔">口腔</option><option value="眼科">眼科</option><option value="耳鼻喉">耳鼻喉</option>
+                            <option value="皮肤">皮肤</option><option value="精神心理">精神心理</option><option value="康复">康复</option>
+                            <option value="风湿免疫">风湿免疫</option><option value="骨科">骨科</option><option value="泌尿">泌尿</option>
+                            <option value="综合">综合</option><option value="教材">教材</option>
+                            <option value="规范">规范</option><option value="药物">药物</option>
+                        </select>
+                    </div>
+                    <div class="set-row">
+                        <label>发布机构</label>
+                        <input type="text" id="wlPublisher" placeholder="如：中华医学会心血管病学分会">
+                    </div>
+                    <div class="set-row">
+                        <label>年份</label>
+                        <input type="text" id="wlYear" placeholder="如：2024">
+                    </div>
+                    <div class="set-row">
+                        <label>类型</label>
+                        <select id="wlType">
+                            <option value="指南">指南</option><option value="教材">教材</option>
+                            <option value="规范">规范</option><option value="药典">药典</option><option value="工具书">工具书</option>
+                        </select>
+                    </div>
+                    <div class="set-row">
+                        <label>备注</label>
+                        <input type="text" id="wlNote" placeholder="可选：收录说明">
+                    </div>
+                    <button class="set-test" id="wlSaveBtn" onclick="saveWhitelist()">➕ 添加书目</button>
+                    <button class="set-test" id="wlCancelBtn" style="display:none" onclick="cancelEditWhitelist()">取消编辑</button>
+                </div>
+                <div class="set-group">
+                    <div class="set-group-title">📖 书目列表（<span id="wlCount">0</span> 条）</div>
+                    <div id="whitelistList" style="max-height:300px;overflow-y:auto">
+                        <div class="manage-loading">加载中...</div>
+                    </div>
+                </div>
+                </div>
+                <div id="wlPaneReq" style="display:none">
+                    <div class="set-group">
+                        <div class="set-group-title">📋 待补书目（用户问了知识库没有的书：📤 上传相关书进知识库让用户能问出答案，➕ 补录书目进推荐白名单）</div>
+                        <div id="reqList" style="max-height:340px;overflow-y:auto">
+                            <div class="manage-loading">加载中...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span style="font-size:12px;color:#888">推荐回答会标注“书目收录时间”，最新版以官方发布为准</span>
+                <button class="btn-ghost" onclick="closeWhitelist()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 设置弹窗 -->
+    <div class="modal-mask" id="settingsMask">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span>⚙️ API 设置</span>
+                <button class="modal-close" onclick="closeSettings()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="set-group">
+                    <div class="set-group-title">🤖 回答模型（LLM）</div>
+                    <div class="set-row">
+                        <label>API 地址</label>
+                        <input type="url" id="setLlmUrl" placeholder="https://api.deepseek.com/chat/completions">
+                    </div>
+                    <div class="set-row">
+                        <label>API Key</label>
+                        <input type="password" id="setLlmKey" placeholder="留空 = 保持当前配置" autocomplete="off">
+                    </div>
+                    <div class="set-row">
+                        <label>快模型</label>
+                        <input type="text" id="setLlmModel" placeholder="deepseek-chat">
+                    </div>
+                    <div class="set-row">
+                        <label>强模型</label>
+                        <input type="text" id="setLlmStrongModel" placeholder="deepseek-reasoner">
+                    </div>
+                    <label class="set-toggle">
+                        <input type="checkbox" id="setLlmFallback" checked>
+                        知识库未命中时用 LLM 兜底回答（带免责标注）
+                    </label>
+                    <button class="set-test" id="testLlmBtn" onclick="testConnection('llm')">🧪 测试连接</button>
+                    <div class="set-test-result" id="testLlmResult"></div>
+                </div>
+                <div class="set-group">
+                    <div class="set-group-title">📐 向量检索（Embedding）</div>
+                    <div class="set-status" id="embStatus"></div>
+                    <div class="set-row">
+                        <label>API 地址</label>
+                        <input type="url" id="setEmbUrl" placeholder="https://api.siliconflow.cn/v1/embeddings">
+                    </div>
+                    <div class="set-row">
+                        <label>API Key</label>
+                        <input type="password" id="setEmbKey" placeholder="留空 = 保持当前配置" autocomplete="off">
+                    </div>
+                    <div class="set-row">
+                        <label>模型</label>
+                        <input type="text" id="setEmbModel" placeholder="BAAI/bge-large-zh-v1.5">
+                    </div>
+                    <div class="set-hint">配置后需点击下方按钮为知识库段落生成向量，之后搜索自动启用"向量+关键词"混合检索，可命中同义/口语化表达。</div>
+                    <button class="set-test set-rebuild" id="rebuildBtn" onclick="rebuildEmbedding()">🔧 为全部段落生成向量</button>
+                    <div class="set-test-result" id="rebuildResult"></div>
+                </div>
+                <div class="set-group">
+                    <div class="set-group-title">🌐 联网搜索（知识库未收录问题时联网检索回答）</div>
+                    <label class="set-toggle">
+                        <input type="checkbox" id="setWebEnabled">
+                        启用联网搜索兜底（未收录问题 → 联网搜索 → 相关度把关 → 带来源回答）
+                    </label>
+                    <div class="set-row">
+                        <label>搜索 API Key</label>
+                        <input type="password" id="setWebKey" placeholder="Serper.dev 的 API Key（google.serper.dev 注册，免费 2500 次/月）" autocomplete="off">
+                    </div>
+                    <div class="set-row">
+                        <label>API 地址</label>
+                        <input type="url" id="setWebUrl" placeholder="https://google.serper.dev/search">
+                    </div>
+                    <div class="set-row" style="flex-direction:column; align-items:stretch;">
+                        <label style="margin-bottom:4px">权威域名白名单</label>
+                        <div class="domain-hint" style="margin-top:0">点选网站即加入白名单（蓝色 = 已选），联网搜索时优先采用这些网站的结果；不选 = 不限制来源。</div>
+                        <div class="domain-candidates">
+                            <div class="dc-group">官方机构</div>
+                            <div class="dc-list" id="dcOfficial"></div>
+                            <div class="dc-group">专业平台</div>
+                            <div class="dc-list" id="dcPro"></div>
+                            <div class="dc-group" id="dcCustomGroup" style="display:none">自定义</div>
+                            <div class="dc-list" id="dcCustom"></div>
+                        </div>
+                        <div class="domain-add">
+                            <input type="text" id="webDomainCustom" placeholder="自定义域名，如：dxy.cn">
+                            <button class="btn-ghost" onclick="addWebDomain()">＋ 添加</button>
+                        </div>
+                    </div>
+                    <div class="set-row">
+                        <label>相关度阈值</label>
+                        <input type="number" id="setWebThreshold" min="0.3" max="0.8" step="0.05" placeholder="0.5">
+                    </div>
+                    <div class="set-hint">相似度低于阈值的结果不采用（防乱说）。默认 0.5：越高越保守（少答不乱答），越低越宽松（多答但需人工把关）。未收录问题时优先联网搜索回答（标注来源+免责，需通过相关度把关），未配置或搜索不相关时自动回退 LLM 通用知识。</div>
+                    <button class="set-test" id="testWebBtn" onclick="testConnection('web')">🧪 测试搜索</button>
+                    <div class="set-test-result" id="testWebResult"></div>
+                </div>
+                <div class="set-group">
+                    <div class="set-group-title">🖥 本地模型（对比实验用）</div>
+                    <div class="set-row">
+                        <label>API 地址</label>
+                        <input type="url" id="setLocalUrl" placeholder="http://localhost:11434/v1/chat/completions">
+                    </div>
+                    <div class="set-row">
+                        <label>模型名</label>
+                        <input type="text" id="setLocalModel" placeholder="qwen2.5:7b-instruct">
+                    </div>
+                    <div class="set-row">
+                        <label>API Key</label>
+                        <input type="password" id="setLocalKey" placeholder="ollama 一般无需 key" autocomplete="off">
+                    </div>
+                    <div class="set-hint">用于页面「🔬 对比实验」中的本地无 RAG 对照组（ollama 部署）。未配置时对比实验仅展示联网模型两组。</div>
+                    <button class="set-test" id="testLocalBtn" onclick="testConnection('local')">🧪 测试本地模型</button>
+                    <div class="set-test-result" id="testLocalResult"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-ghost" onclick="closeSettings()">关闭</button>
+                <button class="btn-confirm" id="saveSettingsBtn" onclick="saveSettings()">保存并生效</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 点踩原因弹窗 -->
+    <div class="modal-mask" id="fbMask">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <span>🙏 帮助我们改进回答</span>
+                <button class="modal-close" onclick="closeFb()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="fb-q">问题：<span id="fbQuestion"></span></div>
+                <div class="fb-reasons" id="fbReasons">
+                    <label class="fb-chip"><input type="checkbox" value="回答不准确">回答不准确</label>
+                    <label class="fb-chip"><input type="checkbox" value="内容不完整/有遗漏">内容不完整/有遗漏</label>
+                    <label class="fb-chip"><input type="checkbox" value="与知识库内容不符">与知识库内容不符</label>
+                    <label class="fb-chip"><input type="checkbox" value="引用/来源有问题">引用/来源有问题</label>
+                    <label class="fb-chip"><input type="checkbox" value="表述不清/难理解">表述不清/难理解</label>
+                    <label class="fb-chip"><input type="checkbox" value="信息过时">信息过时</label>
+                </div>
+                <textarea class="fb-reason-text" id="fbReasonText" rows="3" placeholder="其他原因或具体建议（选填）..."></textarea>
+                <div class="fb-hint" id="fbHint">请至少选择一项原因，帮助我们定位问题</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-ghost" onclick="closeFb()">取消</button>
+                <button class="btn-confirm" id="fbSubmitBtn" onclick="submitFb()" disabled>提交反馈</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const $ = id => document.getElementById(id);
+        const qInput = $('qInput');
+        const askBtn = $('askBtn');
+        let loading = $('loadingIndicator');
+        let loadingText = $('loadingText');
+        const chatArea = $('chatArea');
+        const chatInner = $('chatInner');
+        let emptyState = $('emptyState');
+        const errorCard = $('errorCard');
+        const bookSelect = $('bookSelect');
+        const sessionBadge = $('sessionBadge');
+        const toast = $('toast');
+        const convList = $('convList');
+        const sidebar = $('sidebar');
+
+        // ── 多会话存储（localStorage 持久化） ──
+        // conversations: [{ id, sessionId, title, createdAt, updatedAt, messages: [{role, content}] }]
+        let conversations = [];
+        let currentId = '';
+
+        function loadConversations() {
+            // 兼容迁移：旧版 sessionStorage 数据 → 首个会话
+            try {
+                const oldId = sessionStorage.getItem('qa_session_id');
+                const oldMsgs = sessionStorage.getItem('qa_messages');
+                if (oldId || oldMsgs) {
+                    const old = JSON.parse(oldMsgs || '[]');
+                    if (Array.isArray(old) && old.length > 0) {
+                        conversations.push({
+                            id: 'conv_' + Date.now(),
+                            sessionId: oldId,
+                            title: typeof old[0]?.content === 'string' ? old[0].content.slice(0, 12) : '历史对话',
+                            createdAt: Date.now(),
+                            updatedAt: Date.now(),
+                            messages: old,
+                        });
+                    }
+                    sessionStorage.removeItem('qa_session_id');
+                    sessionStorage.removeItem('qa_messages');
+                }
+            } catch (e) { /* 旧数据损坏则忽略 */ }
+
+            try {
+                const saved = JSON.parse(localStorage.getItem('qa_conversations') || '[]');
+                if (Array.isArray(saved)) conversations = [...saved, ...conversations];
+            } catch (e) {
+                // 数据损坏：清空重建，避免页面崩溃
+                localStorage.removeItem('qa_conversations');
+                localStorage.removeItem('qa_current_id');
+                conversations = [];
+            }
+            currentId = localStorage.getItem('qa_current_id') || (conversations[0]?.id || '');
+            // currentId 指向的会话不存在时重置
+            if (currentId && !getConv(currentId)) currentId = '';
+        }
+        function persist() {
+            localStorage.setItem('qa_conversations', JSON.stringify(conversations));
+            localStorage.setItem('qa_current_id', currentId);
+        }
+        function getConv(id = currentId) { return conversations.find(c => c.id === id); }
+        function fmtTime(ts) {
+            const d = new Date(ts);
+            const now = new Date();
+            const sameDay = d.toDateString() === now.toDateString();
+            if (sameDay) return `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+            const yest = new Date(now); yest.setDate(now.getDate() - 1);
+            if (d.toDateString() === yest.toDateString()) return '昨天';
+            return `${d.getMonth()+1}/${d.getDate()}`;
+        }
+        function renderSidebar() {
+            convList.innerHTML = '';
+            const list = conversations.filter(c => !convSearchTerm || (c.title || '').includes(convSearchTerm));
+            if (list.length === 0) {
+                convList.innerHTML = '<div class="conv-empty">' + (convSearchTerm ? '未找到匹配的会话' : '暂无历史对话<br>点击上方"新建对话"开始') + '</div>';
+                return;
+            }
+            list.forEach(c => {
+                const item = document.createElement('div');
+                item.className = 'conv-item' + (c.id === currentId ? ' active' : '');
+                item.innerHTML = `
+                    <div class="conv-title">${esc(c.title || '新对话')}</div>
+                    <div class="conv-time">${fmtTime(c.updatedAt)}</div>
+                    <button class="conv-del" title="删除对话">✕</button>`;
+                item.onclick = (e) => {
+                    if (e.target.classList.contains('conv-del')) return;
+                    switchConversation(c.id);
+                };
+                item.querySelector('.conv-del').onclick = () => deleteConversation(c.id);
+                convList.appendChild(item);
+            });
+        }
+        // 会话搜索
+        let convSearchTerm = '';
+        function onConvSearch(v) {
+            convSearchTerm = v.trim();
+            renderSidebar();
+        }
+        function updateBadge() {
+            const c = getConv();
+            sessionBadge.textContent = c && c.messages.length > 0
+                ? `${esc(c.title || '').slice(0, 8)} · ${Math.ceil(c.messages.length / 2)} 轮`
+                : '新对话';
+        }
+
+        // ── 会话切换 ──
+        function clearChat() {
+            chatInner.innerHTML = '';
+            loading.remove(); // 卸载旧 loading 节点，后面重新挂载
+            emptyState = null;
+        }
+        function showEmpty() {
+            const es = document.createElement('div');
+            es.className = 'empty-state';
+            es.id = 'emptyState';
+            es.innerHTML = `
+                <div class="icon">🩺</div>
+                <h2>有什么医学问题想问我？</h2>
+                <p>基于医学书籍知识库，支持追问和限定书籍范围</p>
+                <div class="chips">
+                    <span class="chip" onclick="askEx(this)">高血压诊断标准</span>
+                    <span class="chip" onclick="askEx(this)">肺炎的诊断标准</span>
+                    <span class="chip" onclick="askEx(this)">社区获得性肺炎的抗菌药物选择</span>
+                    <span class="chip" onclick="askEx(this)">心力衰竭的治疗原则</span>
+                </div>`;
+            chatInner.appendChild(es);
+            emptyState = es;
+        }
+        function mountLoading() {
+            if (!$('loadingIndicator')) {
+                const l = document.createElement('div');
+                l.className = 'msg-assistant loading-indicator';
+                l.id = 'loadingIndicator';
+                l.innerHTML = `
+                    <div class="avatar">🩺</div>
+                    <div class="ai-body">
+                        <div class="ai-bubble">
+                            <div class="loading-dots"><span></span><span></span><span></span></div>
+                            <div class="loading-text" id="loadingText">正在搜索知识库...</div>
+                        </div>
+                    </div>`;
+                chatInner.appendChild(l);
+            }
+            loading = $('loadingIndicator');
+            loadingText = $('loadingText');
+        }
+        function switchConversation(id) {
+            abortAllRequests(); // 切换对话时取消进行中请求，防止回答渲染到错误的对话
+            clearLoading();
+            const c = getConv(id);
+            if (!c) { currentId = ''; newConversation(); return; } // 会话不存在时兜底新建
+            currentId = id;
+            persist();
+            clearChat();
+            if (c.messages.length === 0) {
+                showEmpty();
+            } else {
+                c.messages.forEach(m => {
+                    if (m.role === 'user') renderUserMsg(m.content, false);
+                    else renderAssistant(m.content || m, false); // content 是 {answer, sources, meta}
+                });
+            }
+            mountLoading();
+            renderSidebar();
+            updateBadge();
+            closeSidebar();
+            scrollToBottom(false);
+        }
+        function newConversation() {
+            abortAllRequests(); // 取消进行中的流式回答/对比实验，防止旧回答写入新对话
+            clearLoading();
+            const c = {
+                id: 'conv_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+                sessionId: '',
+                title: '新对话',
+                createdAt: Date.now(),
+                updatedAt: Date.now(),
+                messages: [],
+            };
+            conversations.unshift(c);
+            currentId = c.id;
+            persist();
+            clearChat();
+            showEmpty();
+            mountLoading();
+            renderSidebar();
+            updateBadge();
+            closeSidebar();
+            qInput.focus();
+        }
+        function deleteConversation(id) {
+            const idx = conversations.findIndex(c => c.id === id);
+            if (idx < 0) return;
+            if (!confirm('删除这个对话？')) return;
+            abortAllRequests(); // 删除对话时同样取消进行中请求
+            clearLoading();
+            conversations.splice(idx, 1);
+            if (currentId === id) {
+                currentId = conversations[0]?.id || '';
+                if (currentId) switchConversation(currentId);
+                else { clearChat(); showEmpty(); mountLoading(); }
+            }
+            persist();
+            renderSidebar();
+            updateBadge();
+        }
+
+        // 移动端侧栏
+        function toggleSidebar() { sidebar.classList.toggle('open'); $('sidebarMask').classList.toggle('visible'); }
+        function closeSidebar() { sidebar.classList.remove('open'); $('sidebarMask').classList.remove('visible'); }
+
+        // 导出当前对话为 Markdown
+        function exportConversation() {
+            const c = getConv();
+            if (!c || c.messages.length === 0) {
+                showToast('暂无对话内容可导出');
+                return;
+            }
+            const lines = ['# 医学知识问答对话', '', `> 导出时间：${new Date().toLocaleString()}`, ''];
+            c.messages.forEach(m => {
+                if (m.role === 'user') {
+                    lines.push(`## ${typeof m.content === 'string' ? m.content : ''}`, '');
+                } else if (m.content && m.content.answer) {
+                    lines.push(m.content.answer, '');
+                    const srcs = (m.content.sources || []).map(s => s.bookTitle || s.docTitle).filter(Boolean);
+                    if (srcs.length > 0) lines.push(`> 参考来源：${[...new Set(srcs)].join('、')}`, '');
+                    lines.push('---', '');
+                }
+            });
+            const blob = new Blob([lines.join('\n')], { type: 'text/markdown;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${(c.title || '对话').replace(/[\\/:*?"<>|]/g, '_')}.md`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('✅ 已导出对话');
+        }
+
+        // ── 渲染 ──
+        function renderUserMsg(text, scroll = true) {
+            const div = document.createElement('div');
+            div.className = 'msg-user';
+            div.innerHTML = `<div class="bubble">${esc(text)}</div>`;
+            chatInner.appendChild(div);
+            if (scroll) scrollToBottom();
+        }
+
+        // ── 回答反馈（点赞/点踩 + 原因） ──
+        let fbTarget = null; // 当前点踩目标 {data, update}
+        const fbMask = $('fbMask');
+        const fbQuestion = $('fbQuestion');
+        const fbReasons = $('fbReasons');
+        const fbReasonText = $('fbReasonText');
+        const fbHint = $('fbHint');
+        const fbSubmitBtn = $('fbSubmitBtn');
+
+        function updateFbSubmit() {
+            const hasChip = document.querySelectorAll('#fbReasons .fb-chip.checked').length > 0;
+            const hasText = fbReasonText.value.trim().length > 0;
+            fbSubmitBtn.disabled = !(hasChip || hasText);
+            fbHint.style.display = (hasChip || hasText) ? 'none' : '';
+        }
+        fbReasons.addEventListener('change', () => {
+            document.querySelectorAll('#fbReasons .fb-chip').forEach(c => c.classList.toggle('checked', c.querySelector('input').checked));
+            updateFbSubmit();
+        });
+        fbReasonText.addEventListener('input', updateFbSubmit);
+        fbMask.onclick = (e) => { if (e.target === fbMask) closeFb(); };
+
+        function openFb(data, update) {
+            fbTarget = { data, update };
+            fbQuestion.textContent = (data.meta && data.meta.question) || '未记录';
+            document.querySelectorAll('#fbReasons .fb-chip').forEach(c => { c.classList.remove('checked'); c.querySelector('input').checked = false; });
+            fbReasonText.value = '';
+            updateFbSubmit();
+            fbMask.classList.add('visible');
+        }
+        function closeFb() { fbMask.classList.remove('visible'); fbTarget = null; }
+
+        async function submitFeedback(data, rating, reason) {
+            const payload = {
+                question: (data.meta && data.meta.question) || '',
+                answer: data.answer || '',
+                rating,
+                reason: reason || null,
+                model: data.meta ? data.meta.model : null,
+                promptVersion: data.meta ? data.meta.promptVersion : null,
+                sourceBooks: (data.sources || []).map(s => s.bookTitle || s.docTitle).filter(Boolean),
+                durationMs: data.meta ? data.meta.duration : null,
+            };
+            if (!payload.question) {
+                const c = getConv();
+                const lastUser = c && [...c.messages].reverse().find(m => m.role === 'user');
+                payload.question = lastUser && typeof lastUser.content === 'string' ? lastUser.content : '未知问题';
+            }
+            try {
+                const res = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                if (!res.ok) throw new Error('提交失败');
+                // 状态持久化到消息对象（随会话保存，刷新后仍显示已反馈）
+                data.feedback = { rating, reason: reason || '', time: Date.now() };
+                persist();
+                return true;
+            } catch (e) {
+                showToast('反馈提交失败，请稍后重试');
+                return false;
+            }
+        }
+
+        async function submitFb() {
+            if (!fbTarget) return;
+            const chips = [...document.querySelectorAll('#fbReasons .fb-chip.checked')].map(c => c.querySelector('input').value);
+            const text = fbReasonText.value.trim();
+            const reason = [...chips, text].filter(Boolean).join('；');
+            if (!reason) return;
+            fbSubmitBtn.disabled = true;
+            fbSubmitBtn.textContent = '提交中...';
+            const ok = await submitFeedback(fbTarget.data, -1, reason);
+            if (ok) {
+                fbTarget.update(-1);
+                closeFb();
+                showToast('已提交反馈，感谢您的建议');
+            } else {
+                fbSubmitBtn.disabled = false;
+                fbSubmitBtn.textContent = '提交反馈';
+            }
+        }
+
+        /** 渲染回答反馈栏（点赞/点踩 + 重新生成） */
+        function renderFeedbackBar(bubble, data, wrap) {
+            const bar = document.createElement('div');
+            bar.className = 'feedback-bar';
+            const label = document.createElement('span');
+            label.className = 'fb-label';
+            label.textContent = '这个回答有帮助吗？';
+            const regen = document.createElement('button');
+            regen.className = 'fb-btn regen-btn';
+            regen.textContent = '🔄 重新生成';
+            regen.title = '换一种方式重新回答';
+            const like = document.createElement('button');
+            like.className = 'fb-btn';
+            like.textContent = '👍 有帮助';
+            const dislike = document.createElement('button');
+            dislike.className = 'fb-btn';
+            dislike.textContent = '👎 待改进';
+
+            const update = (rating) => {
+                if (rating === 1) {
+                    like.classList.add('liked');
+                    dislike.style.visibility = 'hidden';
+                    label.textContent = '感谢您的反馈 👍';
+                } else {
+                    dislike.classList.add('disliked');
+                    like.style.visibility = 'hidden';
+                    label.textContent = '已反馈，感谢您的建议 🙏';
+                }
+            };
+
+            if (data.feedback) {
+                update(data.feedback.rating); // 刷新/历史会话恢复已反馈状态
+            } else {
+                like.onclick = () => { submitFeedback(data, 1, '').then(ok => { if (ok) { update(1); showToast('感谢您的反馈 👍'); } }); };
+                dislike.onclick = () => openFb(data, update);
+            }
+            regen.onclick = () => regenerateAnswer(data, wrap);
+
+            bar.appendChild(label);
+            bar.appendChild(regen);
+            bar.appendChild(like);
+            bar.appendChild(dislike);
+            bubble.appendChild(bar);
+        }
+
+        // ── 📖 PageIndex 知识库结构浏览（书 → 章节 → 段落索引） ──
+        let PI_DATA = null
+        let PI_SEL_BOOK = null
+        const PI_OPEN = new Set() // 已展开节点 id
+
+        async function openPageIndex() {
+            document.getElementById('pageIndexMask').classList.add('visible')
+            if (PI_DATA) { renderPiAll(); return }
+            try {
+                const r = await fetch('/api/books/structure')
+                if (!r.ok) throw new Error('HTTP ' + r.status)
+                PI_DATA = await r.json()
+                renderPiAll()
+            } catch (e) {
+                document.getElementById('piTree').innerHTML = `<div class="pi-empty">❌ 加载失败: ${esc(e.message)}</div>`
+            }
+        }
+        function closePageIndex() { document.getElementById('pageIndexMask').classList.remove('visible') }
+
+        // 统计某节点全部后代段落数（含自身）
+        function piCountAll(id) {
+            const node = PI_DATA.tree.find(n => n.id === id)
+            if (!node) return 0
+            return node.passages.length + PI_DATA.tree.filter(n => n.parentId === id).reduce((a, c) => a + piCountAll(c.id), 0)
+        }
+
+        function renderPiAll() {
+            const s = PI_DATA.stats
+            document.getElementById('piStats').innerHTML =
+                `<div class="pi-stat"><b>${s.books}</b> 本书</div>` +
+                `<div class="pi-stat"><b>${s.chapters}</b> 章节</div>` +
+                `<div class="pi-stat"><b>${s.sections}</b> 节</div>` +
+                `<div class="pi-stat"><b>${s.passages}</b> 段落索引</div>` +
+                `<div class="pi-stat">🔄 实时同步知识库</div>`
+            const books = PI_DATA.tree.filter(n => n.level === 0)
+            const list = document.getElementById('piBookList')
+            list.innerHTML = ''
+            if (!books.length) { list.innerHTML = '<div class="pi-empty">暂无书籍</div>'; return }
+            books.forEach(b => {
+                const btn = document.createElement('div')
+                btn.className = 'pi-book' + (PI_SEL_BOOK === b.id ? ' active' : '')
+                btn.innerHTML = `<span>📕 ${esc(b.title)}</span><span class="cnt">${piCountAll(b.id)}段</span>`
+                btn.onclick = () => {
+                    PI_SEL_BOOK = b.id
+                    PI_OPEN.clear() // 切书重置展开状态
+                    document.getElementById('piPassages').innerHTML = '<div class="pi-empty">点击章节查看该页段落索引</div>'
+                    renderPiAll()
+                    renderPiTree()
+                }
+                list.appendChild(btn)
+            })
+            if (!PI_SEL_BOOK) { PI_SEL_BOOK = books[0].id }
+            renderPiTree()
+        }
+
+        function renderPiTree() {
+            const treeEl = document.getElementById('piTree')
+            treeEl.innerHTML = ''
+            const book = PI_DATA.tree.find(n => n.id === PI_SEL_BOOK)
+            if (!book) { treeEl.innerHTML = '<div class="pi-empty">选择一本书</div>'; return }
+            const mkNode = (node, depth) => {
+                const kids = PI_DATA.tree.filter(n => n.parentId === node.id)
+                const isOpen = PI_OPEN.has(node.id)
+                const row = document.createElement('div')
+                row.className = 'pi-node'
+                row.style.paddingLeft = (10 + depth * 20) + 'px'
+                row.innerHTML =
+                    `<span class="pi-arrow">${kids.length ? (isOpen ? '▼' : '▶') : '·'}</span>` +
+                    `<span class="pi-title">${depth === 0 ? '📘' : '📄'} ${esc(node.title)}</span>` +
+                    (node.passages.length ? `<span class="pi-count">${node.passages.length}</span>` : '')
+                row.onclick = () => {
+                    if (kids.length) { isOpen ? PI_OPEN.delete(node.id) : PI_OPEN.add(node.id) }
+                    renderPiTree()
+                    renderPiPassages(node)
+                }
+                treeEl.appendChild(row)
+                if (isOpen) kids.forEach(k => mkNode(k, depth + 1))
+            }
+            const rootKids = PI_DATA.tree.filter(n => n.parentId === book.id)
+            if (!rootKids.length) { treeEl.innerHTML = '<div class="pi-empty">本书暂无章节</div>'; return }
+            rootKids.forEach(c => mkNode(c, 1))
+        }
+
+        function renderPiPassages(node) {
+            const el = document.getElementById('piPassages')
+            if (!node.passages.length) { el.innerHTML = '<div class="pi-empty">该节点无段落</div>'; return }
+            el.innerHTML = ''
+            node.passages.forEach((p, i) => {
+                const d = document.createElement('div')
+                d.className = 'pi-passage'
+                d.innerHTML = `<div class="p-head"><span>📄 ${esc(node.title)} · 段 ${i + 1}</span><span>点击展开</span></div><div class="p-text">${esc(p.content)}</div>`
+                d.onclick = () => d.classList.toggle('expanded')
+                el.appendChild(d)
+            })
+        }
+
+        // ── 🔬 对比实验演示（RAG 对比与模型对比分开，支持切换对照基线） ──
+        // RAG 区：选模型 → 3 张卡（完整/无/差 RAG）映射到 mode+model
+        function ragCardsFor(modelSel) {
+            if (modelSel === 'deepseek-v4-pro') return [
+                { mode: 'strong', model: '' },
+                { mode: 'norag', model: 'deepseek-v4-pro' },
+                { mode: 'weakrag', model: 'deepseek-v4-pro' },
+            ]
+            if (modelSel === 'local') return [
+                { mode: 'localrag', model: '' },
+                { mode: 'local', model: '' },
+                { mode: 'weakrag', model: 'local' },
+            ]
+            return [
+                { mode: '', model: '' },
+                { mode: 'norag', model: '' },
+                { mode: 'weakrag', model: '' },
+            ]
+        }
+        // 模型区：选 RAG 链路 → 3 张卡（快/强/本地）映射到 mode+model
+        function modelCardsFor(ragSel) {
+            if (ragSel === 'norag') return [
+                { mode: 'norag', model: '' },
+                { mode: 'norag', model: 'deepseek-v4-pro' },
+                { mode: 'local', model: '' },
+            ]
+            if (ragSel === 'weakrag') return [
+                { mode: 'weakrag', model: '' },
+                { mode: 'weakrag', model: 'deepseek-v4-pro' },
+                { mode: 'weakrag', model: 'local' },
+            ]
+            return [
+                { mode: '', model: '' },
+                { mode: 'strong', model: '' },
+                { mode: 'localrag', model: '' },
+            ]
+        }
+        // 版本进步对比区：固定链路，并排本地微调各版本 vs 云端基线（同一问题同一链路，看进步）
+        function versionCardsFor(ragSel) {
+            const cards = [
+                { mode: ragSel, model: 'deepseek-v4-flash' }, // 云端基线
+                { mode: ragSel, model: '' },                  // med-qa v1（当前）
+                { mode: ragSel, model: 'qwen2.5-7b-med-r4-v5' }, // 质控判定旧版
+            ]
+            return cards
+        }
+        async function askCompare(mode, question, model) {
+            // 并发时 LLM 可能瞬时限流，失败自动重试 1 次
+            for (let attempt = 0; attempt < 2; attempt++) {
+                const controller = new AbortController();
+                activeRequests.add(controller);
+                try {
+                    const res = await fetch('/api/ask', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ question, mode, ...(model ? { model } : {}) }),
+                        signal: controller.signal, // 新建对话等场景可取消
+                    });
+                    const data = await res.json();
+                    if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+                    return data;
+                } catch (e) {
+                    if (isAbort(e)) throw e; // 被取消：直接抛出，由调用方静默处理
+                    if (attempt === 0) await new Promise(r => setTimeout(r, 2500));
+                    else throw e;
+                } finally {
+                    activeRequests.delete(controller);
+                }
+            }
+        }
+        function fillCompareCard(card, r) {
+            const tags = [];
+            if (r.meta && r.meta.model) tags.push(r.meta.model);
+            if (r.sources) tags.push('来源 ' + r.sources.length + ' 条');
+            if (r.meta && r.meta.duration) tags.push(Math.round(r.meta.duration / 1000) + 's');
+            card.querySelector('.cc-tags').textContent = tags.join(' · ');
+            const body = card.querySelector('.cc-body');
+            body.innerHTML = '';
+            const pre = document.createElement('div');
+            pre.className = 'cc-answer';
+            pre.textContent = r.answer || '(空回答)';
+            body.appendChild(pre);
+            if (r.sources && r.sources.length) {
+                const sh = document.createElement('div');
+                sh.className = 'cc-src-head';
+                sh.textContent = '📄 来源 ' + r.sources.length + ' 条 ▾';
+                const sb = document.createElement('div');
+                sb.className = 'cc-src-body hidden';
+                sb.innerHTML = r.sources.map((s, i) =>
+                    `<div class="cc-src-item">${i + 1}. ${esc(s.bookTitle || s.docTitle || '未知')}${s.sectionPath ? ' / ' + esc(s.sectionPath) : ''}<span class="cc-page-tag">${s.pageNo != null ? 'P' + s.pageNo : '段' + (i + 1)}</span></div>`
+                ).join('');
+                sh.onclick = () => {
+                    const open = sb.classList.toggle('hidden');
+                    sh.textContent = '📄 来源 ' + r.sources.length + ' 条 ' + (open ? '▾' : '▴');
+                };
+                body.appendChild(sh);
+                body.appendChild(sb);
+            }
+            // 技术参数面板（老板看板：模型/端点/检索/耗时/token/引用/版本/字数）
+            if (r.meta) {
+                const m = r.meta;
+                const ph = document.createElement('div');
+                ph.className = 'cc-param-head';
+                ph.textContent = '⚙ 技术参数 ▾';
+                const pb = document.createElement('div');
+                pb.className = 'cc-param-body hidden';
+                const rows = [
+                    ['模型', m.model || '-'],
+                    ['模式', m.mode || '-'],
+                    ['端点', m.endpoint === 'local' ? '本地（Ollama）' : '云端 API'],
+                    ['检索方式', m.searchMethod || '-'],
+                    ['候选 / 最终', (m.searchCount != null ? m.searchCount : '-') + ' / ' + (m.finalCount != null ? m.finalCount : '-')],
+                    ['来源书籍', (m.bookCount != null ? m.bookCount : '-') + ' 本'],
+                    ['耗时', m.duration ? (m.duration / 1000).toFixed(1) + 's' : '-'],
+                    ['回答字数', m.answerLen != null ? m.answerLen : '-'],
+                    ['Token 入/出/总', m.usage ? m.usage.prompt_tokens + ' / ' + m.usage.completion_tokens + ' / ' + m.usage.total_tokens : '-'],
+                    ['GPU 利用率', m.gpu ? m.gpu.utilAvg + '%（峰值 ' + m.gpu.utilPeak + '%）' : '-'],
+                    ['GPU 显存', m.gpu ? m.gpu.memUsedMiB + ' / ' + m.gpu.memTotalMiB + ' MiB（' + m.gpu.memUtilPct + '%）' : '-'],
+                    ['GPU 温度/功耗', m.gpu ? m.gpu.tempMin + '-' + m.gpu.tempMax + '°C / ' + m.gpu.powerW + 'W' : '-'],
+                    ['提示词版本', m.promptVersion || '-'],
+                    ['引用 总/非法/覆盖', m.citation ? m.citation.total + ' / ' + m.citation.invalid + ' / ' + m.citation.coverage : '-'],
+                ];
+                pb.innerHTML = rows.map(([k, v]) => `<div class="cc-param-row"><span class="cc-param-k">${k}</span><span class="cc-param-v">${esc(String(v))}</span></div>`).join('');
+                ph.onclick = () => {
+                    const open = pb.classList.toggle('hidden');
+                    ph.textContent = '⚙ 技术参数 ' + (open ? '▾' : '▴');
+                };
+                body.appendChild(ph);
+                body.appendChild(pb);
+            }
+        }
+        // 渲染一个实验区块：选择器（对照基线）+ 生成按钮 + 卡片组
+        // selectOptions 决定基线；getGroups(sel) 返回 3 张卡的 {mode, model}；cardMeta 固定卡片名
+        function renderCompareBlock(container, title, hint, selectLabel, selectOptions, cardMeta, getGroups, data) {
+            const block = document.createElement('div');
+            block.className = 'compare-block';
+            const head = document.createElement('div');
+            head.className = 'compare-head';
+            head.innerHTML = `${title} <span class="compare-hint">${hint}</span>`;
+            const sel = document.createElement('select');
+            sel.className = 'compare-select';
+            sel.title = selectLabel;
+            selectOptions.forEach(o => {
+                const opt = document.createElement('option');
+                opt.value = o.value;
+                opt.textContent = o.label;
+                sel.appendChild(opt);
+            });
+            const btn = document.createElement('button');
+            btn.className = 'fb-btn compare-btn';
+            btn.textContent = '▶ 生成对比';
+            const grid = document.createElement('div');
+            grid.className = 'compare-grid';
+            head.appendChild(sel);
+            head.appendChild(btn);
+            block.appendChild(head);
+            block.appendChild(grid);
+            container.appendChild(block);
+            btn.onclick = async () => {
+                btn.disabled = true;
+                btn.textContent = '⏳ 生成中...';
+                // 按选择器映射 3 张卡（mode+model），固定卡片名/描述
+                const groups = getGroups(sel.value).map((g, i) => ({ ...cardMeta[i], ...g }));
+                const cards = groups.map(g => {
+                    const card = document.createElement('div');
+                    card.className = 'compare-card';
+                    card.innerHTML = `<div class="cc-head"><b>${g.name}</b><span class="cc-desc">${g.desc}</span><span class="cc-tags"></span></div><div class="cc-body"><div class="cc-pending">待生成</div></div>`;
+                    if (g.mode === '' && !g.model && data.answer) fillCompareCard(card, { answer: data.answer, sources: data.sources || [], meta: data.meta });
+                    return card;
+                });
+                grid.replaceChildren(...cards);
+                const others = groups.filter(g => g.mode !== '' || g.model);
+                await Promise.all(others.map(async (g) => {
+                    const card = cards[groups.indexOf(g)];
+                    card.querySelector('.cc-body').innerHTML = '<div class="cc-pending">⏳ 生成中...</div>';
+                    try {
+                        const r = await askCompare(g.mode, data.meta.question, g.model);
+                        fillCompareCard(card, r);
+                    } catch (e) {
+                        if (isAbort(e)) return; // 新建对话已取消对比实验，静默
+                        card.querySelector('.cc-body').innerHTML = `<div class="cc-error">❌ ${esc(e.message)}</div>`;
+                    }
+                }));
+                btn.disabled = false;
+                btn.textContent = '↻ 重新生成';
+            };
+        }
+        function renderCompareSection(bubble, data) {
+            const q = (data.meta && data.meta.question) || '';
+            if (!q) return;
+            const sec = document.createElement('div');
+            sec.className = 'compare-section';
+            // 实验一：RAG 机制对比（选择模型 → 只变检索链路）
+            renderCompareBlock(sec, '🔬 RAG 机制对比', '选模型后，只变检索链路', '实验模型', [
+                { value: '', label: '模型：快模型（flash）' },
+                { value: 'deepseek-v4-pro', label: '模型：强模型（pro）' },
+                { value: 'local', label: '模型：本地微调（med-qa）' },
+            ], [
+                { name: '完整 RAG', desc: '混合检索 + 重排 + 引用' },
+                { name: '无 RAG', desc: '无检索直答' },
+                { name: '差 RAG', desc: '仅关键词（无重排）' },
+            ], ragCardsFor, data);
+            // 实验二：模型对比（选择 RAG 链路 → 只变模型）
+            renderCompareBlock(sec, '🤖 模型对比', '选 RAG 链路后，只变模型', '实验链路', [
+                { value: '', label: '链路：完整 RAG' },
+                { value: 'norag', label: '链路：无 RAG' },
+                { value: 'weakrag', label: '链路：差 RAG' },
+            ], [
+                { name: '云端快模型', desc: 'deepseek-v4-flash' },
+                { name: '云端强模型', desc: 'deepseek-v4-pro' },
+                { name: '本地微调模型', desc: 'qwen2.5-7b-med-qa' },
+            ], modelCardsFor, data);
+            // 实验三：版本进步对比（同一链路，本地微调各版本 vs 云端基线——证明模型迭代进步）
+            renderCompareBlock(sec, '📈 版本进步对比', '选链路后，并排对比本地微调各版本与云端基线', '对比链路', [
+                { value: 'localrag', label: '链路：完整 RAG' },
+                { value: 'local', label: '链路：直答（无检索）' },
+            ], [
+                { name: '云端基线', desc: 'deepseek-v4-flash' },
+                { name: 'med-qa v1', desc: '问答微调版（当前）' },
+                { name: 'med-r4-v5', desc: '质控判定旧版' },
+            ], versionCardsFor, data);
+            bubble.appendChild(sec);
+        }
+
+        /** 重新生成回答：移除旧回答 → 流式重新生成 → 替换消息 */
+        async function regenerateAnswer(data, wrap) {
+            const question = (data.meta && data.meta.question) || '';
+            if (!question) { showToast('无法重新生成：缺少问题信息'); return; }
+            const conv = getConv();
+            if (!conv) return;
+
+            wrap.remove(); // 移除旧回答
+            let idx = -1;
+            for (let i = conv.messages.length - 1; i >= 0; i--) {
+                if (conv.messages[i].role === 'assistant') { idx = i; break; }
+            }
+            if (idx >= 0) conv.messages.splice(idx, 1); // 移除旧回答消息
+            persist();
+
+            setLoading('正在搜索知识库...', false);
+            const render = async (body) => {
+                const { result, tmp } = await askStream(body);
+                if (tmp) tmp.wrap.remove();
+                if (!result) throw new Error('未收到完整回答');
+                if (result.sessionId) conv.sessionId = result.sessionId;
+                renderAssistant(result);
+                saveMsg('assistant', result);
+            };
+            try {
+                const body = { question, regen: true };
+                if (conv.sessionId) body.sessionId = conv.sessionId;
+                try {
+                    await render(body);
+                } catch (err) {
+                    if (err.code === 'SESSION_EXPIRED') {
+                        conv.sessionId = '';
+                        await render({ question, regen: true });
+                    } else { throw err; }
+                }
+                showToast('已重新生成回答');
+            } catch (err) {
+                errorCard.textContent = err.message;
+                errorCard.classList.add('visible');
+                renderAssistant(data); // 失败时恢复原回答
+                saveMsg('assistant', data);
+            } finally {
+                clearLoading();
+            }
+        }
+
+        function renderAssistant(data, scroll = true) {
+            // 兼容两种数据形态：直接 {answer,...} 或历史消息 {role, content:{answer,...}}
+            if (data && data.content && typeof data.content === 'object' && data.content.answer != null) {
+                data = data.content;
+            }
+            const answer = data.answer || '';
+            const wrap = document.createElement('div');
+            wrap.className = 'msg-assistant';
+            wrap.innerHTML = `<div class="avatar">🩺</div>`;
+            const avatar = wrap.querySelector('.avatar');
+
+            const body = document.createElement('div');
+            body.className = 'ai-body';
+            const bubble = document.createElement('div');
+            bubble.className = 'ai-bubble';
+
+            // 知识库未收录提示（noResult 时显示）+ 上传引导
+            if (data.meta && data.meta.noResult) {
+                const banner = document.createElement('div');
+                banner.className = 'noresult-banner';
+                banner.innerHTML = `
+                    <span class="nr-text">📖 该问题未收录在当前知识库${data.meta.fallback ? '，以下回答来自 AI 通用知识仅供参考' : ''}</span>
+                    <button class="nr-btn" onclick="openUpload()">📤 上传相关书籍</button>`;
+                bubble.appendChild(banner);
+            }
+
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'copy-btn';
+            copyBtn.textContent = '📋';
+            copyBtn.title = '复制回答';
+            copyBtn.onclick = () => copyAnswer(data.answer);
+            bubble.appendChild(copyBtn);
+
+            const content = document.createElement('div');
+            content.className = 'answer-content';
+            content.innerHTML = renderMarkdown(data.answer);
+            bubble.appendChild(content);
+
+            // 🧠 LLM 重排过程面板（老板演示：候选 → 级别判定 → 保留/删除）
+            if (data.rerank && data.rerank.details && data.rerank.details.length) {
+                const rr = data.rerank;
+                const sec = document.createElement('div');
+                sec.className = 'rerank-section';
+                const lv2 = rr.details.filter(d => d.level === 2 && !d.note).length;
+                const lv1 = rr.details.filter(d => d.level === 1).length;
+                const del = rr.details.filter(d => !d.kept).length;
+                const una = rr.details.filter(d => d.note).length;
+                const head = document.createElement('div');
+                head.className = 'rerank-header';
+                const failTag = una > 0 ? ' · ⚠ LLM 重排失败，候选全部保留' : '';
+                head.innerHTML = `<span class="arrow">▼</span><span>🧠 LLM 重排 · 候选 ${rr.candidateCount} → 保留 ${rr.keptCount}（直接相关 ${lv2} / 弱相关 ${lv1} / 删除 ${del}）${failTag}</span>`;
+                const body = document.createElement('div');
+                body.className = 'rerank-body hidden';
+                rr.details.forEach(d => {
+                    const row = document.createElement('div');
+                    row.className = 'rerank-row' + (d.kept ? '' : ' dropped');
+                    const lvLabel = d.note ? '未评估' : (d.level === 2 ? '直接相关' : (d.level === 1 ? '弱相关' : '无关'));
+                    const lvCls = d.note ? 'lv0' : `lv${d.level}`;
+                    row.innerHTML =
+                        `<span class="rerank-lv ${lvCls}">${lvLabel}</span>` +
+                        `<span class="rerank-book">${esc(d.bookTitle || '未知')}</span>` +
+                        `<span class="rerank-text">${esc(d.content)}</span>` +
+                        `<span class="rerank-mark ${d.kept ? 'keep' : 'drop'}">${d.kept ? '保留' : '删除'}</span>`;
+                    body.appendChild(row);
+                });
+                head.onclick = () => {
+                    body.classList.toggle('hidden');
+                    head.querySelector('.arrow').classList.toggle('collapsed');
+                };
+                sec.appendChild(head);
+                sec.appendChild(body);
+                bubble.appendChild(sec);
+            }
+
+            if (data.sources && data.sources.length > 0) {
+                const sourcesSec = document.createElement('div');
+                sourcesSec.className = 'sources-section';
+                const books = [...new Set(data.sources.map(s => s.bookTitle || s.docTitle).filter(Boolean))];
+                const srcHeader = document.createElement('div');
+                srcHeader.className = 'sources-header';
+                srcHeader.innerHTML = `<span class="arrow">▼</span><span>参考来源 · ${data.sources.length} 条 · ${books.length} 本书</span>`;
+                const srcBody = document.createElement('div');
+                srcBody.className = 'sources-body'; // 默认展开：页面化卡片直接可见，不藏起来
+                const srcHeaderToggle = () => { srcBody.classList.toggle('hidden'); }
+                data.sources.forEach((s, i) => {
+                    // 页面化卡片：页码角标（pageNo 有值用 P+页码，否则用段落序号）+ 书名 + 章节 + 内容摘要
+                    const pageTag = s.pageNo != null ? `P${s.pageNo}` : `段 ${i + 1}`;
+                    const mainLabel = s.bookTitle ? `《${esc(s.bookTitle)}》` : (s.docTitle ? `《${esc(s.docTitle)}》` : '未知来源');
+                    const subLabel = s.docTitle && s.bookTitle && s.docTitle !== s.bookTitle ? esc(s.docTitle) : '';
+                    const card = document.createElement('div');
+                    card.className = 'page-card';
+                    const head = document.createElement('div');
+                    head.className = 'page-head';
+                    head.innerHTML = `<span class="page-tag">${pageTag}</span><span class="book-label">${mainLabel}</span>`;
+                    const body = document.createElement('div');
+                    body.className = 'page-body';
+                    if (subLabel) {
+                        const path = document.createElement('div');
+                        path.className = 'path-label';
+                        path.textContent = subLabel;
+                        body.appendChild(path);
+                    }
+                    const excerpt = document.createElement('div');
+                    excerpt.className = 'page-excerpt';
+                    excerpt.textContent = s.content;
+                    body.appendChild(excerpt);
+                    const hint = document.createElement('div');
+                    hint.className = 'expand-hint';
+                    hint.textContent = '点击展开全文';
+                    body.appendChild(hint);
+                    card.appendChild(head);
+                    card.appendChild(body);
+                    card.onclick = () => card.classList.toggle('expanded');
+                    srcBody.appendChild(card);
+                });
+                srcHeader.onclick = () => {
+                    srcHeaderToggle();
+                    srcHeader.querySelector('.arrow').classList.toggle('collapsed');
+                };
+                sourcesSec.appendChild(srcHeader);
+                sourcesSec.appendChild(srcBody);
+                bubble.appendChild(sourcesSec);
+            }
+
+            // 回答反馈（点赞/点踩 + 点踩原因 + 重新生成）
+            renderFeedbackBar(bubble, data, wrap);
+
+// 🔬 对比实验演示（完整RAG / 无RAG / 差RAG / 本地）
+            renderCompareSection(bubble, data);
+
+            body.appendChild(bubble);
+            if (data.meta) {
+                const meta = document.createElement('div');
+                meta.className = 'meta-bar';
+                const parts = [];
+                if (data.meta.round != null) parts.push(`第 ${data.meta.round} 轮`);
+                if (data.meta.webSearch) parts.push('🌐 联网回答'); // 知识库未收录 → 联网兑底回答标记
+                if (data.meta.bookCount != null) parts.push(`来源 ${data.meta.bookCount} 本书`);
+                if (data.meta.model) parts.push(data.meta.model);
+                if (data.meta.promptVersion) parts.push(`prompt${data.meta.promptVersion}`);
+                if (data.meta.citation && data.meta.citation.total > 0 && data.meta.citation.coverage != null) {
+                    parts.push(`引用覆盖 ${Math.round(data.meta.citation.coverage * 100)}%`);
+                    if (data.meta.citation.fixed) parts.push(data.meta.citation.retried ? '引用修正·重生成' : '引用修正');
+                }
+                if (data.meta.duration != null) parts.push(`耗时 ${data.meta.duration}ms`);
+                if (data.meta.cached) parts.push('[缓存命中]');
+                meta.textContent = parts.join(' · ');
+                body.appendChild(meta);
+            }
+            wrap.appendChild(body);
+            chatInner.appendChild(wrap);
+            if (scroll) scrollToBottom();
+        }
+
+        function scrollToBottom(smooth = true) {
+            chatArea.scrollTo({ top: chatArea.scrollHeight, behavior: smooth ? 'smooth' : 'auto' });
+        }
+
+        // ── 输入 ──
+        qInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(); }
+        });
+        function autoResize(el) {
+            el.style.height = 'auto';
+            el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+        }
+        function askEx(el) {
+            qInput.value = el.textContent.trim();
+            autoResize(qInput);
+            ask();
+        }
+
+        // ── 工具 ──
+        function showToast(msg) {
+            toast.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(() => toast.classList.remove('show'), 1800);
+        }
+        function copyAnswer(text) {
+            navigator.clipboard.writeText(text).then(
+                () => showToast('✅ 已复制回答'),
+                () => showToast('复制失败')
+            );
+        }
+        function renderMarkdown(text) {
+            if (!text) return '';
+            let html = esc(text);
+            html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+            html = html.replace(/((?:<li>.*?<\/li>\n?)+)/g, '<ul>$1</ul>');
+            html = html.replace(/\[参考(\d+)\]/g, '<sup style="color:var(--primary);font-size:11px">[$1]</sup>');
+            html = html.replace(/\n/g, '<br>');
+            html = html.replace(/(<\/h3>|<\/li>|<\/ul>)\s*<br>/g, '$1');
+            html = html.replace(/<br>\s*(<\/ul>|<\/li>)/g, '$1');
+            html = html.replace(/(<br>\s*){2,}/g, '<br>');
+            html = html.replace(/<ul><\/ul>/g, '');
+            return html;
+        }
+        function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+        // ── 提问 ──
+        // 三阶段加载提示：搜索 → 过滤 → 生成
+        let loadingTimers = [];
+        // 全局进行中请求管理：新建/切换/删除对话时取消，避免旧请求完成后污染当前对话
+        const activeRequests = new Set();
+        function abortAllRequests() {
+            activeRequests.forEach(c => { try { c.abort(); } catch (e) { } });
+            activeRequests.clear();
+        }
+        function isAbort(err) { return !!(err && (err.name === 'AbortError' || err.message === 'The operation was aborted.' || err.code === 'ABORT_ERR')); }
+        function setLoading(phase, useTimers = true) {
+            if (emptyState) emptyState.style.display = 'none';
+            mountLoading();
+            loading.classList.add('visible');
+            loadingText.textContent = phase || '正在搜索知识库...';
+            askBtn.classList.add('btn-loading');
+            askBtn.disabled = true;
+            clearTimeoutList();
+            if (useTimers) {
+                // 阶段 1 → 2：过滤相关段落
+                loadingTimers.push(setTimeout(() => { loadingText.textContent = '正在过滤相关段落...'; }, 700));
+                // 阶段 2 → 3：生成回答
+                loadingTimers.push(setTimeout(() => { loadingText.textContent = '正在生成回答...'; }, 1400));
+            }
+            scrollToBottom();
+        }
+        function clearTimeoutList() {
+            loadingTimers.forEach(t => clearTimeout(t));
+            loadingTimers = [];
+        }
+        function clearLoading() {
+            clearTimeoutList();
+            loading.classList.remove('visible');
+            askBtn.classList.remove('btn-loading');
+            askBtn.disabled = false;
+        }
+
+        function saveMsg(role, content) {
+            const c = getConv();
+            if (!c) return;
+            c.messages.push({ role, content });
+            // 防 localStorage 膨胀：每个会话最多保留 60 条消息（30 轮），超出丢最旧
+            if (c.messages.length > 60) {
+                c.messages.splice(0, c.messages.length - 60);
+            }
+            c.updatedAt = Date.now();
+            if (c.title === '新对话' && role === 'user') {
+                c.title = (typeof content === 'string' ? content : '').slice(0, 12) || '新对话';
+            }
+            persist();
+            renderSidebar();
+            updateBadge();
+        }
+
+        // ── 流式问答（SSE） ──
+        function setLoadingStage(stage) {
+            const map = { search: '正在搜索知识库...', rerank: '正在过滤相关段落...', generate: '正在生成回答...' };
+            if (loadingText) loadingText.textContent = map[stage] || loadingText.textContent;
+        }
+
+        // 创建流式临时气泡（回答边生成边显示纯文本）
+        function createStreamBubble() {
+            const wrap = document.createElement('div');
+            wrap.className = 'msg-assistant';
+            wrap.innerHTML = `<div class="avatar">🩺</div>`;
+            const body = document.createElement('div');
+            body.className = 'ai-body';
+            const bubble = document.createElement('div');
+            bubble.className = 'ai-bubble';
+            const content = document.createElement('div');
+            content.className = 'answer-content stream-text';
+            bubble.appendChild(content);
+            body.appendChild(bubble);
+            wrap.appendChild(body);
+            chatInner.appendChild(wrap);
+            return { wrap, content };
+        }
+
+        // 发起流式请求并解析 SSE，返回 { result, tmp }
+        async function askStream(body) {
+            const controller = new AbortController();
+            activeRequests.add(controller);
+            try {
+                const res = await fetch('/api/ask/stream', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body),
+                    signal: controller.signal, // 新建对话等场景可取消
+                });
+                if (!res.ok) {
+                    let err = null;
+                    try { err = await res.json(); } catch { err = { error: '请求失败' }; }
+                    const e = new Error(err.error || '请求失败');
+                    e.code = err.code;
+                    throw e;
+                }
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder();
+                let buf = '';
+                let tmp = null;
+                let fullAnswer = '';
+                let result = null;
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    buf += decoder.decode(value, { stream: true });
+                    let idx;
+                    while ((idx = buf.indexOf('\n\n')) >= 0) {
+                        const frame = buf.slice(0, idx).trim();
+                        buf = buf.slice(idx + 2);
+                        if (!frame.startsWith('data:')) continue;
+                        const data = JSON.parse(frame.slice(5).trim());
+                        if (data.type === 'stage') {
+                            setLoadingStage(data.stage);
+                        } else if (data.type === 'delta') {
+                            if (!tmp) tmp = createStreamBubble();
+                            fullAnswer += data.text;
+                            tmp.content.textContent = fullAnswer;
+                            scrollToBottom(false);
+                        } else if (data.type === 'done') {
+                            result = data;
+                        } else if (data.type === 'error') {
+                            const e = new Error(data.message || '服务错误');
+                            e.code = data.code;
+                            throw e;
+                        }
+                    }
+                }
+                return { result, tmp };
+            } finally {
+                activeRequests.delete(controller);
+            }
+        }
+
+        async function ask() {
+            const q = qInput.value.trim();
+            if (!q) { qInput.focus(); return; }
+            const bookId = bookSelect.value ? parseInt(bookSelect.value) : null;
+            errorCard.classList.remove('visible');
+
+            // 确保当前有会话
+            if (!getConv()) newConversation();
+            const conv = getConv();
+
+            renderUserMsg(q);
+            qInput.value = '';
+            autoResize(qInput);
+            saveMsg('user', q);
+
+            // 流式模式：阶段文案由 SSE stage 事件驱动（禁用内置定时器避免冲突）
+            setLoading('正在搜索知识库...', false);
+
+            const doAsk = async (body) => {
+                const { result, tmp } = await askStream(body);
+                if (tmp) tmp.wrap.remove(); // 移除临时流式气泡，统一走正式渲染
+                if (!result) throw new Error('未收到完整回答');
+                return result;
+            };
+
+            try {
+                const body = { question: q };
+                if (bookId) body.bookId = bookId;
+                if (conv.sessionId) body.sessionId = conv.sessionId;
+                const selModel = modelSelect.value;
+                if (selModel && selModel !== 'auto') body.model = selModel; // 提问前选模型：覆盖自动路由
+
+                let data;
+                try {
+                    data = await doAsk(body);
+                } catch (err) {
+                    if (err.code === 'SESSION_EXPIRED') {
+                        // 会话过期：开启新会话重试，并更新当前会话的后端ID
+                        conv.sessionId = '';
+                        body.sessionId = undefined;
+                        data = await doAsk(body);
+                    } else if (err.code === 'BOOK_NOT_FOUND') {
+                        bookSelect.value = '';
+                        throw err;
+                    } else {
+                        throw err;
+                    }
+                }
+
+                if (data.sessionId) {
+                    conv.sessionId = data.sessionId;
+                    persist();
+                }
+
+                renderAssistant(data);
+                saveMsg('assistant', data);
+
+            } catch (err) {
+                if (isAbort(err)) return; // 新建对话/切换对话已取消请求，静默不报错
+                errorCard.textContent = err.message;
+                errorCard.classList.add('visible');
+            } finally {
+                clearLoading();
+            }
+        }
+
+        // ── 书籍列表 ──
+        async function loadBooks() {
+            try {
+                const res = await fetch('/api/books');
+                const data = await res.json();
+                if (data.books && data.books.length > 0) {
+                    data.books.forEach(b => {
+                        if (b.title === '质控知识库') return;
+                        const opt = document.createElement('option');
+                        opt.value = b.id;
+                        opt.textContent = b.title;
+                        bookSelect.appendChild(opt);
+                    });
+                }
+            } catch (e) { /* 忽略 */ }
+        }
+
+        // ── 上传书籍 ──
+        let uploadToken = null;
+        const uploadMask = $('uploadMask');
+        const dropZone = $('dropZone');
+        const fileInput = $('fileInput');
+        const uploadError = $('uploadError');
+        const uploadPreview = $('uploadPreview');
+        const uploadResult = $('uploadResult');
+        const upTitleInput = $('upTitleInput');
+        const upStats = $('upStats');
+        const upChapters = $('upChapters');
+        const confirmBtn = $('confirmBtn');
+
+        function openUpload() {
+            uploadMask.classList.add('visible');
+            resetUpload();
+            // 上传大小上限动态读取（服务端 MAX_UPLOAD_MB 配置，避免前端写死不一致）
+            fetch('/api/upload/config').then(r => r.json()).then(cfg => {
+                if (cfg && cfg.maxMb) $('dzHint').textContent = `支持 TXT / MD / PDF，最大 ${cfg.maxMb}MB · 同名书籍重新上传会覆盖`
+            }).catch(() => { /* 保持默认文案 */ })
+        }
+        function closeUpload() {
+            uploadMask.classList.remove('visible');
+        }
+        uploadMask.onclick = (e) => { if (e.target === uploadMask) closeUpload(); };
+
+        function resetUpload() {
+            uploadToken = null;
+            fileInput.value = '';
+            uploadError.classList.remove('visible');
+            uploadPreview.hidden = true;
+            uploadResult.hidden = true;
+            confirmBtn.hidden = true;
+            dropZone.style.display = '';
+            dropZone.classList.remove('uploading');
+            document.getElementById('uploadReqHint').hidden = true; // 普通打开上传不显示待补引导
+        }
+
+        function showUploadError(msg) {
+            uploadError.textContent = msg;
+            uploadError.classList.add('visible');
+        }
+
+        // 拖拽上传
+        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) handleUploadFile(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) handleUploadFile(fileInput.files[0]);
+        });
+
+        async function handleUploadFile(file) {
+            resetUpload();
+            dropZone.classList.add('uploading');
+            const fd = new FormData();
+            fd.append('file', file);
+            try {
+                const res = await fetch('/api/upload/preview', { method: 'POST', body: fd });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || '解析失败');
+
+                uploadToken = data.token;
+                upTitleInput.value = data.bookTitle || '';
+                upStats.innerHTML = `
+                    <span>章节 <b>${data.chapterCount}</b></span>
+                    <span>段落 <b>${data.totalPassages}</b></span>
+                    <span>字数 <b>${data.totalChars.toLocaleString()}</b></span>`;
+                upChapters.innerHTML = (data.chapters || [])
+                    .map(c => `${esc(c.title)} · ${c.passages} 段`)
+                    .join('<br>') + (data.chapterCount > 30 ? '<br><span class="more">…共 ' + data.chapterCount + ' 章</span>' : '');
+                uploadPreview.hidden = false;
+                confirmBtn.hidden = false;
+                dropZone.style.display = 'none';
+            } catch (err) {
+                showUploadError(err.message);
+            } finally {
+                dropZone.classList.remove('uploading');
+            }
+        }
+
+        async function confirmUpload() {
+            if (!uploadToken) return;
+            confirmBtn.disabled = true;
+            confirmBtn.textContent = '入库中...';
+            try {
+                const res = await fetch('/api/upload/confirm', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ token: uploadToken, title: upTitleInput.value.trim() }),
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || '入库失败');
+
+                uploadPreview.hidden = true;
+                confirmBtn.hidden = true;
+                uploadResult.hidden = false;
+                uploadResult.className = 'upload-result ok';
+                uploadResult.innerHTML = `
+                    <div class="ur-title">✅ 《${esc(data.bookTitle)}》已入库</div>
+                    ${data.chapterCount} 个章节 · ${data.passageCount} 个知识段落<br>
+                    旧版同名书籍（如有）已自动替换`;
+                refreshBooks();
+                showToast('✅ 书籍入库完成');
+            } catch (err) {
+                uploadResult.hidden = false;
+                uploadResult.className = 'upload-result err';
+                uploadResult.innerHTML = `<div class="ur-title">❌ 入库失败</div>${esc(err.message)}`;
+            } finally {
+                confirmBtn.disabled = false;
+                confirmBtn.textContent = '确认入库';
+            }
+        }
+
+        // 刷新书籍下拉框
+        async function refreshBooks() {
+            try {
+                const res = await fetch('/api/books');
+                const data = await res.json();
+                const cur = bookSelect.value;
+                bookSelect.innerHTML = '<option value="">📚 全部书籍</option>';
+                if (data.books && data.books.length > 0) {
+                    data.books.forEach(b => {
+                        if (b.title === '质控知识库') return;
+                        const opt = document.createElement('option');
+                        opt.value = b.id;
+                        opt.textContent = b.title;
+                        bookSelect.appendChild(opt);
+                    });
+                }
+                if (cur) bookSelect.value = cur;
+            } catch (e) { /* 忽略 */ }
+        }
+
+        // ── 管理书籍 ──
+        const manageMask = $('manageMask');
+        const manageList = $('manageList');
+
+        function openManageBooks() {
+            manageMask.classList.add('visible');
+            loadManageBooks();
+        }
+        function closeManageBooks() { manageMask.classList.remove('visible'); }
+        manageMask.onclick = (e) => { if (e.target === manageMask) closeManageBooks(); };
+
+        // ── 权威书目库（白名单管理） ──
+        const whitelistMask = $('whitelistMask');
+        const whitelistList = $('whitelistList');
+        let wlEditId = null // 当前编辑的书目 id（null=新增模式）
+
+        function openWhitelist() {
+            wlEditId = null
+            document.getElementById('wlTitle').value = ''
+            document.getElementById('wlPublisher').value = ''
+            document.getElementById('wlYear').value = ''
+            document.getElementById('wlNote').value = ''
+            document.getElementById('wlSaveBtn').textContent = '➕ 添加书目'
+            document.getElementById('wlCancelBtn').style.display = 'none'
+            whitelistMask.classList.add('visible')
+            loadWhitelist()
+            loadRequests() // 同步刷新待补书目徽章（打开弹窗即可见真实数量）
+        }
+        function closeWhitelist() { whitelistMask.classList.remove('visible'); }
+        whitelistMask.onclick = (e) => { if (e.target === whitelistMask) closeWhitelist(); };
+
+        // ── 待补书目（未覆盖闭环：用户问了知识库没有的书，供管理员补录） ──
+        // 领域 → 建议补录方向（管理者据此知道该找哪类书）
+        const DOMAIN_SUGGEST = {
+            '心血管': '建议补充：心血管专科指南（心衰/冠心病/心律失常等）或《内科学》心血管篇',
+            '呼吸': '建议补充：呼吸系统诊治指南（哮喘/慢阻肺/肺炎）或呼吸病学教材',
+            '神经': '建议补充：神经系统疾病指南（卒中/癫痫/帕金森）或神经病学教材',
+            '内分泌': '建议补充：内分泌代谢指南（糖尿病/甲状腺/骨质疏松）或内分泌学教材',
+            '消化': '建议补充：消化系统指南（肝病/胰腺/幽门螺杆菌等）或消化病学教材',
+            '肾脏': '建议补充：肾脏病与透析指南或肾脏病学教材',
+            '血液': '建议补充：血液病指南（白血病/淋巴瘤/贫血）或血液病学教材',
+            '感染': '建议补充：感染病/抗菌药物指南或感染病学教材',
+            '肿瘤': '建议补充：相关瘤种诊疗指南（卫健委发布）或肿瘤学教材',
+            '外科': '建议补充：外科学教材或对应专科手术指南',
+            '妇产': '建议补充：妇产科学教材或妇产科诊治指南',
+            '儿科': '建议补充：儿科学教材或儿科诊治指南',
+            '急诊重症': '建议补充：急诊/重症医学教材或心肺复苏等急救指南',
+            '影像检验': '建议补充：医学影像学/检验学教材或影像诊断指南',
+            '药物': '建议补充：国家基本药物目录、抗菌药物指导原则或药理学教材',
+            '口腔': '建议补充：口腔科学教材或口腔专科指南（种植/牙周/正畸）',
+            '眼科': '建议补充：眼科学教材或眼科诊治指南（白内障/青光眼等）',
+            '耳鼻喉': '建议补充：耳鼻咽喉科学教材或专科诊治指南',
+            '皮肤': '建议补充：皮肤性病学教材或皮肤病诊治指南',
+            '精神心理': '建议补充：精神病学/心理学教材或精神疾病诊疗指南',
+            '康复': '建议补充：康复医学教材或康复治疗指南',
+            '风湿免疫': '建议补充：风湿免疫病指南（类风湿/狼疮/痛风）或内科学风湿篇',
+            '骨科': '建议补充：骨科学教材或骨科诊疗指南（脊柱/关节/创伤）',
+            '泌尿': '建议补充：泌尿外科学教材或泌尿专科诊疗指南',
+        }
+        function loadNavBadge() {
+            fetch('/api/books/requests?status=pending')
+                .then(r => r.json())
+                .then(data => {
+                    const n = (data.requests || []).length
+                    const badge = document.getElementById('wlNavBadge')
+                    badge.textContent = n > 99 ? '99+' : n
+                    badge.style.display = n > 0 ? 'inline-block' : 'none'
+                })
+                .catch(() => { /* 网络异常时保持隐藏 */ })
+        }
+        loadNavBadge() // 页面加载即检查
+        setInterval(loadNavBadge, 60000) // 每 60s 轮询，新请求实时上红点
+        function switchWlTab(tab) {
+            document.getElementById('wlPaneList').style.display = tab === 'list' ? '' : 'none'
+            document.getElementById('wlPaneReq').style.display = tab === 'req' ? '' : 'none'
+            document.getElementById('wlTabList').classList.toggle('active', tab === 'list')
+            document.getElementById('wlTabReq').classList.toggle('active', tab === 'req')
+            if (tab === 'req') loadRequests()
+        }
+        async function loadRequests() {
+            const el = document.getElementById('reqList')
+            el.innerHTML = '<div class="manage-loading">加载中...</div>'
+            try {
+                const res = await fetch('/api/books/requests?status=pending')
+                const data = await res.json()
+                const reqs = data.requests || []
+                document.getElementById('reqBadge').textContent = reqs.length
+                if (reqs.length === 0) {
+                    el.innerHTML = '<div class="manage-empty">🎉 暂无待补请求。用户问过、但知识库没有相关内容的书会汇总在这里，方便您补充收录。</div>'
+                    return
+                }
+                el.innerHTML = reqs.map(x => `
+                    <div class="req-item">
+                        <div>❓ ${esc(x.question)}<span class="req-domain">${esc(x.domain || '未分类')}</span><span class="req-count">问过 ${x.hit_count} 次</span></div>
+                        ${x.note ? `<div class="req-gap">📌 ${esc(x.note)}</div>` : ''}
+                        <div class="req-suggest">💡 ${esc(DOMAIN_SUGGEST[x.domain] || '建议补充：与用户问题对应的权威指南或教材，可先搜索该方向已有的公开资料')}</div>
+                        ${renderReqBooks(x.book_suggestions)}
+                        <div class="req-actions">
+                            <button class="btn-ghost" onclick="uploadForReq('${esc(x.question).replace(/'/g, "\\'")}','${esc(x.domain || '')}')">📤 上传相关书</button>
+                            <button class="btn-ghost" onclick="fillWhitelistFromReq('${esc(x.question).replace(/'/g, "\\'")}','${esc(x.domain || '')}')">➕ 补录书目</button>
+                            <button class="btn-ghost" onclick="markRequest(${x.id},'done')">✅ 已处理</button>
+                            <button class="btn-ghost" onclick="markRequest(${x.id},'ignored')">⏭ 忽略</button>
+                        </div>
+                    </div>`).join('')
+                loadNavBadge() // 同步刷新顶栏红点
+            } catch (e) {
+                el.innerHTML = `<div class="manage-empty">加载失败: ${e.message}</div>`
+            }
+        }
+        async function markRequest(id, status) {
+            try {
+                await fetch('/api/books/requests/' + id, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ status }) })
+            } catch (e) { /* 忽略 */ }
+            loadRequests()
+            loadNavBadge()
+        }
+        // 渲染联网搜索到的候选书籍（书名可点，直接看是什么书/指南）
+        function renderReqBooks(suggestions) {
+            if (!suggestions || suggestions.length === 0) return ''
+            const typeLabel = { pdf: '📄PDF', book: '📖图书', article: '🖥网页' }
+            const links = suggestions.map(s =>
+                `<a href="${esc(s.link)}" target="_blank" rel="noopener" style="color:#2563eb;text-decoration:underline">${esc(s.title)}</a><em style="font-style:normal;font-size:11px;color:#999">${typeLabel[s.type] || ''}</em>`
+            ).join('<br>')
+            return `<div class="req-books">📚 候选书籍：<br>${links}</div>`
+        }
+
+        function fillWhitelistFromReq(question, domain) {
+            // 预填新增表单并切到“权威书目” tab，管理员把问题改写为真实书名后保存
+            document.getElementById('wlTitle').value = question
+            const sel = document.getElementById('wlDomain')
+            if (domain && [...sel.options].some(o => o.value === domain)) sel.value = domain
+            switchWlTab('list')
+            document.getElementById('wlTitle').focus()
+        }
+        function uploadForReq(question, domain) {
+            // 关闭白名单弹窗 → 打开上传弹窗 → 显示待补引导（该传什么书）
+            closeWhitelist()
+            openUpload()
+            const hint = document.getElementById('uploadReqHint')
+            const suggest = (DOMAIN_SUGGEST[domain] || '与问题对应的权威指南或教材').replace(/^建议补充：/, '')
+            hint.textContent = `📢 用户询问「${question}」时知识库暂无相关内容，建议上传：${suggest}。上传完成后，可回到“权威书目库-待补书目”将该条标记为已处理。`
+            hint.hidden = false
+        }
+
+        async function loadWhitelist() {
+            whitelistList.innerHTML = '<div class="manage-loading">加载中...</div>';
+            try {
+                const res = await fetch('/api/books/whitelist')
+                const data = await res.json()
+                renderWhitelist(data.books || [])
+            } catch (e) {
+                whitelistList.innerHTML = `<div class="manage-loading">加载失败: ${e.message}</div>`
+            }
+        }
+
+        function renderWhitelist(books) {
+            document.getElementById('wlCount').textContent = books.length
+            if (books.length === 0) {
+                whitelistList.innerHTML = '<div class="manage-loading">暂无书目，请在上方添加</div>'
+                return
+            }
+            // 按领域分组
+            const groups = {}
+            for (const b of books) {
+                if (!groups[b.domain]) groups[b.domain] = []
+                groups[b.domain].push(b)
+            }
+            let html = ''
+            for (const [domain, items] of Object.entries(groups)) {
+                html += `<div style="font-weight:700;color:var(--primary);margin:10px 0 4px">${domain}</div>`
+                for (const b of items) {
+                    const info = [b.year, b.publisher, b.book_type].filter(Boolean).join(' · ')
+                    html += `<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px dashed var(--border);font-size:13px">
+                        <span style="opacity:${b.enabled ? 1 : 0.45}" title="${(b.note || '').replace(/"/g, '&quot;')}">
+                            ${b.enabled ? '' : '🔒 '}${b.title}
+                            ${info ? `<span style="color:#888;font-size:12px">（${info}）</span>` : ''}
+                        </span>
+                        <span style="margin-left:auto;display:flex;gap:6px">
+                            <button class="btn-ghost" style="padding:2px 8px;font-size:12px" onclick="editWhitelist(${b.id})">编辑</button>
+                            <button class="btn-ghost" style="padding:2px 8px;font-size:12px" onclick="toggleWhitelist(${b.id}, ${!b.enabled})">${b.enabled ? '停用' : '启用'}</button>
+                            <button class="btn-ghost" style="padding:2px 8px;font-size:12px;color:#e11d48" onclick="delWhitelist(${b.id})">删除</button>
+                        </span>
+                    </div>`
+                }
+            }
+            whitelistList.innerHTML = html
+        }
+
+        function editWhitelist(id) {
+            fetch('/api/books/whitelist').then(r => r.json()).then(data => {
+                const b = (data.books || []).find(x => x.id === id)
+                if (!b) return
+                wlEditId = id
+                document.getElementById('wlTitle').value = b.title
+                document.getElementById('wlDomain').value = b.domain
+                document.getElementById('wlPublisher').value = b.publisher || ''
+                document.getElementById('wlYear').value = b.year || ''
+                document.getElementById('wlType').value = b.book_type || '指南'
+                document.getElementById('wlNote').value = b.note || ''
+                document.getElementById('wlSaveBtn').textContent = '💾 保存修改'
+                document.getElementById('wlCancelBtn').style.display = 'inline-block'
+            })
+        }
+        function cancelEditWhitelist() {
+            wlEditId = null
+            document.getElementById('wlTitle').value = ''
+            document.getElementById('wlPublisher').value = ''
+            document.getElementById('wlYear').value = ''
+            document.getElementById('wlNote').value = ''
+            document.getElementById('wlSaveBtn').textContent = '➕ 添加书目'
+            document.getElementById('wlCancelBtn').style.display = 'none'
+        }
+
+        async function saveWhitelist() {
+            const title = document.getElementById('wlTitle').value.trim()
+            if (!title) { alert('请填写书名'); return }
+            const body = {
+                title,
+                domain: document.getElementById('wlDomain').value,
+                publisher: document.getElementById('wlPublisher').value.trim(),
+                year: document.getElementById('wlYear').value.trim(),
+                book_type: document.getElementById('wlType').value,
+                note: document.getElementById('wlNote').value.trim(),
+            }
+            try {
+                if (wlEditId) {
+                    await fetch('/api/books/whitelist/' + wlEditId, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+                } else {
+                    await fetch('/api/books/whitelist', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+                }
+                cancelEditWhitelist()
+                loadWhitelist()
+            } catch (e) { alert('保存失败: ' + e.message) }
+        }
+
+        async function toggleWhitelist(id, enabled) {
+            await fetch('/api/books/whitelist/' + id, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ enabled }) })
+            loadWhitelist()
+        }
+
+        async function delWhitelist(id) {
+            if (!confirm('确认删除该书目？删除后推荐不再出现')) return
+            await fetch('/api/books/whitelist/' + id, { method: 'DELETE' })
+            loadWhitelist()
+        }
+
+        async function loadManageBooks() {
+            manageList.innerHTML = '<div class="manage-loading">加载中...</div>';
+            try {
+                const res = await fetch('/api/books/manage');
+                const data = await res.json();
+                renderManageBooks(data.books || []);
+            } catch (e) {
+                manageList.innerHTML = '<div class="manage-empty">加载失败，请重试</div>';
+            }
+        }
+
+        function renderManageBooks(books) {
+            if (!books || books.length === 0) {
+                manageList.innerHTML = '<div class="manage-empty">暂无书籍</div>';
+                return;
+            }
+            manageList.innerHTML = '';
+            books.forEach(b => {
+                const item = document.createElement('div');
+                item.className = 'manage-item';
+                item.innerHTML = `
+                    <div class="mi-info">
+                        <div class="mi-title">${esc(b.title)}${b.title === '质控知识库' ? '（系统）' : ''}</div>
+                        <div class="mi-meta">${b.chapterCount} 章节 · ${b.passageCount} 段落${b.createdAt ? ' · ' + new Date(b.createdAt).toLocaleDateString() : ''}</div>
+                    </div>
+                    <span class="mi-status ${b.enabled ? 'on' : 'off'}">${b.enabled ? '已启用' : '已禁用'}</span>
+                    <div class="mi-actions">
+                        ${b.enabled
+                            ? `<button class="mi-btn danger" onclick="toggleBook(${b.id}, 'disable')">禁用</button>`
+                            : `<button class="mi-btn" onclick="toggleBook(${b.id}, 'enable')">启用</button>`}
+                    </div>`;
+                manageList.appendChild(item);
+            });
+        }
+
+        async function toggleBook(bookId, action) {
+            const isDisable = action === 'disable';
+            if (isDisable) {
+                if (!confirm('确定禁用这本书吗？\n禁用后该书内容将不再出现在搜索结果中，可随时重新启用。')) return;
+            }
+            try {
+                const res = await fetch(`/api/books/${bookId}/${action}`, { method: 'POST' });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || '操作失败');
+                showToast(isDisable ? `已禁用《${data.title}》` : `已启用《${data.title}》`);
+                loadManageBooks();
+                refreshBooks(); // 同步下拉框
+            } catch (e) {
+                showToast(e.message || '操作失败');
+            }
+        }
+
+        // ── API 设置 ──
+        const settingsMask = $('settingsMask');
+        let settingsData = null; // 当前生效配置快照
+
+        function openSettings() {
+            settingsMask.classList.add('visible');
+            loadSettings();
+        }
+        function closeSettings() { settingsMask.classList.remove('visible'); }
+        settingsMask.onclick = (e) => { if (e.target === settingsMask) closeSettings(); };
+
+        async function loadSettings() {
+            $('testLlmResult').textContent = '';
+            $('rebuildResult').textContent = '';
+            try {
+                const res = await fetch('/api/settings');
+                const data = await res.json();
+                settingsData = data.data;
+                const { llm, embedding, webSearch, localLlm } = data.data;
+                $('setLlmUrl').value = llm.apiUrl || '';
+                llmKeyOriginal = llm.apiKey || ''; // 脱敏值（如 sk-260****31e3），用于判断是否修改过
+                $('setLlmKey').value = llmKeyOriginal;
+                $('setLlmKey').placeholder = llm.hasKey ? '已配置，输入新值可覆盖' : '未配置，填入以启用';
+                $('setLlmModel').value = llm.model || '';
+                $('setLlmStrongModel').value = llm.strongModel || '';
+                $('setLlmFallback').checked = !!llm.fallback;
+                $('setEmbUrl').value = embedding.apiUrl || '';
+                embKeyOriginal = embedding.apiKey || '';
+                $('setEmbKey').value = embKeyOriginal;
+                $('setEmbKey').placeholder = embedding.hasKey ? '已配置，输入新值可覆盖' : '未配置，填入以启用';
+                $('setEmbModel').value = embedding.model || '';
+                $('setWebEnabled').checked = !!webSearch?.enabled;
+                webKeyOriginal = webSearch?.apiKey || '';
+                $('setWebKey').value = webKeyOriginal;
+                $('setWebKey').placeholder = webSearch?.hasKey ? '已配置，输入新值可覆盖' : '未配置，填入以启用';
+                $('setWebUrl').value = webSearch?.apiUrl || '';
+                webDomains = (webSearch?.domains || '').split(',').map(s => s.trim()).filter(Boolean);
+                webDomainsLoaded = true // 白名单已从服务端加载
+                renderWebDomains();
+                $('setWebThreshold').value = webSearch?.threshold ?? '';
+                localKeyOriginal = localLlm?.apiKey || '';
+                $('setLocalUrl').value = localLlm?.apiUrl || '';
+                $('setLocalModel').value = localLlm?.model || '';
+                $('setLocalKey').value = localKeyOriginal;
+                renderEmbStatus(embedding.enabled ? '已启用，搜索将使用向量+关键词混合检索' : '未启用，当前为纯关键词检索');
+                settingsLoaded = true // 加载完成，允许保存（防止默认值覆盖已有配置）
+            } catch (e) {
+                renderEmbStatus('读取配置失败', true);
+            }
+        }
+
+        function renderEmbStatus(text, isErr) {
+            $('embStatus').innerHTML = `<span class="dot ${isErr ? 'off' : (text.includes('已启用') ? 'on' : 'off')}"></span>${esc(text)}`;
+        }
+
+        // ── 权威域名白名单（chip 标签式管理） ──
+        let webDomains = []
+        let webDomainsLoaded = false // 是否已从服务端加载过白名单（防止加载前保存导致误删配置）
+        let settingsLoaded = false // 设置是否加载完成（防止加载前保存用默认值覆盖已有配置）
+        let llmKeyOriginal = '' // 脱敏 key 回显值，用于判断是否修改过（避免脱敏值被当新 key 提交）
+        let embKeyOriginal = ''
+        let webKeyOriginal = ''
+        let localKeyOriginal = ''
+        const DOMAIN_CANDIDATES = {
+            official: [
+                { d: 'gov.cn', n: '政府卫生部门' },
+                { d: 'nmpa.gov.cn', n: '国家药监局' },
+                { d: 'chinacdc.cn', n: '中国疾控中心' },
+                { d: 'who.int', n: '世界卫生组织' },
+                { d: 'pubmed.ncbi.nlm.nih.gov', n: 'PubMed 学术文献' },
+            ],
+            pro: [
+                { d: 'mayoclinic.org', n: '梅奥诊所' },
+                { d: 'msdmanuals.cn', n: '默沙东诊疗手册' },
+                { d: 'uptodate.com', n: 'UpToDate 循证医学' },
+                { d: 'medlive.cn', n: '医脉通' },
+                { d: 'yiigle.com', n: '中华医学期刊网' },
+                { d: 'cmaph.org.cn', n: '中华医学会杂志社' },
+                { d: 'cochrane.org', n: 'Cochrane 循证医学' },
+                { d: 'dxy.cn', n: '丁香园' },
+                { d: 'nejm.org', n: 'NEJM 新英格兰医学杂志' },
+                { d: 'thelancet.com', n: '柳叶刀' },
+                { d: 'pmc.ncbi.nlm.nih.gov', n: 'PMC 学术全文' },
+            ],
+        }
+        const domainName = (d) => {
+            for (const list of Object.values(DOMAIN_CANDIDATES)) {
+                const hit = list.find(x => x.d === d)
+                if (hit) return hit.n
+            }
+            return d
+        }
+        function renderWebDomains() {
+            // 候选按钮即选择器：已选蓝色高亮；自定义域名追加到“自定义”组
+            for (const [group, list] of Object.entries(DOMAIN_CANDIDATES)) {
+                document.getElementById(group === 'official' ? 'dcOfficial' : 'dcPro').innerHTML = list.map(x =>
+                    `<button type="button" class="dc-item${webDomains.includes(x.d) ? ' selected' : ''}" onclick="toggleWebDomain('${x.d}')">${esc(x.n)}<em class="dc-em">${x.d}</em></button>`
+                ).join('')
+            }
+            const known = new Set(Object.values(DOMAIN_CANDIDATES).flat().map(x => x.d))
+            const custom = webDomains.filter(d => !known.has(d))
+            document.getElementById('dcCustomGroup').style.display = custom.length ? '' : 'none'
+            document.getElementById('dcCustom').innerHTML = custom.map(d =>
+                `<button type="button" class="dc-item selected" onclick="toggleWebDomain('${esc(d)}')">${esc(d)}<em class="dc-em">点击取消</em></button>`
+            ).join('')
+        }
+        function toggleWebDomain(d) {
+            const i = webDomains.indexOf(d)
+            if (i >= 0) webDomains.splice(i, 1); else webDomains.push(d)
+            renderWebDomains()
+        }
+        function toggleDomainPanel() {
+            const panel = document.getElementById('domainCandidates')
+            const btn = document.getElementById('dcToggle')
+            const open = panel.style.display !== 'none'
+            panel.style.display = open ? 'none' : ''
+            btn.textContent = open ? '＋ 选择候选域名' : '▾ 收起候选域名'
+        }
+        function removeWebDomain(d) {
+            webDomains = webDomains.filter(x => x !== d)
+            renderWebDomains()
+        }
+        function addWebDomain() {
+            const input = document.getElementById('webDomainCustom')
+            const d = input.value.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '')
+            if (!d) return
+            if (!webDomains.includes(d)) webDomains.push(d)
+            input.value = ''
+            renderWebDomains()
+        }
+        document.getElementById('webDomainCustom').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); addWebDomain() } })
+        renderWebDomains()
+
+        async function saveSettings() {
+            // 防护：配置未加载完成时禁止保存（默认值提交会覆盖已有配置，历史事故）
+            if (!settingsLoaded) { showToast('⚠️ 配置仍在加载，请稍候再保存'); return; }
+            const btn = $('saveSettingsBtn');
+            btn.disabled = true;
+            try {
+                const payload = {
+                    llmApiUrl: $('setLlmUrl').value.trim(),
+                    llmModel: $('setLlmModel').value.trim(),
+                    llmStrongModel: $('setLlmStrongModel').value.trim(),
+                    llmFallback: $('setLlmFallback').checked,
+                    embeddingApiUrl: $('setEmbUrl').value.trim(),
+                    embeddingModel: $('setEmbModel').value.trim(),
+                    webSearchEnabled: $('setWebEnabled').checked,
+                    webSearchApiUrl: $('setWebUrl').value.trim(),
+                    webSearchThreshold: $('setWebThreshold').value.trim(),
+                    localLlmApiUrl: $('setLocalUrl').value.trim(),
+                    localLlmModel: $('setLocalModel').value.trim(),
+                };
+                // 白名单：仅加载成功后提交（防止加载前保存把配置清空）
+                if (webDomainsLoaded) payload.webSearchDomains = webDomains.join(',');
+                // Key：仅当输入了新值（且与回显的脱敏值不同）才提交，防止脱敏值覆盖真实 key
+                const llmKey = $('setLlmKey').value.trim();
+                if (llmKey && llmKey !== llmKeyOriginal) payload.llmApiKey = llmKey;
+                const embKey = $('setEmbKey').value.trim();
+                if (embKey && embKey !== embKeyOriginal) payload.embeddingApiKey = embKey;
+                const webKey = $('setWebKey').value.trim();
+                if (webKey && webKey !== webKeyOriginal) payload.webSearchApiKey = webKey;
+                const localKey = $('setLocalKey').value.trim();
+                if (localKey && localKey !== localKeyOriginal) payload.localLlmApiKey = localKey;
+                const res = await fetch('/api/settings', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                const data = await res.json();
+                if (!data.ok) throw new Error(data.error || '保存失败');
+                showToast('✅ 配置已保存并立即生效');
+                loadSettings(); // 刷新回显
+            } catch (e) {
+                showToast('❌ ' + (e.message || '保存失败'));
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        async function testConnection(type) {
+            const btn = type === 'llm' ? $('testLlmBtn') : type === 'embedding' ? $('testEmbBtn') : type === 'web' ? $('testWebBtn') : $('testLocalBtn');
+            const resultEl = type === 'llm' ? $('testLlmResult') : type === 'embedding' ? $('testEmbResult') : type === 'web' ? $('testWebResult') : $('testLocalResult');
+            if (btn) btn.disabled = true;
+            resultEl.className = 'set-test-result';
+            resultEl.textContent = '测试中...';
+            try {
+                const res = await fetch('/api/settings/test', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type }),
+                });
+                const data = await res.json();
+                if (data.ok) {
+                    resultEl.className = 'set-test-result ok';
+                    resultEl.textContent = '✅ ' + data.message;
+                } else {
+                    resultEl.className = 'set-test-result err';
+                    resultEl.textContent = '❌ ' + data.error;
+                }
+            } catch (e) {
+                resultEl.className = 'set-test-result err';
+                resultEl.textContent = '❌ ' + e.message;
+            } finally {
+                if (btn) btn.disabled = false;
+            }
+        }
+
+        async function rebuildEmbedding() {
+            if (!confirm('将为全部启用段落调用 Embedding API 生成向量（串行执行，约 30 秒/50 条）。\n已生成的段落会重新生成。确定继续吗？')) return;
+            const btn = $('rebuildBtn');
+            const resultEl = $('rebuildResult');
+            btn.disabled = true;
+            btn.textContent = '⏳ 生成中，请勿关闭...';
+            resultEl.className = 'set-test-result';
+            resultEl.textContent = '正在生成向量...';
+            try {
+                const res = await fetch('/api/settings/embedding/rebuild', { method: 'POST' });
+                const data = await res.json();
+                if (data.ok) {
+                    resultEl.className = 'set-test-result ok';
+                    resultEl.textContent = '✅ ' + data.message;
+                    renderEmbStatus('已启用，搜索将使用向量+关键词混合检索');
+                } else {
+                    resultEl.className = 'set-test-result err';
+                    resultEl.textContent = '❌ ' + data.error;
+                }
+            } catch (e) {
+                resultEl.className = 'set-test-result err';
+                resultEl.textContent = '❌ ' + e.message;
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🔧 为全部段落生成向量';
+            }
+        }
+
+
+        // ── 初始化 ──
+        loadConversations();
+        if (currentId) {
+            switchConversation(currentId);
+        } else {
+            newConversation();
+        }
+        loadBooks();
+        qInput.focus();
+    </script>
+</body>
+</html>

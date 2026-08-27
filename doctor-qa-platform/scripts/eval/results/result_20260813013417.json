@@ -1,0 +1,2635 @@
+{
+  "generatedAt": "2026-08-13T01:34:17.304Z",
+  "summary": {
+    "total": 30,
+    "ok": 30,
+    "fail": 0,
+    "failDetails": [],
+    "noResult": 5,
+    "withSources": 25,
+    "noResultRate": 0.17,
+    "bookHit": 24,
+    "bookHitRate": 0.8,
+    "bookMiss": [
+      {
+        "id": "q9",
+        "book": "高血压基层诊疗指南2024",
+        "question": "高血压诊断标准有哪些要点？",
+        "got": []
+      },
+      {
+        "id": "q8",
+        "book": "外科学第9版",
+        "question": "急性阑尾炎的治疗原则是什么？",
+        "got": []
+      },
+      {
+        "id": "q12",
+        "book": "抗菌药物临床应用指导原则",
+        "question": "非限制级抗菌药物的治疗原则是什么？",
+        "got": []
+      },
+      {
+        "id": "q16",
+        "book": "诊断学第10版",
+        "question": "发热的治疗原则是什么？",
+        "got": [
+          "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "中国重症卒中管理指南2024"
+        ]
+      },
+      {
+        "id": "q26",
+        "book": "中国重症卒中管理指南2024",
+        "question": "中国重症卒中管理指南2024的重症脑梗死的治疗原则是什么？",
+        "got": []
+      },
+      {
+        "id": "q29",
+        "book": "中国重症卒中管理指南2024",
+        "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的诊断标准是什么？",
+        "got": []
+      }
+    ],
+    "avgSources": 4.07,
+    "avgBooks": 2.03,
+    "avgDuration": 32081,
+    "avgAnswerLen": 508,
+    "refTotal": 100,
+    "refInvalid": 0,
+    "refFixed": 0,
+    "refRetried": 0,
+    "refCoverageAvg": 0.49,
+    "modelDist": {
+      "deepseek-v4-flash": 23,
+      "none": 3,
+      "deepseek-v4-pro": 4
+    },
+    "promptVersions": [
+      "v3"
+    ]
+  },
+  "results": [
+    {
+      "id": "q1",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "肺炎",
+      "category": "diagnosis",
+      "question": "肺炎的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11088,
+      "answer": "知识库中关于肺炎诊断标准的内容有限，现有资料主要涉及影像学表现，以下基于相关参考及临床常识整理。\n\n**影像学检查（资料明确提及）**  \n- 胸部X线检查可见肺纹理增粗、斑片状浸润影、大片实变影等。[参考3]  \n- 胸部CT可更清晰显示病变范围和性质。[参考3]  \n- 影像学是肺炎诊断的重要依据，但具体诊断阈值未在资料中给出。[参考3]\n\n**综合诊断要素（基于临床常识，仅供参考）**  \n- 临床表现：发热、咳嗽、咳痰，或原有呼吸道症状加重，可伴胸痛、呼吸困难等。  \n- 实验室检查：血常规白细胞计数升高或降低，C反应蛋白、降钙素原等炎症指标升高。  \n- 病原学检查：痰培养、血培养、抗原检测等有助于明确病原体。  \n- 诊断通常需结合上述临床特征和影像学新发浸润影，具体标准请参照相关指南。\n\n临床提示：对于疑似肺炎患者，应尽早行胸部影像学检查，并结合病原学结果指导抗感染治疗。[参考4]",
+      "sources": [
+        {
+          "id": 12619,
+          "docId": 1296,
+          "docTitle": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "pageNo": null,
+          "content": "此外，因为肺活量测定法对肺功能的测量结果准确且可 重复，因此 GOLD 专家建议将肺功能检查作为诊断 COPD 的金标准[9]。药师可在一些场所通过有效的便携式设备进行肺功能测试，测量一些重要的指标如 FEV1、FEV6 和 FEV1/FEV6 药师[187]。对 FEV1/FEV6 与 FEV1/FVC 的诊断准确性进行比较的 11 项研究的荟萃分析结果表明， FEV1/FEV6 在成人群体中检测 COPD 具有较高的敏感性和特异性[191]。然而，微量呼吸仪并不测量 FVC 值。FVC 是用力呼气动作时排出的空气量（是以升为单位的肺活量的指 标）。这是一个只能使用诊断性肺活量计得到的参数。微量呼吸仪上获得的结果之所以可以用于诊断 COPD，是因为在诊断成人气道阻塞时，FEV6 可以是 FVC 的替代指标。此外，FEV6 比传统的肺活量测量法更容易获得，并且具有可接受的敏感性和特异性值[192]。然而，使用 FEV1/FEV6<0.75 作为与 FEV1/FVC 比率的最佳相关性[34]已经受到质疑。总的来说，最准确 的截止值取决于所使用的微量呼吸仪[193,194]。",
+          "similarity": 0.4814380992316075,
+          "matchType": "both"
+        },
+        {
+          "id": 12617,
+          "docId": 1296,
+          "docTitle": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "pageNo": null,
+          "content": "在全球范围内，由于所使用的诊断定义的不同，以及无法获得肺活量测定，慢阻肺病的患病率有很大的差 异，这导致 10%-95%的患者诊断不足[185]。 由于慢阻肺病的进展性和不可逆转性，诊断不及时会导致更高的患病率以及更高的医疗费用。根据世界卫 生组织，COPD 需要早期诊断和治疗，通过帮助患者戒烟以减缓症状的发展和减少慢阻肺病的复发。因此，早 期诊断是至关重要的[7]。此外，考虑到早期治疗能够减轻临床症状和提高成本效益，国家和全球指南，如 GOLD 建议建立筛选机制，在疾病的早期阶段发现这些患者[9]。鉴于大规模筛查的不可行性，最有效的替代方 法是选择高风险人群，使用符合最低灵敏度要求、可重复性和验证的筛查或诊断测试进行筛选[186]。 所有 35 岁以上的人，如果存在潜在的危险因素，如吸烟、长期接触其他肺部刺激物（如二手烟、空气污 染或化学烟雾）、环境或工作场所的粉尘，并出现与该病相适应的慢性症状，如咳嗽、排痰和用力呼吸困难， 都应被考虑为可能患有 COPD[9]。",
+          "similarity": 0.4769895076751709,
+          "matchType": "vector"
+        },
+        {
+          "id": 10003,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "肺炎的胸部X线检查可见肺纹理增粗、斑片状浸润影、大片实变影等。胸部CT可更清晰显示病变范围和性质。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11556,
+          "docId": 475,
+          "docTitle": "1. 肺炎：卒中相关性肺炎指非机械通气患者在",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "1. 肺炎：卒中相关性肺炎指非机械通气患者在",
+          "pageNo": null,
+          "content": "卒中发病 7 d 内新出现的肺炎［68］ 。重症患者使用机 械通气可能发生呼吸机相关性肺炎。卒中后肺炎 的防治可参见相关指南和共识［68⁃69］ 。推荐意见： （1）重症卒中患者应警惕卒中相关 性肺炎和呼吸机相关性肺炎的发生（Ⅰ级推荐，C 级证据）。（2）早期评估和处理吞咽困难和误吸问 题，对意识障碍患者应特别注意预防肺炎（Ⅰ级推 荐，C 级证据）。（3）疑有肺炎的发热患者或诊断肺 炎后应尽早开始经验性抗感染治疗，但不推荐预防 性使用，应尽快完善病原学检查，针对性地选用抗 菌药物（Ⅱ级推荐，B 级证据）。2. 深静脉血栓（deep venous thrombosis，DVT）： 我国指南推荐脑梗死患者应尽早活动、抬高下肢， 避免下肢输液［12］ 。但重症卒中患者通常生命体征 不稳定，故应结合具体情况在没有禁忌证的情况下 适当运动。对于卧床制动的卒中患者，现行指南均 推荐气压泵间断充气加压装置降低 DVT 的风险、 改善预后，不推荐使用弹力袜预防 DVT［12⁃13，19］ 。欧 美 指 南 不 推 荐 制 动 患 者 常 规 使 用 抗 凝 治 疗 预 防 DVT；",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11559,
+          "docId": 476,
+          "docTitle": "一、危重症卒中的预测和预防",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "一、危重症卒中的预测和预防",
+          "pageNo": null,
+          "content": "重症卒中患者常出现病情恶化，在临床管理中 应密切监测患者的生命体征、意识状态和神经功 能，明确恶化原因，针对病因治疗。脑水肿和出血 转化是脑梗死急性期常见神经系统并发症及临床 恶化的主要原因［71］ 。严重神经功能缺损和大面积 脑梗死是较为公认的恶性脑水肿和出血转化的预 测因素［72⁃73］ 。溶栓、取栓后成功血管再通可降低恶 性 脑 水 肿 风 险 ，从 而 预 防 危 重 症 脑 梗 死 的 发 生［74⁃75］ 。脑出血后数小时可出现血肿扩大，加重神 经功能缺损。有学者提出头颅 CT 显示混合征［76］ 、 黑洞征［77］ 和岛征［78］ 对脑出血后血肿扩大及不良预 后具有预测价值。脑出血后血压升高与血肿扩大 和不良预后均相关，应密切监测和维持患者的血压 稳定，控制血压可减少血肿扩大［40］ 。迟发性脑缺血 是 SAH 患者死亡和残疾的主要原因，其主要病理 机制为血管痉挛，脑血管造影是诊断脑血管痉挛的 “金标准”，可使用改良 Fisher 量表评估患者的血管 痉挛风险［15］ 。经颅多普勒血管超声对于血管痉挛 具 有 高 敏 感 度 和 高 阴 性 预 测 值 ，常 用 于 临 床 监 测［79］ 。现行指南建议 SAH 患者维持体液平衡和正 常循环血容量，推荐使用尼莫地平治疗血管痉挛， 预防迟发性脑缺血、改善预后［15，80］ 。 推荐意见： （1）脑梗死后成功再灌注治疗可降 低脑水肿风险（Ⅱ级推荐，C 级证据）。 （2）脑出血后 血压控制可减少血肿扩大（Ⅱ级推荐，C 级证据）。 （3）SAH 后使用尼莫地平可改善患者预后（Ⅰ级推 荐，A 级证据）。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "肺炎的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 9,
+        "rerankedCount": 5,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 10602,
+        "newSession": true
+      },
+      "sessionId": "836db5dc"
+    },
+    {
+      "id": "q3",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "COPD",
+      "category": "diagnosis",
+      "question": "COPD的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 21391,
+      "answer": "知识库中关于COPD具体诊断阈值（如吸入支气管扩张剂后FEV1/FVC<0.7）的内容有限，以下结合检索资料及临床常识回答。\n\n1. **肺功能检查是诊断金标准**：GOLD专家建议将肺功能检查作为诊断COPD的金标准[参考1]。临床常用吸入支气管扩张剂后FEV1/FVC<0.7作为诊断阈值（基于临床常识，仅供参考）[参考1]。\n\n2. **可替代指标**：FEV1/FEV6可用于筛查COPD，具有较高的敏感性和特异性；FEV1/FEV6<0.75常作为与FEV1/FVC相关的参考截止值，但最准确值取决于所用设备[参考1]。\n\n3. **高危人群筛查**：所有35岁以上人群，若存在危险因素（如吸烟、长期接触二手烟/空气污染/化学烟雾、环境或工作场所粉尘等），并出现慢性咳嗽、排痰、用力时呼吸困难等症状，应考虑COPD可能[参考2]。\n\n4. **其他危险因素**：遗传性α-1抗胰蛋白酶缺乏症、哮喘、慢性支气管炎、儿童期严重呼吸道感染史等也与COPD相关，但不作为诊断标准本身[参考3]。\n\n**临床提示**：COPD早期诊断和干预至关重要，建议对高风险人群及时进行肺功能筛查[参考2]。",
+      "sources": [
+        {
+          "id": 12619,
+          "docId": 1296,
+          "docTitle": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "pageNo": null,
+          "content": "此外，因为肺活量测定法对肺功能的测量结果准确且可 重复，因此 GOLD 专家建议将肺功能检查作为诊断 COPD 的金标准[9]。药师可在一些场所通过有效的便携式设备进行肺功能测试，测量一些重要的指标如 FEV1、FEV6 和 FEV1/FEV6 药师[187]。对 FEV1/FEV6 与 FEV1/FVC 的诊断准确性进行比较的 11 项研究的荟萃分析结果表明， FEV1/FEV6 在成人群体中检测 COPD 具有较高的敏感性和特异性[191]。然而，微量呼吸仪并不测量 FVC 值。FVC 是用力呼气动作时排出的空气量（是以升为单位的肺活量的指 标）。这是一个只能使用诊断性肺活量计得到的参数。微量呼吸仪上获得的结果之所以可以用于诊断 COPD，是因为在诊断成人气道阻塞时，FEV6 可以是 FVC 的替代指标。此外，FEV6 比传统的肺活量测量法更容易获得，并且具有可接受的敏感性和特异性值[192]。然而，使用 FEV1/FEV6<0.75 作为与 FEV1/FVC 比率的最佳相关性[34]已经受到质疑。总的来说，最准确 的截止值取决于所使用的微量呼吸仪[193,194]。",
+          "similarity": 0.5677137117215233,
+          "matchType": "both"
+        },
+        {
+          "id": 12617,
+          "docId": 1296,
+          "docTitle": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "pageNo": null,
+          "content": "在全球范围内，由于所使用的诊断定义的不同，以及无法获得肺活量测定，慢阻肺病的患病率有很大的差 异，这导致 10%-95%的患者诊断不足[185]。 由于慢阻肺病的进展性和不可逆转性，诊断不及时会导致更高的患病率以及更高的医疗费用。根据世界卫 生组织，COPD 需要早期诊断和治疗，通过帮助患者戒烟以减缓症状的发展和减少慢阻肺病的复发。因此，早 期诊断是至关重要的[7]。此外，考虑到早期治疗能够减轻临床症状和提高成本效益，国家和全球指南，如 GOLD 建议建立筛选机制，在疾病的早期阶段发现这些患者[9]。鉴于大规模筛查的不可行性，最有效的替代方 法是选择高风险人群，使用符合最低灵敏度要求、可重复性和验证的筛查或诊断测试进行筛选[186]。 所有 35 岁以上的人，如果存在潜在的危险因素，如吸烟、长期接触其他肺部刺激物（如二手烟、空气污 染或化学烟雾）、环境或工作场所的粉尘，并出现与该病相适应的慢性症状，如咳嗽、排痰和用力呼吸困难， 都应被考虑为可能患有 COPD[9]。",
+          "similarity": 0.5806053876876831,
+          "matchType": "vector"
+        },
+        {
+          "id": 12549,
+          "docId": 1269,
+          "docTitle": "1.1 CRDs 的定义和特点：哮喘和慢阻肺病",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "1.1 CRDs 的定义和特点：哮喘和慢阻肺病",
+          "pageNo": null,
+          "content": "其他因素包括遗传性 α-1-抗胰蛋白酶缺乏症（一种可在患者年轻时引起 COPD 的遗 传病）、年龄和性别、在子宫内发生的不良事件和影响肺部生长和发育的早产、较低的社会经济地位、哮喘和 气道高反应性、慢性支气管炎和儿童时期严重的呼吸道感染史[7,9]。慢阻肺病是一种可预防和可治疗的异质性疾病，有多种临床表现。将 COPD 分为不同表型，可以针对性 指导治疗方法、疾病管理和改善预后[12]。COPD 患者常见的表型有小气道疾病、肺气肿（实质组织破坏）、",
+          "similarity": 0.5695960695273843,
+          "matchType": "vector"
+        },
+        {
+          "id": 10104,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD稳定期治疗：戒烟是首要措施。药物治疗包括支气管扩张剂（β2受体激动剂、抗胆碱能药物）、吸入糖皮质激素等。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10105,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD急性加重（AECOPD）最常见原因是呼吸道感染，表现为呼吸困难加重、咳嗽加剧、痰量增多或呈脓性。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "COPD的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 8,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 6,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 21081,
+        "newSession": true
+      },
+      "sessionId": "41c747f5"
+    },
+    {
+      "id": "q4",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "COPD",
+      "category": "treatment",
+      "question": "COPD的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 16436,
+      "answer": "COPD治疗原则包括：\n\n- **治疗目标**：减轻症状，减少急性发作频率和严重程度，提高运动耐力和改善整体健康。[参考3]\n\n- **初始治疗**：基于气流限制和症状评估，确定主要可治疗特征（呼吸困难或加重）；给予抢救性短效支气管舒张剂缓解症状；吸入装置应个性化定制；强调正确吸入技术；开始ICS前需权衡风险与获益。[参考3] COPD患者应优先使用LABAs和/或LAMAs，而非ICS治疗。[参考1]\n\n- **后续管理**：定期审查症状和急性加重风险；在判断治疗不充分前，先优化吸入装置选择和评估吸入技术；评估患者依从性；据此考虑升级或降级药物治疗；可使用IPCRG COPD Right Care轮子辅助处方选择。[参考3]\n\n- **感染与加重预防**：呼吸道感染是AECOPD最常见原因[参考5]；流感疫苗接种有利于预防AECOPD。[参考2] 处理细菌感染时，应促进抗菌药物合理使用，并监测疗效和不良反应。[参考2]\n\n**临床提示**：正确吸入技术和依从性是COPD药物疗效的关键，调整方案前务必先评估这两项。",
+      "sources": [
+        {
+          "id": 12643,
+          "docId": 1304,
+          "docTitle": "6.5 呼吸困难的非药物管理",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "6.5 呼吸困难的非药物管理",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p45 7 CRDs 的药物管理 有许多药物可用于治疗 CRDs；然而，这些药物在世界各地的可用性和可负担性有所不同。哮喘和慢阻肺 病的治疗包括使用吸入性糖皮质激素（ICS）和支气管舒张剂。在哮喘中，长效 β2 受体激动剂（LABAs）和 长效毒蕈碱拮抗剂（LAMA）必须在使用吸入性糖皮质激素（ICS）的情况下使用；在 COPD 患者中，应该优 先使用 LABAs 和/或 LAMAs，而不是 ICS 进行治疗[226]。第 7 章概述了用于治疗哮喘和 COPD 的主要药物。",
+          "similarity": 0.5563426613807678,
+          "matchType": "both"
+        },
+        {
+          "id": 12603,
+          "docId": 1289,
+          "docTitle": "3.2.6 呼吸道感染",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3.2.6 呼吸道感染",
+          "pageNo": null,
+          "content": "值得关注的病毒感染包括流感、鼻病毒、副流感和偏肺病 毒[124]。药师在处理慢阻肺病患者的细菌感染时，可以促进抗菌药物的合理使用。在配药时，应确认抗菌药物治疗 方案符合患者的个体因素，如感染类型、合并症和风险因素。治疗管理还应该包括对治疗方案的疗效和不良反 应的常规监测[125]。同样的原则也适用于在 COPD 病毒感染的病例。流感疫苗接种有利于预防 AECOPD 的发 生，在哮喘病中也是如此。",
+          "similarity": 0.5549309319175441,
+          "matchType": "both"
+        },
+        {
+          "id": 12653,
+          "docId": 1306,
+          "docTitle": "7.2 慢阻肺病的药物治疗",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "7.2 慢阻肺病的药物治疗",
+          "pageNo": null,
+          "content": "药物治疗的目的是减轻症状，减少急性发作的频率和严重程度，以及提高患者的运动耐力和改善整体健康。 在选择 COPD 的药物治疗时，必须考虑以下原则。 初始药物治疗[9,226]： • 药物治疗的开始应基于对气流限制和症状的评估。对于初始药物治疗，要确定主要的可治疗特征--呼 吸困难或病情加重。 • 应给予抢救性短效支气管舒张剂以缓解症状。 • 吸入装置应根据患者的喜好进行个性化定制、开具和配药。 • 应强调正确的吸入技术的重要性[9]。 • 在开始使用 ICS 之前，应权衡其风险和益处。 用于后续的药物治疗管理[9]。 • 应该对症状和病情加重的风险进行审查。 • 在得出治疗不充分的结论之前，优化吸入装置的选择和评估吸入技术是至关重要的。 • 应评估患者对吸入装置使用的依从性。 • 在评估了症状和吸入装置的依从性和吸入技术后，应考虑升级或降级药物治疗。 • IPCRG COPD Right Care 轮子是一个快速帮助选择处方的工具。该工具的 A 面能够帮助那些知道慢阻 肺病患者需要吸入药物但不确定选择哪种药物的医护人员（见).",
+          "similarity": 0.6263963580131531,
+          "matchType": "vector"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10105,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD急性加重（AECOPD）最常见原因是呼吸道感染，表现为呼吸困难加重、咳嗽加剧、痰量增多或呈脓性。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "COPD的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 10,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 7,
+          "invalid": [],
+          "coverage": 0.8,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 16434,
+        "newSession": true
+      },
+      "sessionId": "8abbdb71"
+    },
+    {
+      "id": "q5",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "支气管哮喘",
+      "category": "diagnosis",
+      "question": "支气管哮喘的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 9019,
+      "answer": "支气管哮喘的诊断标准依据参考资料 [参考5]：\n\n1. **可变气流受限的证据**：包括支气管舒张试验阳性、呼气峰流量（PEF）变异率 >10%。[参考5]\n2. **症状特征符合哮喘**：存在典型哮喘症状（如反复喘息、气急、胸闷或咳嗽等）。[参考5]\n\n临床提示：哮喘诊断需结合病史、体征及可变气流受限证据综合判断，必要时进行支气管激发试验等进一步检查（本资料未涉及，基于临床常识）。",
+      "sources": [
+        {
+          "id": 12560,
+          "docId": 1273,
+          "docTitle": "3. 参与哮喘治疗方案的制定，包括选择不同的吸入装置。",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3. 参与哮喘治疗方案的制定，包括选择不同的吸入装置。",
+          "pageNo": null,
+          "content": "A origem da referência não foi encontrada.). 表 2 IPCRG 用于评估难治性哮喘的 SIMPLES 工具 SIMPLES 描述 吸烟 检查目前的吸烟状况：对于吸烟者，询问目前的吸烟习惯，并鼓励戒烟；非吸烟者，询问 接触二手烟草烟雾的情况。吸入技术 检查吸入装置的正确使用（即正确的吸入装置操作技术）并评估吸入装置的选择。监测 通过评估症状和活动受限来监测哮喘控制。药物治疗 评估用药的依从性、与药物有关的问题以及患者对药物的理解。生活方式 评估任何加重和触发哮喘的因素。教育 检查患者对哮喘及其相关治疗的理解。支持 在患者的哮喘管理中得到来自家庭成员的支持，并协助家庭成员帮助患者进行自我管理。",
+          "similarity": 0.5709425040798656,
+          "matchType": "vector"
+        },
+        {
+          "id": 12622,
+          "docId": 1297,
+          "docTitle": "4.3.1 哮喘",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "4.3.1 哮喘",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p37 以及过敏性鼻炎和哮喘控制测试（CARAT），其中 CARAT 是唯一一个可以用于评估过敏性鼻炎的测试[198]。参见 表 9 详情和链接，以获得更多信息。一些研究表明，ACT 问卷可以成为评估社区药房中哮喘患者控制程度的有用工具[55,199]。通过使用这些 问卷，药师可以识别出部分控制或控制不佳的患者，这些患者应该被转诊到全科医生那里，但在进行治疗之前， 药师主导的干预措施有可能足以改善患者的症状并达到控制疾病的要求[200]。研究表明，接受社区药师提供的 特定哮喘自我管理服务的患者与不接受服务的患者相比，前者的生活质量有所提高，疾病症状有所减轻，对维 持治疗的依从性也有所增强[31,200]。通过使用峰流计（PFM）来评估呼气峰值流量（PEF）是另一个被用于评估社区药房的哮喘控制情况的工 具[201,202]。峰流仪是一种手持式、廉价且易于使用的设备，可以测量患者用力呼气的速度，还可用于测量气 道狭窄程度。如果患者的数值能够保持在这个水平是最好的，个人最佳值（个人峰流数）应该被记录下来。",
+          "similarity": 0.5582207274967238,
+          "matchType": "vector"
+        },
+        {
+          "id": 12574,
+          "docId": 1278,
+          "docTitle": "2.3.2 哮喘严重程度的分类",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "2.3.2 哮喘严重程度的分类",
+          "pageNo": null,
+          "content": "根据 GINA 指出，哮喘严重程度的定义是基于\"难以治疗 \"程度。这个定义是一种回顾性的评估，评估时 间从控制症状或症状恶化治疗开始后至少两到三个月[8]。严重程度分类有助于指导治疗决策，分为间歇性、轻 度持续性、中度持续性或严重持续性。哮喘的严重程度并非一成不变，应在每次就诊时根据控制或缓解哮喘症 状所需的治疗程度进行重新分级。哮喘的严重程度与疾病症状强度一致，哮喘严重程度的变化可能与不同的环 境暴露、合并症或疾病的发展有关[44]。GINA 指出，临床上哮喘严重程度的分级对于程度严重的哮喘患者来 说是有用的，因为该分级能够识别哪些患者是相对难以治疗，需要使用大剂量 ICS-LABA 的，以及哪些患者是 需要额外治疗的（如生物疗法）\"[8]。哮喘严重程度的分级描述于表 7 所示。 表 7 哮喘严重程度的分类 严重程度 间歇性 持续性 轻度 轻度 中度 重度 症状的主要特征 （夜醒、活动限制 和使用 SABA 作为 缓解剂的使用频 率）。 症状＜1 次/周或 症状轻微 症状≥1 次/周，但＜1 次 /日，夜间憋醒＞2 次/ 月，但＜1 次/周 每日有症状，夜间憋醒≥ 1 次/周，活动受限≥1 次 /周 用小剂量吸入性糖皮质 激素/长效 β2 受体激动 剂（ICS-LABA）控制。 每日有症状，频繁夜间 憋醒，日常活动受到限 制。 尽管用大剂量 ICS- LABA 进行了优化治 疗，但仍未得到控制。",
+          "similarity": 0.5542321966359677,
+          "matchType": "vector"
+        },
+        {
+          "id": 10103,
+          "docId": 211,
+          "docTitle": "J44 COPD",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J44/",
+          "pageNo": null,
+          "content": "COPD的肺功能诊断标准：吸入支气管扩张剂后FEV1/FVC<70%。GOLD分级：GOLD1级FEV1≥80%，GOLD2级50-79%，GOLD3级30-49%，GOLD4级<30%。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10182,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘的诊断依据：①可变气流受限的证据（支气管舒张试验阳性、PEF变异率>10%）；②症状特征符合哮喘。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "支气管哮喘的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 13,
+        "rerankedCount": 6,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 9017,
+        "newSession": true
+      },
+      "sessionId": "8315a47f"
+    },
+    {
+      "id": "q7",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "急性阑尾炎",
+      "category": "diagnosis",
+      "question": "急性阑尾炎的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 6517,
+      "answer": "知识库中关于急性阑尾炎诊断标准的内容有限，以下诊断要点基于临床常识，仅供参考。\n\n- 典型症状：转移性右下腹痛（先脐周后右下腹），伴恶心、呕吐、发热。[参考3]\n- 体征：右下腹固定压痛、反跳痛及肌紧张（临床常识，仅供参考）。\n- 实验室检查：白细胞计数升高（临床常识，仅供参考）。\n- 影像学：腹部超声示阑尾肿大（直径>6mm）；腹部CT准确率更高，尤其对不典型病例。[参考1]\n\n临床提示：若怀疑穿孔或脓肿，需警惕阑尾穿孔、腹腔脓肿等并发症，及时干预。[参考2]",
+      "sources": [
+        {
+          "id": 11043,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的影像学检查：腹部超声可显示肿大的阑尾（直径>6mm）。腹部CT诊断准确率更高，尤其对不典型病例。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11045,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的并发症：阑尾穿孔、腹腔脓肿、门静脉炎、阑尾周围脓肿。术后并发症包括切口感染、腹腔出血、阑尾残株炎等。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11046,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎是最常见的急腹症，典型表现为转移性右下腹痛（先脐周后转右下腹），伴恶心、呕吐、发热。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10005,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "重症肺炎的诊断标准：主要标准：①需要机械通气；②感染性休克需要血管活性药物。次要标准：①呼吸频率≥30次/分；②氧合指数≤250；③多肺叶浸润。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10002,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "社区获得性肺炎的诊断标准：①社区发病；②发热≥38℃；③咳嗽、咳痰或呼吸道症状加重；④肺实变体征或湿啰音；⑤白细胞>10×10^9/L或<4×10^9/L。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "急性阑尾炎的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 13,
+        "rerankedCount": 6,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 6515,
+        "newSession": true
+      },
+      "sessionId": "7c5c9693"
+    },
+    {
+      "id": "q6",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "支气管哮喘",
+      "category": "treatment",
+      "question": "支气管哮喘的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 9526,
+      "answer": "支气管哮喘的治疗原则包括：**长期控制与急性缓解相结合**，以吸入给药为主，并根据哮喘控制水平分阶梯调整治疗。[参考1]\n\n## 治疗原则\n- 药物分为**控制药物**（如吸入性糖皮质激素ICS）和**缓解药物**（如短效β2受体激动剂SABA），前者用于长期控制，后者用于急性发作。[参考1]\n- **吸入剂型**优先：剂量小、起效快、不良反应少，需根据患者选择合适装置并教育正确使用。[参考1]\n- 成人和青少年**不应单独使用SABA**，以免过度依赖和过度使用；应强调ICS维持治疗的重要性，ICS使用不足会增加急性发作风险。[参考1][参考2]\n- 起始治疗剂量取决于严重程度，初始可用较大剂量快速控制症状，控制后逐渐减量；每3-6个月随访复查。[参考1]\n- 症状控制良好后每3个月降级，ICS剂量每次递减25%-50%，直至最低有效维持剂量。[参考1]\n- 轻度哮喘者仍有严重或致命发作风险，不应拒绝ICS治疗。[参考1]\n\n## 分层/阶梯方案\n根据病情严重程度采用阶梯治疗[参考4]：\n- **第1级**：按需使用SABA（仅用于极轻度、间歇发作）\n- **第2级**：低剂量ICS\n- **第3级**：低剂量ICS + 长效β2受体激动剂（LABA）\n- **第4级**：中/高剂量ICS + LABA\n- **第5级**：加用生物制剂\n\n急性发作时：重复吸入SABA、早期全身使用糖皮质激素、氧疗维持SpO₂ 93-95%，严重发作需静脉用药。[参考5]\n\n## 注意事项\n- 避免过度依赖SABA，药师应识别频繁使用SABA的患者并教育其正确使用及风险。[参考2]\n- 治疗调整需遵循指南，兼顾患者意愿与风险评估，以患者为中心。[参考3]\n\n**临床提示**：无论哮喘症状频率高低，均需重视ICS长期抗炎治疗，不可因症状轻微而中断控制药物。[参考1]",
+      "sources": [
+        {
+          "id": 12644,
+          "docId": 1305,
+          "docTitle": "7.1 哮喘的药物治疗",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "7.1 哮喘的药物治疗",
+          "pageNo": null,
+          "content": "在选择哮喘的药物治疗时，必须考虑以下原则[227]： • 哮喘药物可分为两类：控制药物，用于长期控制疾病；缓解药物，用于急救，旨在治疗哮喘急性发作 （急性治疗）[8,228]。 • 吸入剂型可以药物局部输送到呼吸道，而且与全身剂型相比，吸入剂型的剂量更小、作用更快、不良 反应更少，因此，吸入剂型的使用特别重要。 • 吸入装置的选择，应考虑到患者的特征和喜好。应向患者提供关于正确使用吸入装置的教育，以改善 患者依从性并提高治疗成功的可能性。 • 成人和青少年的哮喘不应单独使用短效 β2 受体激动剂（SABA）治疗，因为使用 SABA 单药治疗可 能会导致 SABA 的过度使用和过度依赖[8]。 • 难治性哮喘的治疗包括：使用抗炎药物（吸入性糖皮质激素）的长期维持治疗和使用长效 β2 受体激 动剂（LABA）的对症治疗。 • 根据哮喘控制情况来调整吸入性抗炎药和支气管舒张剂的组合。 • 起始治疗的剂量取决于哮喘的严重程度。最开始，应该是最大的剂量，以达到快速控制症状的目的。 随着症状得到控制，可以减少剂量。 • 治疗应在疾病的最早阶段开始；这种治疗应根据疾病的严重程度分阶段进行，并应每 3 至 6 个月进 行一次随访复查[8]。 • 当症状得到良好控制时，可以每隔三个月进行一次降级治疗。ICS 的剂量应每个间隔期递减 25%- 50%，直到达到维持哮喘控制的最低 ICS 剂量[8]。 • 患者常常错误地认为，被诊断为轻度哮喘意味着自己没有风险，不需要吸入控制药物治疗。因此， GINA 建议避免使用 \"轻度哮喘 \"这一术语，如果使用这一术语，应强调不经常出现症状的患者仍有 可能出现严重或致命的急性发作，这种风险在接受 ICS 的治疗中会大大降低[8]。 有关哮喘的主要药物治疗方案的更多信息，请见 图 4 和 表 10。",
+          "similarity": 0.6262258218930652,
+          "matchType": "both"
+        },
+        {
+          "id": 12682,
+          "docId": 1320,
+          "docTitle": "8.3.3 过度依赖吸入短效 β2 -激动剂",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "8.3.3 过度依赖吸入短效 β2 -激动剂",
+          "pageNo": null,
+          "content": "药师应积极教育患者坚持 ICS 治疗的重要性以及与 ICS 使用不足会出现的相关问题， 并解释过度依赖 SABAs 的影响和风险。IPCRG 已经试行了 \"哮喘正确护理\"的社会运动，以改善哮喘的管理，特别是消除哮喘管理中有效干预措 施的过度使用或使用不足[286]。正确哮喘护理的目的是通过审查临床治疗情况，使治疗与指南保持一致来倡导 改善哮喘管理，并在政策层面上推动变革。正确的管理方式、开展社会运动、引起大规模的变化和吸引追随者 是哮喘正确护理的基本原则[286]。其中一个关键且需要优先解决的问题是患者对 SABA 的过度依赖，可通过吸 引和说服相关的利益相关者（患者、开具处方者、药师）来解决。正确的护理是以证据为指导，以患者为中心，权衡利弊和风险患者[287]。在过度依赖 SABA 的情况下，药 师可以积极识别那些经常使用 SABA 的患者（例如，通过评估患者的电子或纸质处方记录）。随后，药师可以 先与患者进行交谈，了解患者对使用 SABA（以及 ICS）的意愿和知识。此外，药师应该教育患者如何正确使 用 SABAs 以及过度依赖的不良后果。",
+          "similarity": 0.6047192215919667,
+          "matchType": "vector"
+        },
+        {
+          "id": 12558,
+          "docId": 1272,
+          "docTitle": "2. 伙伴关系--促进伙伴关系，以预防和控制 CRDs。",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "2. 伙伴关系--促进伙伴关系，以预防和控制 CRDs。",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p13 国际初级保健呼吸组（IPCRG）的哮喘正确护理策略就初级护理中的优质哮喘管理达成了八项以患者为中 心的声明。 表 1 显示了 IPCRG 认为哮喘患者应该得到什么。而药师可以在声明 2、4、5、6 和 7 中发挥作 用。 表 1 IPCRG 的八个以人为本的声明：哮喘患者应该得到什么 类别 声明 诊断 1. 由初级保健团队对患者的哮喘进行及时、准确和正式/客观的诊断。[IPCRG 已经通过哮喘诊断拼图项 目解决了这个问题]。 管理 2. 根据其疾病严重程度的最佳实践建议，接受充分的哮喘吸入治疗。 [IPCRG 目前正在通过 \"哮喘正 确护理\"项目开展这项工作--解决过度依赖短效 β2 受体激动剂以及吸入性糖皮质激素使用不足的问 题。]",
+          "similarity": 0.5914791226387192,
+          "matchType": "vector"
+        },
+        {
+          "id": 10183,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘的阶梯治疗：第1级按需SABA，第2级低剂量ICS，第3级低剂量ICS+LABA，第4级中/高剂量ICS+LABA，第5级加用生物制剂。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10184,
+          "docId": 212,
+          "docTitle": "J45 支气管哮喘",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J45/",
+          "pageNo": null,
+          "content": "哮喘急性发作的治疗：重复吸入SABA、早期全身使用糖皮质激素、氧疗维持SpO2 93-95%。严重发作需静脉用药。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "支气管哮喘的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 9,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 13,
+          "invalid": [],
+          "coverage": 1,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 9523,
+        "newSession": true
+      },
+      "sessionId": "6e8c1b75"
+    },
+    {
+      "id": "q9",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "高血压诊断标准",
+      "category": "diagnosis",
+      "question": "高血压诊断标准有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 18040,
+      "answer": "⚠️ 该回答来自网络搜索，未经知识库审核，仅供参考，请以权威指南和临床实际为准\n\n关于高血压诊断标准，网络资料存在新旧标准差异，需注意区分：\n\n1. **传统/WHO标准**：在未使用降压药物情况下，非同日两次测量，收缩压≥140 mmHg 和/或舒张压≥90 mmHg，可诊断为高血压（来源3）。此标准目前仍被WHO采用。\n\n2. **中国新指南标准（2022年）**：中国成人高血压诊断界值已由≥140/90 mmHg 下调至≥130/80 mmHg（来源4）。按此标准，血压130–139/80–89 mmHg 即属1级高血压（来源2）。\n\n3. **家庭及动态血压监测标准**：家庭血压≥135/85 mmHg（连续5~7天规范测量平均值），或24h动态血压≥130/80 mmHg，也可作为诊断参考（来源5）。\n\n⚠️ 矛盾提示：来源3（WHO）仍采用≥140/90 mmHg，而来源2、4（中国新指南）已下调至≥130/80 mmHg。两者适用场景不同，应结合所在地区及具体指南执行，建议以最新权威临床指南为准。\n\n来源：\n[1] https://www.bjhd.gov.cn/ztzx/2022/zwxmt/msgz/202211/t20221116_4563515.shtml\n[2] https://www.cqfd.gov.cn/sy_200/ztzl/mbfk/202212/t20221227_11425430.html\n[3] https://www.who.int/zh/news-room/fact-sheets/detail/hypertension\n[4] https://www.shhk.gov.cn/xwzx/002008/002008040/20230518/bba61258-ca3c-4fdc-bba1-42c729ad9987.html\n[5] https://www.dzjkb.org.cn/dazhongkepu/dazhongkepu/5733f7778c3ac066df7d8ab738608bc0.html",
+      "sources": [],
+      "meta": {
+        "question": "高血压诊断标准有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": null,
+        "searchCount": 17,
+        "rerankedCount": 3,
+        "finalCount": 0,
+        "bookCount": 0,
+        "noResult": true,
+        "webSearch": true,
+        "round": 1,
+        "citation": null,
+        "duration": 18038,
+        "newSession": true
+      },
+      "sessionId": "eac374e0"
+    },
+    {
+      "id": "q8",
+      "bookId": 101,
+      "bookTitle": "外科学第9版",
+      "chapter": "急性阑尾炎",
+      "category": "treatment",
+      "question": "急性阑尾炎的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 29141,
+      "answer": "⚠️ 该回答来自网络搜索，未经知识库审核，仅供参考，请以权威指南和临床实际为准\n\n急性阑尾炎的治疗原则：\n\n1. **总体原则**：治疗包括药物治疗（非手术治疗）和手术治疗，一旦明确诊断，一般建议采取手术治疗；需根据患者具体情况选择合适的治疗方式（来源1）（来源3）。\n\n2. **手术适应证**：手术治疗是急性阑尾炎的主要治疗方法（来源3）。若为早期急性单纯性阑尾炎，在使用抗生素治疗有效的情况下可考虑保守治疗（来源1）。\n\n3. **儿童特殊情况**：对3天以上病程的患儿，需动态评估一般情况（精神、食欲、活动）：若“今天比昨天更坏”则应手术以控制病灶扩散；若“今天比昨天好转”则不应手术，仅需抗生素、输液、休息治疗（来源4）。\n\n4. **权威共识**：已有《急性阑尾炎中西医结合诊疗专家共识（2025年）》，可参考其中关于诊断与治疗的详细内容（来源2）。\n\n**注意**：不同资料对具体手术时机、保守治疗条件的表述存在差异，建议以权威指南（如该专家共识）及临床实际为准。\n\n来源链接：\n1. http://www.mod.gov.cn/gfbw/gffw/16204237.html\n2. https://guide.medlive.cn/guide_v2/1/37333\n3. https://www.med66.com/xiangcunquanke/jhwd/zy2605303572.shtml\n4. https://www.haodf.com/neirong/wenzhang/104970.html",
+      "sources": [],
+      "meta": {
+        "question": "急性阑尾炎的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 7,
+        "rerankedCount": 7,
+        "finalCount": 0,
+        "bookCount": 0,
+        "noResult": true,
+        "webSearch": true,
+        "round": 1,
+        "citation": {
+          "total": 0,
+          "invalid": [],
+          "coverage": 0,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 29137,
+        "newSession": true
+      },
+      "sessionId": "827fa2de"
+    },
+    {
+      "id": "q10",
+      "bookId": 102,
+      "bookTitle": "高血压基层诊疗指南2024",
+      "chapter": "降压药物选择",
+      "category": "treatment",
+      "question": "降压药物选择有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 19440,
+      "answer": "知识库中关于降压药物的禁忌症和常规剂量内容有限，以下相关部分基于临床常识仅供参考。\n\n1. **噻嗪类利尿剂**（氢氯噻嗪、吲达帕胺）  \n   - 适应症：老年高血压、单纯收缩期高血压、心衰患者。[参考1]  \n   - 注意事项：需监测血钾和尿酸。[参考1]  \n   - 禁忌症（临床常识）：痛风、低钾血症、严重肾功能不全。  \n   - 常规剂量（临床常识）：氢氯噻嗪12.5～25 mg，每日1次；需个体化调整。\n\n2. **ARB类**（缬沙坦、氯沙坦）  \n   - 适应症：与ACEI相似，可作为ACEI不耐受（尤其干咳）时的替代。[参考2]  \n   - 禁忌症（临床常识）：妊娠、高钾血症、双侧肾动脉狭窄。  \n   - 常规剂量（临床常识）：缬沙坦80～160 mg，每日1次；需个体化调整。\n\n3. **CCB类**（氨氯地平、硝苯地平控释片）  \n   - 适应症：老年高血压、单纯收缩期高血压、伴心绞痛患者。[参考3]  \n   - 注意事项：常见踝部水肿、面部潮红。[参考3]  \n   - 禁忌症（临床常识）：心源性休克、严重主动脉瓣狭窄、急性心肌梗死。  \n   - 常规剂量（临床常识）：氨氯地平5～10 mg，每日1次；需个体化调整。\n\n**临床提示**：药物选择需结合患者合并症、耐受性及经济因素，并注意监测不良反应（如利尿剂对电解质和尿酸的影响）。",
+      "sources": [
+        {
+          "id": 10672,
+          "docId": 261,
+          "docTitle": "降压药物选择",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/药物/选择/",
+          "pageNo": null,
+          "content": "噻嗪类利尿剂（如氢氯噻嗪、吲达帕胺）适用于老年高血压、单纯收缩期高血压、心衰患者。需监测血钾和尿酸。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10703,
+          "docId": 261,
+          "docTitle": "降压药物选择",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/药物/选择/",
+          "pageNo": null,
+          "content": "ARB（如缬沙坦、氯沙坦）适应证与ACEI相似，但不引起干咳，可作为ACEI不耐受时的替代。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10709,
+          "docId": 261,
+          "docTitle": "降压药物选择",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/药物/选择/",
+          "pageNo": null,
+          "content": "CCB（如氨氯地平、硝苯地平控释片）适用于老年高血压、单纯收缩期高血压、伴心绞痛患者。常见不良反应为踝部水肿、面部潮红。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11536,
+          "docId": 473,
+          "docTitle": "二、重症管理",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "二、重症管理",
+          "pageNo": null,
+          "content": "（2）出现急性 意识障碍、呼吸功能衰竭时，应行气管插管，必要时 辅助机械通气（Ⅰ级推荐，C 级证据）。（3）当患者病 情稳定后应及时评估拔除气管插管（Ⅰ级推荐，C 级证据）。（4）当患者拔管失败或插管超过 14 d，应 选择时机行气管切开（Ⅱ级推荐，C 级证据）。（二）血压管理 急性卒中患者启动降压治疗前应分析和纠正 可逆诱因，比如既往高血压、应激反应、低氧血症、 颅高压、谵妄、疼痛、尿潴留或其他刺激。卒中患者 血压过高增加脑组织水肿和出血风险，血压过低增 加继发性脑缺血风险。重症卒中患者血压控制目 标 值 应 考 虑 卒 中 类 型 、伴 发 疾 病 和 特 异 性 治 疗 措施。我 国 指 南 推 荐 脑 梗 死 患 者 收 缩 压 持 续 ≥ 200/110 mmHg 或伴特殊疾病（严重心功能不全、主 动脉夹层、高血压脑病）可降压治疗；对准备接受溶 栓、取栓的患者，控制血压<180/100 mmHg［12］ 。对 于脑梗死伴脑水肿患者，尚缺乏证据推荐降压目标 值［28］ 。对于低血压患者应积极寻找和处理病因，必 要时扩容升压。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "降压药物选择有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 5,
+        "rerankedCount": 4,
+        "finalCount": 4,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 5,
+          "invalid": [],
+          "coverage": 0.75,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 19438,
+        "newSession": true
+      },
+      "sessionId": "76b45f5d"
+    },
+    {
+      "id": "q11",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "非限制级抗菌药物",
+      "category": "diagnosis",
+      "question": "非限制级抗菌药物的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 21378,
+      "answer": "知识库中关于【非限制级抗菌药物诊断标准】的内容有限。目前检索到的资料仅提及抗菌药物分级管理的目的和使用强度监测，未对非限制级抗菌药物的分类或诊断标准作出具体定义。[参考4][参考5]\n\n根据临床常识（仅供参考）：非限制级抗菌药物并非基于“诊断”指标，而是依据药物安全性、疗效、耐药性及经济性进行的分级管理。其通常具备以下特征：\n1. 经长期临床应用证明安全、有效，不良反应较少且可控。[基于临床常识，仅供参考]\n2. 价格相对低廉，不易诱导细菌耐药，或耐药率较低。[基于临床常识，仅供参考]\n3. 临床医师可根据病情直接处方，无需特殊限制或审批。[基于临床常识，仅供参考]\n\n需强调的是，上述分类特征属于临床管理惯例，并非量化诊断标准。若需要明确某药物是否属于非限制级，应参照所在医疗机构制定的抗菌药物分级目录执行。\n\n临床提示：抗菌药物的分级管理旨在平衡疗效与耐药风险，处方非限制级药物时仍需严格遵循感染诊疗规范，避免滥用。[参考4]",
+      "sources": [
+        {
+          "id": 12932,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "p114 |《慢性呼吸系统疾病药师手册》（A handbook for pharmacists） 2020;86(7):1281-8. [accessed: 27 May 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/31823381. 263. Plaza V, Fernandez-Rodriguez C, Melero C et al. Validation of the 'Test of the Adherence to Inhalers' (TAI) for Asthma and COPD Patients. J Aerosol Med Pulm Drug Deliv. 2016;",
+          "similarity": 0.4423288141293048,
+          "matchType": "vector"
+        },
+        {
+          "id": 12603,
+          "docId": 1289,
+          "docTitle": "3.2.6 呼吸道感染",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3.2.6 呼吸道感染",
+          "pageNo": null,
+          "content": "值得关注的病毒感染包括流感、鼻病毒、副流感和偏肺病 毒[124]。药师在处理慢阻肺病患者的细菌感染时，可以促进抗菌药物的合理使用。在配药时，应确认抗菌药物治疗 方案符合患者的个体因素，如感染类型、合并症和风险因素。治疗管理还应该包括对治疗方案的疗效和不良反 应的常规监测[125]。同样的原则也适用于在 COPD 病毒感染的病例。流感疫苗接种有利于预防 AECOPD 的发 生，在哮喘病中也是如此。",
+          "similarity": 0.434135522492864,
+          "matchType": "vector"
+        },
+        {
+          "id": 12576,
+          "docId": 1279,
+          "docTitle": "2.3.3 慢阻肺病严重程度的分类",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "2.3.3 慢阻肺病严重程度的分类",
+          "pageNo": null,
+          "content": "对 COPD 严重程度主要依据气流受限的评估。应使用肺功能检测来确定气流受限的严重程度。GOLD 建 议在使用至少一种足够剂量的短效吸入性支气管舒张剂后进行肺功能检测，以尽量减少变异性[9]。 气流受限的严重程度可根据预测的 FEV1（一秒钟内强制呼气容积）的百分比分为轻度、中度、重度和非 常严重[5]。 • 轻度：FEV1≥80%预测值 • 中度：50%≤FEV1 <80%预测值 • 重度：30%≤FEV1 <50%预测值 • 极重度：FEV1 <30%预测值 气流受限应与症状评估结合起来，一些经过验证的工具，如 COPD 评估测试（CAT 问卷）和 COPD 控制 问卷（CCQ 问卷），可以用来评估 COPD 症状。修改后的英国医学研究委员会的问卷工具（mMRC 问卷） 可用于评估呼吸困难的症状。GOLD 推荐的 ABCD 评级工具（修订版）可以根据气流受限和症状对 COPD 的 严重程度进行分类。在 GOLD 中提出的修订后的 ABCD 评级工具可以 GOLD-2020 REPORT 中获取（译者注： GOLD 2023 将 ABCD 分级改为 ABE 评级）。",
+          "similarity": 0.4260881973347319,
+          "matchType": "vector"
+        },
+        {
+          "id": 10743,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "抗菌药物分级管理的目的：在保证临床疗效的前提下，减少不良反应和细菌耐药性的产生，降低患者医疗费用。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10744,
+          "docId": 270,
+          "docTitle": "非限制级抗菌药物",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/分级/非限制/",
+          "pageNo": null,
+          "content": "抗菌药物使用强度（AUD）= 某抗菌药物消耗量（DDD数）/同期患者收治总床日数×100。用于监测抗菌药物使用量。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "非限制级抗菌药物的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 21376,
+        "newSession": true
+      },
+      "sessionId": "c24a7fed"
+    },
+    {
+      "id": "q12",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "非限制级抗菌药物",
+      "category": "treatment",
+      "question": "非限制级抗菌药物的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 16983,
+      "answer": "⚠️ 该回答来自网络搜索，未经知识库审核，仅供参考，请以权威指南和临床实际为准\n\n根据搜索资料，非限制级抗菌药物的治疗原则可归纳为：\n\n1. **定义与定位**：非限制使用级抗菌药物是指经长期临床应用证明安全、有效，对细菌耐药性影响较小，价格相对较低的抗菌药物（来源2、来源3）。\n\n2. **首选原则**：预防感染、治疗轻度或者局部感染应当首选非限制使用级抗菌药物（来源3）。\n\n3. **合理用药要求**：非限制使用级抗菌药物虽未限定医生处方权限和规定适应证，但仍需严格掌握应用指征、合理用药（来源4、来源5）。\n\n4. **关于具体治疗疗程、联合用药等细节**：搜索结果中未提及。\n\n来源链接：\n[1] https://www.nhc.gov.cn/wjw/zcjd/200410/d1ead02b5e704e7884ee89ed4e5dbb79.shtml\n[2] https://www.moj.gov.cn/pub/sfbgw/flfggz/flfggzbmgz/201207/t20120705_145157.html\n[3] https://wjw.wuhan.gov.cn/zwgk_28/zcgz/202001/t20200114_803347.shtml\n[4] https://www.shanghai.gov.cn/cmsres//services/res/cmsres/resource/2/0012/07/07a725341a994177b99f400bbe6a06f9/256c9bdb45dba008bc7da31fddc7c737.pdf\n[5] https://wsjkw.sh.gov.cn/yzgl4/20210316/7bf75a6fe963446d9ff97d99fef5572f.html",
+      "sources": [],
+      "meta": {
+        "question": "非限制级抗菌药物的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": null,
+        "searchCount": 4,
+        "rerankedCount": 4,
+        "finalCount": 0,
+        "bookCount": 0,
+        "noResult": true,
+        "webSearch": true,
+        "round": 1,
+        "citation": null,
+        "duration": 16981,
+        "newSession": true
+      },
+      "sessionId": "4abcf166"
+    },
+    {
+      "id": "q2",
+      "bookId": 100,
+      "bookTitle": "内科学第10版",
+      "chapter": "肺炎",
+      "category": "treatment",
+      "question": "肺炎的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 99671,
+      "answer": "1. 值得关注的病毒感染包括流感、鼻病毒、副流感和偏肺病 毒[124]。药师在处理慢阻肺病患者的细菌感染时，可以促进抗菌药物的合理使用。在配药时，应确认抗菌药物治疗 方案符合患者的个体因素，如感染类型、合并症和风险因素。治疗管理还应该包括对治疗方案的疗效和不良反 应的常规监测[125]。同样的原则也适用于在 COPD 病毒感染的病例。流感疫苗接种有利于预防 AECOPD 的发 生，在哮喘病中也是如此。\n\n2. 《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p85 12 伦理方面的考虑 在护理 CRDs 患者时，尊重患者的自主权是很重要的。换句话说，必须考虑患者的信仰、价值观和愿望， 即使该护理方法不一定符合该患者的最佳利益。这一自主性原则还包括知情同意、隐私和保密性。\"知情同意 \"是指将拟议的治疗或程序告知给患者，确保患者正确理解这些治疗或程序，并在没有任何不 ...\n\n3. 药物治疗的目的是减轻症状，减少急性发作的频率和严重程度，以及提高患者的运动耐力和改善整体健康。 在选择 COPD 的药物治疗时，必须考虑以下原则。 初始药物治疗[9,226]： • 药物治疗的开始应基于对气流限制和症状的评估。对于初始药物治疗，要确定主要的可治疗特征--呼 吸困难或病情加重。 • 应给予抢救性短效支气管舒张剂以缓解症状。 • 吸入装置应根据患者的喜好进行个性化定制、开具和配药。 •...\n\n4. 肺炎球菌疫苗可用于高危人群的预防，包括23价多糖疫苗和13价结合疫苗。推荐65岁以上老年人、免疫功能低下者接种。\n\n5. 卒中发病 7 d 内新出现的肺炎［68］ 。重症患者使用机 械通气可能发生呼吸机相关性肺炎。卒中后肺炎 的防治可参见相关指南和共识［68⁃69］ 。推荐意见： （1）重症卒中患者应警惕卒中相关 性肺炎和呼吸机相关性肺炎的发生（Ⅰ级推荐，C 级证据）。（2）早期评估和处理吞咽困难和误吸问 题，对意识障碍患者应特别注意预防肺炎（Ⅰ级推 荐，C 级证据）。（3）疑有肺炎的发热患者或诊断肺 炎后应尽早开始...",
+      "sources": [
+        {
+          "id": 12603,
+          "docId": 1289,
+          "docTitle": "3.2.6 呼吸道感染",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3.2.6 呼吸道感染",
+          "pageNo": null,
+          "content": "值得关注的病毒感染包括流感、鼻病毒、副流感和偏肺病 毒[124]。药师在处理慢阻肺病患者的细菌感染时，可以促进抗菌药物的合理使用。在配药时，应确认抗菌药物治疗 方案符合患者的个体因素，如感染类型、合并症和风险因素。治疗管理还应该包括对治疗方案的疗效和不良反 应的常规监测[125]。同样的原则也适用于在 COPD 病毒感染的病例。流感疫苗接种有利于预防 AECOPD 的发 生，在哮喘病中也是如此。",
+          "similarity": 0.5065194972180757,
+          "matchType": "vector"
+        },
+        {
+          "id": 12735,
+          "docId": 1366,
+          "docTitle": "8.7 药品供应的管理、供应和可负担性",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "8.7 药品供应的管理、供应和可负担性",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p85 12 伦理方面的考虑 在护理 CRDs 患者时，尊重患者的自主权是很重要的。换句话说，必须考虑患者的信仰、价值观和愿望， 即使该护理方法不一定符合该患者的最佳利益。这一自主性原则还包括知情同意、隐私和保密性。\"知情同意 \"是指将拟议的治疗或程序告知给患者，确保患者正确理解这些治疗或程序，并在没有任何不 当影响或胁迫的情况下获得患者的授权来进行这些治疗或程序[342,343]。从根本上说，知情同意过程应以患者为中心，考虑到个人的价值观、信仰、需求和偏好。在这个过程中， 药师和患者要共同决策，在这个过程中，应向患者清楚地说明临床活动或治疗的益处、相关的风险和不确定性。344 此外，应权衡利益和风险，尊重患者的权利和自主权，确定治疗目标，并根据自身的信仰、价值观和愿望 做出是否参加的决定[342]。必须让患者有时间考虑，然后在没有不当影响或胁迫的情况下就是否接受治疗或手 术作出决定，或自愿撤回其同意。",
+          "similarity": 0.5048378104164862,
+          "matchType": "vector"
+        },
+        {
+          "id": 12653,
+          "docId": 1306,
+          "docTitle": "7.2 慢阻肺病的药物治疗",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "7.2 慢阻肺病的药物治疗",
+          "pageNo": null,
+          "content": "药物治疗的目的是减轻症状，减少急性发作的频率和严重程度，以及提高患者的运动耐力和改善整体健康。 在选择 COPD 的药物治疗时，必须考虑以下原则。 初始药物治疗[9,226]： • 药物治疗的开始应基于对气流限制和症状的评估。对于初始药物治疗，要确定主要的可治疗特征--呼 吸困难或病情加重。 • 应给予抢救性短效支气管舒张剂以缓解症状。 • 吸入装置应根据患者的喜好进行个性化定制、开具和配药。 • 应强调正确的吸入技术的重要性[9]。 • 在开始使用 ICS 之前，应权衡其风险和益处。 用于后续的药物治疗管理[9]。 • 应该对症状和病情加重的风险进行审查。 • 在得出治疗不充分的结论之前，优化吸入装置的选择和评估吸入技术是至关重要的。 • 应评估患者对吸入装置使用的依从性。 • 在评估了症状和吸入装置的依从性和吸入技术后，应考虑升级或降级药物治疗。 • IPCRG COPD Right Care 轮子是一个快速帮助选择处方的工具。该工具的 A 面能够帮助那些知道慢阻 肺病患者需要吸入药物但不确定选择哪种药物的医护人员（见).",
+          "similarity": 0.5037680864334106,
+          "matchType": "vector"
+        },
+        {
+          "id": 10007,
+          "docId": 210,
+          "docTitle": "J18 肺炎",
+          "bookTitle": "内科学第10版",
+          "sectionPath": "/内科学/呼吸/J18/",
+          "pageNo": null,
+          "content": "肺炎球菌疫苗可用于高危人群的预防，包括23价多糖疫苗和13价结合疫苗。推荐65岁以上老年人、免疫功能低下者接种。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11556,
+          "docId": 475,
+          "docTitle": "1. 肺炎：卒中相关性肺炎指非机械通气患者在",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "1. 肺炎：卒中相关性肺炎指非机械通气患者在",
+          "pageNo": null,
+          "content": "卒中发病 7 d 内新出现的肺炎［68］ 。重症患者使用机 械通气可能发生呼吸机相关性肺炎。卒中后肺炎 的防治可参见相关指南和共识［68⁃69］ 。推荐意见： （1）重症卒中患者应警惕卒中相关 性肺炎和呼吸机相关性肺炎的发生（Ⅰ级推荐，C 级证据）。（2）早期评估和处理吞咽困难和误吸问 题，对意识障碍患者应特别注意预防肺炎（Ⅰ级推 荐，C 级证据）。（3）疑有肺炎的发热患者或诊断肺 炎后应尽早开始经验性抗感染治疗，但不推荐预防 性使用，应尽快完善病原学检查，针对性地选用抗 菌药物（Ⅱ级推荐，B 级证据）。2. 深静脉血栓（deep venous thrombosis，DVT）： 我国指南推荐脑梗死患者应尽早活动、抬高下肢， 避免下肢输液［12］ 。但重症卒中患者通常生命体征 不稳定，故应结合具体情况在没有禁忌证的情况下 适当运动。对于卧床制动的卒中患者，现行指南均 推荐气压泵间断充气加压装置降低 DVT 的风险、 改善预后，不推荐使用弹力袜预防 DVT［12⁃13，19］ 。欧 美 指 南 不 推 荐 制 动 患 者 常 规 使 用 抗 凝 治 疗 预 防 DVT；",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "肺炎的治疗原则是什么？",
+        "model": null,
+        "promptVersion": null,
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": null,
+        "duration": 99218,
+        "newSession": true
+      },
+      "sessionId": "50403cb7"
+    },
+    {
+      "id": "q14",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "腹腔感染经验用药",
+      "category": "treatment",
+      "question": "腹腔感染经验用药有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 19281,
+      "answer": "腹腔感染经验用药需覆盖肠道革兰阴性杆菌和厌氧菌。[参考3]  \n\n- 轻中度感染：选用头孢二代/三代联合甲硝唑，或β-内酰胺/酶抑制剂复合制剂。[参考3]  \n- 重症腹腔感染：经验用药需覆盖耐药菌，选用碳青霉烯类（美罗培南/亚胺培南）或哌拉西林他唑巴坦，必要时加抗MRSA药物。[参考2]  \n- 经验性抗感染治疗48-72小时后应评估疗效（体温、白细胞、降钙素原等），指标改善则继续，否则需调整方案或寻找感染源。[参考1]  \n\n临床提示：腹腔感染控制效果与感染源是否充分引流/清除密切相关，疗效评估时应同时关注外科干预情况。",
+      "sources": [
+        {
+          "id": 10805,
+          "docId": 273,
+          "docTitle": "肺部感染经验用药",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/经验/肺部/",
+          "pageNo": null,
+          "content": "经验性抗感染治疗48-72小时后应评估疗效：体温、白细胞、降钙素原等指标改善则继续，否则需调整方案或寻找感染源。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10804,
+          "docId": 274,
+          "docTitle": "腹腔感染经验用药",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/经验/肺部/",
+          "pageNo": null,
+          "content": "重症腹腔感染经验用药需覆盖耐药菌：碳青霉烯类（美罗培南/亚胺培南）或哌拉西林他唑巴坦，必要时加抗MRSA药物。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10803,
+          "docId": 274,
+          "docTitle": "腹腔感染经验用药",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/经验/肺部/",
+          "pageNo": null,
+          "content": "腹腔感染经验用药需覆盖肠道革兰阴性杆菌和厌氧菌。轻中度：头孢二代/三代+甲硝唑，或β-内酰胺/酶抑制剂复合制剂。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11045,
+          "docId": 250,
+          "docTitle": "K35 急性阑尾炎",
+          "bookTitle": "外科学第9版",
+          "sectionPath": "/外科学/普外/K35/",
+          "pageNo": null,
+          "content": "急性阑尾炎的并发症：阑尾穿孔、腹腔脓肿、门静脉炎、阑尾周围脓肿。术后并发症包括切口感染、腹腔出血、阑尾残株炎等。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "腹腔感染经验用药有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 8,
+        "rerankedCount": 4,
+        "finalCount": 4,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.75,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 19280,
+        "newSession": true
+      },
+      "sessionId": "fef45836"
+    },
+    {
+      "id": "q13",
+      "bookId": 103,
+      "bookTitle": "抗菌药物临床应用指导原则",
+      "chapter": "肺部感染经验用药",
+      "category": "treatment",
+      "question": "肺部感染经验用药有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 31345,
+      "answer": "知识库中关于肺部感染经验用药的内容有限，以下除引用外，部分基于临床常识，仅供参考。\n\n1. **治疗原则**：尽早启动经验性抗感染治疗，同时积极留取病原学标本。（基于临床常识）\n2. **分层/阶梯方案**：根据感染场所（社区/医院）、严重程度及宿主因素选择药物。社区获得性肺炎常用β-内酰胺类联合大环内酯类或呼吸喹诺酮类；医院获得性肺炎需覆盖革兰阴性杆菌（如铜绿假单胞菌），可选抗假单胞菌β-内酰胺类，必要时联合氨基糖苷类或喹诺酮类。（基于临床常识）\n3. **注意事项**：经验性治疗48-72小时后应评估疗效，观察体温、白细胞、降钙素原等指标；若改善则继续原方案，否则需调整方案或寻找感染源。[参考4]\n\n**临床提示**：经验性用药需结合本地耐药监测数据，并动态评估疗效。",
+      "sources": [
+        {
+          "id": 12602,
+          "docId": 1289,
+          "docTitle": "3.2.6 呼吸道感染",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3.2.6 呼吸道感染",
+          "pageNo": null,
+          "content": "由于目前还没有针对 HRV 和 RSV 的实用抗病毒疗法和疫苗，因此不能低估对病毒性呼吸道感染的初级预 防作用。然而，现在的流感疫苗和抗病毒疗法是有安全有效的。因此，药师应该监测并对哮喘患者（尤其是儿 童和孕妇）的呼吸道感染进行有效管理[120]。在临床环境中，药师应与其他医疗工作者合作： • 识别感染病毒性呼吸道感染的高风险哮喘患者。• 确定对感染最合适的明确和对症治疗。• 启动、修改和监测所选治疗方案的疗效。• 确定合适的患者进行免疫预防，特别强调患者的安全。• 在有法规支持的情况下，帮助患者注射流感疫苗；• 执行管理和预防呼吸道感染的政策[121,122]。药师在患者教育方面也有重要作用，这涉及到呼吸道感染的初级预防措施的重要性。预防措施包括流感疫 苗的好处、适当的卫生措施和采用免疫学策略[121,122]。与哮喘相反，细菌和病毒感染都会引起严重的 AECOPD，其中病毒感染是主要的风险因素。这些感染通 过气道炎症引发 AECOPD 事件，导致气流减弱和肺部过度膨胀[123]。牵涉到 COPD 的主要细菌是肺炎链球菌、 流感嗜血杆菌、卡他拉菌、肠杆菌和铜绿假单胞菌。",
+          "similarity": 0.5210875868797339,
+          "matchType": "both"
+        },
+        {
+          "id": 12603,
+          "docId": 1289,
+          "docTitle": "3.2.6 呼吸道感染",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3.2.6 呼吸道感染",
+          "pageNo": null,
+          "content": "值得关注的病毒感染包括流感、鼻病毒、副流感和偏肺病 毒[124]。药师在处理慢阻肺病患者的细菌感染时，可以促进抗菌药物的合理使用。在配药时，应确认抗菌药物治疗 方案符合患者的个体因素，如感染类型、合并症和风险因素。治疗管理还应该包括对治疗方案的疗效和不良反 应的常规监测[125]。同样的原则也适用于在 COPD 病毒感染的病例。流感疫苗接种有利于预防 AECOPD 的发 生，在哮喘病中也是如此。",
+          "similarity": 0.5641524012361301,
+          "matchType": "vector"
+        },
+        {
+          "id": 12756,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p93 15 参考文献 1. World Health Organization. Chronic respiratory diseases: 2022. updated [accessed: 9 June 2022]. Available at: https://www.who.int/health-topics/chronic-respiratory-diseases#tab=tab_1. 2. World Health Organization. Global surveillance, prevention and control of chronic respiratory diseases: a comprehensive approach: 2007. updated [accessed: 26 January 2022]. Available at: https://www.who.int/publications/i/item/global-surveillance-prevention-and-control-of-chronic- respiratory-diseases. 3. Global burden of 369 diseases and injuries in 204 countries and territories, 1990-2019: a systematic analysis for the Global Burden of Disease Study 2019. Lancet. 2020;",
+          "similarity": 0.5343789139760273,
+          "matchType": "vector"
+        },
+        {
+          "id": 10805,
+          "docId": 273,
+          "docTitle": "肺部感染经验用药",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/经验/肺部/",
+          "pageNo": null,
+          "content": "经验性抗感染治疗48-72小时后应评估疗效：体温、白细胞、降钙素原等指标改善则继续，否则需调整方案或寻找感染源。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10803,
+          "docId": 274,
+          "docTitle": "腹腔感染经验用药",
+          "bookTitle": "抗菌药物临床应用指导原则",
+          "sectionPath": "/抗菌药物/经验/肺部/",
+          "pageNo": null,
+          "content": "腹腔感染经验用药需覆盖肠道革兰阴性杆菌和厌氧菌。轻中度：头孢二代/三代+甲硝唑，或β-内酰胺/酶抑制剂复合制剂。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "肺部感染经验用药有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 9,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 31343,
+        "newSession": true
+      },
+      "sessionId": "16cb9f6d"
+    },
+    {
+      "id": "q15",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "发热",
+      "category": "diagnosis",
+      "question": "发热的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 28956,
+      "answer": "知识库中关于发热诊断标准的具体内容有限，以下基于临床常识补充，仅供参考：\n\n- 发热诊断标准：腋下温度≥37.3℃，或口腔温度≥37.5℃，或直肠温度≥37.7℃（不同测量部位阈值略有差异）。（基于临床常识）\n- 按体温高低分级：低热37.3~38℃；中等度热38.1~39℃；高热39.1~41℃；超高热≥41℃。（基于临床常识）\n\n临床提示：测量体温时需静息5分钟以上，并避免刚进食、运动后立即测量。",
+      "sources": [
+        {
+          "id": 12619,
+          "docId": 1296,
+          "docTitle": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "4.2 对未确诊的慢阻肺病患者进行筛查",
+          "pageNo": null,
+          "content": "此外，因为肺活量测定法对肺功能的测量结果准确且可 重复，因此 GOLD 专家建议将肺功能检查作为诊断 COPD 的金标准[9]。药师可在一些场所通过有效的便携式设备进行肺功能测试，测量一些重要的指标如 FEV1、FEV6 和 FEV1/FEV6 药师[187]。对 FEV1/FEV6 与 FEV1/FVC 的诊断准确性进行比较的 11 项研究的荟萃分析结果表明， FEV1/FEV6 在成人群体中检测 COPD 具有较高的敏感性和特异性[191]。然而，微量呼吸仪并不测量 FVC 值。FVC 是用力呼气动作时排出的空气量（是以升为单位的肺活量的指 标）。这是一个只能使用诊断性肺活量计得到的参数。微量呼吸仪上获得的结果之所以可以用于诊断 COPD，是因为在诊断成人气道阻塞时，FEV6 可以是 FVC 的替代指标。此外，FEV6 比传统的肺活量测量法更容易获得，并且具有可接受的敏感性和特异性值[192]。然而，使用 FEV1/FEV6<0.75 作为与 FEV1/FVC 比率的最佳相关性[34]已经受到质疑。总的来说，最准确 的截止值取决于所使用的微量呼吸仪[193,194]。",
+          "similarity": 0.41264733151479627,
+          "matchType": "both"
+        },
+        {
+          "id": 12562,
+          "docId": 1273,
+          "docTitle": "3. 参与哮喘治疗方案的制定，包括选择不同的吸入装置。",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "3. 参与哮喘治疗方案的制定，包括选择不同的吸入装置。",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p15 2 CRDs 的临床表现",
+          "similarity": 0.4106053113937378,
+          "matchType": "vector"
+        },
+        {
+          "id": 10861,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "发热的热型：稽留热（体温持续39-40℃，24h波动<1℃）见于大叶性肺炎；弛张热（24h波动>2℃）见于败血症；间歇热见于疟疾。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10862,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "咳嗽的性质：干咳见于上呼吸道感染、胸膜炎、肺栓塞等。湿咳（有痰）见于肺炎、支气管扩张、肺脓肿等。犬吠样咳嗽见于喉炎。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10863,
+          "docId": 280,
+          "docTitle": "发热",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/症状/发热/",
+          "pageNo": null,
+          "content": "痰的性状：铁锈色痰见于肺炎链球菌肺炎；粉红色泡沫痰见于急性肺水肿；砖红色胶冻样痰见于克雷伯杆菌肺炎；黄绿色痰见于铜绿假单胞菌感染。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "发热的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 0,
+          "invalid": [],
+          "coverage": 0,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 28954,
+        "newSession": true
+      },
+      "sessionId": "ea6dd709"
+    },
+    {
+      "id": "q17",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "血常规检查",
+      "category": "diagnosis",
+      "question": "血常规检查的临床意义是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 11750,
+      "answer": "知识库中关于红细胞、血小板等血常规其他指标的内容有限，以下相关内容基于临床常识仅供参考。\n\n血常规检查的核心临床意义在于通过白细胞分类及计数辅助判断感染类型，同时评估贫血、出血等基础状态，具体要点如下：\n\n1. **中性粒细胞比例**：升高常见于急性细菌感染、组织损伤、急性出血等；降低常见于病毒感染、药物影响、再生障碍性贫血等。[参考1]\n2. **淋巴细胞比例**：升高常见于病毒感染、结核、淋巴瘤等；降低常见于免疫缺陷、放疗化疗后、糖皮质激素使用后等。[参考2]\n3. **红细胞及血红蛋白**：降低提示贫血，升高可见于脱水、慢性缺氧等（基于临床常识）。\n4. **血小板计数**：减少提示出血风险，增多需警惕血栓倾向或骨髓增殖性疾病（基于临床常识）。\n\n临床提示：血常规需结合临床症状及动态变化综合解读，单一指标异常不能直接确诊。",
+      "sources": [
+        {
+          "id": 10921,
+          "docId": 283,
+          "docTitle": "血常规检查",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/检验/血常规/",
+          "pageNo": null,
+          "content": "中性粒细胞比例升高常见于急性细菌感染、组织损伤、急性出血等。降低见于病毒感染、药物影响、再生障碍性贫血等。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10922,
+          "docId": 283,
+          "docTitle": "血常规检查",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/检验/血常规/",
+          "pageNo": null,
+          "content": "淋巴细胞比例升高见于病毒感染、结核、淋巴瘤等。降低见于免疫缺陷、放疗化疗后、糖皮质激素使用后等。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11570,
+          "docId": 483,
+          "docTitle": "1. 颅内压监测：LHI 患者硬膜下颅内压监测提",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "1. 颅内压监测：LHI 患者硬膜下颅内压监测提",
+          "pageNo": null,
+          "content": "示的颅内压增高可预测临床恶化和死亡［7，96］ 。但 有研究结果提示当 LHI 患者出现脑疝征象时，颅内 压仍可在正常范围［97］ 。与有创颅内压监测相比，通 过密切的临床和影像学监测早期发现脑疝征象更 具临床意义［98］ 。因此，我国专家共识推荐应用瞳 孔、意识、肢体自主运动等临床征象作为 LHI 脑疝 的早期监测指标，不应完全被有创颅内压监测替 代［3］ 。梗阻性脑室出血患者的颅内压>30 mmHg 可 预测不良功能预后［99］ 。ESO 脑出血指南指出，目前 尚无证据支持颅内压监测可改善临床结局［36］ 。我 国脑出血指南建议在有条件的情况下，重症患者可 进行颅内压和脑灌注压监测［13］ 。 推荐意见：目前缺乏充分证据推荐重症卒中患 者常规使用颅内压监测，应结合临床症状体征（比 如意识状态和瞳孔改变）及影像学征象变化综合评 估（Ⅱ级推荐，C 级证据）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11569,
+          "docId": 482,
+          "docTitle": "三、严重并发症处理",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "三、严重并发症处理",
+          "pageNo": null,
+          "content": "（一）颅内压增高 颅内压增高是重症卒中病情恶化进展的常见 病理过程。在临床工作和既往文献中，常将脑水肿 和颅内高压混用，但具有临床意义的脑水肿应为脑 组织肿胀所致颅内压升高甚至脑疝的情况。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "血常规检查的临床意义是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 6,
+        "rerankedCount": 4,
+        "finalCount": 4,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 2,
+          "invalid": [],
+          "coverage": 0.5,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 11748,
+        "newSession": true
+      },
+      "sessionId": "60499ae5"
+    },
+    {
+      "id": "q18",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "胸部CT",
+      "category": "diagnosis",
+      "question": "胸部CT的临床意义是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 8069,
+      "answer": "胸部CT在肺部疾病诊治中具有重要价值，主要包括以下方面：\n\n1. **肺结节的评估与良恶性鉴别**：通过观察结节大小（<6mm、6-8mm、>8mm）、密度（实性、部分实性、磨玻璃）及形态特征（分叶、毛刺、胸膜牵拉）来判断良恶性，为后续管理决策提供依据。[参考2]\n\n2. **肺炎的诊断与病原学提示**：肺炎的CT表现包括磨玻璃影、实变影、小叶间隔增厚、树芽征等，不同病原体肺炎的CT表现有一定特征性，有助于病因分析和鉴别诊断。[参考3]\n\n3. **增强CT的安全管理**：使用含碘造影剂时需警惕不良反应，分为轻度（恶心、荨麻疹）、中度（喉头水肿、支气管痉挛）、重度（过敏性休克、心跳骤停）。碘过敏者禁用含碘造影剂，检查前应评估风险。[参考4]\n\n**临床提示**：胸部CT需结合临床资料综合判读，行增强扫描前务必询问过敏史并做好急救准备。",
+      "sources": [
+        {
+          "id": 12732,
+          "docId": 1366,
+          "docTitle": "8.7 药品供应的管理、供应和可负担性",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "8.7 药品供应的管理、供应和可负担性",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p83 临床、经济和患者报告的结果已被用于评估 CRDs 服务的进展。例如，在大约 5 至 11 岁的哮喘患者中进 行的一项随机对照试验，可用于评估了由药师领导的远程医疗服务的临床、人文和经济成果。该试验不仅评估 了临床影响（哮喘控制、急性家中频率、住院治疗、SABA 缓解剂的使用），还评估了经济结果（如药物费用、 父母缺勤、交通费用和住院负担）和人文结果（生活质量）[338]。在意大利进行的另一项针对哮喘患者的分组 随机对照试验不仅评估了临床结果，还评估了患者报告的结果（如依从性），以及药师主导的药物审查干预的 经济结果（成本效益）[339]。这些结果可以指导药师开展和实施有针对性的、有效的、高效的、以人为本的优 质医疗服务[336]。在欧盟委员会关于欧盟慢阻肺病和哮喘等 CRDs 监测指标的报告中，对哮喘患者的监测指标包括慢性症状、 症状发作、医院就诊次数、日常活动限制和肺功能的情况[340]。根据欧盟委员会的报告，这些指标是预测哮喘 和慢阻肺病患者健康结果的最佳预测指标。",
+          "similarity": 0.4060043394565611,
+          "matchType": "vector"
+        },
+        {
+          "id": 10981,
+          "docId": 285,
+          "docTitle": "胸部CT",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/影像/胸部CT/",
+          "pageNo": null,
+          "content": "肺结节的CT评估：大小（<6mm、6-8mm、>8mm）、密度（实性、部分实性、磨玻璃）、形态（分叶、毛刺、胸膜牵拉）是判断良恶性的关键。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10982,
+          "docId": 285,
+          "docTitle": "胸部CT",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/影像/胸部CT/",
+          "pageNo": null,
+          "content": "肺炎的CT表现：磨玻璃影、实变影、小叶间隔增厚、树芽征等。不同病原体肺炎的CT表现有一定特征性。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10985,
+          "docId": 285,
+          "docTitle": "胸部CT",
+          "bookTitle": "诊断学第10版",
+          "sectionPath": "/诊断学/影像/胸部CT/",
+          "pageNo": null,
+          "content": "增强CT造影剂不良反应：轻度（恶心、荨麻疹）、中度（喉头水肿、支气管痉挛）、重度（过敏性休克、心跳骤停）。碘过敏者禁用含碘造影剂。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11570,
+          "docId": 483,
+          "docTitle": "1. 颅内压监测：LHI 患者硬膜下颅内压监测提",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "1. 颅内压监测：LHI 患者硬膜下颅内压监测提",
+          "pageNo": null,
+          "content": "示的颅内压增高可预测临床恶化和死亡［7，96］ 。但 有研究结果提示当 LHI 患者出现脑疝征象时，颅内 压仍可在正常范围［97］ 。与有创颅内压监测相比，通 过密切的临床和影像学监测早期发现脑疝征象更 具临床意义［98］ 。因此，我国专家共识推荐应用瞳 孔、意识、肢体自主运动等临床征象作为 LHI 脑疝 的早期监测指标，不应完全被有创颅内压监测替 代［3］ 。梗阻性脑室出血患者的颅内压>30 mmHg 可 预测不良功能预后［99］ 。ESO 脑出血指南指出，目前 尚无证据支持颅内压监测可改善临床结局［36］ 。我 国脑出血指南建议在有条件的情况下，重症患者可 进行颅内压和脑灌注压监测［13］ 。 推荐意见：目前缺乏充分证据推荐重症卒中患 者常规使用颅内压监测，应结合临床症状体征（比 如意识状态和瞳孔改变）及影像学征象变化综合评 估（Ⅱ级推荐，C 级证据）。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "胸部CT的临床意义是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 6,
+        "rerankedCount": 6,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 3,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 8067,
+        "newSession": true
+      },
+      "sessionId": "bbdfa527"
+    },
+    {
+      "id": "q16",
+      "bookId": 104,
+      "bookTitle": "诊断学第10版",
+      "chapter": "发热",
+      "category": "treatment",
+      "question": "发热的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 36273,
+      "answer": "发热的治疗原则：发热是卒中患者预后不良的危险因素，应加强体温监测，并全面寻找发热原因，在治疗病因的同时考虑降温治疗。[参考4]\n\n**一、降温治疗（分层方案）**\n1. 脑梗死患者体温超过38℃时，可采用物理降温与药物降温相结合的方式。[参考4]\n2. 物理降温期间应监测并预防寒颤；若发生寒颤，应调整物理降温为药物降温。[参考4]\n\n**二、抗感染治疗（针对感染性发热）**\n1. 疑有肺炎的发热患者或确诊肺炎后，应尽早开始经验性抗感染治疗。[参考5]\n2. 不推荐预防性使用抗菌药物；应尽快完善病原学检查，针对性选用抗菌药物。[参考5]\n\n**三、注意事项**\n1. 目前缺乏证据支持低温疗法可改善重症卒中患者预后，如需开展低温治疗，应在充分评估和沟通后参照相关专家共识进行。[参考4]\n2. 发热治疗需结合病因综合处理，避免仅对症降温而延误原发病治疗。[参考4][参考5]\n\n临床提示：对重症卒中患者，发热管理应优先明确感染与非感染病因，动态评估降温效果与寒颤风险。",
+      "sources": [
+        {
+          "id": 12735,
+          "docId": 1366,
+          "docTitle": "8.7 药品供应的管理、供应和可负担性",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "8.7 药品供应的管理、供应和可负担性",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p85 12 伦理方面的考虑 在护理 CRDs 患者时，尊重患者的自主权是很重要的。换句话说，必须考虑患者的信仰、价值观和愿望， 即使该护理方法不一定符合该患者的最佳利益。这一自主性原则还包括知情同意、隐私和保密性。\"知情同意 \"是指将拟议的治疗或程序告知给患者，确保患者正确理解这些治疗或程序，并在没有任何不 当影响或胁迫的情况下获得患者的授权来进行这些治疗或程序[342,343]。从根本上说，知情同意过程应以患者为中心，考虑到个人的价值观、信仰、需求和偏好。在这个过程中， 药师和患者要共同决策，在这个过程中，应向患者清楚地说明临床活动或治疗的益处、相关的风险和不确定性。344 此外，应权衡利益和风险，尊重患者的权利和自主权，确定治疗目标，并根据自身的信仰、价值观和愿望 做出是否参加的决定[342]。必须让患者有时间考虑，然后在没有不当影响或胁迫的情况下就是否接受治疗或手 术作出决定，或自愿撤回其同意。",
+          "similarity": 0.4622985467554904,
+          "matchType": "both"
+        },
+        {
+          "id": 12736,
+          "docId": 1366,
+          "docTitle": "8.7 药品供应的管理、供应和可负担性",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "8.7 药品供应的管理、供应和可负担性",
+          "pageNo": null,
+          "content": "知情同意的过程包括向患者披露所有信息，让患者理解所有披露的信息，然 后由患者自愿作出决定，并授权医护人员提供相关服务[342]。虽然自主性原则包含了知情同意，但药师和医疗服务提供者可能需要权衡其他伦理原则的重要性，如受益 原则、公正原则和非恶意原则(表 18)[345]。表 18 医学伦理原则的定义 道 德 原 则 定义 自 主 性 尊重患者做决定的权利，决定接受或拒绝哪种治疗或程序。例如，讲述所有可选择的吸入器，让患者根据自己的需 要、信仰、偏好和能力来选择正确的管理。效 益 以患者的最大利益为出发点。在 CRDs 的背景下，利益原则包括根据患者的疾病控制情况，提出所有可能的治疗方 案，使患者的利益最大化，风险最小化。公 正 对每个人都一视同仁。正义包括公平性和分配正义--公平性是指对所有的人一视同仁，分配正义是指公平分配有限的 资源，并考虑到文化和身份。非 恶 意 避免对患者或社会造成伤害。换言之，减少重大的伤害风险或避免造成严重伤害的小风险。这些伦理原则在现实世界的实践中可能会发生冲突，从而引起伦理困境。",
+          "similarity": 0.4570462380079181,
+          "matchType": "both"
+        },
+        {
+          "id": 12653,
+          "docId": 1306,
+          "docTitle": "7.2 慢阻肺病的药物治疗",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "7.2 慢阻肺病的药物治疗",
+          "pageNo": null,
+          "content": "药物治疗的目的是减轻症状，减少急性发作的频率和严重程度，以及提高患者的运动耐力和改善整体健康。 在选择 COPD 的药物治疗时，必须考虑以下原则。 初始药物治疗[9,226]： • 药物治疗的开始应基于对气流限制和症状的评估。对于初始药物治疗，要确定主要的可治疗特征--呼 吸困难或病情加重。 • 应给予抢救性短效支气管舒张剂以缓解症状。 • 吸入装置应根据患者的喜好进行个性化定制、开具和配药。 • 应强调正确的吸入技术的重要性[9]。 • 在开始使用 ICS 之前，应权衡其风险和益处。 用于后续的药物治疗管理[9]。 • 应该对症状和病情加重的风险进行审查。 • 在得出治疗不充分的结论之前，优化吸入装置的选择和评估吸入技术是至关重要的。 • 应评估患者对吸入装置使用的依从性。 • 在评估了症状和吸入装置的依从性和吸入技术后，应考虑升级或降级药物治疗。 • IPCRG COPD Right Care 轮子是一个快速帮助选择处方的工具。该工具的 A 面能够帮助那些知道慢阻 肺病患者需要吸入药物但不确定选择哪种药物的医护人员（见).",
+          "similarity": 0.4786604642868042,
+          "matchType": "vector"
+        },
+        {
+          "id": 11547,
+          "docId": 474,
+          "docTitle": "0.5）℃［47］",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "0.5）℃［47］",
+          "pageNo": null,
+          "content": "Cochrane 系统评价提示动脉瘤术中低温疗法对于 低 级 别 动 脉 瘤 SAH 的 功 能 预 后 改 善 可 能 是 有 效 的，但对于高级别动脉瘤伴或不伴 SAH 的疗效尚 缺乏证据［53］ 。推荐意见： （1）发热是卒中患者预后不良的危 险因素，应加强对重症卒中患者的体温监测（Ⅱ级 推荐，C 级证据）。（2）体温升高时应全面寻找发热 原因，在治疗病因的同时可考虑降温治疗，脑梗死 患者体温超过 38 ℃，可采用物理降温与药物降温 相结合的方式；物理降温应注意监测和预防寒颤， 如 发 生 寒 颤 ，应 考 虑 调 整 物 理 降 温 为 药 物 降 温 （Ⅰ级推荐，C 级证据）。（3）目前缺乏证据支持低温 疗法可改善重症卒中患者的预后，在充分评估和沟 通 后 如 需 开 展 低 温 治 疗 可 参 照 相 关 专 家 共 识［4］ （Ⅱ级推荐，C 级证据）。（四）血糖管理 卒中患者早期高血糖与不良预后风险增加相 关。尽管卒中后低血糖发生率较低，一旦发生可加 重脑缺血损伤和脑水肿而导致不良预后，应尽快纠 正。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11556,
+          "docId": 475,
+          "docTitle": "1. 肺炎：卒中相关性肺炎指非机械通气患者在",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "1. 肺炎：卒中相关性肺炎指非机械通气患者在",
+          "pageNo": null,
+          "content": "卒中发病 7 d 内新出现的肺炎［68］ 。重症患者使用机 械通气可能发生呼吸机相关性肺炎。卒中后肺炎 的防治可参见相关指南和共识［68⁃69］ 。推荐意见： （1）重症卒中患者应警惕卒中相关 性肺炎和呼吸机相关性肺炎的发生（Ⅰ级推荐，C 级证据）。（2）早期评估和处理吞咽困难和误吸问 题，对意识障碍患者应特别注意预防肺炎（Ⅰ级推 荐，C 级证据）。（3）疑有肺炎的发热患者或诊断肺 炎后应尽早开始经验性抗感染治疗，但不推荐预防 性使用，应尽快完善病原学检查，针对性地选用抗 菌药物（Ⅱ级推荐，B 级证据）。2. 深静脉血栓（deep venous thrombosis，DVT）： 我国指南推荐脑梗死患者应尽早活动、抬高下肢， 避免下肢输液［12］ 。但重症卒中患者通常生命体征 不稳定，故应结合具体情况在没有禁忌证的情况下 适当运动。对于卧床制动的卒中患者，现行指南均 推荐气压泵间断充气加压装置降低 DVT 的风险、 改善预后，不推荐使用弹力袜预防 DVT［12⁃13，19］ 。欧 美 指 南 不 推 荐 制 动 患 者 常 规 使 用 抗 凝 治 疗 预 防 DVT；",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "发热的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 13,
+        "rerankedCount": 5,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 8,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 36270,
+        "newSession": true
+      },
+      "sessionId": "b8bcdd49"
+    },
+    {
+      "id": "q19",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "疾病特点与分型",
+      "category": "diagnosis",
+      "question": "成人糖尿病食养指南（2023年版）的疾病特点与分型的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 17137,
+      "answer": "根据参考资料，糖尿病诊断标准及分型如下：\n\n1. **糖尿病定义与典型症状**：由多种病因引起胰岛功能减退、胰岛素抵抗等，以高血糖为特点，典型症状为“三多一少”（多饮、多食、多尿、体重减少）。[参考1]\n\n2. **糖尿病分类（WHO 2019年）**：分为1型糖尿病、2型糖尿病、混合型糖尿病、其他特殊类型糖尿病、未分类糖尿病、妊娠期糖尿病。[参考2]\n\n3. **中医辨证分型**：\n   - 阴虚热盛证：烦渴多饮、咽干舌燥、多食善饥、溲赤便秘，舌红少津苔黄，脉滑数或弦数。\n   - 气阴两虚证：倦怠乏力、心慌气短、自汗盗汗、口干舌燥、多饮多尿、五心烦热、腰酸膝软，舌淡或暗有齿痕，脉细弱。\n   - 阴阳两虚证：乏力自汗、形寒肢冷、腰酸膝软、耳轮焦干、多饮多尿或浮肿少尿、五更泻、阳痿早泄，舌淡苔白，脉沉细无力。[参考2]\n\n4. **糖尿病诊断标准**（静脉血浆葡萄糖或HbA1c）：\n   - 典型糖尿病症状 + 随机血糖 ≥11.1 mmol/L；\n   - 或空腹血糖 ≥7.0 mmol/L；\n   - 或OGTT 2h血糖 ≥11.1 mmol/L；\n   - 或HbA1c ≥6.5%。\n   - 无典型症状者需改日复查确认。空腹状态指至少8小时无能量摄入，随机血糖指任意时间血糖。[参考3]\n\n临床提示：诊断糖尿病时需排除急性应激等因素，并注意糖尿病前期（空腹血糖受损、糖耐量减低）的识别与干预。",
+      "sources": [
+        {
+          "id": 11424,
+          "docId": 411,
+          "docTitle": "二、疾病特点与分型",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "二、疾病特点与分型",
+          "pageNo": null,
+          "content": "（一）糖尿病定义与分类。 糖尿病是由遗传因素、内分泌功能紊乱等各种致病因子 作用，导致胰岛功能减退、胰岛素抵抗等而引发的糖、蛋白 质、脂肪、水和电解质等一系列代谢紊乱综合征。临床上以 高血糖为主要特点。糖尿病的典型症状是三多一少，也就是 多饮、多食、多尿和体重减少。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11425,
+          "docId": 411,
+          "docTitle": "二、疾病特点与分型",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "二、疾病特点与分型",
+          "pageNo": null,
+          "content": "3 根据病因学证据，2019 年世界卫生组织（WHO）将糖尿 病分类更新为 6 种类型，即 1 型糖尿病、2 型糖尿病、混合 型糖尿病、其他特殊类型糖尿病、未分类糖尿病、妊娠期糖 尿病。 （二）中医对糖尿病的认识及分型。 糖尿病常见辨证分型及临床表现如下。 阴虚热盛证:表现为烦渴多饮，咽干舌燥，多食善饥，溲 赤便秘，舌红少津苔黄，脉滑数或弦数。 气阴两虚证:表现为倦怠乏力、心慌气短、盗汗、自汗， 口干舌燥，多饮多尿，五心烦热，大便秘结，腰酸膝软，舌 淡或舌红暗，舌边有齿痕，苔薄白少津，或少苔，脉细弱。 阴阳两虚证:表现为乏力自汗，形寒肢冷，腰酸膝软，耳 轮焦干，多饮多尿，或浮肿少尿，或五更泻，阳痿早泄，舌 淡苔白，脉沉细无力。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11519,
+          "docId": 458,
+          "docTitle": "九、鸽肉山药玉竹汤",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "九、鸽肉山药玉竹汤",
+          "pageNo": null,
+          "content": "62 附录 5 糖尿病诊断标准 表 5.1 糖代谢状态分类（世界卫生组织 1999 年） 糖代谢状态 静脉血浆葡萄糖（mmol/L） 空腹 OGTT 2h 正常血糖 ＜6.1 ＜7.8 空腹血糖受损 ≥6.1，＜7.0 ＜7.8 糖耐量减低 ＜7.0 ≥7.8，＜11.1 糖尿病 ≥7.0 ≥11.1 引自世界卫生组织 1999 年，中国 2 型糖尿病防治指南（2017 年版） 注：空腹血糖受损和糖耐量减低统称为糖调节受损，也称糖尿病前期；空腹血 糖正常参考范围下限通常为 3.9mmol/L。 表 5.2 糖尿病诊断标准 诊断标准 静脉血浆葡萄糖或 HbA1c 水平 典型糖尿病症状 加上随机血糖 ≥11.1mmol/L 或加上空腹血糖 ≥7.0mmol/L 或加上 OGTT 2h 血糖 ≥11.1mmol/L 或加上 HbA1c ≥6.5% 无糖尿病典型症状者，须改日复查确认 注：OGTT 为口服葡萄糖耐量试验；HbA1c 为糖化血红蛋白。典型糖尿病症状包 括烦渴多饮、多尿、多食、不明原因体重下降；随机血糖指不考虑上次用餐时 间，一天中任意时间的血糖，不能用来诊断空腹血糖受损或糖耐量减低；空腹 状态指至少 8 小时没有进食能量。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11559,
+          "docId": 476,
+          "docTitle": "一、危重症卒中的预测和预防",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "一、危重症卒中的预测和预防",
+          "pageNo": null,
+          "content": "重症卒中患者常出现病情恶化，在临床管理中 应密切监测患者的生命体征、意识状态和神经功 能，明确恶化原因，针对病因治疗。脑水肿和出血 转化是脑梗死急性期常见神经系统并发症及临床 恶化的主要原因［71］ 。严重神经功能缺损和大面积 脑梗死是较为公认的恶性脑水肿和出血转化的预 测因素［72⁃73］ 。溶栓、取栓后成功血管再通可降低恶 性 脑 水 肿 风 险 ，从 而 预 防 危 重 症 脑 梗 死 的 发 生［74⁃75］ 。脑出血后数小时可出现血肿扩大，加重神 经功能缺损。有学者提出头颅 CT 显示混合征［76］ 、 黑洞征［77］ 和岛征［78］ 对脑出血后血肿扩大及不良预 后具有预测价值。脑出血后血压升高与血肿扩大 和不良预后均相关，应密切监测和维持患者的血压 稳定，控制血压可减少血肿扩大［40］ 。迟发性脑缺血 是 SAH 患者死亡和残疾的主要原因，其主要病理 机制为血管痉挛，脑血管造影是诊断脑血管痉挛的 “金标准”，可使用改良 Fisher 量表评估患者的血管 痉挛风险［15］ 。经颅多普勒血管超声对于血管痉挛 具 有 高 敏 感 度 和 高 阴 性 预 测 值 ，常 用 于 临 床 监 测［79］ 。现行指南建议 SAH 患者维持体液平衡和正 常循环血容量，推荐使用尼莫地平治疗血管痉挛， 预防迟发性脑缺血、改善预后［15，80］ 。 推荐意见： （1）脑梗死后成功再灌注治疗可降 低脑水肿风险（Ⅱ级推荐，C 级证据）。 （2）脑出血后 血压控制可减少血肿扩大（Ⅱ级推荐，C 级证据）。 （3）SAH 后使用尼莫地平可改善患者预后（Ⅰ级推 荐，A 级证据）。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11591,
+          "docId": 491,
+          "docTitle": "10.1161/STROKEAHA.110.587758.",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "10.1161/STROKEAHA.110.587758.",
+          "pageNo": null,
+          "content": "[J]. J Crit Care, 2006, 21(2): 163‐172. DOI: 10.1016/j.jcrc.2005.10.002. [57] Spasovski G, Vanholder R, Allolio B, et al. Clinical practice guideline on diagnosis and treatment of hyponatraemia [J]. Eur J Endocrinol, 2014, 170(3): G1‐G47. DOI: 10.1530/ EJE‐13‐1020. [58] Dennis MS, Lewis SC, Warlow C. Effect of timing and method of enteral tube feeding for dysphagic stroke patients (FOOD): a multicentre randomised controlled trial[J]. Lancet, 2005, 365(9461): 764‐772. DOI: 10.1016/ S0140‐6736(05)17983‐5. [59] Zhao J, Yuan F, Song C, et al. Safety and efficacy of three enteral feeding strategies in patients with severe stroke in China (OPENS): a multicentre, prospective, randomised, open‐label, blinded‐endpoint trial[J]. Lancet Neurol, 2022, 21(4): 319‐328. DOI: 10.1016/S1474‐4422 (22)00010‐2. [60] Singer P, Blaser AR, Berger MM, et al. ESPEN guideline on clinical nutrition in the intensive care unit[J]. Clin Nutr, 2019, 38(1): 48‐79. DOI: 10.1016/j.clnu.2018.08.037. [61] 中华医学会肠外肠内营养学分会, 北京医学会肠外肠内营 养学分会 . 维生素制剂临床应用专家共识[J]. 中华外科杂 志, 2015, 53(7): 481‐487. DOI: 10.3760/cma.j.issn.0529‐5815. 2015.07.001. Extracorporeal and Enteral Nutrition Branch of the Chinese Medical Association, Extracorporeal and Enteral Nutrition Branch of the Beijing Medical Association. Expert consensus on clinical application of vitamin preparations[J]. Chin J Surg, 2015, 53(7): 481‐487. DOI: 10.3760/cma.j.issn.0529‐5815.2015.07.001. [62] da Silva J, Seres DS, Sabino K, et al. ASPEN consensus recommendations for refeeding syndrome[J]. Nutr Clin Pract, 2020, 35(2): 178‐195. DOI: 10.1002/ncp.10474. [63] 中华医学会肠外肠内营养学分会神经疾病营养支持学组, 中华医学会神经病学分会神经重症协作组, 中国医师协会 神经内科医师分会神经重症专业委员会, 等 . 神经系统疾 病肠内营养支持中国专家共识(第二版)[J]. 中华临床营养 杂志, 2019, 27(4): 193‐203. DOI: 10.3760/cma.j.issn.1674‐635X. 2019.04.001. Neurological Nutrition Support Group, Society of Parenteral and Enteral Nutrition, Chinese Medical Association, Neurocritical Care Committee of the Society of Neurology, Chinese Medical Association, Neurocritical Care Committee of the Neurologist Association, Chinese Medical Doctor Association. Chinese expert consensus on enteral nutrition support for neurological diseases (the second version)[J]. Chin J Clin Nutr, 2019, 27(4): 193‐203. DOI: 10.3760/cma.j.issn.1674‐635X.2019.04.001. [64] 中华医学会神经外科学分会, 中国神经外科重症管理协作 组 . 中国神经外科重症管理专家共识(2020 版)[J]. 中华医 学 杂 志 , 2020, 100(19): 1443‐1458. DOI: 10.3760/cma. j. cn112137‐20200318‐00818. Neurosurgery Branch of the Chinese Medical Association, Chinese Neurosurgery Critical Care Management Collaborative Group. Consensus of Chinese experts on critical care management in neurosurgery (2020 edition) [J]. Natl Med J China, 2020, 100(19): 1443‐1458. DOI: 10.3760/cma.j.cn112137‐20200318‐00818. [65] Devlin JW, Skrobik Y, Gélinas C, et al. Clinical practice guidelines for the prevention and management of pain, agitation/sedation, delirium, immobility, and sleep disruption in adult patients in the ICU[J]. Crit Care Med, 2018, 46(9): e825‐e873. DOI: 10.1097/CCM.0000000000003299. [66] 李莉, 段丹, 陈茂君 . 神经重症患者镇静镇痛评估与治疗的 研 究 进 展 [J]. 实 用 医 院 临 床 杂 志 , 2021, 18(5): 219‐222. DOI: 10.3969/j.issn.1672‐6170.2021.05.060. Li L, Duan D, Chen MJ. Research progress on evaluation and treatment of sedation and analgesia in patients with severe neurological diseases[J]. Pract J Clin Med, 2021, 18(5): 219‐222. DOI: 10.3969/j.issn.1672‐6170.2021.05.060. [67] 中华医学会重症医学分会 . 中国成人 ICU 镇痛和镇静治疗 指南[J]. 中华重症医学电子杂志, 2018, 4(2): 90‐113. DOI: 10.3760/cma.j.issn.2095‐4352.2018.06.001. Critical Care Medicine Branch of the Chinese Medical Association. Guidelines for analgesia and sedation treatment in intensive care unit of Chinese adults[J]. Chin Crit Care Med, 2018, 4(2): 90‐113. DOI: 10.3760/cma. j. issn.2095‐4352.2018.06.001. [68] 王拥军, 陈玉国, 吕传柱, 等 . 卒中相关性肺炎诊治中国专 家 共 识 (2019 更 新 版) [J]. 中 国 卒 中 杂 志 , 2019, 14(12): 1251‐1262. DOI: 10.3969/j.issn.1673‐5765.2019.12.011. Wang YJ, Chen YG, Lyu CZ, et al. Chinese expert consensus on",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "成人糖尿病食养指南（2023年版）的疾病特点与分型的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 9,
+        "rerankedCount": 5,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 17135,
+        "newSession": true
+      },
+      "sessionId": "5121822f"
+    },
+    {
+      "id": "q20",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "疾病特点与分型",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的疾病特点与分型的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 29710,
+      "answer": "知识库中关于“成人糖尿病食养指南（2023年版）”治疗原则的内容有限，以下结合疾病特点与分型，基于临床常识仅供参考：\n\n1. **综合控糖与代谢管理**：糖尿病是以高血糖为主要特点的代谢紊乱综合征，治疗首要原则是有效控制血糖，同时改善糖、蛋白质、脂肪及水电解质等代谢紊乱。[参考4]\n\n2. **分型个体化治疗**：根据WHO分类，糖尿病分为1型、2型、混合型、其他特殊类型、未分类及妊娠期糖尿病，治疗应依据具体类型制定个体化方案，如1型需胰岛素替代，2型侧重生活方式干预及药物管理等。[参考5]\n\n3. **中医辨证治则**：结合中医分型，治疗原则分别为：\n   - **阴虚热盛证**：治以滋阴清热、生津润燥，对应烦渴多饮、多食善饥等表现。[参考5]\n   - **气阴两虚证**：治以益气养阴，对应倦怠乏力、心慌气短、口干舌燥等表现。[参考5]\n   - **阴阳两虚证**：治以温阳育阴、阴阳双补，对应形寒肢冷、腰酸膝软等表现。[参考5]\n\n临床提示：食养调理应结合患者具体证型，辨证施膳，并注重饮食、运动与药物协同管理。",
+      "sources": [
+        {
+          "id": 12943,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p115 274. Ude-Okeleke RC, Aslanpour Z, Dhillon S et al. Medicines Related Problems (MRPs) Originating in Primary Care Settings in Older Adults - A Systematic Review. J Pharm Pract. 2021:8971900211023638. [accessed: 16 June 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/34159813. 275. Lee JK, McCutcheon LRM, Fazel MT et al. Assessment of Interprofessional Collaborative Practices and Outcomes in Adults With Diabetes and Hypertension in Primary Care: A Systematic Review and Meta-analysis. JAMA Netw Open. 2021;",
+          "similarity": 0.49387252367303425,
+          "matchType": "vector"
+        },
+        {
+          "id": 12848,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "18(6):3013. [accessed: 10 July 2022]. Available at: https://dx.doi.org/10.3390/ijerph18063013. 144. Burks A, Tang M, Sicherer S et al. ICON: food allergy. Journal of Allergy and Clinical Immunology. 2012;129(4):906-20. [accessed: 10 July 2022]. Available at: https://pubmed.ncbi.nlm.nih.gov/22365653/. 145. Taylor S, Bush R, Selner J et al. Sensitivity to sulfited foods among sulfite-sensitive subjects with asthma. Journal of Allergy and Clinical Immunology. 1988;",
+          "similarity": 0.47498560548171864,
+          "matchType": "vector"
+        },
+        {
+          "id": 12918,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "12(3):443-52. [accessed: 15 June 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/33694123. 246. Lipska KJ, Krumholz H, Soones T et al. Polypharmacy in the Aging Patient: A Review of Glycemic Control in Older Adults With Type 2 Diabetes. JAMA. 2016;",
+          "similarity": 0.46913810166306025,
+          "matchType": "vector"
+        },
+        {
+          "id": 11424,
+          "docId": 411,
+          "docTitle": "二、疾病特点与分型",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "二、疾病特点与分型",
+          "pageNo": null,
+          "content": "（一）糖尿病定义与分类。 糖尿病是由遗传因素、内分泌功能紊乱等各种致病因子 作用，导致胰岛功能减退、胰岛素抵抗等而引发的糖、蛋白 质、脂肪、水和电解质等一系列代谢紊乱综合征。临床上以 高血糖为主要特点。糖尿病的典型症状是三多一少，也就是 多饮、多食、多尿和体重减少。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11425,
+          "docId": 411,
+          "docTitle": "二、疾病特点与分型",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "二、疾病特点与分型",
+          "pageNo": null,
+          "content": "3 根据病因学证据，2019 年世界卫生组织（WHO）将糖尿 病分类更新为 6 种类型，即 1 型糖尿病、2 型糖尿病、混合 型糖尿病、其他特殊类型糖尿病、未分类糖尿病、妊娠期糖 尿病。 （二）中医对糖尿病的认识及分型。 糖尿病常见辨证分型及临床表现如下。 阴虚热盛证:表现为烦渴多饮，咽干舌燥，多食善饥，溲 赤便秘，舌红少津苔黄，脉滑数或弦数。 气阴两虚证:表现为倦怠乏力、心慌气短、盗汗、自汗， 口干舌燥，多饮多尿，五心烦热，大便秘结，腰酸膝软，舌 淡或舌红暗，舌边有齿痕，苔薄白少津，或少苔，脉细弱。 阴阳两虚证:表现为乏力自汗，形寒肢冷，腰酸膝软，耳 轮焦干，多饮多尿，或浮肿少尿，或五更泻，阳痿早泄，舌 淡苔白，脉沉细无力。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "成人糖尿病食养指南（2023年版）的疾病特点与分型的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 2,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 5,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 29709,
+        "newSession": true
+      },
+      "sessionId": "ba3f73b9"
+    },
+    {
+      "id": "q22",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "食物选择",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的食物选择有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 19367,
+      "answer": "根据现有资料，成人糖尿病食养指南的食物选择要点如下（具体食物分类内容有限，以下为现有资料中的相关原则）：\n\n1. **优先选择低GI食物和中医食养方**：尽量选择低血糖生成指数（GI）食物、食药物质及中医食养方。[参考1]\n2. **注意烹调方式**：谷薯类避免过度烹调；避免沾粉、勾芡；避免使用易加淀粉的碎肉半成品（如香肠、丸子）；食用禽类时去皮；烹调油品种多样，全天限量烹调油25g、盐5g。[参考1]\n3. **遵循中医食养原则**：强调寒热温凉阴阳平衡、五味调和；将日常膳食与传统中医养生食谱相结合。按辨证论治选择食药物质：阴虚热盛证用桑叶、决明子、莲子等；气阴两虚证用桑椹、枸杞子、葛根等；阴阳两虚证用山药、茯苓、肉桂等。[参考3]\n4. **规律进餐、合理加餐**：定时定量进餐，不暴饮暴食，饮食有节、科学配置，进行标准化定量营养配餐；根据血糖波动特点决定是否加餐及加餐种类，以促进餐后血糖稳定。[参考3]\n\n**临床提示**：具体食物选择应结合患者的血糖波动特点、中医证型及个体活动量进行标准化定量配餐。",
+      "sources": [
+        {
+          "id": 11445,
+          "docId": 418,
+          "docTitle": "3.试点物质以†标记，非试点",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "3.试点物质以†标记，非试点",
+          "pageNo": null,
+          "content": "20 附录 3 不同地区食谱示例 按照成人糖尿病食养指南的基本原则，根据各地食物资 源和人群膳食特点，推荐不同地区、不同季节的糖尿病患者 适用的全天膳食食谱。 以下食谱由有经验的临床营养指导人员设计，并经过营 养成分计算和评估。食谱适合轻体力活动的成人糖尿病患者， 一天食谱的能量在 1600～2000kcal 范围，使用者可结合自 身活动量及其他因素合理调整能量。食谱设计保持食物多样， 尽量选择低 GI 食物、食药物质和中医食养方。整体食谱符合 能量适宜、搭配合理、主食定量、蔬菜肉类适量等原则。当 体重过重或过轻，可以按照 25～30kcal/（kg·d）适当增减 食材用量调整。另外，以下食谱的食物重量均为其可食部的 生重。 不同烹调方法对血糖的影响也不同，淀粉含量高的谷薯 类，避免过度烹调，否则容易升高其血糖生成指数；避免沾 粉或勾芡的烹调方式；避免使用在制作过程中易加淀粉的碎 肉半成品，如香肠、丸子等；为减少脂肪的摄入,在食用禽类 时去皮；烹调油的品种应多样，保障脂肪酸之间的平衡。全 天限量烹调油 25g，盐 5g。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11435,
+          "docId": 413,
+          "docTitle": "8.自我管理，定期营养咨询，提高血糖控制能力。",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "8.自我管理，定期营养咨询，提高血糖控制能力。",
+          "pageNo": null,
+          "content": "12 附录 1 成人糖尿病患者的食物选择",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11433,
+          "docId": 413,
+          "docTitle": "8.自我管理，定期营养咨询，提高血糖控制能力。",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "8.自我管理，定期营养咨询，提高血糖控制能力。",
+          "pageNo": null,
+          "content": "10 种不同的性质，寒凉食物可以清热，但易伤阳；温热食物可 以祛寒，但易伤阴，强调寒热温凉阴阳平衡。“五味”包括 酸味、苦味、甘味、辛味、咸味，酸味入肝，苦味入心，甘 味入脾，辛味入肺，咸味入肾，在食养之时，要五味调和。 中医学自古以来就有“药食同源”的理论。按照中医辨 证论治原则，阴虚热盛证采用具有养阴清热作用的食药物质， 如桑叶、决明子、莲子等；气阴两虚证采用具有益气养阴作 用的食药物质，如桑椹、枸杞子、葛根等；阴阳两虚证可选 用山药、茯苓、肉桂等。把日常膳食和传统中医养生食谱相 结合。 （七）规律进餐，合理加餐，促进餐后血糖稳定。 进餐规律，定时定量，是维持血糖平稳的基础。规律进 餐指一日三餐及加餐的时间相对固定，定时定量进餐，可避 免过度饥饿引起的饱食中枢反应迟钝而导致的进食过量。不 暴饮暴食，不随意进食零食、饮料，不过多聚餐，减少餐次。 不论在家或在外就餐，根据个人的生理条件和身体活动量， 应该饮食有节、科学配置，进行标准化、定量的营养配餐， 合理计划餐次和能量分配来安排全天膳食，吃饭宜细嚼慢咽， 形成良好饮食习惯。 是否需要加餐、什么时间加餐，以及选择何种零食，应 根据患者具体血糖波动的特点来决定。对于病程长、血糖控 制不佳、注射胰岛素的 2 型糖尿病患者和 1 型糖尿病患者， 应进行血糖监测，可根据实际情况适当加餐，以预防低血糖 的发生。对于消瘦的糖尿病患者以及妊娠期糖尿病患者，也",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10726,
+          "docId": 261,
+          "docTitle": "降压药物选择",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/药物/选择/",
+          "pageNo": null,
+          "content": "ACEI（如依那普利、贝那普利）适用于高血压合并糖尿病、慢性肾病、心衰、心梗后患者。主要不良反应为干咳、血管神经性水肿。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11578,
+          "docId": 485,
+          "docTitle": "四、外科治疗",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "四、外科治疗",
+          "pageNo": null,
+          "content": "重症卒中患者可因脑梗死或出血范围大、脑水 肿、出血转化等产生占位效应，导致颅内压增高、脑 疝等，需及时评估手术指征。对于年龄 60 岁以下、 发病 48 h 内的恶性 MCA 梗死患者，去骨瓣减压术 可改善患者预后［26］ 。该疗效在 60~80 岁患者中也 得到证实［116⁃117］ 。美国神经重症协会建议对于 LHI 患者评估去骨瓣减压术指征时无需顾虑年龄，但指 出对>60 岁的患者应对患方充分知情告知术后可 能遗留严重残疾的风险［27］ 。关于手术时机的选择 目前尚无定论，美国神经重症协会建议 LHI 患者在 发病 24~48 h 内脑疝征象尚未形成时行去骨瓣减压 术［27］ 。我国指南推荐对于大面积大脑半球或小脑 梗死患者，如出现早期脑疝征象、经积极内科治疗 仍出现严重颅内高压表现或神经功能进行性恶化、 伴影像学脑水肿占位征象，应及时评估去骨瓣减压 手 术 指 征［118］ 。 ESO 指 出 对 于 发 病 >48 h 或 年 龄 > 60 岁的 LHI 患者接受去骨瓣减压术对于降低死亡 和残疾风险的疗效和安全性为低等级证据，占位性 小脑梗死是否获益于去骨瓣减压术或脑脊液引流 尚缺乏 RCT 证据，均有待研究［119］ 。 对于大面积脑出血患者或脑梗死后大面积出 血转化的患者，外科手术可清除血肿、缓解颅内高 压、改善预后。我国脑出血指南推荐对于伴神经功 能恶化或脑干受压的小脑出血患者，无论有无脑室",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "成人糖尿病食养指南（2023年版）的食物选择有哪些要点？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 8,
+        "rerankedCount": 5,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 19365,
+        "newSession": true
+      },
+      "sessionId": "e3a1c474"
+    },
+    {
+      "id": "q23",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "不同证型食药物质推荐",
+      "category": "diagnosis",
+      "question": "成人糖尿病食养指南（2023年版）的不同证型食药物质推荐的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 23161,
+      "answer": "知识库中关于【成人糖尿病食养指南（2023年版）不同证型食药物质推荐的诊断标准】的内容有限。[参考4] 仅提供了不同地区食谱示例及烹调原则，未涉及中医证型的分类依据或诊断标准，因此无法给出具体的证型对应食药物质推荐标准。基于临床常识，中医辨证分型通常依据症状、舌象、脉象等综合判断，具体诊断标准请以指南原文为准（此部分仅供参考）。建议查阅《成人糖尿病食养指南（2023年版）》原书中“中医食养”相关章节。临床提示：糖尿病中医辨证需结合患者整体状况，不可单凭单一症状下结论。",
+      "sources": [
+        {
+          "id": 12943,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p115 274. Ude-Okeleke RC, Aslanpour Z, Dhillon S et al. Medicines Related Problems (MRPs) Originating in Primary Care Settings in Older Adults - A Systematic Review. J Pharm Pract. 2021:8971900211023638. [accessed: 16 June 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/34159813. 275. Lee JK, McCutcheon LRM, Fazel MT et al. Assessment of Interprofessional Collaborative Practices and Outcomes in Adults With Diabetes and Hypertension in Primary Care: A Systematic Review and Meta-analysis. JAMA Netw Open. 2021;",
+          "similarity": 0.5275796088671219,
+          "matchType": "vector"
+        },
+        {
+          "id": 10591,
+          "docId": 260,
+          "docTitle": "高血压诊断标准",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/诊断/标准/",
+          "pageNo": null,
+          "content": "高血压的心血管危险因素包括：年龄（男>55岁，女>65岁）、吸烟、血脂异常、早发心血管病家族史、肥胖、缺乏体力活动。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 10640,
+          "docId": 260,
+          "docTitle": "高血压诊断标准",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/诊断/标准/",
+          "pageNo": null,
+          "content": "高血压的靶器官损害：左心室肥厚、颈动脉内膜中层厚度增厚、eGFR下降、微量白蛋白尿、脉搏波传导速度增快。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11445,
+          "docId": 418,
+          "docTitle": "3.试点物质以†标记，非试点",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "3.试点物质以†标记，非试点",
+          "pageNo": null,
+          "content": "20 附录 3 不同地区食谱示例 按照成人糖尿病食养指南的基本原则，根据各地食物资 源和人群膳食特点，推荐不同地区、不同季节的糖尿病患者 适用的全天膳食食谱。 以下食谱由有经验的临床营养指导人员设计，并经过营 养成分计算和评估。食谱适合轻体力活动的成人糖尿病患者， 一天食谱的能量在 1600～2000kcal 范围，使用者可结合自 身活动量及其他因素合理调整能量。食谱设计保持食物多样， 尽量选择低 GI 食物、食药物质和中医食养方。整体食谱符合 能量适宜、搭配合理、主食定量、蔬菜肉类适量等原则。当 体重过重或过轻，可以按照 25～30kcal/（kg·d）适当增减 食材用量调整。另外，以下食谱的食物重量均为其可食部的 生重。 不同烹调方法对血糖的影响也不同，淀粉含量高的谷薯 类，避免过度烹调，否则容易升高其血糖生成指数；避免沾 粉或勾芡的烹调方式；避免使用在制作过程中易加淀粉的碎 肉半成品，如香肠、丸子等；为减少脂肪的摄入,在食用禽类 时去皮；烹调油的品种应多样，保障脂肪酸之间的平衡。全 天限量烹调油 25g，盐 5g。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 12550,
+          "docId": 1269,
+          "docTitle": "1.1 CRDs 的定义和特点：哮喘和慢阻肺病",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "1.1 CRDs 的定义和特点：哮喘和慢阻肺病",
+          "pageNo": null,
+          "content": "p10 |《慢性呼吸系统疾病药师手册》（A handbook for pharmacists） 慢性支气管炎、α-1-抗胰蛋白酶缺乏症、频繁加重者（每年≥两次中度急性加重或≥1 次重度急性加重的患者， 主要由呼吸道病毒和细菌引发）[13]、哮喘-COPD 重叠、嗜酸细胞与非嗜酸细胞的表型以及肺部以外的表型 （合并症）[2,12]。 慢阻肺病患者往往还患有其他慢性疾病，如心血管疾病、骨质疏松症、肌肉骨骼疾病、肺癌、焦虑和抑郁 症、认知障碍、代谢综合征和糖尿病、胃肠道疾病、支气管舒张、肺纤维化和阻塞性睡眠呼吸障碍。合并症对 COPD 的患病率和死亡率有重大影响，并对医疗系统造成巨大的经济负担[14]。根据不同疾病的治疗指南对合 并症进行管理对于减缓 COPD 的疾病发展至关重要[7,9,15]。 尽管哮喘和 COPD 呈现出不同机制导致的气道炎症和气道阻塞的特征和症状，但一些具有持续气流受限 的患者也可能同时具有哮喘和 COPD 的几个疾病特征，呈现出哮喘-COPD 的重叠[8,16]。认识到症状的重叠性， 与其将患者贴上哮喘、COPD 或重叠诊断的标签，不如提出一种以可治疗特征作为替代性的描述方法，例如单 独针对的特定患者特征（见第 8.5) [17]。 慢性呼吸道疾病的治疗因病情和症状的严重程度而有所不同，重点是对疾病的炎症进行适当管理的同时也 要对气道进行舒张以改善呼吸功能。哮喘和慢阻肺病的治疗需要一个长期和系统的管理方法[2]。避免接触诱因 是控制这些慢性呼吸系统疾病的根本。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "成人糖尿病食养指南（2023年版）的不同证型食药物质推荐的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 1,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 23159,
+        "newSession": true
+      },
+      "sessionId": "7248f9bc"
+    },
+    {
+      "id": "q24",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "不同证型食药物质推荐",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的不同证型食药物质推荐的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 37244,
+      "answer": "根据参考资料，成人糖尿病食养遵循中医辨证论治原则，不同证型推荐相应食药物质：\n\n- **阴虚热盛证**：治以养阴清热，可选用桑叶、决明子、莲子等。[参考3]\n- **气阴两虚证**：治以益气养阴，可选用桑椹、枸杞子、葛根等。[参考3]\n- **阴阳两虚证**：可选用山药、茯苓、肉桂等。[参考3]\n\n**注意事项**：食养需结合体质、病因、证候，注意寒热温凉阴阳平衡与五味调和；日常膳食与传统中医养生食谱相结合，并尽量选择低GI食物、食药物质和中医食养方。[参考3][参考1] 具体方案应由医师或营养指导人员个体化制定。[参考2]\n\n临床提示：食药物质为辅助干预，应在专业人员指导下结合常规管理使用。[参考2]",
+      "sources": [
+        {
+          "id": 11445,
+          "docId": 418,
+          "docTitle": "3.试点物质以†标记，非试点",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "3.试点物质以†标记，非试点",
+          "pageNo": null,
+          "content": "20 附录 3 不同地区食谱示例 按照成人糖尿病食养指南的基本原则，根据各地食物资 源和人群膳食特点，推荐不同地区、不同季节的糖尿病患者 适用的全天膳食食谱。 以下食谱由有经验的临床营养指导人员设计，并经过营 养成分计算和评估。食谱适合轻体力活动的成人糖尿病患者， 一天食谱的能量在 1600～2000kcal 范围，使用者可结合自 身活动量及其他因素合理调整能量。食谱设计保持食物多样， 尽量选择低 GI 食物、食药物质和中医食养方。整体食谱符合 能量适宜、搭配合理、主食定量、蔬菜肉类适量等原则。当 体重过重或过轻，可以按照 25～30kcal/（kg·d）适当增减 食材用量调整。另外，以下食谱的食物重量均为其可食部的 生重。 不同烹调方法对血糖的影响也不同，淀粉含量高的谷薯 类，避免过度烹调，否则容易升高其血糖生成指数；避免沾 粉或勾芡的烹调方式；避免使用在制作过程中易加淀粉的碎 肉半成品，如香肠、丸子等；为减少脂肪的摄入,在食用禽类 时去皮；烹调油的品种应多样，保障脂肪酸之间的平衡。全 天限量烹调油 25g，盐 5g。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11423,
+          "docId": 410,
+          "docTitle": "一、前言",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "一、前言",
+          "pageNo": null,
+          "content": "2 体质、病因、证候给予不同食养方案，在调和气血、平衡人 体营养、辅助预防疾病上效果显著。针对不同体质糖尿病患 者，选取不同特性的食物或食药物质食用，可有效改善患者 血糖水平。 为辅助预防和控制我国人群糖尿病的发生发展，改善糖 尿病患者的日常膳食，提高居民营养健康水平，发展传统食 养服务，根据《健康中国行动（2019—2030 年） 》和《国民营 养计划（2017—2030 年） 》相关要求，制定本指南。本指南 以食养为基础，依据现代营养学理论和相关证据，以及我国 传统中医的理念和调养方案，提出具有多学科优势互补的成 人糖尿病患者食养基本原则和食谱示例。本指南主要面向成 人 2 型糖尿病患者以及基层卫生工作者 （包括营养指导人员） ， 为糖尿病辅助预防与改善提供食养指导。1 型糖尿病、妊娠 期糖尿病及其他类型的糖尿病患者，可参考（但不拘泥于） 本指南制定膳食营养方案，同时使用者应在医师或营养指导 人员等专业人员的指导下，根据患者具体情况设计个性化食 养方案。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11433,
+          "docId": 413,
+          "docTitle": "8.自我管理，定期营养咨询，提高血糖控制能力。",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "8.自我管理，定期营养咨询，提高血糖控制能力。",
+          "pageNo": null,
+          "content": "10 种不同的性质，寒凉食物可以清热，但易伤阳；温热食物可 以祛寒，但易伤阴，强调寒热温凉阴阳平衡。“五味”包括 酸味、苦味、甘味、辛味、咸味，酸味入肝，苦味入心，甘 味入脾，辛味入肺，咸味入肾，在食养之时，要五味调和。 中医学自古以来就有“药食同源”的理论。按照中医辨 证论治原则，阴虚热盛证采用具有养阴清热作用的食药物质， 如桑叶、决明子、莲子等；气阴两虚证采用具有益气养阴作 用的食药物质，如桑椹、枸杞子、葛根等；阴阳两虚证可选 用山药、茯苓、肉桂等。把日常膳食和传统中医养生食谱相 结合。 （七）规律进餐，合理加餐，促进餐后血糖稳定。 进餐规律，定时定量，是维持血糖平稳的基础。规律进 餐指一日三餐及加餐的时间相对固定，定时定量进餐，可避 免过度饥饿引起的饱食中枢反应迟钝而导致的进食过量。不 暴饮暴食，不随意进食零食、饮料，不过多聚餐，减少餐次。 不论在家或在外就餐，根据个人的生理条件和身体活动量， 应该饮食有节、科学配置，进行标准化、定量的营养配餐， 合理计划餐次和能量分配来安排全天膳食，吃饭宜细嚼慢咽， 形成良好饮食习惯。 是否需要加餐、什么时间加餐，以及选择何种零食，应 根据患者具体血糖波动的特点来决定。对于病程长、血糖控 制不佳、注射胰岛素的 2 型糖尿病患者和 1 型糖尿病患者， 应进行血糖监测，可根据实际情况适当加餐，以预防低血糖 的发生。对于消瘦的糖尿病患者以及妊娠期糖尿病患者，也",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 12550,
+          "docId": 1269,
+          "docTitle": "1.1 CRDs 的定义和特点：哮喘和慢阻肺病",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "1.1 CRDs 的定义和特点：哮喘和慢阻肺病",
+          "pageNo": null,
+          "content": "p10 |《慢性呼吸系统疾病药师手册》（A handbook for pharmacists） 慢性支气管炎、α-1-抗胰蛋白酶缺乏症、频繁加重者（每年≥两次中度急性加重或≥1 次重度急性加重的患者， 主要由呼吸道病毒和细菌引发）[13]、哮喘-COPD 重叠、嗜酸细胞与非嗜酸细胞的表型以及肺部以外的表型 （合并症）[2,12]。 慢阻肺病患者往往还患有其他慢性疾病，如心血管疾病、骨质疏松症、肌肉骨骼疾病、肺癌、焦虑和抑郁 症、认知障碍、代谢综合征和糖尿病、胃肠道疾病、支气管舒张、肺纤维化和阻塞性睡眠呼吸障碍。合并症对 COPD 的患病率和死亡率有重大影响，并对医疗系统造成巨大的经济负担[14]。根据不同疾病的治疗指南对合 并症进行管理对于减缓 COPD 的疾病发展至关重要[7,9,15]。 尽管哮喘和 COPD 呈现出不同机制导致的气道炎症和气道阻塞的特征和症状，但一些具有持续气流受限 的患者也可能同时具有哮喘和 COPD 的几个疾病特征，呈现出哮喘-COPD 的重叠[8,16]。认识到症状的重叠性， 与其将患者贴上哮喘、COPD 或重叠诊断的标签，不如提出一种以可治疗特征作为替代性的描述方法，例如单 独针对的特定患者特征（见第 8.5) [17]。 慢性呼吸道疾病的治疗因病情和症状的严重程度而有所不同，重点是对疾病的炎症进行适当管理的同时也 要对气道进行舒张以改善呼吸功能。哮喘和慢阻肺病的治疗需要一个长期和系统的管理方法[2]。避免接触诱因 是控制这些慢性呼吸系统疾病的根本。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11553,
+          "docId": 474,
+          "docTitle": "0.5）℃［47］",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "0.5）℃［47］",
+          "pageNo": null,
+          "content": "（2）早期评估患者的吞咽和胃肠功能，确定营养支 持途径，推荐肠内营养支持，如因胃肠功能不全等 使得胃肠营养不能提供所需的全部目标热量，可考 虑肠内外营养结合或肠外营养支持（Ⅰ级推荐，B 级证据）。（七）镇静镇痛治疗 疼痛管理原则是在明确和积极处理疼痛原因 的前提下配合镇痛治疗，避免因止痛治疗掩盖病情 变化。应注意避免过度镇静或镇痛导致的不良反 应，如低血压、免疫抑制、血栓事件、延长辅助通气时 间和意识障碍时间等。美国神经重症协会指南推荐 对出现疼痛的 LHI 患者可使用止痛药物治疗，但缺 乏证据推荐止痛药物的种类［27］ 。ESO 建议 SAH 患 者可选择的止痛药为对乙酰氨基酚，对于严重头痛 者可选择可待因或曲马多；在破裂动脉瘤未闭塞之 前避免使用水杨酸类药物［43］ 。国内外专家建议在镇 静治疗前或同时给予镇痛治疗，可使用 Richmond 躁 动⁃镇 静 量 表（Richmond Agitation⁃Sedation Scale， RASS）、Riker 镇 静⁃躁 动 量 表（Sedation⁃Agitation Scale，SAS）等评估患者的镇静深度［64⁃65］ 。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "成人糖尿病食养指南（2023年版）的不同证型食药物质推荐的治疗原则是什么？",
+        "model": "deepseek-v4-pro",
+        "promptVersion": "v3",
+        "searchCount": 8,
+        "rerankedCount": 6,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 7,
+          "invalid": [],
+          "coverage": 0.6,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 37244,
+        "newSession": true
+      },
+      "sessionId": "919573b6"
+    },
+    {
+      "id": "q21",
+      "bookId": 409,
+      "bookTitle": "成人糖尿病食养指南（2023年版）",
+      "chapter": "食养原则和建议",
+      "category": "treatment",
+      "question": "成人糖尿病食养指南（2023年版）的食养原则和建议有哪些要点？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 78751,
+      "answer": "成人糖尿病食养指南（2023年版）的食养原则和建议要点如下：\n\n1. 食物多样，养成和建立合理膳食习惯。[参考1]\n2. 能量适宜，控制超重肥胖和预防消瘦。[参考1]\n3. 主食定量，优选全谷物和低血糖生成指数食物。[参考1]\n4. 积极运动，改善体质和胰岛素敏感性。[参考1]\n5. 清淡饮食，限制饮酒，预防和延缓并发症。[参考1]\n6. 食养有道，合理选择应用食药物质。[参考1]\n7. 规律进餐，合理加餐，促进餐后血糖稳定。[参考1]\n\n实施中还应注意：食谱保持食物多样、搭配合理，尽量选择低GI食物、食药物质；烹调时避免过度加热谷薯类，避免沾粉或勾芡，全天烹调油限量25g、盐5g；能量可按25～30kcal/（kg·d）酌情调整。[参考2]\n\n临床提示：指导患者时应结合体重、活动量个体化调整能量，并重视烹调方式对血糖的影响。[参考2]",
+      "sources": [
+        {
+          "id": 11426,
+          "docId": 412,
+          "docTitle": "三、食养原则和建议",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "三、食养原则和建议",
+          "pageNo": null,
+          "content": "根据营养科学理论、中医理论和目前膳食相关慢性病科 学研究文献证据，在专家组共同讨论、建立共识的基础上， 对糖尿病患者的日常食养提出 8 条原则和建议。包括：1.食 物多样，养成和建立合理膳食习惯。2.能量适宜，控制超重 肥胖和预防消瘦。3.主食定量，优选全谷物和低血糖生成指 数食物。4.积极运动，改善体质和胰岛素敏感性。5.清淡饮 食，限制饮酒，预防和延缓并发症。6.食养有道，合理选择 应用食药物质。7.规律进餐，合理加餐，促进餐后血糖稳定。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11445,
+          "docId": 418,
+          "docTitle": "3.试点物质以†标记，非试点",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "3.试点物质以†标记，非试点",
+          "pageNo": null,
+          "content": "20 附录 3 不同地区食谱示例 按照成人糖尿病食养指南的基本原则，根据各地食物资 源和人群膳食特点，推荐不同地区、不同季节的糖尿病患者 适用的全天膳食食谱。 以下食谱由有经验的临床营养指导人员设计，并经过营 养成分计算和评估。食谱适合轻体力活动的成人糖尿病患者， 一天食谱的能量在 1600～2000kcal 范围，使用者可结合自 身活动量及其他因素合理调整能量。食谱设计保持食物多样， 尽量选择低 GI 食物、食药物质和中医食养方。整体食谱符合 能量适宜、搭配合理、主食定量、蔬菜肉类适量等原则。当 体重过重或过轻，可以按照 25～30kcal/（kg·d）适当增减 食材用量调整。另外，以下食谱的食物重量均为其可食部的 生重。 不同烹调方法对血糖的影响也不同，淀粉含量高的谷薯 类，避免过度烹调，否则容易升高其血糖生成指数；避免沾 粉或勾芡的烹调方式；避免使用在制作过程中易加淀粉的碎 肉半成品，如香肠、丸子等；为减少脂肪的摄入,在食用禽类 时去皮；烹调油的品种应多样，保障脂肪酸之间的平衡。全 天限量烹调油 25g，盐 5g。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11446,
+          "docId": 419,
+          "docTitle": "一、东北地区",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "一、东北地区",
+          "pageNo": null,
+          "content": "东北地区物产丰富，主食以精米面为主，辅以多种粗粮 及豆类；油脂多用大豆油，坚果类较为丰富；大多数地区蛋 白质的来源以畜、禽肉为主。但东北地区总体饮食口味偏咸、 多油、能量高。由于冬季寒冷，冬春季节时令果蔬较少，多 来自于外省市。本系列食谱遵循糖尿病患者食养原则，合理 搭配东北地区各季特色食材。为改善糖尿病患者膳食习惯， 本指南根据地区的食物种类特点，将食谱主食蔬菜水果等的 搭配多样化，增加水产的比例，更符合地方的膳食特点。东 北地区四季食谱示例见表 3.1。 表 3.1 东北地区四季食谱示例 春季食谱 1 早餐 锅贴（玉米面 20g，面粉 40g） 煮鸡蛋（鸡蛋 50g） 无糖豆浆（300ml） 萝卜蘸酱（白萝卜 50g） 中餐 杂粮饭（大米 50g，藜麦 10g，玉米碴 10g） 芹菜炒肉（芹菜 50g，猪肉 20g） 鸡片炒油菜（鸡胸肉 20g，油菜 50g） 红菜汤（圆白菜 50g，西红柿 50g，土豆 20g，牛肉 30g） 加餐 苹果（100g） 晚餐 二米饭（大米 50g，小米 50g） 藿香鱼（藿香*3g，白鲢 30g） 杏鲍菇蒜苗炒肉（杏鲍菇 15g，蒜苗 50g，牛肉 20g） 油豆角炖肉（油豆角 50g，牛肉 20g） 油、盐 全天总用量：植物油 25g，盐 4g 春季食谱 2 早餐 发糕（面粉 30g，玉米面 45g） 茶鸡蛋（鸡蛋 50g） 牛奶（250ml） 凉拌菠菜（菠菜 50g） 中餐 杂粮饭（大米 40g，赤小豆*25g，小米 25g） 香菇炒菜心（油菜心 50g，香菇 50g）",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 10662,
+          "docId": 261,
+          "docTitle": "降压药物选择",
+          "bookTitle": "高血压基层诊疗指南2024",
+          "sectionPath": "/高血压指南/药物/选择/",
+          "pageNo": null,
+          "content": "ACEI（如依那普利、贝那普利）适用于高血压合并糖尿病、慢性肾病、心衰、心梗后患者。主要不良反应为干咳、血管神经性水肿。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11553,
+          "docId": 474,
+          "docTitle": "0.5）℃［47］",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "0.5）℃［47］",
+          "pageNo": null,
+          "content": "（2）早期评估患者的吞咽和胃肠功能，确定营养支 持途径，推荐肠内营养支持，如因胃肠功能不全等 使得胃肠营养不能提供所需的全部目标热量，可考 虑肠内外营养结合或肠外营养支持（Ⅰ级推荐，B 级证据）。（七）镇静镇痛治疗 疼痛管理原则是在明确和积极处理疼痛原因 的前提下配合镇痛治疗，避免因止痛治疗掩盖病情 变化。应注意避免过度镇静或镇痛导致的不良反 应，如低血压、免疫抑制、血栓事件、延长辅助通气时 间和意识障碍时间等。美国神经重症协会指南推荐 对出现疼痛的 LHI 患者可使用止痛药物治疗，但缺 乏证据推荐止痛药物的种类［27］ 。ESO 建议 SAH 患 者可选择的止痛药为对乙酰氨基酚，对于严重头痛 者可选择可待因或曲马多；在破裂动脉瘤未闭塞之 前避免使用水杨酸类药物［43］ 。国内外专家建议在镇 静治疗前或同时给予镇痛治疗，可使用 Richmond 躁 动⁃镇 静 量 表（Richmond Agitation⁃Sedation Scale， RASS）、Riker 镇 静⁃躁 动 量 表（Sedation⁃Agitation Scale，SAS）等评估患者的镇静深度［64⁃65］ 。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "成人糖尿病食养指南（2023年版）的食养原则和建议有哪些要点？",
+        "model": "deepseek-v4-pro",
+        "promptVersion": "v3",
+        "searchCount": 8,
+        "rerankedCount": 5,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 9,
+          "invalid": [],
+          "coverage": 0.4,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 78750,
+        "newSession": true
+      },
+      "sessionId": "98c534fc"
+    },
+    {
+      "id": "q26",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑梗死",
+      "category": "treatment",
+      "question": "中国重症卒中管理指南2024的重症脑梗死的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 29722,
+      "answer": "⚠️ 该回答来自网络搜索，未经知识库审核，仅供参考，请以权威指南和临床实际为准\n\n搜索结果中未明确提及《中国重症卒中管理指南2024》中“重症脑梗死”的具体治疗原则。仅检索到以下相关信息：\n\n- 有资料显示，该指南由指南执笔专家解读，内容涵盖重症脑梗死、重症脑出血、动脉瘤破裂性蛛网膜下腔出血等疾病的诊治（来源5）。\n- 但搜索结果未提供该指南关于重症脑梗死治疗原则的具体条文、推荐意见或操作细节。\n\n其他检索结果分别涉及卒中康复管理（来源1）、卒中中心建设（来源2）、脑卒中早期康复（来源3）、高血压性脑出血多学科诊治（来源4），均未包含重症脑梗死的治疗原则。\n\n建议您直接查阅《中国重症卒中管理指南2024》原文或权威平台发布的全文。\n\n来源链接：\n1. https://guide.medlive.cn/guideline/19149\n2. https://www.nhc.gov.cn/yzygj/c100068/202607/132e10e188004f5ba2ffe8c6039e5f00.shtml\n3. https://cmab.yiigle.com/uploads/guide_html/%E4%B8%AD%E5%9B%BD%E8%84%91%E5%8D%92%E4%B8%AD%E6%97%A9%E6%9C%9F%E5%BA%B7%E5%A4%8D%E6%B2%BB%E7%96%97%E6%8C%87%E5%8D%97.html\n4. https://seleguide.yiigle.com/uploads/guide_html/%E9%AB%98%E8%A1%80%E5%8E%8B%E6%80%A7%E8%84%91%E5%87%BA%E8%A1%80%E4%B8%AD%E5%9B%BD%E5%A4%9A%E5%AD%A6%E7%A7%91%E8%AF%8A%E6%B2%BB%E6%8C%87%E5%8D%97.html\n5. https://cmtopdr.com/classroom/video/detail/62221.html",
+      "sources": [],
+      "meta": {
+        "question": "中国重症卒中管理指南2024的重症脑梗死的治疗原则是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": "v3",
+        "searchCount": 11,
+        "rerankedCount": 8,
+        "finalCount": 0,
+        "bookCount": 0,
+        "noResult": true,
+        "webSearch": true,
+        "round": 1,
+        "citation": {
+          "total": 0,
+          "invalid": [],
+          "coverage": 0,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 29721,
+        "newSession": true
+      },
+      "sessionId": "ffe27249"
+    },
+    {
+      "id": "q25",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑梗死",
+      "category": "diagnosis",
+      "question": "中国重症卒中管理指南2024的重症脑梗死的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 71046,
+      "answer": "知识库中关于“中国重症卒中管理指南2024”的重症脑梗死具体诊断标准内容有限，以下依据参考5中重症脑梗死相关定义供参考，并非该指南原文。\n\n重症脑梗死相关诊断/判断标准：\n\n- **重症脑梗死**：基于临床表现，多在发病1个月内评估，常定义为重度神经功能缺损（NIHSS评分≥15分）或意识障碍（GCS评分≤12分），或伴心、肺、肾等器官系统严重功能障碍。[参考5]\n\n- **大面积脑梗死**：基于影像学显示梗死范围，常用定义为CT低密度影>1/2大脑中动脉供血区，或DWI梗死体积>145 ml。[参考5]\n\n- **恶性脑水肿**：指脑梗死后脑水肿迅速进展，导致颅内占位、脑疝，临床表现为神经功能进行性恶化，可致严重残疾甚至死亡的恶性状态。[参考5]\n\n- **危重症脑梗死**：指患者病情严重，伴发呼吸循环系统或其他重要器官功能衰竭，危及生命，需要重症监护治疗或神经外科手术干预的状态。[参考5]\n\n临床提示：上述概念存在交叉，临床判断需结合神经功能评分、影像学梗死范围及器官功能状态综合评估。",
+      "sources": [
+        {
+          "id": 12943,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p115 274. Ude-Okeleke RC, Aslanpour Z, Dhillon S et al. Medicines Related Problems (MRPs) Originating in Primary Care Settings in Older Adults - A Systematic Review. J Pharm Pract. 2021:8971900211023638. [accessed: 16 June 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/34159813. 275. Lee JK, McCutcheon LRM, Fazel MT et al. Assessment of Interprofessional Collaborative Practices and Outcomes in Adults With Diabetes and Hypertension in Primary Care: A Systematic Review and Meta-analysis. JAMA Netw Open. 2021;",
+          "similarity": 0.46420441247860333,
+          "matchType": "vector"
+        },
+        {
+          "id": 13073,
+          "docId": 1400,
+          "docTitle": "3.7 NIPPV 的缺点与常见不良反应",
+          "bookTitle": "2019年 临床急诊杂志",
+          "sectionPath": "3.7 NIPPV 的缺点与常见不良反应",
+          "pageNo": null,
+          "content": "朱华栋(北京协和医院) 参考文献 [1] DeanRH.TheGrowingRoleofNoninvasiveVenti- lationin Patients Requiring Prolonged Mechanical Ventilation[J].RespirCare,2012,57(6):900-920. [2] CrimiC,NotoA,PrinciP,etal.Europeansurveyof noninvasive ventilation practices[J].Eur Res J, 2010,36(2):362-369. [3] GarpestadE,BrennanJ,HillNS.Noninvasiveventilation forcriticalcare[J].Chest,2007,132(2):711-720. [4] TheCanadian CriticalCare Trials Group,Canadian CriticalCareSocietyNoninvasiveVentilationGuide- linesGroup.Clinicalpracticeguidelinesfortheuseof noninvasivepositive-pressureventilationandnoninvasive continuouspositiveairway pressureintheacutecare · 8 · 临床急诊杂志 第20卷",
+          "similarity": 0.4571708772938916,
+          "matchType": "vector"
+        },
+        {
+          "id": 12880,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "135(4):991-8. [accessed: 5 August 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/19349398. 192. Keeley D. Peak flow monitoring and microspirometry as aids to respiratory diagnosis in primary care: more important than ever in times of COVID. Primary Care Respiratory Update,. 2020(21). [accessed: 5 August 2022]. Available at: https://www.pcrs-uk.org/resource/peak-flow- monitoring-and-microspirometry-aids-respiratory-diagnosis-primary-care-more. 193. Zhou J, Li X, Wang X et al. Accuracy of portable spirometers in the diagnosis of chronic obstructive pulmonary disease A meta-analysis. NPJ Prim Care Respir Med. 2022;",
+          "similarity": 0.457061269441438,
+          "matchType": "vector"
+        },
+        {
+          "id": 12883,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "11(1):e0145571. [accessed: 24 June 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/26726887. 196. Schatz M, Sorkness CA, Li JT et al. Asthma Control Test: reliability, validity, and responsiveness in patients not previously followed by asthma specialists. The Journal of allergy and clinical immunology. 2006;",
+          "similarity": 0.45188189899569475,
+          "matchType": "vector"
+        },
+        {
+          "id": 11520,
+          "docId": 460,
+          "docTitle": "一、重症脑梗死",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "一、重症脑梗死",
+          "pageNo": null,
+          "content": "国外学者最早在 1996 年提出“恶性大脑中动 脉（middle cerebral artery，MCA）梗死”的概念来描 述 大 面 积 MCA 梗 死 ，强 调 其 恶 性 病 程 和 不 良 预 后［7］ 。后续衍生出重症脑梗死相关的众多名词术 语，可总结为 4 组概念［8⁃11］ ： （1）重症脑梗死：基于临 床表现，多在发病 1 个月内评估［12］ ，常定义为重度 神经功能缺损［比如美国国立卫生研究院卒中量表 （National Institutes of Health Stroke Scale，NIHSS）评 分 ≥15 分］或 意 识 障 碍［比 如 格 拉 斯 哥 昏 迷 量 表 （Glasgow Coma Scale，GCS）评分≤12 分］或伴心、肺、 肾等器官系统严重功能障碍。 （2）大面积脑梗死：基 于影像学显示梗死范围，常用定义为 CT 低密度影> 1/2 MCA 供 血 区 或 弥 散 加 权 成 像 （diffusion⁃weighted imaging， DWI）梗 死 体 积 > 145 ml。 （3）恶性脑水肿：指脑梗死后脑水肿迅速进 展，导致颅内占位、脑疝，临床表现为神经功能进行 性恶化，可致严重残疾甚至死亡的恶性状态。 （4）危 重症脑梗死：指患者病情严重，伴发呼吸循环系统 或其他重要器官功能衰竭，危及生命，需要重症监 护治疗或神经外科手术干预的状态。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "中国重症卒中管理指南2024的重症脑梗死的诊断标准是什么？",
+        "model": "deepseek-v4-pro",
+        "promptVersion": "v3",
+        "searchCount": 12,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 71043,
+        "newSession": true
+      },
+      "sessionId": "2d82ad3e"
+    },
+    {
+      "id": "q27",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑出血",
+      "category": "diagnosis",
+      "question": "中国重症卒中管理指南2024的重症脑出血的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 47867,
+      "answer": "知识库中关于《中国重症卒中管理指南2024》原始出处的信息有限，以下为该资料所载重症脑出血诊断标准[参考5]：\n\n符合以下任一条件即可定义为重症脑出血：\n- 幕上血肿≥30 ml（丘脑出血≥10 ml）[参考5]\n- 幕下血肿≥10 ml（脑干出血≥5 ml）[参考5]\n\n该标准主要用于评估急诊手术指征[参考5]。临床提示：实际判断还需结合出血部位、占位效应及患者整体情况综合评估。",
+      "sources": [
+        {
+          "id": 12880,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "135(4):991-8. [accessed: 5 August 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/19349398. 192. Keeley D. Peak flow monitoring and microspirometry as aids to respiratory diagnosis in primary care: more important than ever in times of COVID. Primary Care Respiratory Update,. 2020(21). [accessed: 5 August 2022]. Available at: https://www.pcrs-uk.org/resource/peak-flow- monitoring-and-microspirometry-aids-respiratory-diagnosis-primary-care-more. 193. Zhou J, Li X, Wang X et al. Accuracy of portable spirometers in the diagnosis of chronic obstructive pulmonary disease A meta-analysis. NPJ Prim Care Respir Med. 2022;",
+          "similarity": 0.46032991768896825,
+          "matchType": "vector"
+        },
+        {
+          "id": 13073,
+          "docId": 1400,
+          "docTitle": "3.7 NIPPV 的缺点与常见不良反应",
+          "bookTitle": "2019年 临床急诊杂志",
+          "sectionPath": "3.7 NIPPV 的缺点与常见不良反应",
+          "pageNo": null,
+          "content": "朱华栋(北京协和医院) 参考文献 [1] DeanRH.TheGrowingRoleofNoninvasiveVenti- lationin Patients Requiring Prolonged Mechanical Ventilation[J].RespirCare,2012,57(6):900-920. [2] CrimiC,NotoA,PrinciP,etal.Europeansurveyof noninvasive ventilation practices[J].Eur Res J, 2010,36(2):362-369. [3] GarpestadE,BrennanJ,HillNS.Noninvasiveventilation forcriticalcare[J].Chest,2007,132(2):711-720. [4] TheCanadian CriticalCare Trials Group,Canadian CriticalCareSocietyNoninvasiveVentilationGuide- linesGroup.Clinicalpracticeguidelinesfortheuseof noninvasivepositive-pressureventilationandnoninvasive continuouspositiveairway pressureintheacutecare · 8 · 临床急诊杂志 第20卷",
+          "similarity": 0.4599236178261754,
+          "matchType": "vector"
+        },
+        {
+          "id": 12892,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "1:13. [accessed: 5 August 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/12773199. 207. Bestall JC, Paul EA, Garrod R et al. Usefulness of the Medical Research Council (MRC) dyspnoea scale as a measure of disability in patients with chronic obstructive pulmonary disease. Thorax. 1999;",
+          "similarity": 0.4545457038012639,
+          "matchType": "vector"
+        },
+        {
+          "id": 12883,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "11(1):e0145571. [accessed: 24 June 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/26726887. 196. Schatz M, Sorkness CA, Li JT et al. Asthma Control Test: reliability, validity, and responsiveness in patients not previously followed by asthma specialists. The Journal of allergy and clinical immunology. 2006;",
+          "similarity": 0.43648776790572674,
+          "matchType": "vector"
+        },
+        {
+          "id": 11521,
+          "docId": 461,
+          "docTitle": "二、重症脑出血",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "二、重症脑出血",
+          "pageNo": null,
+          "content": "脑出血病死率和致残率高，临床通常将幕上血 肿≥30 ml（丘脑出血≥10 ml）或幕下血肿≥10 ml（脑 干出血≥5 ml）定义为重症脑出血，用于评估急诊手 术指征［13⁃14］ 。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "中国重症卒中管理指南2024的重症脑出血的诊断标准是什么？",
+        "model": "deepseek-v4-pro",
+        "promptVersion": "v3",
+        "searchCount": 12,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": {
+          "total": 4,
+          "invalid": [],
+          "coverage": 0.2,
+          "fixed": false,
+          "retried": false
+        },
+        "duration": 47862,
+        "newSession": true
+      },
+      "sessionId": "90125c5f"
+    },
+    {
+      "id": "q29",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "动脉瘤破裂性 SAH",
+      "category": "diagnosis",
+      "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的诊断标准是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 17806,
+      "answer": "⚠️ 该回答来自网络搜索，未经知识库审核，仅供参考，请以权威指南和临床实际为准\n\n关于《中国重症卒中管理指南2024》中动脉瘤破裂性SAH的诊断标准：\n\n- 搜索结果中未提及该指南的具体诊断标准条目（来源3仅提及该指南“针对……动脉瘤破裂性蛛网膜下腔出血的定义”，但未给出具体内容）。\n- 相关文献指出，对于突发头痛患者，应及时完善CT检查以诊断/排除aSAH（来源1）。\n- 另有《中国破裂颅内动脉瘤临床管理指南（2024版）》涉及aSAH的临床影像诊断等，但具体诊断标准未在本次搜索结果中展示（来源4）。\n\n建议直接查阅《中国重症卒中管理指南2024》原文或相关权威发布平台获取完整诊断标准。\n\n来源链接：\n1. https://rs.yiigle.com/cmaid/1504074\n3. https://www.icuguideline.com/%E4%B8%AD%E5%9B%BD%E9%87%8D%E7%97%87%E5%8D%92%E4%B8%AD%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%972024/\n4. https://cns.cma.org.cn/art/2024/6/11/art_2196_56955.html",
+      "sources": [],
+      "meta": {
+        "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的诊断标准是什么？",
+        "model": "deepseek-v4-flash",
+        "promptVersion": null,
+        "searchCount": 14,
+        "rerankedCount": 2,
+        "finalCount": 0,
+        "bookCount": 0,
+        "noResult": true,
+        "webSearch": true,
+        "round": 1,
+        "citation": null,
+        "duration": 17802,
+        "newSession": true
+      },
+      "sessionId": "f176701a"
+    },
+    {
+      "id": "q28",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "重症脑出血",
+      "category": "treatment",
+      "question": "中国重症卒中管理指南2024的重症脑出血的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 84604,
+      "answer": "1. 《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p85 12 伦理方面的考虑 在护理 CRDs 患者时，尊重患者的自主权是很重要的。换句话说，必须考虑患者的信仰、价值观和愿望， 即使该护理方法不一定符合该患者的最佳利益。这一自主性原则还包括知情同意、隐私和保密性。\"知情同意 \"是指将拟议的治疗或程序告知给患者，确保患者正确理解这些治疗或程序，并在没有任何不 ...\n\n2. 脑出血病死率和致残率高，临床通常将幕上血 肿≥30 ml（丘脑出血≥10 ml）或幕下血肿≥10 ml（脑 干出血≥5 ml）定义为重症脑出血，用于评估急诊手 术指征［13⁃14］ 。\n\n3. 中华神经科杂志 2024 年 7 月第 57 卷第 7 期 Chin J Neurol, July 2024, Vol. 57, No. 7 · 703 · 者血糖维持在 7.8~10.0 mmol/L，且应避免静脉使用 糖溶液［27⁃28］ 。我国指南推荐脑梗死或脑出血患者 应加强血糖监测，将血糖控制在 7.8~10.0 mmol/L， 血糖高于 10.0 mmol/L 时可给予胰岛素治疗，血糖...\n\n4. （2）药物治疗：对于卒中伴颅内压增高的患者， 静脉输注甘露醇或高渗盐水可降低颅内压［103］ 。美 国相关指南共识建议高渗盐水或甘露醇可作为颅 高压的初始治疗；对于脑出血伴颅高压患者，高渗 盐水可能优于甘露醇；不推荐脑梗死患者预防性使 用甘露醇［27⁃28，104］ 。我国相关指南共识推荐 LHI 患 者降颅压药物首选甘露醇，甘露醇无效时可选用高 渗盐水，同时密切监测血钠和血浆渗透压变化［3］ ；...\n\n5. 2 体质、病因、证候给予不同食养方案，在调和气血、平衡人 体营养、辅助预防疾病上效果显著。针对不同体质糖尿病患 者，选取不同特性的食物或食药物质食用，可有效改善患者 血糖水平。 为辅助预防和控制我国人群糖尿病的发生发展，改善糖 尿病患者的日常膳食，提高居民营养健康水平，发展传统食 养服务，根据《健康中国行动（2019—2030 年） 》和《国民营 养计划（2017—2030 年） 》相关要求，制定...",
+      "sources": [
+        {
+          "id": 12735,
+          "docId": 1366,
+          "docTitle": "8.7 药品供应的管理、供应和可负担性",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "8.7 药品供应的管理、供应和可负担性",
+          "pageNo": null,
+          "content": "《慢性呼吸系统疾病药师手册》（A handbook for pharmacists）| p85 12 伦理方面的考虑 在护理 CRDs 患者时，尊重患者的自主权是很重要的。换句话说，必须考虑患者的信仰、价值观和愿望， 即使该护理方法不一定符合该患者的最佳利益。这一自主性原则还包括知情同意、隐私和保密性。\"知情同意 \"是指将拟议的治疗或程序告知给患者，确保患者正确理解这些治疗或程序，并在没有任何不 当影响或胁迫的情况下获得患者的授权来进行这些治疗或程序[342,343]。从根本上说，知情同意过程应以患者为中心，考虑到个人的价值观、信仰、需求和偏好。在这个过程中， 药师和患者要共同决策，在这个过程中，应向患者清楚地说明临床活动或治疗的益处、相关的风险和不确定性。344 此外，应权衡利益和风险，尊重患者的权利和自主权，确定治疗目标，并根据自身的信仰、价值观和愿望 做出是否参加的决定[342]。必须让患者有时间考虑，然后在没有不当影响或胁迫的情况下就是否接受治疗或手 术作出决定，或自愿撤回其同意。",
+          "similarity": 0.45101700869152905,
+          "matchType": "vector"
+        },
+        {
+          "id": 11521,
+          "docId": 461,
+          "docTitle": "二、重症脑出血",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "二、重症脑出血",
+          "pageNo": null,
+          "content": "脑出血病死率和致残率高，临床通常将幕上血 肿≥30 ml（丘脑出血≥10 ml）或幕下血肿≥10 ml（脑 干出血≥5 ml）定义为重症脑出血，用于评估急诊手 术指征［13⁃14］ 。",
+          "similarity": null,
+          "matchType": "title"
+        },
+        {
+          "id": 11549,
+          "docId": 474,
+          "docTitle": "0.5）℃［47］",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "0.5）℃［47］",
+          "pageNo": null,
+          "content": "中华神经科杂志 2024 年 7 月第 57 卷第 7 期 Chin J Neurol, July 2024, Vol. 57, No. 7 · 703 · 者血糖维持在 7.8~10.0 mmol/L，且应避免静脉使用 糖溶液［27⁃28］ 。我国指南推荐脑梗死或脑出血患者 应加强血糖监测，将血糖控制在 7.8~10.0 mmol/L， 血糖高于 10.0 mmol/L 时可给予胰岛素治疗，血糖 低于 3.3 mmol/L 时给予 10%~20% 葡萄糖口服或静 脉 注 射［12⁃13］ 。ESO 建 议 SAH 患 者 血 糖 >10 mmol/L 时给予干预［43］ 。推荐意见： （1）应密切监测患者血糖水平，避免 血糖过高或过低（Ⅰ级推荐，C 级证据）。（2）患者血 糖高于 10 mmol/L 时可给予胰岛素治疗，控制目标 为 7.8~10.0 mmol/L（Ⅱ级推荐，B 级证据）。（五）血钠管理 重症卒中患者因脱水、高血糖、电解质紊乱、 药物等可出现低钠血症，也可因神经系统损伤出 现抗利尿激素分泌失调综合征、脑性耗盐综合征 等。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11572,
+          "docId": 484,
+          "docTitle": "2. 颅内压管理：\t（1）一般治疗：对于颅内压增高",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "2. 颅内压管理：\t（1）一般治疗：对于颅内压增高",
+          "pageNo": null,
+          "content": "（2）药物治疗：对于卒中伴颅内压增高的患者， 静脉输注甘露醇或高渗盐水可降低颅内压［103］ 。美 国相关指南共识建议高渗盐水或甘露醇可作为颅 高压的初始治疗；对于脑出血伴颅高压患者，高渗 盐水可能优于甘露醇；不推荐脑梗死患者预防性使 用甘露醇［27⁃28，104］ 。我国相关指南共识推荐 LHI 患 者降颅压药物首选甘露醇，甘露醇无效时可选用高 渗盐水，同时密切监测血钠和血浆渗透压变化［3］ ；脑出血患者可个体化给予甘露醇和高渗盐水脱水 降颅压［13］ 。一项荟萃分析纳入 112 例颅内压增高 的卒中或脑损伤患者，发现高渗盐水降低颅内压的 效果优于甘露醇［105］ 。对于颅内压增高的 SAH 患 者，甘露醇和高渗盐水可降低颅内压，但缺乏改善 临床结局的证据［106］ 。欧洲重症医学会建议对于颅 内压增高的患者，可使用甘露醇或高渗盐水降低颅 内压，推荐将神经功能恶化合并颅内压>25 mmHg 作为触发渗透性治疗的阈值［107］ 。我国神经外科重 症管理协作组推荐高渗盐水可用于治疗脑梗死、脑 出血、SAH 所致的颅内高压［108］ 。",
+          "similarity": null,
+          "matchType": "keyword"
+        },
+        {
+          "id": 11423,
+          "docId": 410,
+          "docTitle": "一、前言",
+          "bookTitle": "成人糖尿病食养指南（2023年版）",
+          "sectionPath": "一、前言",
+          "pageNo": null,
+          "content": "2 体质、病因、证候给予不同食养方案，在调和气血、平衡人 体营养、辅助预防疾病上效果显著。针对不同体质糖尿病患 者，选取不同特性的食物或食药物质食用，可有效改善患者 血糖水平。 为辅助预防和控制我国人群糖尿病的发生发展，改善糖 尿病患者的日常膳食，提高居民营养健康水平，发展传统食 养服务，根据《健康中国行动（2019—2030 年） 》和《国民营 养计划（2017—2030 年） 》相关要求，制定本指南。本指南 以食养为基础，依据现代营养学理论和相关证据，以及我国 传统中医的理念和调养方案，提出具有多学科优势互补的成 人糖尿病患者食养基本原则和食谱示例。本指南主要面向成 人 2 型糖尿病患者以及基层卫生工作者 （包括营养指导人员） ， 为糖尿病辅助预防与改善提供食养指导。1 型糖尿病、妊娠 期糖尿病及其他类型的糖尿病患者，可参考（但不拘泥于） 本指南制定膳食营养方案，同时使用者应在医师或营养指导 人员等专业人员的指导下，根据患者具体情况设计个性化食 养方案。",
+          "similarity": null,
+          "matchType": "keyword"
+        }
+      ],
+      "meta": {
+        "question": "中国重症卒中管理指南2024的重症脑出血的治疗原则是什么？",
+        "model": null,
+        "promptVersion": null,
+        "searchCount": 11,
+        "rerankedCount": 4,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": null,
+        "duration": 84599,
+        "newSession": true
+      },
+      "sessionId": "2a19b2d0"
+    },
+    {
+      "id": "q30",
+      "bookId": 459,
+      "bookTitle": "中国重症卒中管理指南2024",
+      "chapter": "动脉瘤破裂性 SAH",
+      "category": "treatment",
+      "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的治疗原则是什么？",
+      "score": {
+        "accuracy": null,
+        "completeness": null,
+        "citation": null,
+        "format": null
+      },
+      "note": "",
+      "ok": true,
+      "duration": 91708,
+      "answer": "1. 朱华栋(北京协和医院) 参考文献 [1] DeanRH.TheGrowingRoleofNoninvasiveVenti- lationin Patients Requiring Prolonged Mechanical Ventilation[J].RespirCare,2012,57(6):900-920. [2] CrimiC,NotoA,PrinciP,etal.Europeansurve...\n\n2. 1:15025. [accessed: 26 January 2022]. Available at: http://www.ncbi.nlm.nih.gov/pubmed/27189668. 11. Padem N, Saltoun C. Classification of asthma. Allergy and asthma proceedings. 2019;40(6):385-8. [ac...\n\n3. 31(4):790-9. [accessed: 27 May 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/18094011. 33. Bereznicki BJ, Peterson GM, Jackson SL et al. Pharmacist-initiated general practitioner referral o...\n\n4. 1:13. [accessed: 5 August 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/12773199. 207. Bestall JC, Paul EA, Garrod R et al. Usefulness of the Medical Research Council (MRC) dyspnoea scale a...\n\n5. 重症卒中患者常出现病情恶化，在临床管理中 应密切监测患者的生命体征、意识状态和神经功 能，明确恶化原因，针对病因治疗。脑水肿和出血 转化是脑梗死急性期常见神经系统并发症及临床 恶化的主要原因［71］ 。严重神经功能缺损和大面积 脑梗死是较为公认的恶性脑水肿和出血转化的预 测因素［72⁃73］ 。溶栓、取栓后成功血管再通可降低恶 性 脑 水 肿 风 险 ，从 而 预 防 危 重 症 脑 梗 死 的 ...",
+      "sources": [
+        {
+          "id": 13073,
+          "docId": 1400,
+          "docTitle": "3.7 NIPPV 的缺点与常见不良反应",
+          "bookTitle": "2019年 临床急诊杂志",
+          "sectionPath": "3.7 NIPPV 的缺点与常见不良反应",
+          "pageNo": null,
+          "content": "朱华栋(北京协和医院) 参考文献 [1] DeanRH.TheGrowingRoleofNoninvasiveVenti- lationin Patients Requiring Prolonged Mechanical Ventilation[J].RespirCare,2012,57(6):900-920. [2] CrimiC,NotoA,PrinciP,etal.Europeansurveyof noninvasive ventilation practices[J].Eur Res J, 2010,36(2):362-369. [3] GarpestadE,BrennanJ,HillNS.Noninvasiveventilation forcriticalcare[J].Chest,2007,132(2):711-720. [4] TheCanadian CriticalCare Trials Group,Canadian CriticalCareSocietyNoninvasiveVentilationGuide- linesGroup.Clinicalpracticeguidelinesfortheuseof noninvasivepositive-pressureventilationandnoninvasive continuouspositiveairway pressureintheacutecare · 8 · 临床急诊杂志 第20卷",
+          "similarity": 0.4710834851464132,
+          "matchType": "vector"
+        },
+        {
+          "id": 12759,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "1:15025. [accessed: 26 January 2022]. Available at: http://www.ncbi.nlm.nih.gov/pubmed/27189668. 11. Padem N, Saltoun C. Classification of asthma. Allergy and asthma proceedings. 2019;40(6):385-8. [accessed: 27 January 2022]. Available at: http://www.ncbi.nlm.nih.gov/pubmed/31690376. 12. Segal LN, Martinez FJ. Chronic obstructive pulmonary disease subpopulations and phenotyping. The Journal of allergy and clinical immunology. 2018;",
+          "similarity": 0.46407879567850974,
+          "matchType": "vector"
+        },
+        {
+          "id": 12772,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "31(4):790-9. [accessed: 27 May 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/18094011. 33. Bereznicki BJ, Peterson GM, Jackson SL et al. Pharmacist-initiated general practitioner referral of patients with suboptimal asthma management. Pharm World Sci. 2008;",
+          "similarity": 0.4616361535570721,
+          "matchType": "vector"
+        },
+        {
+          "id": 12892,
+          "docId": 1375,
+          "docTitle": "13.2.3 政策",
+          "bookTitle": "慢性呼吸系统疾病药师手册（A handbook for pharmacists）",
+          "sectionPath": "13.2.3 政策",
+          "pageNo": null,
+          "content": "1:13. [accessed: 5 August 2022]. Available at: https://www.ncbi.nlm.nih.gov/pubmed/12773199. 207. Bestall JC, Paul EA, Garrod R et al. Usefulness of the Medical Research Council (MRC) dyspnoea scale as a measure of disability in patients with chronic obstructive pulmonary disease. Thorax. 1999;",
+          "similarity": 0.46156900663006706,
+          "matchType": "vector"
+        },
+        {
+          "id": 11559,
+          "docId": 476,
+          "docTitle": "一、危重症卒中的预测和预防",
+          "bookTitle": "中国重症卒中管理指南2024",
+          "sectionPath": "一、危重症卒中的预测和预防",
+          "pageNo": null,
+          "content": "重症卒中患者常出现病情恶化，在临床管理中 应密切监测患者的生命体征、意识状态和神经功 能，明确恶化原因，针对病因治疗。脑水肿和出血 转化是脑梗死急性期常见神经系统并发症及临床 恶化的主要原因［71］ 。严重神经功能缺损和大面积 脑梗死是较为公认的恶性脑水肿和出血转化的预 测因素［72⁃73］ 。溶栓、取栓后成功血管再通可降低恶 性 脑 水 肿 风 险 ，从 而 预 防 危 重 症 脑 梗 死 的 发 生［74⁃75］ 。脑出血后数小时可出现血肿扩大，加重神 经功能缺损。有学者提出头颅 CT 显示混合征［76］ 、 黑洞征［77］ 和岛征［78］ 对脑出血后血肿扩大及不良预 后具有预测价值。脑出血后血压升高与血肿扩大 和不良预后均相关，应密切监测和维持患者的血压 稳定，控制血压可减少血肿扩大［40］ 。迟发性脑缺血 是 SAH 患者死亡和残疾的主要原因，其主要病理 机制为血管痉挛，脑血管造影是诊断脑血管痉挛的 “金标准”，可使用改良 Fisher 量表评估患者的血管 痉挛风险［15］ 。经颅多普勒血管超声对于血管痉挛 具 有 高 敏 感 度 和 高 阴 性 预 测 值 ，常 用 于 临 床 监 测［79］ 。现行指南建议 SAH 患者维持体液平衡和正 常循环血容量，推荐使用尼莫地平治疗血管痉挛， 预防迟发性脑缺血、改善预后［15，80］ 。 推荐意见： （1）脑梗死后成功再灌注治疗可降 低脑水肿风险（Ⅱ级推荐，C 级证据）。 （2）脑出血后 血压控制可减少血肿扩大（Ⅱ级推荐，C 级证据）。 （3）SAH 后使用尼莫地平可改善患者预后（Ⅰ级推 荐，A 级证据）。",
+          "similarity": null,
+          "matchType": "title"
+        }
+      ],
+      "meta": {
+        "question": "中国重症卒中管理指南2024的动脉瘤破裂性 SAH的治疗原则是什么？",
+        "model": null,
+        "promptVersion": null,
+        "searchCount": 10,
+        "rerankedCount": 8,
+        "finalCount": 5,
+        "bookCount": 3,
+        "noResult": false,
+        "webSearch": false,
+        "round": 1,
+        "citation": null,
+        "duration": 91710,
+        "newSession": true
+      },
+      "sessionId": "5ba9e121"
+    }
+  ]
+}
