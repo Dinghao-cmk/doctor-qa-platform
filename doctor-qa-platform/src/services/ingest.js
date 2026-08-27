@@ -34,7 +34,7 @@ const parseFile = async (buffer, filename) => {
     for (let i = 1; i <= doc.numPages; i++) {
         const page = await doc.getPage(i)
         const tc = await page.getTextContent()
-        pages.push({ pageNo: i, text: reconstructPageText(tc) })
+        pages.push({ pageNo: i, ...reconstructPageText(tc) })
     }
     const pdfOutline = []
     try {
@@ -126,39 +126,78 @@ const parseFile = async (buffer, filename) => {
     const tocText = tocEntries.length >= 3 ? tocPages.map(p => p.text).join('\n') : null
     const contentPages = pages.filter(p => !isTocPage(p.text))
     const safePages = contentPages.length > 0 ? contentPages : pages // 全被误判时保留全部
-    // 页间插入空行：保证段落不跨页（段落页码 = 所在页）；与 buildLinePageMap 对齐
-    const text = safePages.map(p => p.text).join('\n\n').trim()
+    // 页间插入空行：保证段落不跨页（段落页码 = 所在页）；同时构建与 text 完全对齐的行号→页码/字号映射
+    const textParts = []
+    const linePageAcc = []
+    const lineSizeAcc = []
+    for (let i = 0; i < safePages.length; i++) {
+        const p = safePages[i]
+        if (!p.text) continue // 空页（无文本）不产生行，join 时只贡献分隔符
+        const lines = p.text.split('\n')
+        textParts.push(p.text)
+        for (let j = 0; j < lines.length; j++) {
+            linePageAcc.push(p.pageNo)
+            lineSizeAcc.push((p.sizes || [])[j] || null)
+        }
+        // 页间空行：仅在后面还有非空页时插入（与 join('\n') 行为一致）
+        let nextIdx = i + 1
+        while (nextIdx < safePages.length && !safePages[nextIdx].text) nextIdx++
+        if (nextIdx < safePages.length) {
+            textParts.push('')
+            linePageAcc.push(p.pageNo)
+            lineSizeAcc.push(null)
+        }
+    }
+    const text = textParts.join('\n').trim()
     if (!text) {
         throw new Error('PDF 未提取到文本（可能是扫描件，无文字层，请上传文字版 PDF 或 TXT）')
     }
     // pages 保留原始逐页（outline 的 pageIdx 基于原始页）；filteredPages 为剔除目录页后的（文本模式行映射用）
-    return { text, pages, filteredPages: safePages, pdfOutline: pdfOutline.length >= 3 ? pdfOutline : null, tocEntries: tocEntries.length >= 5 ? tocEntries : null, tocText }
+    return {
+        text, pages, filteredPages: safePages,
+        pdfOutline: pdfOutline.length >= 3 ? pdfOutline : null,
+        tocEntries: tocEntries.length >= 5 ? tocEntries : null, tocText,
+        linePageMap: linePageAcc, lineSizeMap: lineSizeAcc,
+    }
 }
 
 /**
  * 重建 PDF 页文本：按 y 坐标分组恢复真实行结构（hasEOL 不可靠，会整页粘连）
+ * 新版（含 sizes）见下方 buildLineSizeMap 之上的定义
+ */
+
+/**
+ * 重建页文本（y 坐标分组）：返回 { text, sizes }，sizes 为每行的字号信息 {min, max}
+ * max=行内最大字号（标题定级：章标题≈2倍正文）；min=行内最小字号（页眉识别：页眉标题常混 8px 小字）
  */
 const reconstructPageText = (tc) => {
     const items = (tc.items || []).filter(it => it.str && it.str.trim())
-    if (items.length === 0) return ''
+    if (items.length === 0) return { text: '', sizes: [] }
     const rows = []
     let curY = null
     let curLine = ''
+    let curMin = 0
+    let curMax = 0
     const CJK = /[\u4e00-\u9fff]$/
     for (const it of items) {
         const y = it.transform ? it.transform[5] : 0
+        const size = it.transform ? it.transform[0] : 0 // x 缩放 ≈ 字号
         const s = it.str || ''
         if (curY !== null && Math.abs(y - curY) > 3) {
-            rows.push({ y: curY, text: curLine })
+            rows.push({ text: curLine, min: curMin, max: curMax })
             curLine = s
+            curMin = size
+            curMax = size
         } else {
             if (curLine && !CJK.test(curLine.slice(-1)) && !/^[\u4e00-\u9fff]/.test(s)) curLine += ' '
             curLine += s
+            curMin = curMin > 0 ? Math.min(curMin, size) : size
+            curMax = Math.max(curMax, size)
         }
         curY = y
     }
-    if (curLine.trim()) rows.push({ y: curY, text: curLine })
-    return rows.map(r => r.text).join('\n')
+    if (curLine.trim()) rows.push({ text: curLine, min: curMin, max: curMax })
+    return { text: rows.map(r => r.text).join('\n'), sizes: rows.map(r => ({ min: r.min, max: r.max })) }
 }
 
 /** 构建 行号 → 页码 映射（PDF 逐页文本合并后使用；页间空行映射到当前页） */
@@ -171,6 +210,37 @@ const buildLinePageMap = (pages) => {
         if (i < pages.length - 1) map.push(pages[i].pageNo) // 页间空行（join('\n\n') 产生）
     }
     return map
+}
+
+/** 构建 行号 → 字号信息 映射（与 buildLinePageMap 对齐；{min, max}；用于标题字号定级与页眉过滤） */
+const buildLineSizeMap = (pages) => {
+    if (!pages || pages.length === 0) return null
+    const map = []
+    for (let i = 0; i < pages.length; i++) {
+        const sizes = pages[i].sizes || []
+        const lineCount = pages[i].text.split('\n').length
+        for (let j = 0; j < lineCount; j++) map.push(sizes[j] || null)
+        if (i < pages.length - 1) map.push(null) // 页间空行
+    }
+    return map
+}
+
+/** 计算正文字号（全局最常见的非零 max 字号） */
+const calcBaseSize = (sizeMap) => {
+    if (!sizeMap) return 0
+    const freq = new Map()
+    for (const s of sizeMap) {
+        const v = s && s.max ? s.max : 0
+        if (v <= 0) continue
+        const k = Math.round(v * 10) / 10
+        freq.set(k, (freq.get(k) || 0) + 1)
+    }
+    let best = 0
+    let bestCnt = 0
+    for (const [k, c] of freq) {
+        if (c > bestCnt) { bestCnt = c; best = k }
+    }
+    return best
 }
 
 /**
@@ -280,11 +350,13 @@ const splitByToc = (tocEntries, text, linePageMap = null) => {
  * @param {number[]|null} linePageMap - 行号→页码映射（PDF），TXT/MD 传 null
  * @returns {Array<{title: string, level: number, parentIndex: number, content: string, pageNo: number|null, lineMap: number[]|null}>}
  */
-const splitChapters = (text, linePageMap = null) => {
+const splitChapters = (text, linePageMap = null, lineSizeMap = null) => {
     const lines = text.split(/\r?\n/)
     const chapters = []
     const stack = [] // 章节栈：[{title, level, content, startLine, pageNo}]
     let lineNo = 0
+    // 正文字号（最常见的非零字号）——用于标题字号定级与页眉过滤
+    const baseSize = calcBaseSize(lineSizeMap)
 
     const headingLevel = (line) => {
         const t = line.trim()
@@ -305,9 +377,41 @@ const splitChapters = (text, linePageMap = null) => {
         return null
     }
 
+    // 页眉识别：统计标题候选行的全局出现次数（同一标题 ≥3 次 = 页眉/重复行）
+    const titleFreq = new Map()
+    for (const line of lines) {
+        const t = line.trim()
+        if (t && t.length <= 60 && headingLevel(t)) {
+            titleFreq.set(t, (titleFreq.get(t) || 0) + 1)
+        }
+    }
     for (const line of lines) {
         const h = headingLevel(line)
         if (h) {
+            // 字号信息（行内 min/max）
+            const sizeInfo = lineSizeMap ? lineSizeMap[lineNo] : null
+            const size = sizeInfo ? sizeInfo.max : null
+            // 页眉过滤：同一标题重复 ≥3 次（每页页眉）且非大字号标题（真章标题如 21px 有豁免）
+            if (titleFreq.get(line.trim()) >= 3 && !(size && size > 0 && baseSize > 0 && size >= baseSize * 1.45)) {
+                if (stack.length > 0) stack[stack.length - 1].content += line + '\n'
+                lineNo++
+                continue
+            }
+            // 字号定级（排版硬信号）：标题行字号显著大于正文字号 → 章/节；小于正文 → 页眉等非标题（跳过）
+            // 无字号信息（txt/扫描）时保持规则判定
+            if (size && size > 0 && baseSize > 0) {
+                if (size < baseSize * 0.85) {
+                    // 页眉/小字（如每页重复的"第一章 绪论"页眉）：不作为标题，并入内容
+                    if (stack.length > 0) stack[stack.length - 1].content += line + '\n'
+                    lineNo++
+                    continue
+                }
+                if (size >= baseSize * 1.45) h.level = 1
+                else if (size >= baseSize * 1.18) h.level = 2
+                else if (/^[一二三四五六七八九十]+、/.test(h.title) || /^[0-9０-９]{1,3}[.．、]/.test(h.title)) h.level = 2
+                // 正文大小（≤1.18x）且带编号：同级编号两级重复的书（如指南"一、"既是章又是节）靠字号区分——小字号条目为节
+                // 其余保持规则判定
+            }
             // 上下文降级为节：①数字编号（"1."）跟在章后；②"一、二、"跟在"附录X"后（附录内的地区/条目是二级）
             // 判断基于最近的 L1 祖先（降级后的节也在栈中，不能只看栈顶）
             if (h.level === 1 && stack.length > 0) {
@@ -525,7 +629,8 @@ const buildChapters = async (parsed) => {
     const pages = typeof parsed === 'object' ? parsed.pages : null
     const filteredPages = typeof parsed === 'object' ? parsed.filteredPages : null
     const pdfOutline = typeof parsed === 'object' ? parsed.pdfOutline : null
-    const globalLineMap = buildLinePageMap(filteredPages || pages)
+    const globalLineMap = parsed.linePageMap || buildLinePageMap(filteredPages || pages)
+    const globalSizeMap = parsed.lineSizeMap || buildLineSizeMap(filteredPages || pages)
     let chapters = null
     // 1) 目录页：正则提取标题+层级为主（标题原样来自目录行，最可靠）；LLM 仅在正则提取不足时兜底
     if (typeof parsed === 'object' && (parsed.tocText || parsed.tocEntries)) {
@@ -542,9 +647,9 @@ const buildChapters = async (parsed) => {
     if (!chapters || chapters.length === 0) {
         if (pages && pdfOutline) {
             chapters = splitByOutline(pdfOutline, pages)
-            if (chapters.length === 0) chapters = splitChapters(text, globalLineMap)
+            if (chapters.length === 0) chapters = splitChapters(text, globalLineMap, globalSizeMap)
         } else {
-            chapters = splitChapters(text, globalLineMap)
+            chapters = splitChapters(text, globalLineMap, globalSizeMap)
         }
     }
     if (chapters.length === 0) throw new Error('未解析到有效内容')
@@ -709,4 +814,4 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
     }
 }
 
-module.exports = { parseFile, buildLinePageMap, splitChapters, splitPassages, splitByOutline, splitByToc, buildChapters, extractTocWithLLM, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
+module.exports = { parseFile, buildLinePageMap, buildLineSizeMap, splitChapters, splitPassages, splitByOutline, splitByToc, buildChapters, extractTocWithLLM, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
