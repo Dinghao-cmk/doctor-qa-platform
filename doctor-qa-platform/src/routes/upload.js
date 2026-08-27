@@ -96,9 +96,10 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
 
         const bookTitle = (() => {
             const t = filename.replace(/\.[^.]+$/, '').trim()
-            // 文件名无意义（纯数字/乱码/太短）时从内容前部提取标题
-            if (!t || /^[\d\s]+$/.test(t) || t.length < 2) {
-                return extractTitleFromText(text) || t || '未命名书籍'
+            // 文件名无意义（纯数字/太短/无中文的长 hash 名）时从内容前部提取标题
+            const isMeaningless = !t || /^[\d\s]+$/.test(t) || t.length < 2 || /^[a-zA-Z0-9]{12,}$/.test(t)
+            if (isMeaningless) {
+                return extractTitleFromText(parsed.text) || t || '未命名书籍'
             }
             return t
         })()

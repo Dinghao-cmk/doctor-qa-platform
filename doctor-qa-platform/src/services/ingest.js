@@ -201,6 +201,10 @@ const splitChapters = (text, linePageMap = null) => {
     for (const line of lines) {
         const h = headingLevel(line)
         if (h) {
+            // 数字编号标题（"1."）跟在章（"一、"/"第X章"）之后时，按上下文降级为节
+            if (h.level === 1 && /^[0-9０-９]{1,3}[.．、]/.test(h.title) && stack.length > 0 && stack[stack.length - 1].level === 1) {
+                h.level = 2
+            }
             const node = { title: h.title, level: h.level, content: '', startLine: lineNo, pageNo: linePageMap ? linePageMap[lineNo] : null }
             // 栈式：弹出 level >= 当前的所有章节
             while (stack.length > 0 && stack[stack.length - 1].level >= h.level) stack.pop()
@@ -292,15 +296,23 @@ const splitPassages = (content, startLine = 0, linePageMap = null) => {
 }
 
 /**
- * 从文本前部提取候选书名（文件名无意义时使用）：取前 200 字符中的首行非空短行
+ * 从文本前部提取候选书名（文件名无意义时使用）
+ * 策略：跳过目录行（编号开头/第X章），取前 5000 字符中的首个更像书名的短行
  */
 const extractTitleFromText = (text) => {
-    const head = text.slice(0, 2000)
+    const head = text.slice(0, 5000)
     const lines = head.split(/\n+/).map(s => s.trim()).filter(s => s.length > 0)
-    for (const line of lines.slice(0, 5)) {
-        if (line.length >= 2 && line.length <= 60 && !/^[\d\s.\-—|]+$/.test(line)) {
-            return line.slice(0, 60)
-        }
+    for (const line of lines.slice(0, 12)) {
+        if (line.length < 2 || line.length > 60) continue
+        if (/^[\d\s.\-—|]+$/.test(line)) continue
+        // 跳过目录/编号行（一、二、1.、第X章、第X节）——这些是正文结构不是书名
+        if (/^[一二三四五六七八九十]+、/.test(line)) continue
+        if (/^第[一二三四五六七八九十百千万0-9０-９]+[章节篇部分]/.test(line)) continue
+        if (/^[0-9０-９]{1,3}[.．、]/.test(line)) continue
+        if (/^[（(][一二三四五六七八九十0-9]+[）)]/.test(line)) continue
+        // 排除页眉页脚特征（出版社/网址/日期）
+        if (/^(人民卫生出版社|卫生部|国家卫生健康|www\.|http|\d{4}年|ISBN)/i.test(line)) continue
+        return line.slice(0, 60)
     }
     return null
 }
@@ -330,13 +342,13 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
     const filteredPages = typeof parsed === 'object' ? parsed.filteredPages : null
     const pdfOutline = typeof parsed === 'object' ? parsed.pdfOutline : null
 
-    // 书名：meta.title 优先（前端可编辑），否则文件名去扩展名；文件名无意义（纯数字等）时尝试从内容提取
+    // 书名：meta.title 优先（前端可编辑），否则文件名去扩展名；文件名无意义（纯数字/太短/无中文的长 hash 名）时从内容提取
     let bookTitle = ''
     if (meta.title && meta.title.trim()) {
         bookTitle = meta.title.trim()
     } else {
         bookTitle = (filename.replace(/\.[^.]+$/, '') || '未命名书籍').trim()
-        if (!bookTitle || /^[\d\s]+$/.test(bookTitle) || bookTitle.length < 2) {
+        if (!bookTitle || /^[\d\s]+$/.test(bookTitle) || bookTitle.length < 2 || /^[a-zA-Z0-9]{12,}$/.test(bookTitle)) {
             bookTitle = extractTitleFromText(text) || '未命名书籍'
         }
     }
