@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# doctor-qa-platform
-=======
 # 医学知识问答平台（Medicine QA Platform）
 
 面向临床医生的医学知识问答系统：**RAG 检索增强问答 + 多模型对比实验 + 本地微调模型**。
@@ -128,4 +125,3 @@ python convert_hf_to_gguf.py ...    # 转 GGUF
 - 敏感配置（API Key）仅存 `.env`（已 gitignore）
 - 模型权重/大文件不纳入仓库
 - 本地模型带诚实约束 prompt：知识库外/截止日期后内容明确"不确定"，不编造
->>>>>>> 6ded55c (医学知识问答平台：RAG检索 + 对比实验体系 + 本地微调模型接入)
