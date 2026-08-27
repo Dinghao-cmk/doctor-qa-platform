@@ -11,7 +11,7 @@ const crypto = require('crypto')
 const fs = require('fs')
 const path = require('path')
 const multer = require('multer')
-const { ingestBook, ingestFromText, splitChapters, splitPassages, extractTitleFromText, buildLinePageMap, SUPPORTED_EXTS } = require('../services/ingest')
+const { ingestBook, ingestFromText, splitPassages, extractTitleFromText, buildChapters, SUPPORTED_EXTS } = require('../services/ingest')
 const { genBookQuestions } = require('../services/questionGen')
 const { runEmbeddingJob } = require('../services/embeddingJob')
 const cache = require('../services/cache')
@@ -81,8 +81,7 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
         // 解析 + 切分预览（不落库；PDF 带页码，章节/段落同步记录起始页）
         const { parseFile } = require('../services/ingest')
         const parsed = await parseFile(req.file.buffer, filename)
-        const linePageMap = buildLinePageMap(parsed.pages)
-        const chapters = splitChapters(parsed.text, linePageMap)
+        const chapters = await buildChapters(parsed)
         const preview = chapters.map(ch => ({
             title: ch.title,
             level: ch.level || 1,
@@ -113,7 +112,7 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
             totalPassages: preview.reduce((s, c) => s + c.passages, 0),
             chapters: preview.slice(0, 30), // 最多展示前 30 章
             ext,
-            withPageNo: !!(linePageMap), // 是否有页码信息（PDF 逐页解析）
+            withPageNo: !!(parsed.pages), // 是否有页码信息（PDF 逐页解析）
         })
     } catch (error) {
         log(`[upload/preview] 失败: ${error.message}`)

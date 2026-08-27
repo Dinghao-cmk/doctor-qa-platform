@@ -113,32 +113,17 @@ const parseFile = async (buffer, filename) => {
         return numbered / entries.length >= 0.5
     }
     const tocEntries = []
+    const tocPages = []
     for (const p of pages) {
         if (isTocPage(p.text)) {
             tocEntries.push(...extractTocEntries(p.text))
+            tocPages.push(p)
         }
     }
-    // 目录条目层级推断：第X章=1 / 第X节=2 / 附录=1 / 数字条目=2 / "一、二、"=1（跟节/附录后=2）
-    let prevLevel = 1
-    let prevTitle = ''
-    for (const e of tocEntries) {
-        const t = e.title.trim()
-        let lv
-        if (/^第[一二三四五六七八九十百千万0-9０-９]+章/.test(t)) lv = 1
-        else if (/^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(t)) lv = 2
-        else if (/^附[录篇]/.test(t)) lv = 1
-        else if (/^[0-9０-９]{1,3}[.．、]/.test(t)) lv = 2
-        else if (/^[一二三四五六七八九十]+、/.test(t)) {
-            if (prevTitle && /^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(prevTitle)) lv = 2
-            else if (prevTitle && /^附[录篇]/.test(prevTitle)) lv = 2
-            else if (prevTitle && /^[0-9０-９]{1,3}[.．、]/.test(prevTitle)) lv = 2
-            else if (prevTitle && /^[一二三四五六七八九十]+、/.test(prevTitle)) lv = prevLevel
-            else lv = 1
-        } else lv = 1
-        e.level = lv
-        prevLevel = lv
-        prevTitle = t
-    }
+    // 目录条目层级推断（共用规则 inferTocLevels）
+    inferTocLevels(tocEntries)
+    // 目录页文本（供 LLM 提取+判断层级；正则提取 tocEntries 作为兜底）
+    const tocText = tocEntries.length >= 3 ? tocPages.map(p => p.text).join('\n') : null
     const contentPages = pages.filter(p => !isTocPage(p.text))
     const safePages = contentPages.length > 0 ? contentPages : pages // 全被误判时保留全部
     // 页间插入空行：保证段落不跨页（段落页码 = 所在页）；与 buildLinePageMap 对齐
@@ -147,7 +132,7 @@ const parseFile = async (buffer, filename) => {
         throw new Error('PDF 未提取到文本（可能是扫描件，无文字层，请上传文字版 PDF 或 TXT）')
     }
     // pages 保留原始逐页（outline 的 pageIdx 基于原始页）；filteredPages 为剔除目录页后的（文本模式行映射用）
-    return { text, pages, filteredPages: safePages, pdfOutline: pdfOutline.length >= 3 ? pdfOutline : null, tocEntries: tocEntries.length >= 5 ? tocEntries : null }
+    return { text, pages, filteredPages: safePages, pdfOutline: pdfOutline.length >= 3 ? pdfOutline : null, tocEntries: tocEntries.length >= 5 ? tocEntries : null, tocText }
 }
 
 /**
@@ -453,6 +438,125 @@ const extractTitleFromText = (text) => {
 }
 
 /**
+ * 目录条目层级推断（正则规则）：第X章=1 / 第X节=2 / 附录=1 / 数字条目=2 / "一、二、"=1（跟节/附录后=2）
+ * 从 parseFile 提取的共用逻辑（LLM 提取的标题也走此规则）
+ */
+const inferTocLevels = (entries) => {
+    let prevLevel = 1
+    let prevTitle = ''
+    for (const e of entries) {
+        const t = (e.title || '').trim()
+        let lv
+        if (/^第[一二三四五六七八九十百千万0-9０-９]+章/.test(t)) lv = 1
+        else if (/^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(t)) lv = 2
+        else if (/^附[录篇]/.test(t)) lv = 1
+        else if (/^[0-9０-９]{1,3}[.．、]/.test(t)) lv = 2
+        else if (/^[一二三四五六七八九十]+、/.test(t)) {
+            if (prevTitle && /^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(prevTitle)) lv = 2
+            else if (prevTitle && /^附[录篇]/.test(prevTitle)) lv = 2
+            else if (prevTitle && /^[0-9０-９]{1,3}[.．、]/.test(prevTitle)) lv = 2
+            else if (prevTitle && /^[一二三四五六七八九十]+、/.test(prevTitle)) lv = prevLevel
+            else lv = 1
+        } else lv = 1
+        e.level = lv
+        prevLevel = lv
+        prevTitle = t
+    }
+    return entries
+}
+
+/**
+ * 用本地模型（Ollama）从目录页原文提取章节标题列表
+ * 模型直接读目录文本，可识别正则提取不出的标题（如"附录2"粘连行）；层级由正则规则 inferTocLevels 判断（已验证更稳）
+ * @param {string} tocText - 目录页文本（含页码）
+ * @returns {Promise<Array<{title: string}>|null>} - 失败返回 null（调用方用正则提取兜底）
+ */
+const extractTocWithLLM = async (tocText) => {
+    try {
+        const model = process.env.LLM_STRUCT_MODEL || 'qwen2.5-7b-med-qa:latest'
+        const prompt = '你是PDF文档解析助手。下面是PDF目录页的文本（每行是"标题 + 页码"或"标题 + 点线 + 页码"格式，夹有页眉数字）。\n' +
+            '任务：提取目录中所有章节条目的标题。\n' +
+            '要求：\n' +
+            '- 标题原样输出（去掉尾部点线和页码，不要翻译、不要改写、不要增删字）\n' +
+            '- 跳过页眉页码、"目录"页标题、纯点线行\n' +
+            '- 按出现顺序输出\n' +
+            '输出 JSON 数组，每个元素 {"t": 标题}。\n' +
+            '只输出 JSON，不要任何其他内容。'
+        const r = await fetch('http://localhost:11434/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model,
+                messages: [{ role: 'user', content: prompt + '\n目录文本:\n' + tocText.slice(0, 9000) }],
+                format: 'json',
+                stream: false,
+                // num_ctx 8192：目录文本 + 输出 JSON 需更大上下文（模型默认 4096 会 400）
+                options: { temperature: 0, num_ctx: 8192 },
+            }),
+            signal: AbortSignal.timeout(180000),
+        })
+        if (!r.ok) return null
+        const data = await r.json()
+        const content = (data.message && data.message.content) || ''
+        const parsed = JSON.parse(content)
+        const arr = Array.isArray(parsed) ? parsed : (parsed && Array.isArray(parsed.entries) ? parsed.entries : null)
+        if (!arr || arr.length < 3 || arr.length > 500) return null
+        const out = []
+        for (const it of arr) {
+            const t = String(it.t || it.title || '').replace(/[.．·\s]+$/g, '').trim()
+            if (t.length < 2 || t.length > 60) continue
+            out.push({ title: t })
+        }
+        if (out.length < 3) return null
+        return out
+    } catch (e) {
+        log('LLM 目录提取失败: ' + (e.message || e))
+        return null
+    }
+}
+
+/**
+ * 构建两级章节树（preview 与入库共用）：目录页(LLM提取→正则提取) > PDF书签 > 文本标题识别
+ * @param {{text: string, pages: Array|null, filteredPages: Array|null, pdfOutline: Array|null, tocEntries: Array|null, tocText: string|null}|string} parsed - parseFile 返回值或纯文本
+ * @returns {Promise<Array<{title, level, parentIndex, content, pageNo, lineMap, startLine}>>}
+ */
+const buildChapters = async (parsed) => {
+    const text = typeof parsed === 'string' ? parsed : parsed.text
+    const pages = typeof parsed === 'object' ? parsed.pages : null
+    const filteredPages = typeof parsed === 'object' ? parsed.filteredPages : null
+    const pdfOutline = typeof parsed === 'object' ? parsed.pdfOutline : null
+    const globalLineMap = buildLinePageMap(filteredPages || pages)
+    let chapters = null
+    // 1) 目录页：正则提取标题+层级为主（标题原样来自目录行，最可靠）；LLM 仅在正则提取不足时兜底
+    if (typeof parsed === 'object' && (parsed.tocText || parsed.tocEntries)) {
+        let entries = parsed.tocEntries
+        if ((!entries || entries.length < 5) && parsed.tocText) {
+            const llmTitles = await extractTocWithLLM(parsed.tocText)
+            if (llmTitles && llmTitles.length >= 3) {
+                entries = inferTocLevels(llmTitles)
+            }
+        }
+        if (entries && entries.length >= 3) chapters = splitByToc(entries, text, globalLineMap)
+    }
+    // 2) PDF 书签
+    if (!chapters || chapters.length === 0) {
+        if (pages && pdfOutline) {
+            chapters = splitByOutline(pdfOutline, pages)
+            if (chapters.length === 0) chapters = splitChapters(text, globalLineMap)
+        } else {
+            chapters = splitChapters(text, globalLineMap)
+        }
+    }
+    if (chapters.length === 0) throw new Error('未解析到有效内容')
+    // 文本/toc 模式的节点补充全局行页码映射（段落页码 = 节点起始行 + 行内偏移）
+    const outlineMode = !!(pages && pdfOutline && chapters.some(c => Array.isArray(c.lineMap)))
+    for (const ch of chapters) {
+        if (!outlineMode && !ch.lineMap && globalLineMap) ch.lineMap = { global: true, startLine: ch.startLine || 0 }
+    }
+    return chapters
+}
+
+/**
  * 解析并入库一本书（完整流程：解析文件 → 切分 → 写入）
  * @param {Buffer} buffer - 文件内容
  * @param {string} filename - 文件名（用作书名）
@@ -487,26 +591,8 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
             bookTitle = extractTitleFromText(text) || '未命名书籍'
         }
     }
-    // 章节树优先级：目录页（出版方权威结构）> PDF 书签 > 文本标题识别
-    let chapters = null
-    let globalLineMap = buildLinePageMap(filteredPages || pages)
-    if (typeof parsed === 'object' && parsed.tocEntries) {
-        chapters = splitByToc(parsed.tocEntries, text, globalLineMap)
-    }
-    if (!chapters || chapters.length === 0) {
-        if (pages && pdfOutline) {
-            chapters = splitByOutline(pdfOutline, pages)
-            if (chapters.length === 0) chapters = splitChapters(text, globalLineMap)
-        } else {
-            chapters = splitChapters(text, globalLineMap)
-        }
-    }
-    if (chapters.length === 0) throw new Error('未解析到有效内容')
-    // 文本/toc 模式的节点补充全局行页码映射（段落页码 = 节点起始行 + 行内偏移）
-    const outlineMode = !!(pages && pdfOutline && chapters.some(c => Array.isArray(c.lineMap)))
-    for (const ch of chapters) {
-        if (!outlineMode && !ch.lineMap && globalLineMap) ch.lineMap = { global: true, startLine: ch.startLine || 0 }
-    }
+    // 章节树：目录页(LLM层级) > PDF书签 > 文本标题识别（preview 与入库共用 buildChapters）
+    const chapters = await buildChapters(parsed)
 
     const trx = await db.transaction()
     try {
@@ -623,4 +709,4 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
     }
 }
 
-module.exports = { parseFile, buildLinePageMap, splitChapters, splitPassages, splitByOutline, splitByToc, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
+module.exports = { parseFile, buildLinePageMap, splitChapters, splitPassages, splitByOutline, splitByToc, buildChapters, extractTocWithLLM, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
