@@ -63,12 +63,81 @@ const parseFile = async (buffer, filename) => {
     } catch { /* outline 解析失败不影响主流程 */ }
     await doc.destroy().catch(() => {})
 
-    // 目录页过滤（无书签时的文本切分用）："标题 + 页码数字"密集的页视为目录页，从正文剔除
+    // 目录页检测与条目提取（按目录划分章节——出版方权威结构）
+    // 目录行格式："标题 + 点线 + 页码" / "标题+页码紧贴" / 标题行（页码在下一行点线行）
+    const TOC_TITLE_RE = /^(.{2,40}?)(?:\s*[.．·]+\s*(\d{1,3})|(\d{1,3}))\s*$/ // 标题+点线+页码 或 标题+页码
+    const DOT_PAGE_RE = /^[.．·\s]{5,}(\d{1,3})\s*$/ // 纯点线+页码
+    const DOT_ONLY_RE = /^[.．·\s]{5,}$/ // 纯点线
+    const extractTocEntries = (pageText) => {
+        const lines = pageText.split('\n').map(s => s.trim()).filter(s => s.length > 0)
+        const entries = []
+        let pendingTitle = null
+        for (const line of lines) {
+            const m = line.match(TOC_TITLE_RE)
+            if (m) {
+                const title = (m[1] || '').replace(/[.．·\s]+$/g, '').trim()
+                const pageNum = parseInt(m[2] || m[3], 10)
+                // 排除索引页词条（中英对照词条含英文；纯数字行）
+                if (title.length >= 2 && pageNum > 0 && !/[a-zA-Z]{2,}/.test(title) && !/^\d{1,3}$/.test(title)) {
+                    entries.push({ title, pageNum })
+                }
+                pendingTitle = null
+            } else if (DOT_PAGE_RE.test(line)) {
+                const pageNum = parseInt(line.match(DOT_PAGE_RE)[1], 10)
+                if (pendingTitle && pageNum > 0 && !/[a-zA-Z]{2,}/.test(pendingTitle) && !/^\d{1,3}$/.test(pendingTitle)) {
+                    entries.push({ title: pendingTitle, pageNum })
+                }
+                pendingTitle = null
+            } else if (DOT_ONLY_RE.test(line)) {
+                // 纯点线行：跳过
+            } else if (line.length >= 2 && line.length <= 40 && !/^\d{1,3}$/.test(line) && !/[。；]/.test(line)) {
+                pendingTitle = line // 可能是无页码的条目标题（页码在下一行）
+            } else {
+                pendingTitle = null
+            }
+        }
+        return entries
+    }
     const isTocPage = (pageText) => {
         const lines = pageText.split('\n').map(s => s.trim()).filter(s => s.length > 0)
-        if (lines.length < 8) return false
-        const tocLike = lines.filter(l => /^[^。；]{2,30}\s*\d{1,3}\s*$/.test(l)).length
-        return tocLike / lines.length > 0.5
+        if (lines.length < 5) return false
+        // 目录行特征：标题+点线+页码 / 纯点线+页码 / 纯点线 / 短标题行（无页码，如"第一章绪论""第一节xxx"）
+        const isTocLine = (l) => TOC_TITLE_RE.test(l) || DOT_PAGE_RE.test(l) || DOT_ONLY_RE.test(l)
+            || (l.length >= 2 && l.length <= 40 && !/^\d{1,3}$/.test(l) && !/[。；]/.test(l))
+        const tocLike = lines.filter(isTocLine).length
+        if (tocLike / lines.length <= 0.35) return false
+        // 防索引页误判：目录条目应大部分带编号前缀（第X章/第X节/一、/1.）
+        const entries = extractTocEntries(pageText)
+        if (entries.length < 3) return false
+        const numbered = entries.filter(e => /^(第[一二三四五六七八九十百千万0-9０-９]+[章节篇]|附[录篇]|[一二三四五六七八九十]+、|[0-9０-９]{1,3}[.．、])/.test(e.title)).length
+        return numbered / entries.length >= 0.5
+    }
+    const tocEntries = []
+    for (const p of pages) {
+        if (isTocPage(p.text)) {
+            tocEntries.push(...extractTocEntries(p.text))
+        }
+    }
+    // 目录条目层级推断：第X章=1 / 第X节=2 / 附录=1 / 数字条目=2 / "一、二、"=1（跟节/附录后=2）
+    let prevLevel = 1
+    let prevTitle = ''
+    for (const e of tocEntries) {
+        const t = e.title.trim()
+        let lv
+        if (/^第[一二三四五六七八九十百千万0-9０-９]+章/.test(t)) lv = 1
+        else if (/^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(t)) lv = 2
+        else if (/^附[录篇]/.test(t)) lv = 1
+        else if (/^[0-9０-９]{1,3}[.．、]/.test(t)) lv = 2
+        else if (/^[一二三四五六七八九十]+、/.test(t)) {
+            if (prevTitle && /^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(prevTitle)) lv = 2
+            else if (prevTitle && /^附[录篇]/.test(prevTitle)) lv = 2
+            else if (prevTitle && /^[0-9０-９]{1,3}[.．、]/.test(prevTitle)) lv = 2
+            else if (prevTitle && /^[一二三四五六七八九十]+、/.test(prevTitle)) lv = prevLevel
+            else lv = 1
+        } else lv = 1
+        e.level = lv
+        prevLevel = lv
+        prevTitle = t
     }
     const contentPages = pages.filter(p => !isTocPage(p.text))
     const safePages = contentPages.length > 0 ? contentPages : pages // 全被误判时保留全部
@@ -78,7 +147,7 @@ const parseFile = async (buffer, filename) => {
         throw new Error('PDF 未提取到文本（可能是扫描件，无文字层，请上传文字版 PDF 或 TXT）')
     }
     // pages 保留原始逐页（outline 的 pageIdx 基于原始页）；filteredPages 为剔除目录页后的（文本模式行映射用）
-    return { text, pages, filteredPages: safePages, pdfOutline: pdfOutline.length >= 3 ? pdfOutline : null }
+    return { text, pages, filteredPages: safePages, pdfOutline: pdfOutline.length >= 3 ? pdfOutline : null, tocEntries: tocEntries.length >= 5 ? tocEntries : null }
 }
 
 /**
@@ -170,6 +239,50 @@ const splitByOutline = (outline, pages) => {
     for (let i = 0; i < chapters.length; i++) {
         if (chapters[i].level === 1) lastCh = i
         chapters[i].parentIndex = chapters[i].level === 1 ? -1 : lastCh
+    }
+    return chapters
+}
+
+/**
+ * 按目录（TOC）划分章节：目录条目在正文中匹配定位（去空白模糊匹配），构建两级树
+ * 目录页码仅作参考，边界以正文匹配位置为准（自动获得真实页码）
+ * @param {Array<{title: string, level: number}>} tocEntries - parseFile 提取的目录条目
+ * @param {string} text - 过滤目录页后的正文文本
+ * @param {number[]|null} linePageMap - 行号→页码映射
+ * @returns {Array<{title, level, parentIndex, content, pageNo, lineMap, startLine}>}
+ */
+const splitByToc = (tocEntries, text, linePageMap = null) => {
+    const lines = text.split('\n')
+    // 归一化：去空白/点线/装饰符（目录"第一节 xxx" vs 正文"第一节|xxx"）
+    const norm = s => s.replace(/[\s.．·…|｜\-—·]/g, '')
+    // 正文匹配（保持目录顺序，从上次位置继续）
+    let searchFrom = 0
+    const matched = []
+    for (const e of tocEntries) {
+        const target = norm(e.title)
+        if (target.length < 3) continue
+        let found = -1
+        for (let i = searchFrom; i < lines.length; i++) {
+            const l = lines[i].trim()
+            if (l.length >= 3 && norm(l) === target) { found = i; break }
+        }
+        if (found >= 0) { matched.push({ title: e.title, level: e.level, lineIdx: found }); searchFrom = found + 1 }
+    }
+    if (matched.length < 3) return []
+    // 构建章节树
+    const chapters = []
+    let lastChapterIdx = -1
+    for (let i = 0; i < matched.length; i++) {
+        const cur = matched[i]
+        const startLine = cur.lineIdx + 1 // 跳过标题行本身
+        const endLine = i + 1 < matched.length ? matched[i + 1].lineIdx : lines.length
+        if (endLine <= startLine) continue
+        const content = lines.slice(startLine, endLine).join('\n').trim()
+        if (content.length < 20) continue
+        const pageNo = linePageMap ? linePageMap[startLine] : null
+        if (cur.level === 1) lastChapterIdx = chapters.length
+        const parentIndex = cur.level === 1 ? -1 : (lastChapterIdx >= 0 ? lastChapterIdx : -1)
+        chapters.push({ title: cur.title, level: cur.level, parentIndex, content, pageNo, lineMap: null, startLine })
     }
     return chapters
 }
@@ -374,19 +487,23 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
             bookTitle = extractTitleFromText(text) || '未命名书籍'
         }
     }
-    // 章节树：PDF 有书签 → outline 两级树；否则文本标题识别（两级）+ 行页码映射
-    let chapters
-    let globalLineMap = null
-    if (pages && pdfOutline) {
-        chapters = splitByOutline(pdfOutline, pages)
-        if (chapters.length === 0) chapters = splitChapters(text, buildLinePageMap(filteredPages || pages))
-    } else {
-        globalLineMap = buildLinePageMap(filteredPages || pages)
-        chapters = splitChapters(text, globalLineMap)
+    // 章节树优先级：目录页（出版方权威结构）> PDF 书签 > 文本标题识别
+    let chapters = null
+    let globalLineMap = buildLinePageMap(filteredPages || pages)
+    if (typeof parsed === 'object' && parsed.tocEntries) {
+        chapters = splitByToc(parsed.tocEntries, text, globalLineMap)
+    }
+    if (!chapters || chapters.length === 0) {
+        if (pages && pdfOutline) {
+            chapters = splitByOutline(pdfOutline, pages)
+            if (chapters.length === 0) chapters = splitChapters(text, globalLineMap)
+        } else {
+            chapters = splitChapters(text, globalLineMap)
+        }
     }
     if (chapters.length === 0) throw new Error('未解析到有效内容')
-    // 文本模式的节点补充全局行页码映射（段落页码 = 节点起始行 + 行内偏移）
-    const outlineMode = !!(pages && pdfOutline && chapters.some(c => c.lineMap))
+    // 文本/toc 模式的节点补充全局行页码映射（段落页码 = 节点起始行 + 行内偏移）
+    const outlineMode = !!(pages && pdfOutline && chapters.some(c => Array.isArray(c.lineMap)))
     for (const ch of chapters) {
         if (!outlineMode && !ch.lineMap && globalLineMap) ch.lineMap = { global: true, startLine: ch.startLine || 0 }
     }
@@ -506,4 +623,4 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
     }
 }
 
-module.exports = { parseFile, buildLinePageMap, splitChapters, splitPassages, splitByOutline, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
+module.exports = { parseFile, buildLinePageMap, splitChapters, splitPassages, splitByOutline, splitByToc, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
