@@ -72,11 +72,11 @@ router.get('/books/manage', async (req, res) => {
 router.get('/books/structure', async (req, res) => {
     try {
         const nodes = await db('rag_source_doc')
-            .select('id', 'title', 'level', 'parent_id', 'enabled')
+            .select('id', 'title', 'level', 'parent_id', 'page_no', 'enabled')
             .where('enabled', true)
             .orderBy('id')
         const passages = await db('rag_passage')
-            .select('id', 'doc_id', 'section_path', 'content')
+            .select('id', 'doc_id', 'section_path', 'page_no', 'content')
             .where('enabled', true)
             .orderBy('id')
         // 段落按 doc_id 分组，挂在节点上
@@ -85,6 +85,7 @@ router.get('/books/structure', async (req, res) => {
             ;(byDoc[p.doc_id] = byDoc[p.doc_id] || []).push({
                 id: p.id,
                 sectionPath: p.section_path,
+                pageNo: p.page_no,
                 content: p.content,
             })
         }
@@ -93,6 +94,7 @@ router.get('/books/structure', async (req, res) => {
             title: n.title,
             level: n.level,
             parentId: n.parent_id,
+            pageNo: n.page_no,
             enabled: !!n.enabled,
             passages: byDoc[n.id] || [],
         }))

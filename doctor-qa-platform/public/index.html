@@ -618,6 +618,7 @@
                 .pi-node .pi-arrow { font-size: 10px; color: var(--text-3); width: 14px; text-align: center; flex-shrink: 0; }
                 .pi-node .pi-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
                 .pi-node .pi-count { font-size: 10.5px; color: #fff; background: var(--primary); border-radius: 8px; padding: 1px 7px; flex-shrink: 0; }
+                .pi-node .pi-page { font-size: 10px; color: var(--text-3); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 1px 6px; flex-shrink: 0; }
                 .pi-passages { flex: 1; overflow-y: auto; border: 1px solid var(--border); border-radius: 10px; padding: 8px; background: var(--bg); }
                 .pi-passage { border-left: 3px solid var(--primary); background: var(--card); border-radius: 0 8px 8px 0; margin-bottom: 8px; padding: 8px 10px; font-size: 12px; line-height: 1.65; color: var(--text-2); cursor: pointer; }
                 .pi-passage .p-head { display: flex; justify-content: space-between; color: var(--text-3); font-size: 10.5px; margin-bottom: 4px; }
@@ -1651,6 +1652,7 @@
                 row.innerHTML =
                     `<span class="pi-arrow">${kids.length ? (isOpen ? '▼' : '▶') : '·'}</span>` +
                     `<span class="pi-title">${depth === 0 ? '📘' : '📄'} ${esc(node.title)}</span>` +
+                    (node.pageNo != null ? `<span class="pi-page">P${node.pageNo}</span>` : '') +
                     (node.passages.length ? `<span class="pi-count">${node.passages.length}</span>` : '')
                 row.onclick = () => {
                     if (kids.length) { isOpen ? PI_OPEN.delete(node.id) : PI_OPEN.add(node.id) }
@@ -1672,7 +1674,7 @@
             node.passages.forEach((p, i) => {
                 const d = document.createElement('div')
                 d.className = 'pi-passage'
-                d.innerHTML = `<div class="p-head"><span>📄 ${esc(node.title)} · 段 ${i + 1}</span><span>点击展开</span></div><div class="p-text">${esc(p.content)}</div>`
+                d.innerHTML = `<div class="p-head"><span>📄 ${esc(node.title)} · ${p.pageNo != null ? 'P' + p.pageNo : '段 ' + (i + 1)}</span><span>点击展开</span></div><div class="p-text">${esc(p.content)}</div>`
                 d.onclick = () => d.classList.toggle('expanded')
                 el.appendChild(d)
             })

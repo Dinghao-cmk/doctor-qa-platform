@@ -11,7 +11,7 @@ const crypto = require('crypto')
 const fs = require('fs')
 const path = require('path')
 const multer = require('multer')
-const { ingestBook, ingestFromText, splitChapters, splitPassages, extractTitleFromText, SUPPORTED_EXTS } = require('../services/ingest')
+const { ingestBook, ingestFromText, splitChapters, splitPassages, extractTitleFromText, buildLinePageMap, SUPPORTED_EXTS } = require('../services/ingest')
 const { genBookQuestions } = require('../services/questionGen')
 const { runEmbeddingJob } = require('../services/embeddingJob')
 const cache = require('../services/cache')
@@ -78,19 +78,21 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
 
         log(`[upload/preview] ${filename} (${(size / 1024).toFixed(1)}KB)`)
 
-        // 解析 + 切分预览（不落库）
+        // 解析 + 切分预览（不落库；PDF 带页码，章节/段落同步记录起始页）
         const { parseFile } = require('../services/ingest')
-        const text = await parseFile(req.file.buffer, filename)
-        const chapters = splitChapters(text)
+        const parsed = await parseFile(req.file.buffer, filename)
+        const linePageMap = buildLinePageMap(parsed.pages)
+        const chapters = splitChapters(parsed.text, linePageMap)
         const preview = chapters.map(ch => ({
             title: ch.title,
             chars: ch.content.trim().length,
-            passages: splitPassages(ch.content).length,
+            pageNo: ch.pageNo || null,
+            passages: splitPassages(ch.content, ch.startLine + 1, linePageMap).length,
         }))
 
-        // 暂存待确认：缓存解析结果，confirm 直接复用（避免 PDF 二次解析）
+        // 暂存待确认：缓存解析结果（含逐页文本），confirm 直接复用（避免 PDF 二次解析）
         const token = crypto.randomBytes(8).toString('hex')
-        pending.set(token, { text, filename, time: Date.now() })
+        pending.set(token, { parsed, filename, time: Date.now() })
 
         const bookTitle = (() => {
             const t = filename.replace(/\.[^.]+$/, '').trim()
@@ -104,11 +106,12 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
             token,
             fileName: filename,
             bookTitle,
-            totalChars: text.length,
+            totalChars: parsed.text.length,
             chapterCount: chapters.length,
             totalPassages: preview.reduce((s, c) => s + c.passages, 0),
             chapters: preview.slice(0, 30), // 最多展示前 30 章
             ext,
+            withPageNo: !!(linePageMap), // 是否有页码信息（PDF 逐页解析）
         })
     } catch (error) {
         log(`[upload/preview] 失败: ${error.message}`)
@@ -176,7 +179,7 @@ router.post('/upload/confirm', async (req, res) => {
         }
         pending.delete(token)
 
-        const result = await ingestFromText(item.text, item.filename, title ? { title: String(title).trim().slice(0, 120) } : {})
+        const result = await ingestFromText(item.parsed || item.text, item.filename, title ? { title: String(title).trim().slice(0, 120) } : {})
 
         // 知识库已更新：清空问答缓存，避免旧答案
         cache.clear()
