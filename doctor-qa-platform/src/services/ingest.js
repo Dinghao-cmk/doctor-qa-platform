@@ -125,16 +125,20 @@ const buildLinePageMap = (pages) => {
  * @returns {Array<{title: string, level: number, parentIndex: number, content: string, pageNo: number|null, lineMap: number[]|null}>}
  */
 const splitByOutline = (outline, pages) => {
-    // 平铺：章 → 其节 → 下章 → ...（level 1/2）；顶层数字条目（"2.xxx"）按上下文降级为节
+    // 平铺：章 → 其节 → 下章 → ...（level 1/2）；顶层数字条目（"2.xxx"）或附录内的"一、二、"条目按上下文降级为节
     const flat = []
-    let lastTop = null // 最近的顶层项索引（用于数字条目降级）
+    let lastTop = null // 最近的顶层章索引（用于数字/条目降级）
+    let lastTopTitle = null
     for (const top of outline) {
         if (/^(目录|目\s*录|contents?|前页|扉页)$/i.test(top.title.trim())) continue
-        const isNumItem = /^[0-9０-９]{1,3}[.．、]/.test(top.title.trim())
-        const level = isNumItem && lastTop !== null ? 2 : 1
+        const t = top.title.trim()
+        const isNumItem = /^[0-9０-９]{1,3}[.．、]/.test(t)
+        const isYiErItem = /^[一二三四五六七八九十]+、/.test(t)
+        const parentIsAppendix = lastTopTitle !== null && /^附[录篇]/.test(lastTopTitle)
+        const level = (isNumItem || (isYiErItem && parentIsAppendix)) && lastTop !== null ? 2 : 1
         const ch = { title: top.title, level, parentIndex: level === 2 ? lastTop : -1, pageIdx: top.pageIdx }
         flat.push(ch)
-        if (level === 1) lastTop = flat.length - 1
+        if (level === 1) { lastTop = flat.length - 1; lastTopTitle = t }
         const validSubs = (top.items || []).filter(s => s.pageIdx !== null && s.pageIdx > ch.pageIdx)
         for (const sub of validSubs) {
             flat.push({ title: sub.title, level: 2, parentIndex: flat.indexOf(ch), pageIdx: sub.pageIdx })
@@ -206,9 +210,14 @@ const splitChapters = (text, linePageMap = null) => {
     for (const line of lines) {
         const h = headingLevel(line)
         if (h) {
-            // 数字编号标题（"1."）跟在章（"一、"/"第X章"）之后时，按上下文降级为节
-            if (h.level === 1 && /^[0-9０-９]{1,3}[.．、]/.test(h.title) && stack.length > 0 && stack[stack.length - 1].level === 1) {
-                h.level = 2
+            // 上下文降级为节：①数字编号（"1."）跟在章后；②"一、二、"跟在"附录X"后（附录内的地区/条目是二级）
+            // 判断基于最近的 L1 祖先（降级后的节也在栈中，不能只看栈顶）
+            if (h.level === 1 && stack.length > 0) {
+                const topL1 = [...stack].reverse().find(s => s.level === 1)
+                const isNumItem = /^[0-9０-９]{1,3}[.．、]/.test(h.title)
+                const isYiErItem = /^[一二三四五六七八九十]+、/.test(h.title)
+                const parentIsAppendix = topL1 && /^附[录篇]/.test(topL1.title)
+                if (isNumItem || (isYiErItem && parentIsAppendix)) h.level = 2
             }
             const node = { title: h.title, level: h.level, content: '', startLine: lineNo, pageNo: linePageMap ? linePageMap[lineNo] : null }
             // 栈式：弹出 level >= 当前的所有章节
@@ -225,11 +234,19 @@ const splitChapters = (text, linePageMap = null) => {
         return [{ title: '正文', level: 1, parentIndex: -1, content: text, pageNo: linePageMap ? linePageMap[0] : null, lineMap: null, startLine: 0 }]
     }
 
-    // 伪标题过滤：内容 <50 字符的节点并入前一节点（消除"规则编号行"等伪章节）
+    // 伪标题过滤：内容极短（<20字）或表格注释特征（数字+星号、食谱注释）的节点并入前一节点
+    // 阈值 20：避免误杀内容较少的真节（旧阈值 50 会把 30-50 字的真节吞掉）
+    const isFakeTitle = (ch) => {
+        if (ch.content.length < 20) return true
+        const t = ch.title.trim()
+        if (/^[0-9０-９]{1,3}\s*[.．、]\s*\*/.test(t)) return true
+        if (/为食谱中用到的食药物质/.test(t)) return true
+        return false
+    }
     const cleaned = []
     for (const ch of chapters) {
         ch.content = ch.content.trim()
-        if (ch.content.length < 50 && cleaned.length > 0) {
+        if (isFakeTitle(ch) && cleaned.length > 0) {
             // 合并进前一个（保持其层级归属）
             const prev = cleaned[cleaned.length - 1]
             prev.content += (prev.content ? '\n' : '') + ch.title + (ch.content ? '\n' + ch.content : '')
