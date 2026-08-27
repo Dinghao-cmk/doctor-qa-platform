@@ -125,12 +125,16 @@ const buildLinePageMap = (pages) => {
  * @returns {Array<{title: string, level: number, parentIndex: number, content: string, pageNo: number|null, lineMap: number[]|null}>}
  */
 const splitByOutline = (outline, pages) => {
-    // 平铺：章 → 其节 → 下章 → ...（level 1/2）
+    // 平铺：章 → 其节 → 下章 → ...（level 1/2）；顶层数字条目（"2.xxx"）按上下文降级为节
     const flat = []
+    let lastTop = null // 最近的顶层项索引（用于数字条目降级）
     for (const top of outline) {
         if (/^(目录|目\s*录|contents?|前页|扉页)$/i.test(top.title.trim())) continue
-        const ch = { title: top.title, level: 1, parentIndex: -1, pageIdx: top.pageIdx }
+        const isNumItem = /^[0-9０-９]{1,3}[.．、]/.test(top.title.trim())
+        const level = isNumItem && lastTop !== null ? 2 : 1
+        const ch = { title: top.title, level, parentIndex: level === 2 ? lastTop : -1, pageIdx: top.pageIdx }
         flat.push(ch)
+        if (level === 1) lastTop = flat.length - 1
         const validSubs = (top.items || []).filter(s => s.pageIdx !== null && s.pageIdx > ch.pageIdx)
         for (const sub of validSubs) {
             flat.push({ title: sub.title, level: 2, parentIndex: flat.indexOf(ch), pageIdx: sub.pageIdx })
@@ -189,6 +193,7 @@ const splitChapters = (text, linePageMap = null) => {
         }
         if (/^第[一二三四五六七八九十百千万0-9０-９]+章\s*\S?/.test(t)) return { title: t.trim(), level: 1 }
         if (/^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]\s*\S?/.test(t)) return { title: t.trim(), level: 2 }
+        if (/^附[录篇]\s*[0-9一二三四五六七八九十]*\s*\S?/.test(t) && t.length <= 30) return { title: t.trim(), level: 1 }
         if (/^[一二三四五六七八九十]+、\S+/.test(t) && t.length <= 30) return { title: t.trim(), level: 1 }
         if (/^[0-9０-９]{1,3}[.．、]\s*\S+/.test(t) && t.length <= 30) {
             // "1." → 章；"1.1" → 节
