@@ -657,7 +657,32 @@ const extractTocWithLLM = async (tocText) => {
 }
 
 /**
+ * 文档构型识别：book（书籍：目录/章节结构）vs nonbook（清单/规则/手册等：条目密集、无层级）
+ * 旧引擎对所有文档统一按书解析，导致 .md 规则库被切出 800+ 扁平章——这里补上"是不是书"的判断
+ * @param {Object} parsed - parseFile 返回值
+ * @param {Array} chapters - 已构建的章节（文本识别模式结果）
+ * @returns {'book'|'nonbook'}
+ */
+const detectDocShape = (parsed, chapters) => {
+    // 出版方权威结构（目录页/书签）存在 → 书构型（信任出版方，不按密度误判）
+    if (parsed && ((parsed.tocEntries && parsed.tocEntries.length >= 3) || (parsed.pdfOutline && parsed.pdfOutline.length >= 3))) {
+        return 'book'
+    }
+    // 文本模式：标题候选行密度（第X章/第X节/附录/（一）/一、/数字编号）
+    const lines = (parsed && parsed.text ? parsed.text : '').split(/\r?\n/)
+    const nonEmpty = lines.filter(l => l.trim().length >= 2)
+    if (nonEmpty.length < 30) return 'book' // 短文档不做判定
+    const headingLike = nonEmpty.filter(l =>
+        /^(第[一二三四五六七八九十百千万0-9０-９]+[章节篇部分]|附[录篇]|（[一二三四五六七八九十]+）|[一二三四五六七八九十]+、|[0-9０-９]{1,3}[.．、])/.test(l.trim()))
+    const density = headingLike.length / nonEmpty.length
+    // 标题过碎（≥60 个）或密度过高（≥12%）→ 清单/规则类，非书
+    if (headingLike.length >= 60 || (headingLike.length >= 30 && density >= 0.12)) return 'nonbook'
+    return 'book'
+}
+
+/**
  * 构建两级章节树（preview 与入库共用）：目录页(LLM提取→正则提取) > PDF书签 > 文本标题识别
+ * 非书构型（清单/规则类文档）返回单节点（整篇作为一节，不切章节树）
  * @param {{text: string, pages: Array|null, filteredPages: Array|null, pdfOutline: Array|null, tocEntries: Array|null, tocText: string|null}|string} parsed - parseFile 返回值或纯文本
  * @returns {Promise<Array<{title, level, parentIndex, content, pageNo, lineMap, startLine}>>}
  */
@@ -690,6 +715,19 @@ const buildChapters = async (parsed) => {
         }
     }
     if (chapters.length === 0) throw new Error('未解析到有效内容')
+    // 3) 构型识别：仅文本识别模式（无目录/书签）检测"非书构型"——清单/规则类文档整篇单节点入库，不切章节树
+    //    （旧引擎把所有文档按书解析，md 规则库被切出 800+ 扁平章，这里补上"是不是书"的判断）
+    if (typeof parsed === 'object' && !parsed.tocEntries && !parsed.pdfOutline) {
+        const shape = detectDocShape(parsed, chapters)
+        if (shape === 'nonbook') {
+            return [{
+                title: extractTitleFromText(text) || '文档正文',
+                level: 1, parentIndex: -1,
+                content: text, pageNo: null,
+                lineMap: null, startLine: 0,
+            }]
+        }
+    }
     // 文本/toc 模式的节点补充全局行页码映射（段落页码 = 节点起始行 + 行内偏移）
     const outlineMode = !!(pages && pdfOutline && chapters.some(c => Array.isArray(c.lineMap)))
     for (const ch of chapters) {
@@ -851,4 +889,4 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
     }
 }
 
-module.exports = { parseFile, buildLinePageMap, buildLineSizeMap, splitChapters, splitPassages, splitByOutline, splitByToc, buildChapters, extractTocWithLLM, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }
+module.exports = { parseFile, buildLinePageMap, buildLineSizeMap, splitChapters, splitPassages, splitByOutline, splitByToc, buildChapters, extractTocWithLLM, detectDocShape, extractTitleFromText, ingestBook, ingestFromText, SUPPORTED_EXTS }

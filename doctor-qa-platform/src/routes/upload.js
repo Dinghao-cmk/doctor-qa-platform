@@ -79,9 +79,11 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
         log(`[upload/preview] ${filename} (${(size / 1024).toFixed(1)}KB)`)
 
         // 解析 + 切分预览（不落库；PDF 带页码，章节/段落同步记录起始页）
-        const { parseFile } = require('../services/ingest')
+        const { parseFile, detectDocShape } = require('../services/ingest')
         const parsed = await parseFile(req.file.buffer, filename)
         const chapters = await buildChapters(parsed)
+        // 文档构型：book=书籍（章节树）；nonbook=清单/规则类（整篇单节点，不切层级）
+        const shape = detectDocShape(parsed, chapters)
         const preview = chapters.map(ch => ({
             title: ch.title,
             level: ch.level || 1,
@@ -107,6 +109,7 @@ router.post('/upload/preview', upload.single('file'), uploadErrorHandler, async 
             token,
             fileName: filename,
             bookTitle,
+            shape,
             totalChars: parsed.text.length,
             chapterCount: chapters.length,
             totalPassages: preview.reduce((s, c) => s + c.passages, 0),
