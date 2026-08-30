@@ -308,20 +308,46 @@ const splitByOutline = (outline, pages) => {
  */
 const splitByToc = (tocEntries, text, linePageMap = null) => {
     const lines = text.split('\n')
-    // 归一化：去空白/点线/装饰符（目录"第一节 xxx" vs 正文"第一节|xxx"）
-    const norm = s => s.replace(/[\s.．·…|｜\-—·]/g, '')
-    // 正文匹配（保持目录顺序，从上次位置继续）
+    // 归一化：去空白/点线/装饰符/括号（目录"第一节 xxx" vs 正文"第一节|xxx"；"（一）" vs "一"）
+    const norm = s => s.replace(/[\s.．·…|｜\-—·（）()]/g, '')
+    // 去掉编号前缀后的主体（"（一）食物多样，xxx" → "食物多样，xxx"；"附录1成人xx" → "成人xx"）
+    const stripPrefix = s => s.replace(/^(第[一二三四五六七八九十百千万0-9０-９]+[章节篇部分]|附录?[0-9一二三四五六七八九十]*|（[一二三四五六七八九十]+）|[一二三四五六七八九十]+、|[0-9０-９]{1,3}[.．、])/, '')
+    const lcpLen = (a, b) => { let i = 0; const m = Math.min(a.length, b.length); while (i < m && a[i] === b[i]) i++; return i }
+    // 正文匹配（保持目录顺序，从上次位置继续）——多级匹配：精确 > 前缀/近似(LCP) > 主体包含，页码相近加分
     let searchFrom = 0
     const matched = []
     for (const e of tocEntries) {
         const target = norm(e.title)
         if (target.length < 3) continue
-        let found = -1
+        const body = stripPrefix(target)
+        let best = { score: 0, idx: -1 }
         for (let i = searchFrom; i < lines.length; i++) {
             const l = lines[i].trim()
-            if (l.length >= 3 && norm(l) === target) { found = i; break }
+            if (l.length < 2 || l.length > 60) continue
+            const n = norm(l)
+            if (n.length < 3) continue
+            let score = 0
+            if (n === target) score = 100
+            else {
+                const lcp = lcpLen(n, target)
+                // 前缀/近似匹配：公共前缀占比高（目录与正文一字之差，如"分型"vs"分类"）
+                if (lcp >= 4 && lcp >= Math.min(n.length, target.length) * 0.6) score = 60 + Math.min(lcp, 30)
+                else if (body.length >= 4 && n.includes(body)) score = 55 // 主体包含（正文标题更短，如"附录1"）
+            }
+            if (score === 0) continue
+            // 页码约束：目录标注页码与正文行页码相近时加分（防重复标题/页眉误匹配）
+            if (linePageMap && e.pageNum) {
+                const p = linePageMap[i]
+                if (p && Math.abs(p - e.pageNum) <= 2) score += 15
+            }
+            if (score > best.score) best = { score, idx: i }
+            if (score >= 100) break
         }
-        if (found >= 0) { matched.push({ title: e.title, level: e.level, lineIdx: found }); searchFrom = found + 1 }
+        if (best.idx >= 0 && best.score >= 55) {
+            matched.push({ title: e.title, level: e.level, lineIdx: best.idx })
+            searchFrom = best.idx + 1
+        }
+        // 未匹配条目：跳过（不推进 searchFrom，避免漏掉后续匹配）
     }
     if (matched.length < 3) return []
     // 构建章节树
@@ -331,13 +357,18 @@ const splitByToc = (tocEntries, text, linePageMap = null) => {
         const cur = matched[i]
         const startLine = cur.lineIdx + 1 // 跳过标题行本身
         const endLine = i + 1 < matched.length ? matched[i + 1].lineIdx : lines.length
-        if (endLine <= startLine) continue
         const content = lines.slice(startLine, endLine).join('\n').trim()
-        if (content.length < 20) continue
+        // 章节点保留即使内容短（章紧邻节标题时无引言，丢弃会导致子节挂错章）；节内容 <20 字视为伪条目跳过
+        if (cur.level === 1) {
+            lastChapterIdx = chapters.length
+            const pageNo = linePageMap ? linePageMap[startLine] : null
+            chapters.push({ title: cur.title, level: 1, parentIndex: -1, content, pageNo, lineMap: null, startLine })
+            continue
+        }
+        if (endLine <= startLine || content.length < 20) continue
         const pageNo = linePageMap ? linePageMap[startLine] : null
-        if (cur.level === 1) lastChapterIdx = chapters.length
-        const parentIndex = cur.level === 1 ? -1 : (lastChapterIdx >= 0 ? lastChapterIdx : -1)
-        chapters.push({ title: cur.title, level: cur.level, parentIndex, content, pageNo, lineMap: null, startLine })
+        const parentIndex = lastChapterIdx >= 0 ? lastChapterIdx : -1
+        chapters.push({ title: cur.title, level: 2, parentIndex, content, pageNo, lineMap: null, startLine })
     }
     return chapters
 }
@@ -546,6 +577,11 @@ const extractTitleFromText = (text) => {
  * 从 parseFile 提取的共用逻辑（LLM 提取的标题也走此规则）
  */
 const inferTocLevels = (entries) => {
+    // 章级信号统计：全书无"一、""第X章""附录"等章级标题时，"（一）"括号编号才作为章（否则是节）
+    const hasChapterSignal = entries.some(e => {
+        const t = (e.title || '').trim()
+        return /^第[一二三四五六七八九十百千万0-9０-９]+章/.test(t) || /^附[录篇]/.test(t) || /^[一二三四五六七八九十]+、/.test(t)
+    })
     let prevLevel = 1
     let prevTitle = ''
     for (const e of entries) {
@@ -555,6 +591,7 @@ const inferTocLevels = (entries) => {
         else if (/^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(t)) lv = 2
         else if (/^附[录篇]/.test(t)) lv = 1
         else if (/^[0-9０-９]{1,3}[.．、]/.test(t)) lv = 2
+        else if (/^（[一二三四五六七八九十]+）/.test(t)) lv = hasChapterSignal ? 2 : 1 // （一）括号编号：有章级标题时是节
         else if (/^[一二三四五六七八九十]+、/.test(t)) {
             if (prevTitle && /^第[一二三四五六七八九十百千万0-9０-９]+[节篇部分]/.test(prevTitle)) lv = 2
             else if (prevTitle && /^附[录篇]/.test(prevTitle)) lv = 2
@@ -781,8 +818,8 @@ const ingestFromText = async (parsed, filename, meta = {}) => {
             let passages
             if (Array.isArray(ch.lineMap)) {
                 passages = splitPassages(ch.content, 0, ch.lineMap) // outline 模式：章节内行号映射
-            } else if (ch.lineMap && ch.lineMap.global && globalLineMap) {
-                passages = splitPassages(ch.content, ch.lineMap.startLine + 1, globalLineMap) // 文本模式：全局行映射
+            } else if (ch.lineMap && ch.lineMap.global && parsed.linePageMap) {
+                passages = splitPassages(ch.content, ch.lineMap.startLine + 1, parsed.linePageMap) // 文本模式：全局行映射（parseFile 已构建与 text 对齐的映射）
             } else {
                 passages = splitPassages(ch.content, 0, null)
             }
